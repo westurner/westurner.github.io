@@ -62,7 +62,7 @@ slug_word_separator = '_'
 extensions = [
     'tinkerer.ext.blog',
     'tinkerer.ext.disqus',
-    'withgithub'
+    'withgithub',
 ]
 
 # Add other template paths here
