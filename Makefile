@@ -5,6 +5,6 @@ serve:
 	python -m SimpleHTTPServer
 
 push:
-	git push origin master
+	ghp-import -n -b master -m 'Added output from `tinker --build` (`make build`)' -r origin -p ./blog/html/
 
 default: build
