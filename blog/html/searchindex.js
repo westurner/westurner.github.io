@@ -1,1 +1,0 @@
-Search.setIndex({envversion:42,terms:{about:2},objtypes:{},objnames:{},filenames:["pages/about","2013/11/25/hello_world","master"],titles:["about","Hello World!","Sitemap"],objects:{},titleterms:{world:1,about:0,hello:1,sitemap:2}})
