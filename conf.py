@@ -59,7 +59,11 @@ slug_word_separator = '_'
 # **************************************************************
 
 # Add other Sphinx extensions here
-extensions = ['tinkerer.ext.blog', 'tinkerer.ext.disqus', 'withgithub']
+extensions = [
+    'tinkerer.ext.blog',
+    'tinkerer.ext.disqus',
+    'withgithub'
+]
 
 # Add other template paths here
 templates_path = ['_templates']
