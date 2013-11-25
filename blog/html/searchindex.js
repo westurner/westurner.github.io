@@ -1,1 +1,1 @@
-Search.setIndex({envversion:42,terms:{},objtypes:{},objnames:{},filenames:["master"],titles:["Sitemap"],objects:{},titleterms:{sitemap:0}})
+Search.setIndex({envversion:42,terms:{about:1},objtypes:{},objnames:{},filenames:["pages/about","master"],titles:["about","Sitemap"],objects:{},titleterms:{about:0,sitemap:1}})
