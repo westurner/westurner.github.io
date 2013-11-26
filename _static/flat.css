@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);body { font-family: 'PT Sans', Helvetica, Arial, sans-serif; }
 
 header { text-align: center; }
-header h1 * { font-size: 1.6em; }
+header h1 * { font-size: 1.25em; }
 header h2 { font-size: 1.4em; font-weight: normal; margin: 0; padding: 0; }
 
 nav { font-size: 1.5em; }
@@ -14,11 +14,16 @@ article p { line-height: 1.5; }
 
 blockquote { margin-left: 0; padding-left: 20px; }
 
-aside.sidebar h1 { font-size: 1.2em; }
+aside.sidebar h1 { font-size: 1.2em; opacity: 0.2; }
 aside.sidebar { font-size: 1em; }
 aside.sidebar.highlight { font-size: .8em; }
 
-footer { font-size: 0.8em; }
+ul#accounts { list-style-type: none; padding: 0; }
+ul#accounts li { display: inline; }
+
+#searchbox input[type="text"] { width: 82%; border: 2px solid #e0e0e0; }
+
+footer { font-size: 0.8em; opacity: 0.2; }
 
 code, kbd, pre, samp { font-family: 'Source Code Pro', monospace, serif; line-height: 1.4em; }
 
