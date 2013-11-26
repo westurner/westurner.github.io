@@ -1,0 +1,37 @@
+{#-
+    boilerplate/aggregated.html
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Front page and following pages aggregating multiple posts per page.
+
+    :copyright: Copyright 2011-2013 by Vlad Riscutia and contributors (see
+    CONTRIBUTORS file). 
+    :license: FreeBSD, see LICENSE file
+-#}
+
+{%- extends "page.html" -%}
+
+{%- set archive_title = archive_title is not defined and ' Blog Archive ' or archive_title -%}
+
+{%- block body -%}
+    <div class="twitter-widget">
+        {% include "twitter.html" %}
+    </div>
+    <div class="posts">
+    <h1 id="posts" style="font-size:18px">
+        <a href="{{ pathto('archive') }}">Blog Posts</a>
+    </h1>
+    {%- for metadata in posts -%}
+        {{ timestamp(metadata.formatted_date) }}
+        {{ metadata.body }}
+        {{ post_meta(metadata, metadata.comment_count) }}
+        {%- if not loop.last -%}<div class="separator post_separator"></div>{%- endif -%}
+    {%- endfor -%}
+    {#
+    <div class="archive_link">
+        <a href="{{ pathto('archive') }}">{{ archivechar }}{{ archive_title }}{{ archivechar }}</a>
+    </div>
+    #}
+    </div>
+{%- endblock -%}
+
