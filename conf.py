@@ -11,7 +11,7 @@ import tinkerer.paths
 project = 'Wes Turner'
 
 # Change this to the tagline of your blog
-tagline = '.'
+tagline = 'Web Developer'
 
 # Change this to the description of your blog
 description = '...'
@@ -79,7 +79,7 @@ exclude_patterns = ["drafts/*", "_templates/*"]
 
 # Add templates to be rendered in sidebar here
 html_sidebars = {
-    "**": ["recent.html", "searchbox.html"]
+    "**": [ "accounts.html", "searchbox.html", "recent.html" ]
 }
 
 # **************************************************************
