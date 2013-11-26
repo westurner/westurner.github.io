@@ -25,6 +25,7 @@ aside.sidebar.highlight { font-size: .8em; }
 
 ul#accounts { list-style-type: none; padding: 0; }
 ul#accounts li { display: inline; }
+ul#accounts li a:hover { text-decoration: none; }
 
 #searchbox input[type="text"] { width: 82%; border: 2px solid #e0e0e0; }
 
