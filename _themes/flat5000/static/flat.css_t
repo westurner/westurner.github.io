@@ -16,6 +16,7 @@ nav { font-size: 1.5em; }
 article p { line-height: 1.5; }
 
 .highlight { font-size: .8em; }
+.highlight pre { font-family: "Monaco", monospace; }
 
 blockquote { margin-left: 0; padding-left: 20px; }
 
