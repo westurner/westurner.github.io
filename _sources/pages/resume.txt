@@ -26,6 +26,12 @@ Resume
    PageBreak oneColumn
 
 
+.. _outline:
+
+.. contents:: `Outline`_
+   :local:
+
+
 Employment
 ===========
 

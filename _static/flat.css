@@ -25,6 +25,11 @@ ul#accounts li a:hover { text-decoration: none; }
 
 #searchbox input[type="text"] { width: 82%; border: 2px solid #e0e0e0; }
 
+div.contents {  padding: 10px 0; }
+div.contents p.topic-title { font-size: 1.5em; }
+div.contents ul.simple { padding: 0 }
+div.contents ul { list-style-type: none; margin: 0; }
+
 footer { font-size: 0.8em; opacity: 0.2; }
 
 code, kbd, pre, samp { font-family: 'Source Code Pro', monospace, serif; line-height: 1.4em; }
