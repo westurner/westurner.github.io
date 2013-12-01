@@ -3,6 +3,9 @@ build:
 
 accounts:
 	python ./get_accounts.py -d > ./_themes/flat5000/accounts.html
+	git add _static/service_icons/*
+	git add _themes/flat5000/accounts.html
+	git commit
 
 serve:
 	python -m SimpleHTTPServer
