@@ -1,5 +1,4 @@
 *.pyc
 *.draft.rst
 blog/
-blog/
 _themes/boilerplate/
