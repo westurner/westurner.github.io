@@ -45,7 +45,7 @@ https://en.wikipedia.org/wiki/STEM_fields
 * https://en.wikipedia.org/wiki/Khan_Academy
   (`@khanacademy <https://twitter.com/khanacademy>`_)
 * https://www.class-central.com/
-  `@classcentral <https://www.class-central.com>`_)
+  (`@classcentral <https://twitter.com/classcentral>`_)
 
 
 Writing Code
@@ -131,7 +131,6 @@ https://en.wikipedia.org/wiki/Science
 * https://en.wikipedia.org/wiki/Linked_data
   (`#linkeddata <https://twitter.com/search?q=%23linkeddate&src=hash>`_)
 * http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data
-
 
 .. epigraph::
 
@@ -225,8 +224,6 @@ https://en.wikipedia.org/wiki/Hyperlocal
 * http://www.siliconprairienews.com/
   (`@SiliconPrairie <https://twitter.com/SiliconPrairie>`_)
 * https://en.wikipedia.org/wiki/Nebraska
-
-
 * https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska
 * https://en.wikipedia.org/wiki/Newspapers_in_Nebraska
 * https://en.wikipedia.org/wiki/Omaha
