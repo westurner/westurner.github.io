@@ -36,14 +36,14 @@ https://en.wikipedia.org/wiki/Category:Responsive_web_design
 STEM Learning
 --------------
 https://en.wikipedia.org/wiki/STEM_fields
-(`#STEM <htps://twitter.com/search?q=%23STEM&src=tyah>`_)
+(`#STEM <htps://twitter.com/search?q=%23STEM&src=hash>`_)
 
 * https://en.wikipedia.org/wiki/Open_educational_resources
-  (`#OER <https://twitter.com/search?q=%23OER&src=typd>`_)
+  (`#OER <https://twitter.com/search?q=%23OER&src=hash>`_)
 * https://en.wikipedia.org/wiki/OpenCourseWare
-  (`#OCW <https://twitter.com/search?q=%23OCW&src=typd>`_)
+  (`#OCW <https://twitter.com/search?q=%23OCW&src=hash>`_)
 * https://en.wikipedia.org/wiki/Khan_Academy
-  `@khanacademy <https://twitter.com/khanacademy>`_)
+  (`@khanacademy <https://twitter.com/khanacademy>`_)
 * https://www.class-central.com/
   `@classcentral <https://www.class-central.com>`_)
 
@@ -56,7 +56,7 @@ Writing Code
 * https://www.khanacademy.org/cs
 * https://www.class-central.com/subject/cs
 * http://www.acm.org/education/curricula/ComputerScience2008.pdf [PDF]
-* http://courses.csail.mit.edu/6.042/spring12/mcs.pdf (OCW) [PDF]
+* http://courses.csail.mit.edu/6.042/spring12/mcs.pdf (#OCW) [PDF]
 * https://en.wikipedia.org/wiki/Abstraction_(computer_science)
 * https://en.wikipedia.org/wiki/Category:Algorithms
 * http://rosettacode.org/wiki/Category:Programming_Tasks
@@ -92,6 +92,12 @@ https://en.wikipedia.org/wiki/Scalability
 
 * https://en.wikipedia.org/wiki/Static_web_page
 * https://en.wikipedia.org/wiki/Content_delivery_network
+* https://en.wikipedia.org/wiki/Cloud_computing
+  (`#cloud <https://twitter.com/search?q=%23cloud&src=hash>`_)
+* https://en.wikipedia.org/wiki/DevOps
+  (`#devops <https://twitter.com/search?q=%23DevOps&src=hash>`_)
+* https://en.wikipedia.org/wiki/Systems_engineering
+* https://en.wikipedia.org/wiki/Performance_engineering
 * https://en.wikipedia.org/wiki/Social_web
 
 
@@ -111,17 +117,19 @@ Science
 https://en.wikipedia.org/wiki/Science
 
 * https://en.wikipedia.org/wiki/Reproducibility
-  (`#reproducibility <https://twitter.com/search?q=%23reproducibility&src=typd>`_)
+  (`#reproducibility <https://twitter.com/search?q=%23reproducibility&src=hash>`_)
 * https://en.wikipedia.org/wiki/Data_science
-  (`#datascience <https://twitter.com/search?q=%23datascience&src=typd>`_)
+  (`#datascience <https://twitter.com/search?q=%23datascience&src=hash>`_)
+* https://en.wikipedia.org/wiki/Open_access
+  (`#openaccess <https://twitter.com/search?q=%23openaccess&src=hash>`_)
+* https://en.wikipedia.org/wiki/Open_science
+  (`#openscience <https://en.wikipedia.org/wiki/OpenScience>`_)
 * http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/
 * http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285
-* https://en.wikipedia.org/wiki/Open_access
-  (`#openaccess <https://twitter.com/search?q=%23openaccess&src=typd>`_)
 * https://en.wikipedia.org/wiki/Open_data
-  (`#opendata <https://twitter.com/search?q=%23opendata&src=typd>`_)
+  (`#opendata <https://twitter.com/search?q=%23opendata&src=hash>`_)
 * https://en.wikipedia.org/wiki/Linked_data
-  (`#linkeddata <https://twitter.com/search?q=%23linkeddate&src=typd>`_)
+  (`#linkeddata <https://twitter.com/search?q=%23linkeddate&src=hash>`_)
 * http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data
 
 
@@ -217,9 +225,12 @@ https://en.wikipedia.org/wiki/Hyperlocal
 * http://www.siliconprairienews.com/
   (`@SiliconPrairie <https://twitter.com/SiliconPrairie>`_)
 * https://en.wikipedia.org/wiki/Nebraska
+
+
 * https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska
 * https://en.wikipedia.org/wiki/Newspapers_in_Nebraska
 * https://en.wikipedia.org/wiki/Omaha
+  (`#omaha <https://twitter.com/search?q=%23omaha&src=hash>`_)
 * `twitter: near:"Omaha, Nebraska, USA" within:25mi
   <https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&src=typd>`_
 
