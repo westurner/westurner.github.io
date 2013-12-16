@@ -43,6 +43,10 @@ div.contents p.topic-title { font-size: 1.5em; }
 div.contents ul.simple { padding: 0 }
 div.contents ul { list-style-type: none; margin: 0; }
 
+table.footnote { opacity: 0.7; margin-top: 1em; }
+table.footnote td { vertical-align: middle; padding-right: 1em; }
+table.footnote td.label { vertical-align: top; }
+
 footer { font-size: 0.8em; opacity: 0.2; }
 
 code, kbd, pre, samp { font-family: {{ code_font }}; line-height: 1.4em; }
