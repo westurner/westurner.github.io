@@ -71,13 +71,12 @@ nav li.main-nav { padding: 10px 0; }
 ul.related { padding: 20px 0 20px 0; list-style: none; }
 ul.related li { line-height: 2em; list-style-type: none; text-align: center; }
 article { padding: 20px 20px 10px 20px; }
-article a { word-wrap: break-word; }
+article { word-wrap: break-word; word-break: break-word; }
 article li { line-height: 1.5em; }
 article h1 { margin-top: 0; }
 ul.related:first-child { padding: 0 0 20px 0; }
 
-div.highlight { padding: 5px 10px; }
-div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; }
+div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; padding: 5px 10px;  }
 
 div.post_separator { height: 40px; }
 
