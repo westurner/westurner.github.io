@@ -6,7 +6,7 @@
 {%- set code_font = "'Source Code Pro', monospace, serif" -%} 
 
 /* Palette */
-{%- set background_color = "#f8fafb" -%}
+{%- set background_color = "#f0f0f0" -%}
 {%- set box_color = "#e6edf2" -%}
 {%- set text_color = "#0c0501" -%}
 {%- set theme_color_light = "#93a4ad" -%}
@@ -26,7 +26,6 @@ article p { line-height: 1.5; }
 .highlight { font-size: .8em; }
 .highlight pre { font-family: "Monaco", monospace; }
 
-blockquote { margin-left: 0; padding-left: 20px; }
 
 aside.sidebar h1 { font-size: 1.2em; opacity: 0.2; }
 aside.sidebar { font-size: 1em; }
@@ -145,7 +144,7 @@ a.footnote-reference { vertical-align: super; }
 div.section h1 a { color: {{ text_color }}; text-decoration: none; }
 .docutils.literal { background-color: {{ box_color }}; border: 1px solid {{ background_color }}; border-radius: 8px; padding: 2px 4px; }
 
-blockquote { border-left: 10px solid {{ border_color }}; }
+blockquote { margin-left: 0; padding: 10px 20px; background: #fafafa; }
 
 div.postmeta { color: {{ theme_color_light }}; }
 
