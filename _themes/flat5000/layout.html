@@ -35,7 +35,7 @@
 {%- endblock -%}
 
 {%- block navigation -%}
-    <nav>
+    <nav role="navigation">
     <ul>
         {%- block quicklinks -%}
         {%- if rss_in_page_nav -%}
@@ -56,7 +56,7 @@
 
 {#- Post layout -#}
 {%- block document -%}
-    <article>
+    <article role="main">
         {%- block body -%}{%- endblock -%}
         {%- block relbar -%}{{ relbar() }}{%- endblock -%}
         {%- block comments_section -%}{%- endblock -%}
