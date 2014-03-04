@@ -50,9 +50,9 @@ footer { font-size: 0.8em; opacity: 0.2; }
 
 code, kbd, pre, samp { font-family: {{ code_font }}; line-height: 1.4em; }
 
-@media only screen and (min-width: 900px) {
+/*@media only screen and (min-width: 900px) {
     body { font-size: 1.1em; }
-}
+}*/
 
 /* Layout */
 ul { padding: 0 0 0 20px; list-style: square; }
