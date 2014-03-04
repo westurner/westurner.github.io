@@ -6,10 +6,9 @@
 Resume
 =============
 
-* Full Stack Web Developer
-* Computer science background with an MIS education
+* Full Stack Developer
 * Entrepreneurial spirit with love for technical minimalism
-* Desire to work as part of a team of bright, motivated individuals
+* Desire to collaborate with a team of bright, motivated individuals
 * Interested in contributing to Applications, Systems, and Portfolio Development
 * Interests in web application security, distributed systems, and interface design
 * Have respect for the dedication and sacrifices needed to achieve mastery
