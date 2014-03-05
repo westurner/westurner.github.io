@@ -66,3 +66,15 @@
         {%- block comments_section -%}{%- endblock -%}
     </article>
 {%- endblock -%}
+
+
+{%- block footer -%}
+          <footer class="wrapper" role="contentinfo">
+          {%- if show_copyright -%}
+            {% trans copyright=copyright|e -%}&copy; Copyright {{ copyright }}. {% endtrans -%}
+          {%- endif -%}
+          {%- if show_sphinx -%}
+          Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)
+          {%- endif -%}
+          </footer>
+{%- endblock -%}
