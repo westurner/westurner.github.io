@@ -150,18 +150,18 @@ Omaha, NE, USA; St Louis, MO, USA
 | University of Nebraska-Omaha
 | BSc Management Information Systems (MIS)
 
-* `MISSO: Management Information Systems Student Organization`_
-* `AIS: Association for Information Systems Student Chapters Founding Chapter`_
+* `MISSO: President`_
+* `AISSC: Student Representative`_
 * `Nebraska Humane Society Nonprofit Consulting`_
 * Learned through collaboration by collaborating to publish
   Principles of Collaboration, Second Edition
-* Intro C++, Perl, Oracle SQL
+* Intro C++, Perl, Oracle SQL, Systems Analysis, Distributed Systems
 * Outstanding Technical Writing course remaining
 
 
-.. _`MISSO: Management Information Systems Student Organization`:
+.. _`MISSO: President`:
    `2009-2010: UNO MISSO President`_
-.. _`AIS: Association for Information Systems Student Chapters Founding Chapter`:
+.. _`AISSC: Student Representative`:
     `2009-2010: AIS Student Chapters Representative`_
 .. _`Nebraska Humane Society Nonprofit Consulting`:
     `2009: Nebraska Humane Society Nonprofit Consulting`_
