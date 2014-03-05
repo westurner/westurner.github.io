@@ -35,7 +35,7 @@ ul#accounts { list-style-type: none; padding: 0; }
 ul#accounts li { display: inline; }
 ul#accounts li a:hover { text-decoration: none; }
 
-#searchbox input[type="text"] { width: 82%; border: 2px solid {{ border_color }}; }
+#searchbox input[type="text"], .searchbox input[type="text"] { width: 82%; border: 2px solid {{ border_color }}; }
 
 div.contents {  padding: 10px 0; }
 div.contents p.topic-title { font-size: 1.5em; }
@@ -174,3 +174,11 @@ h1, h2, h3 { margin: 20px 0 10px 0 !important; }
 p { margin: 0 0 10px; }
 ul, ol { margin: 0 0 10px; }
 div.line-block { margin: 0 0 10px; }
+/* end inspired by Bootstrap CSS */
+
+button, input, select, textarea {
+    padding: 4px;
+}
+
+ul.search { list-style-type: none; margin: 0; padding: 0; }
+ul.search li { background: #fff; padding: 10px; margin: 10px 0; }
