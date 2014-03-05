@@ -134,8 +134,8 @@ Systems Infrastructure Management
 Education
 ==========
 
-Omaha, NE; St Louis, MO
-------------------------
+Omaha, NE, USA; St Louis, MO, USA
+-----------------------------------
 
 - Night Owl
 - RPMs on 3.5" diskettes, Corel Linux, BeOS
@@ -150,13 +150,21 @@ Omaha, NE; St Louis, MO
 | University of Nebraska-Omaha
 | BSc Management Information Systems (MIS)
 
-* MISSO: Management Information Systems Student Organization
-* AIS: Association for Information Systems Student Chapters Founding Chapter
-* Nebraska Humane Society Nonprofit Consulting
+* `MISSO: Management Information Systems Student Organization`_
+* `AIS: Association for Information Systems Student Chapters Founding Chapter`_
+* `Nebraska Humane Society Nonprofit Consulting`_
 * Learned through collaboration by collaborating to publish
   Principles of Collaboration, Second Edition
 * Intro C++, Perl, Oracle SQL
 * Outstanding Technical Writing course remaining
+
+
+.. _`MISSO: Management Information Systems Student Organization`:
+   `2009-2010: UNO MISSO President`_
+.. _`AIS: Association for Information Systems Student Chapters Founding Chapter`:
+    `2009-2010: AIS Student Chapters Representative`_
+.. _`Nebraska Humane Society Nonprofit Consulting`:
+    `Nebraska Humane Society Nonprofit Consulting`_
 
 
 2010-2014: Online Learning
@@ -218,8 +226,10 @@ Responsible for design, coding; presentation lead
 
    PageBreak oneColumn
 
-2009: Nebraska Humane Society Adoption Listings
-------------------------------------------------
+2009: Nebraska Humane Society Nonprofit Consulting
+---------------------------------------------------
+| Social Web Team
+| Social Media Consulting Recommendations Report
 | Adoption Listings Crawler & Website Prototype
 |  UNOmaha: Special Topics Consulting
 |  Merged teams of six and then ten
@@ -228,13 +238,12 @@ Responsible for design, coding; presentation lead
 
 Responsible for concept, design, coding; presentation lead
 
-* Task Queues
-* JSON-P API
-* Prior to Blobstore
-
-* Python, JavaScript, CSS, XHTML
-* Django, jQuery, 960.gs
-* Google AppEngine: Python
+* Created collaboration plan: Team Site, Mailing List; Google Sites and Groups
+* Researched strategies and metrics for maximizing social media goodwill
+* Developed adoption listings harvester and static page templates
+* Google AppEngine: Python (before the introduction of Blobstore)
+* Task Queues, JSONP API
+* Python, Django, JavaScript, jQuery, CSS, 960.gs, XHTML
 
 
 2009: Tiger Solutions Web Based Course Management System
