@@ -164,7 +164,7 @@ Omaha, NE, USA; St Louis, MO, USA
 .. _`AIS: Association for Information Systems Student Chapters Founding Chapter`:
     `2009-2010: AIS Student Chapters Representative`_
 .. _`Nebraska Humane Society Nonprofit Consulting`:
-    `Nebraska Humane Society Nonprofit Consulting`_
+    `2009: Nebraska Humane Society Nonprofit Consulting`_
 
 
 2010-2014: Online Learning
