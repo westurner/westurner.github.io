@@ -20,7 +20,7 @@ description = '...'
 author = 'Wes Turner'
 
 # Change this to your copyright string
-copyright = '2013 %s' % author
+copyright = '2014 %s' % author
 
 # Change this to your blog root URL (required for RSS feed)
 website = 'http://westurner.github.io/'
