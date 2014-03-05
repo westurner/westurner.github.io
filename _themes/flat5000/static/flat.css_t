@@ -169,3 +169,8 @@ div.year h2 { margin-bottom: 20px; margin-top: 0; }
     div.year h2 { margin-left: 40%; }
 }
 
+/* inspired by Bootstrap CSS */
+h1, h2, h3 { margin: 20px 0 10px 0 !important; }
+p { margin: 0 0 10px; }
+ul, ol { margin: 0 0 10px; }
+div.line-block { margin: 0 0 10px; }
