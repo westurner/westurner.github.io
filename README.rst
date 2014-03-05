@@ -11,7 +11,7 @@ Valued Components
 * `Sphinx <http://sphinx-doc.org>`_ (https://github.com/vladris/tinkerer)
 * `Tinkerer <http://tinkerer.me>`_ (https://bitbucket.org/birkenfeld/sphinx)
 * `jQuery <http://jquery.com>`_ (https://github.com/jquery/jquery)
-* `jQuery-lifestream <https://github.com/christianv/jquery-lifestream>`_
+* `jQuery-lifestream <http://christianv.github.com/jquery-lifestream/>`_ (https://github.com/christianv/jquery-lifestream)
 * `Bootstrap <http://getbootstrap.com>`_ (https://github.com/twbs/bootstrap)
 
 
