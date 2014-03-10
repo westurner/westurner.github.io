@@ -5,6 +5,14 @@
 =============
 Resume
 =============
+
+.. raw:: latex
+    
+   \newpage
+
+Summary
+========
+
 *Full Stack Developer* with an entrepreneurial spirit streak
 
 Desire to:
@@ -31,10 +39,10 @@ Experience:
    PageBreak oneColumn
 
 
-.. _outline:
+.. only: html and text
 
-.. contents:: `Outline`_
-   :local:
+   .. contents:: `Outline`_
+      :local:
 
 
 Employment
@@ -43,10 +51,10 @@ Employment
 2009-2010: Programmer Analyst I @ UNMC
 ----------------------------------------
 | University of Nebraska Medical Center (UNMC)
-|  Knowledge Engineering Group (KEG)
-|  Section of Cardiology
-|  Initially contacted by and contracted through Kelly IT Resources
-|  Feb 2009 - Oct 2010
+| Knowledge Engineering Group (KEG)
+| Section of Cardiology
+| Initially contacted by and contracted through Kelly IT Resources
+| Feb 2009 - Oct 2010
 
 Supported `UNMC 
 <https://en.wikipedia.org/wiki/University_of_Nebraska_Medical_Center>`_
@@ -104,9 +112,9 @@ End of cycle resignation
 2007-2008: Web Developer @ UNOmaha
 ------------------------------------
 | University of Nebraska at Omaha
-|  Nebraska University Consortium on Information Assurance (NUCIA)
-|  Peter Kiewit Institute (PKI)
-|  January 2007 - March 2008
+| Nebraska University Consortium on Information Assurance (NUCIA)
+| Peter Kiewit Institute (PKI)
+| January 2007 - March 2008
 
 Python Web Developer
 
@@ -195,10 +203,9 @@ Projects
 2007: Presense
 ------------------------
 | Social Media Aggregation Concept & Gaussian Chart Generator
-|  UNOmaha: Graphical User Interface Design
-|  Team of three
-
-Responsible for concept, design, coding; presentation lead
+| UNOmaha: Graphical User Interface Design
+| Team of three
+| Responsible for concept, design, coding; presentation lead
 
 * Google Charts API
 * Prior to Task Queues
@@ -211,11 +218,10 @@ Responsible for concept, design, coding; presentation lead
 2007: Eagle Financial Life Insurance Quotes
 --------------------------------------------
 | Insurance Quote Models, Views, and Templates
-|  UNOmaha: Distributed Systems
-|  Team of four
-|  https://bitbucket.org/westurner/eaglefin
-
-Responsible for design, coding; presentation lead
+| UNOmaha: Distributed Systems
+| Team of four
+| Responsible for design, coding; presentation lead
+| https://bitbucket.org/westurner/eaglefin
 
 * Python, JavaScript, CSS, XHTML
 * Django, 960.gs
@@ -231,12 +237,11 @@ Responsible for design, coding; presentation lead
 | Social Web Team
 | Social Media Consulting Recommendations Report
 | Adoption Listings Crawler & Website Prototype
-|  UNOmaha: Special Topics Consulting
-|  Merged teams of six and then ten
-|  https://nhs-adoptions.appspot.com
-|  https://bitbucket.org/westurner/nhs-social-web
-
-Responsible for concept, design, coding; presentation lead
+| UNOmaha: Special Topics Consulting
+| Merged teams of six and then ten
+| Responsible for concept, design, coding; presentation lead
+| https://nhs-adoptions.appspot.com
+| https://bitbucket.org/westurner/nhs-social-web
 
 * Created collaboration plan: Team Site, Mailing List; Google Sites and Groups
 * Researched strategies and metrics for maximizing social media goodwill
@@ -249,12 +254,11 @@ Responsible for concept, design, coding; presentation lead
 2009: Tiger Solutions Web Based Course Management System
 ---------------------------------------------------------
 | Django app for Listing Available Courses and Scheduling Course Requests
-|  UNO: Systems Analysis & Design / Systems Design & Implementation
-|  Team of four
-|  http://code.google.com/p/wbcms
-|  https://bitbucket.org/westurner/wbcms
-
-Responsible for design, coding, and presentation
+| UNO: Systems Analysis & Design / Systems Design & Implementation
+| Team of four
+| Responsible for design, coding, and presentation
+| http://code.google.com/p/wbcms
+| https://bitbucket.org/westurner/wbcms
 
 * Python, JavaScript, CSS, XHTML
 * Django, YUI Layouts
@@ -287,9 +291,9 @@ Responsible for design, coding, and presentation
 2010: Help Haiti Project
 -------------------------
 | WordPress Instance for Haiti Earthquake Awareness
-|  UNOmaha: Managing in the Digital World
-|  Three geo-distributed teams of four to five
-|  http://code.google.com/p/helphaitiproject
+| UNOmaha: Managing in the Digital World
+| Three geo-distributed teams of four to five
+| http://code.google.com/p/helphaitiproject
 
 Responsible for project management
 
