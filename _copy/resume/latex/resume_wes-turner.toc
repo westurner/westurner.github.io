@@ -1,0 +1,25 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Summary}{2}{section.1}
+\contentsline {section}{\numberline {2}Employment}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}2009-2010: Programmer Analyst I @ UNMC}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}2007-2008: Web Developer @ UNOmaha}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}Education}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Omaha, NE, USA; St Louis, MO, USA}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}2007-2010: UNOmaha}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}2010-2014: Online Learning}{4}{subsection.3.3}
+\contentsline {section}{\numberline {4}Projects}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}2007: Presense}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}2007: Eagle Financial Life Insurance Quotes}{4}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}2009: Nebraska Humane Society Nonprofit Consulting}{5}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}2009: Tiger Solutions Web Based Course Management System}{5}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}2009-2010: UNO MISSO President}{5}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}2009-2010: AIS Student Chapters Representative}{5}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}2010: Help Haiti Project}{6}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Workhours}{6}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Flowstat}{6}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}Provis}{6}{subsection.4.10}
+\contentsline {subsection}{\numberline {4.11}Dotfiles}{6}{subsection.4.11}
+\contentsline {subsection}{\numberline {4.12}Self Directed Learning}{7}{subsection.4.12}
+\contentsline {subsection}{\numberline {4.13}Pycd10api}{7}{subsection.4.13}
+\contentsline {subsection}{\numberline {4.14}Redem}{7}{subsection.4.14}
+\contentsline {section}{\numberline {5}Contact Information}{7}{section.5}
