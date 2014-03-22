@@ -2,13 +2,24 @@
 
    wes.turner@gmail.com
 
-=============
-Resume
-=============
+==========================================================
+`Resume: Wes Turner <http://westurner.github.io/resume>`_
+==========================================================
 
 .. raw:: latex
     
    \newpage
+
+.. raw:: html
+
+   <div class="sidebar">
+   <p class="first sidebar-title"><a class="reference external" href="http://westurner.github.io/resume">Wes Turner</a></p>
+   <ul class="last simple">
+   <li><a class="reference external" href="http://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/html/resume.html">HTML</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume.rst">RST</a></li>
+   </ul>
+   </div>
 
 Summary
 ========
