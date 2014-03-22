@@ -33,7 +33,7 @@ website = 'http://westurner.github.io/'
 disqus_shortname = None
 
 # Change your favicon (new favicon goes in _static directory)
-html_favicon = 'tinkerer.ico'
+html_favicon = ''
 
 # Pick another Tinkerer theme or use your own
 html_theme = "flat5000"
