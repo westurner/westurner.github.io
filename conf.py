@@ -93,5 +93,5 @@ version = tinkerer.__version__
 release = tinkerer.__version__
 html_title = project
 html_use_index = False
-html_show_sourcelink = False
+html_show_sourcelink = True
 html_add_permalinks = None

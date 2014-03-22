@@ -16,4 +16,12 @@ view:
 push:
 	ghp-import -n -b master -m 'Added output from `tinker --build` (`make build`)' -r origin -p ./blog/html/
 
+push_source:
+	git push origin source
+
+.PHONY: resume
+resume:
+	cd resume && \
+		make forweb
+
 default: build
