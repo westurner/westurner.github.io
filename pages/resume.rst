@@ -2,9 +2,9 @@
 :author: Wes Turner <wes.turner@gmail.com>
 :copyright: Copyright © 2014, All Rights Reserved
 
-===============================================
-`Resume <http://westurner.github.io/resume>`_
-===============================================
+======================================================
+`Resume <http://westurner.github.io/pages/resume>`_
+======================================================
 
 .. raw:: latex
     
