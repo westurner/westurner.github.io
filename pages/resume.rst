@@ -1,6 +1,6 @@
-.. header::
-
-   wes.turner@gmail.com
+:title: Resume: Wes Turner
+:author: Wes Turner <wes.turner@gmail.com>
+:copyright: Copyright © 2014, All Rights Reserved
 
 ===============================================
 `Resume <http://westurner.github.io/resume>`_
@@ -17,7 +17,10 @@
    <ul class="last simple">
    <li><a class="reference external" href="http://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
    <li><a class="reference external" href="http://westurner.github.io/resume/html/resume.html">HTML</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/resume.rst">RST</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
    </ul>
    </div>
 
@@ -27,7 +30,7 @@ Summary
 *Full Stack Developer* with an entrepreneurial spirit streak
 
 Desire to:
-  
+
 * Collaborate with a **team** of bright, motivated individuals
 * **Learn** with agile, iterative, continuous integration and deployment
 * Develop **applications**, **distributed systems**, and **portfolios**
@@ -484,7 +487,7 @@ Open Source Contributions
 ---------------------------
 Primarily small contributions here and there to show my appreciation.
 
-From `Pandas/CONTRIBUTING.md <https://github.com/pydata/pandas/blob/master/CONTRIBUTING.md#pull-requests>`_:
+From `pandas/CONTRIBUTING.md <https://github.com/pydata/pandas/blob/master/CONTRIBUTING.md#pull-requests>`_ :
 
 .. pull-quote::
 
