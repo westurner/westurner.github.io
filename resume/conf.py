@@ -332,3 +332,17 @@ epub_copyright = u'2014 Wes Turner'
 
 # If false, no index is generated.
 #epub_use_index = True
+
+
+# -- Options for DOCX .. --------------
+# https://bitbucket.org/haraisao/sphinx-docxbuilder/overview
+#extensions.append('sphinx-docxbuilder')
+#
+#docx_title = u"Resume : %s" % epub_author
+#docx_subject = docx_title
+#docx_creator = epub_author
+#docx_company = u""
+#docx_category = u""
+#docx_descriptions = docx_title
+#docx_keywords = [docx_creator, u"resume", u"python", u"linux", u"open source"]
+#docx_style = NotImplemented # 'MyStyle.docx'

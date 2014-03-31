@@ -2,7 +2,8 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -c . ../pages
+SRCDIR        = ../pages
+SPHINXOPTS    = -c . $(SRCDIR)
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = ../_copy/resume
@@ -177,6 +178,40 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 rst2html:
-	rst2html ./README.rst > index.html
+	rst2html $(SRCDIR)/resume.rst > $(BUILDDIR)/resume_wes-turner.html
 
-forweb: html singlehtml latexpdf
+rst:
+	cp $(SRCDIR)/resume.rst $(BUILDDIR)/resume_wes-turner.rst
+	@echo "Build finished. The RST file is in $(BUILDDIR)/"
+
+odt:
+	rst2odt.py \
+		--stylesheet=styles.odt \
+		--strip-comments \
+		--no-doc-info \
+		$(SRCDIR)/resume.rst \
+		$(BUILDDIR)/resume_wes-turner.odt
+	@echo "Build finished. The ODT file is in $(BUILDDIR)/"
+
+doc: odt
+	soffice --headless \
+		--convert-to doc \
+		$(BUILDDIR)/resume_wes-turner.odt \
+		--outdir $(BUILDDIR)
+	@echo "Build finished. The DOC file is in $(BUILDDIR)/"
+
+docx: odt
+	soffice --headless \
+		--convert-to docx \
+		$(BUILDDIR)/resume_wes-turner.odt \
+		--outdir $(BUILDDIR)
+	@echo "Build finished. The DOCX file is in $(BUILDDIR)/"
+
+#docx_builder:
+#	$(SPHINXBUILD) -b docx $(ALLSPHINXOPTS) $(BUILDDIR)/docx
+#	@echo
+#	@echo "Build finished. The DOCX file is in $(BUILDDIR)/docx."
+
+
+forweb: rst html singlehtml latexpdf odt doc docx
+
