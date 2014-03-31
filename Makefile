@@ -24,4 +24,11 @@ resume:
 	cd resume && \
 		make forweb
 
+resume_commit: resume
+	git add ./_copy/resume
+	git commit -m "Added updated resume build outputs"
+
+all: resume_commit build push push_source
+
 default: build
+
