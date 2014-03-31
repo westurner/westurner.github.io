@@ -60,11 +60,12 @@ Employment
 ===========
 
 2009-2010: Programmer Analyst I @ UNMC
-----------------------------------------
-| University of Nebraska Medical Center (UNMC)
-| Knowledge Engineering Group (KEG)
+-----------------------------------------
 | Section of Cardiology
+| Knowledge Engineering Group (KEG)
+| University of Nebraska Medical Center (UNMC)
 | Initially contacted by and contracted through Kelly IT Resources
+| Omaha, Nebraska, USA
 | Feb 2009 - Oct 2010
 
 Supported `UNMC 
@@ -121,10 +122,11 @@ End of cycle resignation
 
 
 2007-2008: Web Developer @ UNOmaha
-------------------------------------
-| University of Nebraska at Omaha
+-------------------------------------
 | Nebraska University Consortium on Information Assurance (NUCIA)
+| University of Nebraska at Omaha (UNO)
 | Peter Kiewit Institute (PKI)
+| Omaha, Nebraska, USA
 | January 2007 - March 2008
 
 Python Web Developer
@@ -150,11 +152,94 @@ Systems Infrastructure Management
 * Contributed platform to Vulnerability Discovery course
 
 
+2005-2006: Systems Developer @ D-Line Marketing
+--------------------------------------------------
+| Internet Marketing Firm
+| V Internet Enterprises after reorganization
+| Ballwin, Missouri, USA
+| October 2005 - June 2006
+
+Systems Developer
+
+- Prototyped video chat subscription logic; Java, Javascript, PHP
+- Maintained VPN link to work remotely from school
+- Tested various streaming services: Darwin Streaming Server, FMS, Red5
+
+
+2004-2004: Dietary Aid @ Autumn View Gardens
+-----------------------------------------------
+| Assisted Living Center
+| Bethesda Healthcare
+| Ballwin, Missouri, USA
+| May 2004 - December 2004
+
+Dietary Aid
+
+- Took order for and served residents and guests
+- Served 6am breakfast, lunch, and 5 course dinners
+- Served occasionally disgruntled residents with a smile
+- Learned the true meaning of Service
+- Resigned due to early HS graduation
+
+
+2003-2004: Systems @ V Internet Enterprises
+----------------------------------------------
+| Internet Marketing Firm
+| Ballwin, Missouri, USA
+| May 2003 - October 2004
+
+Systems Administrator / Systems Programmer
+
+- Supported day-to-day operations; RedHat Linux, DNS, Network Troubleshooting
+- Developed affiliate conversion tracking system; PHP, MySQL
+- Various automation tools: VB6, VB.net, SOAP, and XML-RPC
+
+
+2002-2007: Independent Web Consultant
+----------------------------------------
+| Small Business Consulting
+| West County; St. Louis, Missouri, USA
+
+- Desktop Support
+- Web Design and Development
+- LAMP CMS Hosting, Configuration, Templating
+- Custom Web Application Development: Web Frameworks
+
+Clients:
+
+- 2002: East Coast Pizza
+- 2003: Gifts St. Louis
+- 2003: LHS Wrestling
+- 2004: Soda Jerks
+- 2006-07: Superior Pro Painting; PHP, MODx, Python, Django
+
+
+2002-2003: Construction Assistant @ East Coast Pizza
+-------------------------------------------------------
+| Family-owned Pizza and Pasta place with Calzones and Strombolis
+| Now Under New Management
+| Chesterfield, MO, USA
+| May 2002 - May 2003
+
+- Construction Assistant: Oven-brick carrier and arranger, Tiler, Sweeper
+- Cat-5 terminator
+- Web Designer
+- Web Developer
+
+
+1996: Windows 3.1 Support
+----------------------------
+| West Omaha, NE, USA
+
+- Helped neighbors fix their Windows 3.1 desktop QuickBooks installation
+- QBasic, Dr. Sbaitso
+
+
 Education
-==========
+============
 
 Omaha, NE, USA; St Louis, MO, USA
------------------------------------
+------------------------------------
 
 - Night Owl
 - RPMs on 3.5" diskettes, Corel Linux, BeOS
@@ -165,7 +250,7 @@ Omaha, NE, USA; St Louis, MO, USA
 
 
 2007-2010: UNOmaha
---------------------
+---------------------
 | University of Nebraska-Omaha
 | BSc Management Information Systems (MIS)
 
@@ -187,7 +272,7 @@ Omaha, NE, USA; St Louis, MO, USA
 
 
 2010-2014: Online Learning
-----------------------------
+-----------------------------
 
 Research Topics
 
@@ -209,10 +294,10 @@ Courses
 
 
 Projects
-===================
+===========
 
 2007: Presense
-------------------------
+-----------------
 | Social Media Aggregation Concept & Gaussian Chart Generator
 | UNOmaha: Graphical User Interface Design
 | Team of three
@@ -227,7 +312,7 @@ Projects
 
 
 2007: Eagle Financial Life Insurance Quotes
---------------------------------------------
+----------------------------------------------
 | Insurance Quote Models, Views, and Templates
 | UNOmaha: Distributed Systems
 | Team of four
@@ -244,7 +329,7 @@ Projects
    PageBreak oneColumn
 
 2009: Nebraska Humane Society Nonprofit Consulting
----------------------------------------------------
+-----------------------------------------------------
 | Social Web Team
 | Social Media Consulting Recommendations Report
 | Adoption Listings Crawler & Website Prototype
@@ -263,7 +348,7 @@ Projects
 
 
 2009: Tiger Solutions Web Based Course Management System
----------------------------------------------------------
+-----------------------------------------------------------
 | Django app for Listing Available Courses and Scheduling Course Requests
 | UNO: Systems Analysis & Design / Systems Design & Implementation
 | Team of four
@@ -279,7 +364,7 @@ Projects
 
 
 2009-2010: UNO MISSO President
-------------------------------------
+---------------------------------
 | `UNO Management Information Systems Student Organization
   <http://www.isqa.unomaha.edu/misso.htm>`_
 
@@ -289,7 +374,7 @@ Projects
 
 
 2009-2010: AIS Student Chapters Representative
------------------------------------------------
+-------------------------------------------------
 | `Association for Information Systems Student Chapters
   <http://sc.aisnet.org/>`_
 
@@ -300,7 +385,7 @@ Projects
 
 
 2010: Help Haiti Project
--------------------------
+---------------------------
 | WordPress Instance for Haiti Earthquake Awareness
 | UNOmaha: Managing in the Digital World
 | Three geo-distributed teams of four to five
@@ -313,8 +398,8 @@ Responsible for project management
 * WordPress, Extensions
 
 
-Workhours
-----------
+2010: Workhours
+------------------
 | Personal project accounting and log processing tool
 
 * Events (bookmarks, log entries, mtimes) to tuples to [SQL]
@@ -322,17 +407,8 @@ Workhours
 * Pyramid, SQLAlchemy, Pyramid Restler REST API, DataTables
 
 
-Flowstat
----------
-| Pyramid polyglot sandbox 
-
-* Agglomeration of utilities: prime numbers, spectrum bands
-* RDF integration: RDFLib, surf, virtuoso, deniz, SPARQL
-* Pyramid + SQLAlchemy REST API
-
-
-Provis
--------
+2010: Cloud Provisioning Research
+------------------------------------
 | Survey, evaluation, adaptation, and integration for DevOps efficiency
 
 * Configuration Management
@@ -341,8 +417,158 @@ Provis
 * DHCP, DNS, Apache, TLS
 
 
+2011: Flowstat
+-----------------
+| Pyramid polyglot sandbox 
+
+* Agglomeration of utilities: prime numbers, spectrum bands
+* RDF integration: RDFLib, surf, virtuoso, deniz, SPARQL
+* Pyramid + SQLAlchemy REST API
+
+
+2012: Self Directed Learning
+-------------------------------
+| http://westurner.github.io/self-directed-learning/
+
+* Autodidactism
+* Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
+* Science, Technology, Engineering, and Mathematics
+
+
+2012: Pycd10api
+------------------
+| REST API wrapper for ICD 10 CM and PCS XML files 
+| https://github.com/westurner/pycd10api
+
+* Python, Pyramid, Cornice, lxml, XPath
+
+
+2013: Redem
+--------------
+| Personal reddit data liberation backup utility
+| https://github.com/westurner/redem
+| http://westurner.github.com/redditlog/
+
+* Reddit reader: comments, submissions, links
+* Fetch last 1000 comments from Reddit
+* Aggregate into static sortable and filterable HTML tables
+* Python, PRAW, Requests, Jinja2, Bootstrap 2, DataTables
+
+2014: Health-marketplace
+---------------------------
+| Health marketplace web application
+| https://github.com/westurner/health-marketplace
+
+* Python, Django, Django-nonrel, Google AppEngine
+
+
+2014: Menuapp
+----------------
+| Restaurant menu web application with `schema.org <http://schema.org/docs/full.html>`_ types
+
+* Developed for a cupcake bakery FoodEstablishment
+* Python, Django, Django-nonrel, Google AppEngine
+* REST API: Django TastyPie
+
+
+2014: Healthref
+------------------
+| Health reference demo application
+| https://github.com/westurner/healthref
+
+* Generates good HTML from an RDF Graph in Turtle Syntax
+* Python, RDFLib, Jinja2, Pygments, n3pygments
+
+
+Open Source Contributions
+---------------------------
+Primarily small contributions here and there to show my appreciation.
+
+From `Pandas/CONTRIBUTING.md <https://github.com/pydata/pandas/blob/master/CONTRIBUTING.md#pull-requests>`_:
+
+.. pull-quote::
+
+    | ENH: Enhancement, new functionality
+    | BUG: Bug fix
+    | DOC: Additions/updates to documentation
+    | TST: Additions/updates to tests
+    | BLD: Updates to the build process/scripts
+    | PERF: Performance improvement
+    | CLN: Code cleanup
+
+Python
+    | `Mailing List Feedback <https://www.google.com/search?q=site:mail.python.org+wes.turner%40gmail.com>`_
+    | `Patch to random.shuffle (rejected by rhettinger) <http://bugs.python.org/issue18511>`_
+    | http://reddit.com/r/python
+
+Pandas
+    | `ENH: Linked Data <https://github.com/pydata/pandas/issues/3402>`_
+    | `PERF/TST: generators in dataframe.from_records <https://github.com/pydata/pandas/issues/6700>`_
+
+Pyramid
+    | `DOC: Update quick_tour.rst: Typo: with -> which <https://github.com/Pylons/pyramid/pull/1106>`_
+
+Pip
+    | `site:github.com/pypa/pip westurner <https://www.google.com/search?q=site%3Agithub.com%2Fpypa%2Fpip+westurner>`_
+    | `SECURITY: Signature research <https://github.com/pypa/pip/issues/1035>`_
+
+scipy-lectures
+    | `DOC: Showing the effects of rounding <https://github.com/scipy-lectures/scipy-lecture-notes/pull/31>`_
+
+scientific-python-lectures
+    | `DOC: Updated Lecture-4-Matplotlib.ipynb: Syntax, FFMpeg workaround, clarification  <https://github.com/jrjohansson/scientific-python-lectures/pull/12>`_
+
+Statsmodels
+    | `DOC: Wikipedia page for Statsmodels (deleted) <https://groups.google.com/d/topic/pystatsmodels/JnxjtkZO2s8/discussion>`_
+
+Turses
+    | `ENH: Add mouse scroll wheel support <https://github.com/alejandrogomez/turses/issues/165>`_
+    | `PERF: Inverted configuration keybindings to make reverse lookups faster <https://github.com/alejandrogomez/turses/pull/172>`_
+
+Tinkerer
+    | `ENH: Added WAI-ARIA roles to templates <https://github.com/vladris/tinkerer/pull/43>`_
+
+Initializr-bootstrap
+    | `ENH: Added WAI-ARIA roles to templates <https://github.com/verekia/initializr-bootstrap/pull/6>`_
+
+Sphinx
+    | `ENH: Added WAI-ARIA roles to templates <https://github.com/verekia/initializr-bootstrap/pull/6>`_
+
+ReadTheDocs
+    | `ENH: Added WAI-ARIA roles to templates <https://github.com/snide/sphinx_rtd_theme/pull/86>`_
+
+sphinxjp.themes.basicstrap
+    | `ENH: Added WAI-ARIA roles to templates and optional navbar-fixed-top setting <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/7>`_
+
+Salt
+    | `DOC: dockerio module: docs syntax and formatting <https://github.com/saltstack/salt/pull/9294>`_
+
+IPython nbviewer
+    | `ENH: Redirect github blob URLs to raw.github URLs <https://github.com/ipython/nbviewer/pull/118>`_
+
+IPython-beautifulsoup
+    | `SECURITY: XSS: JS/CSS Injection <https://github.com/Psycojoker/ipython-beautifulsoup/issues/2>`_
+
+version_information
+    | `SECURITY: XSS: Escape JSON, HTML, and LaTeX strings <https://github.com/jrjohansson/version_information/pull/2>`_
+    | `ENH: Added check for pkg_resources version and extended __doc__ <https://github.com/jrjohansson/version_information/pull/3>`_
+
+Bento
+    | `DOC: refs to big-o cheatsheet, rosetta code <https://github.com/JonHMChan/bento/pull/88>`_
+
+Python-mode
+    | `DOC: Updated README.rst <https://github.com/klen/python-mode/pull/302>`_
+
+
+hello_world
+--------------
+| https://github.com/westurner/hello_world
+
+Language basics / code samples in C++, CoffeeScript, Cython, Go, Java, Javascript, Python, and Ruby
+
+
 Dotfiles
-----------
+-----------
 | https://github.com/westurner/dotfiles
 | https://github.com/westurner/dotvim
 
@@ -354,37 +580,9 @@ Dotfiles
 
    PageBreak oneColumn
 
-Self Directed Learning
------------------------
-| http://westurner.github.io/self-directed-learning/
-
-* Autodidactism
-* Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
-* Science, Technology, Engineering, and Mathematics
-
-
-Pycd10api
-----------
-| REST API wrapper for ICD 10 CM and PCS XML files 
-|  https://github.com/westurner/pycd10api
-
-* Python, Pyramid, Cornice, lxml, XPath
-
-
-Redem
-------
-| Personal reddit data liberation backup utility
-|  https://github.com/westurner/redem
-|  http://westurner.github.com/redditlog/
-
-* Reddit reader: comments, submissions, links
-* Fetch last 1000 comments from Reddit
-* Aggregate into static sortable and filterable HTML tables
-* Python, PRAW, Requests, Jinja2, Bootstrap 2, DataTables
-
 
 Contact Information
-====================
+======================
 
 | `westurner.github.io <http://westurner.github.io>`_
 | `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`_
