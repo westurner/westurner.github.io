@@ -27,6 +27,9 @@
 Summary
 ========
 
+**Objective**: Develop and contribute my skills and experience toward
+achieving organizational mission objectives.
+
 *Full Stack Developer* with an entrepreneurial spirit streak
 
 Desire to:
