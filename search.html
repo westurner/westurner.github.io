@@ -21,8 +21,8 @@
             <link rel="stylesheet" href="_static/main.css" type="text/css">
             <link rel="stylesheet" href="_static/flat.css" type="text/css">
             <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-            <link rel="stylesheet" href="_static/webfont.css" type="text/css">
-        <link rel="shortcut icon" href="_static/tinkerer.ico" /><!-- Load modernizr and JQuery -->
+            <link rel="stylesheet" href="_static/font-awesome.min.css" type="text/css">
+        <!-- Load modernizr and JQuery -->
         <script src="_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
@@ -31,7 +31,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.2.1',
+        VERSION:     '1.4.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -59,18 +59,18 @@
     ga('create', 'UA-46001060-1', 'westurner.github.io');
     ga('send', 'pageview');
     </script></head>
-    <body>
+    <body role="document">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-      <div id="container"><header>
+      <div id="container"><header role="banner">
             <hgroup>
-              <h1><a href="index.html">Wes Turner</a></h1><h2>Web Developer</h2></hgroup>
+              <h1><a href="index.html">Wes Turner</a></h1><h2>Pro</h2></hgroup>
           </header>
-      <nav>
+      <nav role="navigation">
     <ul><li class="quicklink"><div class="rss">
-        <a href="rss.html" title="Subscribe via RSS"><span class="webfont">B</span></a>
+        <a href="rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li><li class="main-nav">
             <a href="index.html">Home</a>
         </li>
@@ -81,20 +81,20 @@
             <a href="pages/stream.html">Stream</a>
         </li>
         <li class="main-nav">
-            <a href="http://westurner.github.com/redditlog/">Redditlog</a>
+            <a href="http://westurner.github.io/redditlog/">Redditlog</a>
         </li>
+        <li class="main-nav">
+            <a href="http://westurner.github.io/healthref/">Healthref</a>
+        </li>
+
     </ul>
-    </nav><div class="main-container"><div class="main wrapper clearfix"><article><h1 id="search-documentation">Search</h1>
+    </nav><div class="main-container" role="main"><div class="main wrapper clearfix"><article role="main"><h1 id="search-documentation">Search</h1>
   <div id="fallback" class="admonition warning">
   <script type="text/javascript">$('#fallback').hide();</script>
   <p>Please activate JavaScript to enable the search
     functionality.</p>
   </div>
-  <p>From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.</p>
-  <form action="" method="get">
+  <form action="" method="get" class="searchbox">
     <input type="text" name="q" value="" />
     <input type="submit" value="search" />
     <span id="search-progress" style="padding-left: 10px"></span>
@@ -126,6 +126,11 @@
 </a>
 </li>
 <li>
+<a href="https://angel.co/westurner" title="AngelList" rel="me" target="_blank">
+<img src="/_static/service_icons/angel.co.png" alt="angel.co"></img>
+</a>
+</li>
+<li>
 <a href="https://twitter.com/westurner" title="Twitter" rel="me" target="_blank">
 <img src="/_static/service_icons/twitter.com.png" alt="twitter.com"></img>
 </a>
@@ -153,6 +158,11 @@
 <li>
 <a href="http://reddit.com/user/westurner" title="Reddit" rel="me" target="_blank">
 <img src="/_static/service_icons/reddit.com.png" alt="reddit.com"></img>
+</a>
+</li>
+<li>
+<a href="https://news.ycombinator.com/user?id=westurner" title="Hacker News" rel="me" target="_blank">
+<img src="/_static/service_icons/news.ycombinator.com.png" alt="news.ycombinator.com"></img>
 </a>
 </li>
 <li>
@@ -201,6 +211,21 @@
 </a>
 </li>
 <li>
+<a href="https://projecteuler.net/profile/westurner.png" title="Project Euler" rel="me" target="_blank">
+<img src="/_static/service_icons/projecteuler.net.png" alt="projecteuler.net"></img>
+</a>
+</li>
+<li>
+<a href="http://rosalind.info/users/westurner/" title="Rosalind" rel="me" target="_blank">
+<img src="/_static/service_icons/rosalind.info.png" alt="rosalind.info"></img>
+</a>
+</li>
+<li>
+<a href="https://www.hackerrank.com/WesTurner" title="HackerRank" rel="me" target="_blank">
+<img src="/_static/service_icons/www.hackerrank.com.png" alt="www.hackerrank.com"></img>
+</a>
+</li>
+<li>
 <a href="https://www.ohloh.net/accounts/westurner" title="Ohloh" rel="me" target="_blank">
 <img src="/_static/service_icons/www.ohloh.net.png" alt="www.ohloh.net"></img>
 </a>
@@ -223,6 +248,11 @@
 <li>
 <a href="http://mixcloud.com/westurner" title="MixCloud" rel="me" target="_blank">
 <img src="/_static/service_icons/mixcloud.com.png" alt="mixcloud.com"></img>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/wsturn" title="YouTube" rel="me" target="_blank">
+<img src="/_static/service_icons/www.youtube.com.png" alt="www.youtube.com"></img>
 </a>
 </li>
 <li>
@@ -256,21 +286,25 @@
 </a>
 </li>
 </ul>
-</div></section><section><div class="widget" id="searchbox">
+</div></section><section><div class="widget" id="searchbox" role="search">
     <h1>Search</h1>
     <form action="#" method="get">
         <input type="text" name="q" />
-        <button type="submit"><span class="webfont">L</span></button>
+        <button type="submit"><span class="fa fa-search"></span></button>
     </form>
 </div></section><section><div class="widget">
     <h1><a href="archive.html">Recent Posts</a></h1>
     <ul><li>
+            <a href="2014/05/03/a_configuration_trick.html">A configuration trick</a>
+        </li><li>
+            <a href="2013/12/15/tech-news-for-america.html">Tech News for America</a>
+        </li><li>
             <a href="2013/11/25/hello_world.html">Hello World!</a>
         </li></ul>
 </div>
 </section></aside></div> <!-- #main --></div> <!-- #main-container -->
 
-        <div class="footer-container"><footer class="wrapper">&copy; Copyright 2013, Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>.</footer></div> <!-- footer-container -->
+        <div class="footer-container" role="contentinfo"><footer class="wrapper" role="contentinfo">&copy; Copyright 2014 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>
           <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

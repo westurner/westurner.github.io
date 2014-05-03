@@ -1,6 +1,6 @@
 /* Typography */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);body { font-family: 'PT Sans', Helvetica, Arial, sans-serif; }
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);/* Palette */body { font-family: 'PT Sans', Helvetica, Arial, sans-serif; }
 
 header { text-align: center; }
 header h1 * { font-size: 1.25em; }
@@ -13,7 +13,6 @@ article p { line-height: 1.5; }
 .highlight { font-size: .8em; }
 .highlight pre { font-family: "Monaco", monospace; }
 
-blockquote { margin-left: 0; padding-left: 20px; }
 
 aside.sidebar h1 { font-size: 1.2em; opacity: 0.2; }
 aside.sidebar { font-size: 1em; }
@@ -23,20 +22,24 @@ ul#accounts { list-style-type: none; padding: 0; }
 ul#accounts li { display: inline; }
 ul#accounts li a:hover { text-decoration: none; }
 
-#searchbox input[type="text"] { width: 82%; border: 2px solid #e0e0e0; }
+#searchbox input[type="text"], .searchbox input[type="text"] { width: 82%; border: 2px solid #e0e0e0; }
 
 div.contents {  padding: 10px 0; }
 div.contents p.topic-title { font-size: 1.5em; }
 div.contents ul.simple { padding: 0 }
 div.contents ul { list-style-type: none; margin: 0; }
 
+table.footnote { opacity: 0.7; margin-top: 1em; }
+table.footnote td { vertical-align: middle; padding-right: 1em; }
+table.footnote td.label { vertical-align: top; }
+
 footer { font-size: 0.8em; opacity: 0.2; }
 
 code, kbd, pre, samp { font-family: 'Source Code Pro', monospace, serif; line-height: 1.4em; }
 
-@media only screen and (min-width: 900px) {
+/*@media only screen and (min-width: 900px) {
     body { font-size: 1.1em; }
-}
+}*/
 
 /* Layout */
 ul { padding: 0 0 0 20px; list-style: square; }
@@ -54,12 +57,12 @@ nav li.main-nav { padding: 10px 0; }
 ul.related { padding: 20px 0 20px 0; list-style: none; }
 ul.related li { line-height: 2em; list-style-type: none; text-align: center; }
 article { padding: 20px 20px 10px 20px; }
+article { word-wrap: break-word; word-break: break-word; }
 article li { line-height: 1.5em; }
 article h1 { margin-top: 0; }
 ul.related:first-child { padding: 0 0 20px 0; }
 
-div.highlight { padding: 5px 10px; }
-div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; }
+div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; padding: 5px 10px;  }
 
 div.post_separator { height: 40px; }
 
@@ -116,7 +119,8 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
     aside.sidebar { left: 74%; top: 0; position: absolute;  width: 26%; } 
 }
 
-/* Palette */body { background-color: #f8fafb; }
+
+body { background-color: #f0f0f0; }
 
 header a, header a:visited, header a:hover, headera:active { color: #0c0501; text-decoration: none; }
 header h2 { color: #93a4ad; }
@@ -125,9 +129,9 @@ a, a:visited { font-weight: bold; color: #4183c4; text-decoration: none; }
 a:hover { font-weight: bold; color: #4183c4; text-decoration: underline; }
 a.footnote-reference { vertical-align: super; }
 div.section h1 a { color: #0c0501; text-decoration: none; }
-.docutils.literal { background-color: #e6edf2; border: 1px solid #f8fafb; border-radius: 8px; padding: 2px 4px; }
+.docutils.literal { background-color: #e6edf2; border: 1px solid #f0f0f0; border-radius: 8px; padding: 2px 4px; }
 
-blockquote { border-left: 10px solid #4183c4; }
+blockquote { margin-left: 0; padding: 10px 20px; background: #fafafa; }
 
 div.postmeta { color: #93a4ad; }
 
@@ -151,3 +155,19 @@ div.year h2 { margin-bottom: 20px; margin-top: 0; }
     div.year div.timestamp { float: left; margin-left: 20%; }
     div.year h2 { margin-left: 40%; }
 }
+
+/* inspired by Bootstrap CSS */
+h1, h2, h3 { margin: 20px 0 10px 0 !important; }
+p { margin: 0 0 10px; }
+ul, ol { margin: 0 0 10px; }
+div.line-block { margin: 0 0 10px; }
+/* end inspired by Bootstrap CSS */
+
+button, input, select, textarea {
+    padding: 4px;
+}
+
+ul.search { list-style-type: none; margin: 0; padding: 0; }
+ul.search li { background: #fff; padding: 10px; margin: 10px 0; }
+
+div.sidebar { padding: 1em; margin: 1em; float:right; background: white; }

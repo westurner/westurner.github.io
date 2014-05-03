@@ -1,0 +1,36 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Summary}{2}{section.1}
+\contentsline {section}{\numberline {2}Employment}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}2009-2010: Programmer Analyst I @ UNMC}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}2007-2008: Web Developer @ UNOmaha}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}2005-2006: Systems Developer @ D-Line Marketing}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}2004-2004: Dietary Aid @ Autumn View Gardens}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}2003-2004: Systems @ V Internet Enterprises}{4}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}2002-2007: Independent Web Consultant}{4}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}2002-2003: Construction Assistant @ East Coast Pizza}{4}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}1996: Windows 3.1 Support}{5}{subsection.2.8}
+\contentsline {section}{\numberline {3}Education}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Omaha, NE, USA; St Louis, MO, USA}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}2007-2010: UNOmaha}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}2010-2014: Online Learning}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Projects}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}2007: Presense}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}2007: Eagle Financial Life Insurance Quotes}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}2009: Nebraska Humane Society Nonprofit Consulting}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}2009: Tiger Solutions Web Based Course Management System}{6}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}2009-2010: UNO MISSO President}{7}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}2009-2010: AIS Student Chapters Representative}{7}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}2010: Help Haiti Project}{7}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}2010: Workhours}{7}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}2010: Cloud Provisioning Research}{7}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}2011: Flowstat}{8}{subsection.4.10}
+\contentsline {subsection}{\numberline {4.11}2012: Self Directed Learning}{8}{subsection.4.11}
+\contentsline {subsection}{\numberline {4.12}2012: Pycd10api}{8}{subsection.4.12}
+\contentsline {subsection}{\numberline {4.13}2013: Redem}{8}{subsection.4.13}
+\contentsline {subsection}{\numberline {4.14}2014: Health-marketplace}{8}{subsection.4.14}
+\contentsline {subsection}{\numberline {4.15}2014: Menuapp}{8}{subsection.4.15}
+\contentsline {subsection}{\numberline {4.16}2014: Healthref}{9}{subsection.4.16}
+\contentsline {subsection}{\numberline {4.17}Open Source Contributions}{9}{subsection.4.17}
+\contentsline {subsection}{\numberline {4.18}hello\_world}{10}{subsection.4.18}
+\contentsline {subsection}{\numberline {4.19}Dotfiles}{10}{subsection.4.19}
+\contentsline {section}{\numberline {5}Contact Information}{10}{section.5}
