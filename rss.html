@@ -11,16 +11,19 @@
             <link>http://westurner.github.io/2014/05/03/a_configuration_trick.html</link>
             <guid>http://westurner.github.io/2014/05/03/a_configuration_trick.html</guid>
             <title><![CDATA[A configuration trick]]></title>
-            <description><![CDATA[<h1>A configuration trick</h1>
+            <description><![CDATA[<div class="section" id="a-configuration-trick">
+<h1>A configuration trick</h1>
 <p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
 can be difficult to grep through. It’s not always easy
 <em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
 <p><strong>Solution</strong>: Approach configuration documentation
 like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
 “literate configuration”.</p>
-<ol class="arabic simple"><li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
+<ol class="arabic simple">
+<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
 <li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
-</ol><p><strong>Example</strong></p>
+</ol>
+<p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
 <a class="reference external" href="https://github.com/westurner/dotfiles/blob/043037f9ac81a5d6f10d1ac3ce628910e57da774/etc/.i3/config">i3 config</a> that I cleaned up this morning:</p>
 <div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
@@ -45,17 +48,17 @@ bindsym $mod+Shift+bracketright  exec --no-startup-id $xflux_reset
 
 ## Resize Mode
 #  &lt;alt&gt; r      -- enter resize mode
-bindsym $mod+r  mode "resize"
+bindsym $mod+r  mode &quot;resize&quot;
 
-mode "resize" {
+mode &quot;resize&quot; {
     ## Grow and shrink windows
     # These bindings trigger as soon as you enter the resize mode
     # ...
     # back to normal: Enter or Escape
     #  &lt;enter&gt;  -- exit resize mode
-    bindsym Return      mode "default"
+    bindsym Return      mode &quot;default&quot;
     #  &lt;esc&gt;    -- exit resize mode
-    bindsym Escape      mode "default"
+    bindsym Escape      mode &quot;default&quot;
 }
 </pre></div>
 </div>
@@ -93,7 +96,8 @@ generating documentation from comment strings embedded in various languages
 <p>I’ve also added this to the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed3110b581a42a77199e2c6708f5165683/Makefile#L83">Provis Makefile</a>,
 which I currently just include into the
 <a class="reference external" href="https://provis.readthedocs.org/en/latest">Provis Documentation</a>.</p>
-<p>This simple pattern saves time when looking up custom keyboard shortcuts.</p>]]></description>
+<p>This simple pattern saves time when looking up custom keyboard shortcuts.</p>
+</div>]]></description>
              <pubDate>Sat, 03 May 2014 00:00:00 -0500</pubDate>
         </item>
     
@@ -101,34 +105,46 @@ which I currently just include into the
             <link>http://westurner.github.io/2013/12/15/tech-news-for-america.html</link>
             <guid>http://westurner.github.io/2013/12/15/tech-news-for-america.html</guid>
             <title><![CDATA[Tech News for America]]></title>
-            <description><![CDATA[<h1>Tech News for America</h1>
+            <description><![CDATA[<div class="section" id="tech-news-for-america">
+<h1>Tech News for America</h1>
 <p>So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links – because what good is an internet page without links – from my trusty ol’ redditlog, here: <a class="reference external" href="http://westurner.github.io/redditlog">http://westurner.github.io/redditlog/</a>.</p>
 <div class="section" id="lean-publishing">
 <h2>Lean Publishing</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Lean">https://en.wikipedia.org/wiki/Lean</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Lightweight_markup_language">https://en.wikipedia.org/wiki/Lightweight_markup_language</a><ul><li><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Lightweight_markup_language">https://en.wikipedia.org/wiki/Lightweight_markup_language</a><ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/ReStructuredText">https://en.wikipedia.org/wiki/ReStructuredText</a></li>
-</ul></li>
-<li><a class="reference external" href="https://westurner.github.io/self-directed-learning">https://westurner.github.io/self-directed-learning/</a><ul><li><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator</a>)</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://westurner.github.io/self-directed-learning">https://westurner.github.io/self-directed-learning/</a><ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator</a>)</li>
 <li><a class="reference external" href="http://pages.github.com">http://pages.github.com</a></li>
 <li><a class="reference external" href="http://pages.bitbucket.org">http://pages.bitbucket.org</a></li>
-</ul></li>
-<li><a class="reference external" href="https://code.google.com/p/helphaitiproject">https://code.google.com/p/helphaitiproject/</a><ul><li><a class="reference external" href="https://en.wikipedia.org/wiki/WordPress">https://en.wikipedia.org/wiki/WordPress</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://code.google.com/p/helphaitiproject">https://code.google.com/p/helphaitiproject/</a><ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/WordPress">https://en.wikipedia.org/wiki/WordPress</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Agile_software_development">https://en.wikipedia.org/wiki/Category:Agile_software_development</a></li>
-</ul></li>
-</ul></div>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="responsive-web-design">
 <h2>Responsive Web Design</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Responsive_web_design">https://en.wikipedia.org/wiki/Category:Responsive_web_design</a></p>
-<ul class="simple"><li>Does it work on my device?</li>
+<ul class="simple">
+<li>Does it work on my device?</li>
 <li>Why am I looking at margins?</li>
 <li>Why should we prefer #anchors over page numbers?</li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="stem-learning">
 <h2>STEM Learning</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/STEM_fields">https://en.wikipedia.org/wiki/STEM_fields</a>
 (<a class="reference external" href="htps://twitter.com/search?q=%23STEM&amp;src=hash">#STEM</a>)</p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_educational_resources">https://en.wikipedia.org/wiki/Open_educational_resources</a>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_educational_resources">https://en.wikipedia.org/wiki/Open_educational_resources</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23OER&amp;src=hash">#OER</a>)</li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/OpenCourseWare">https://en.wikipedia.org/wiki/OpenCourseWare</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23OCW&amp;src=hash">#OCW</a>)</li>
@@ -136,10 +152,12 @@ which I currently just include into the
 (<a class="reference external" href="https://twitter.com/khanacademy">@khanacademy</a>)</li>
 <li><a class="reference external" href="https://www.class-central.com">https://www.class-central.com/</a>
 (<a class="reference external" href="https://twitter.com/classcentral">@classcentral</a>)</li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="writing-code">
 <h2>Writing Code</h2>
-<ul class="simple"><li><a class="reference external" href="http://code.org">http://code.org/</a>
+<ul class="simple">
+<li><a class="reference external" href="http://code.org">http://code.org/</a>
 (<a class="reference external" href="https://twitter.com/codeorg">@codeorg</a>)</li>
 <li><a class="reference external" href="https://www.khanacademy.org/cs">https://www.khanacademy.org/cs</a></li>
 <li><a class="reference external" href="https://www.class-central.com/subject/cs">https://www.class-central.com/subject/cs</a></li>
@@ -149,21 +167,26 @@ which I currently just include into the
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Algorithms">https://en.wikipedia.org/wiki/Category:Algorithms</a></li>
 <li><a class="reference external" href="http://rosettacode.org/wiki/Category:Programming_Tasks">http://rosettacode.org/wiki/Category:Programming_Tasks</a></li>
 <li><a class="reference external" href="https://projecteuler.net/problems">https://projecteuler.net/problems</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="web-software-development">
 <h2>Web Software Development</h2>
 <p><a class="reference external" href="http://en.wikipedia.org/wiki/Web_development">http://en.wikipedia.org/wiki/Web_development</a></p>
-<ul class="simple"><li><a class="reference external" href="http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/tech-news-for-america.html#c4fy37a">http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a</a></li>
+<ul class="simple">
+<li><a class="reference external" href="http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/tech-news-for-america.html#c4fy37a">http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a</a></li>
 <li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/tech-news-for-america.html#c9yxl8w">http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="software-engineering">
 <h2>Software Engineering</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_engineering">https://en.wikipedia.org/wiki/Software_engineering</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_development_process">https://en.wikipedia.org/wiki/Software_development_process</a></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_development_process">https://en.wikipedia.org/wiki/Software_development_process</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Software_design_patterns">https://en.wikipedia.org/wiki/Category:Software_design_patterns</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science">https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science</a>)</li>
 <li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/tech-news-for-america.html#cdwgwaa">http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="web-scale">
 <h2>Web Scale</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Scalability">https://en.wikipedia.org/wiki/Scalability</a></p>
@@ -172,7 +195,8 @@ which I currently just include into the
 cache invalidation and naming things.”</p>
 <p class="attribution">—Phil Karlton</p>
 </div></blockquote>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Static_web_page">https://en.wikipedia.org/wiki/Static_web_page</a></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Static_web_page">https://en.wikipedia.org/wiki/Static_web_page</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Content_delivery_network">https://en.wikipedia.org/wiki/Content_delivery_network</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing">https://en.wikipedia.org/wiki/Cloud_computing</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23cloud&amp;src=hash">#cloud</a>)</li>
@@ -181,20 +205,24 @@ cache invalidation and naming things.”</p>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Systems_engineering">https://en.wikipedia.org/wiki/Systems_engineering</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Performance_engineering">https://en.wikipedia.org/wiki/Performance_engineering</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Social_web">https://en.wikipedia.org/wiki/Social_web</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="sentiment">
 <h2>Sentiment</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Sentiment_analysis">https://en.wikipedia.org/wiki/Sentiment_analysis</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics">https://en.wikipedia.org/wiki/Computational_linguistics</a></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics">https://en.wikipedia.org/wiki/Computational_linguistics</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Semantic_analysis">https://en.wikipedia.org/wiki/Semantic_analysis</a></li>
 <li><a class="reference external" href="http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/tech-news-for-america.html#camicro">http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro</a></li>
 <li><a class="reference external" href="http://textblob.readthedocs.org/en/latest">http://textblob.readthedocs.org/en/latest/</a></li>
 <li><a class="reference external" href="http://docs.continuum.io/anaconda/pkgs.html">http://docs.continuum.io/anaconda/pkgs.html</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="science">
 <h2>Science</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Science">https://en.wikipedia.org/wiki/Science</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Reproducibility">https://en.wikipedia.org/wiki/Reproducibility</a>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Reproducibility">https://en.wikipedia.org/wiki/Reproducibility</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23reproducibility&amp;src=hash">#reproducibility</a>)</li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Data_science">https://en.wikipedia.org/wiki/Data_science</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23datascience&amp;src=hash">#datascience</a>)</li>
@@ -209,7 +237,8 @@ cache invalidation and naming things.”</p>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Linked_data">https://en.wikipedia.org/wiki/Linked_data</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23linkeddate&amp;src=hash">#linkeddata</a>)</li>
 <li><a class="reference external" href="http://www.w3.org/TR/ld-glossary/tech-news-for-america.html#x5-star-linked-open-data">http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data</a></li>
-</ul><blockquote class="epigraph">
+</ul>
+<blockquote class="epigraph">
 <div><p>☆</p>
 <p>Publish data on the Web in any format (e.g., PDF, JPEG)
 accompanied by an explicit
@@ -246,30 +275,41 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
 <div class="section" id="entrepreneurship">
 <h2>Entrepreneurship</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Entrepreneurship">https://en.wikipedia.org/wiki/Entrepreneurship</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Microeconomics">https://en.wikipedia.org/wiki/Microeconomics</a><ul><li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/microeconomics">https://www.khanacademy.org/economics-finance-domain/microeconomics</a></li>
-</ul></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Macroeconomics">https://en.wikipedia.org/wiki/Macroeconomics</a><ul><li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/macroeconomics">https://www.khanacademy.org/economics-finance-domain/macroeconomics</a></li>
-</ul></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Venture_capital">https://en.wikipedia.org/wiki/Venture_capital</a><ul><li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup">https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup</a></li>
-</ul></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Microeconomics">https://en.wikipedia.org/wiki/Microeconomics</a><ul>
+<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/microeconomics">https://www.khanacademy.org/economics-finance-domain/microeconomics</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Macroeconomics">https://en.wikipedia.org/wiki/Macroeconomics</a><ul>
+<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/macroeconomics">https://www.khanacademy.org/economics-finance-domain/macroeconomics</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Venture_capital">https://en.wikipedia.org/wiki/Venture_capital</a><ul>
+<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup">https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup</a></li>
+</ul>
+</li>
 <li><a class="reference external" href="https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read">https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read</a></li>
 <li><a class="reference external" href="http://personalmba.com/best-business-books">http://personalmba.com/best-business-books/</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Business_models_for_open-source_software">https://en.wikipedia.org/wiki/Business_models_for_open-source_software</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software_security#The_debate">https://en.wikipedia.org/wiki/Open-source_software_security#The_debate</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="community-development">
 <h2>Community Development</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Community_development">https://en.wikipedia.org/wiki/Community_development</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_for_America">https://en.wikipedia.org/wiki/Code_for_America</a>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_for_America">https://en.wikipedia.org/wiki/Code_for_America</a>
 (<a class="reference external" href="https://twitter.com/codeforamerica">@codeforamerica</a>)</li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness">https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness</a>
 (<a class="reference external" href="https://twitter.com/randomhacks">@randomhacks</a>)</li>
 <li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/tech-news-for-america.html#cam3t17">http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17</a></li>
-</ul></div>
+</ul>
+</div>
 <div class="section" id="hyperlocal">
 <h2>Hyperlocal</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Hyperlocal">https://en.wikipedia.org/wiki/Hyperlocal</a></p>
-<ul class="simple"><li><a class="reference external" href="https://en.wikipedia.org/wiki/Milky_Way">https://en.wikipedia.org/wiki/Milky_Way</a></li>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Milky_Way">https://en.wikipedia.org/wiki/Milky_Way</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_System">https://en.wikipedia.org/wiki/Solar_System</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Earth">https://en.wikipedia.org/wiki/Earth</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/North_America">https://en.wikipedia.org/wiki/North_America</a></li>
@@ -283,7 +323,9 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Omaha">https://en.wikipedia.org/wiki/Omaha</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23omaha&amp;src=hash">#omaha</a>)</li>
 <li><a class="reference external" href="https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&amp;src=typd">twitter: near:”Omaha, Nebraska, USA” within:25mi</a></li>
-</ul><p>EDIT: 2014/02/02 Updated link to “Mathematics for Computer Science” PDF</p>
+</ul>
+<p>EDIT: 2014/02/02 Updated link to “Mathematics for Computer Science” PDF</p>
+</div>
 </div>]]></description>
              <pubDate>Sun, 15 Dec 2013 00:00:00 -0600</pubDate>
         </item>
@@ -292,13 +334,14 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
             <link>http://westurner.github.io/2013/11/25/hello_world.html</link>
             <guid>http://westurner.github.io/2013/11/25/hello_world.html</guid>
             <title><![CDATA[Hello World!]]></title>
-            <description><![CDATA[<h1>Hello World!</h1>
+            <description><![CDATA[<div class="section" id="hello-world">
+<h1>Hello World!</h1>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s">"Hello World!"</span>
+    <span class="k">return</span> <span class="s">&quot;Hello World!&quot;</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -338,9 +381,22 @@ which generates the requisite
 <a class="reference external" href="http://pygments.org">Pygments</a>
 (<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main">source</a>)
 style.</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none"><colgroup><col class="label"/><col/></colgroup><tbody valign="top"><tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>TIL that “Hello World” originated from
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>TIL that “Hello World” originated from
 <a class="reference external" href="https://en.wikipedia.org/wiki/The_C_Programming_Language_(book)">The C Programming Language</a>
-by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id8">[2]</a></td></tr></tbody></table><table class="docutils footnote" frame="void" id="f2" rules="none"><colgroup><col class="label"/><col/></colgroup><tbody valign="top"><tr><td class="label"><a class="fn-backref" href="#id8">[2]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></td></tr></tbody></table></div>
+by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id8">[2]</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label"/><col/></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[2]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>]]></description>
             <category><![CDATA[ python ]]></category>
              <pubDate>Mon, 25 Nov 2013 00:00:00 -0600</pubDate>

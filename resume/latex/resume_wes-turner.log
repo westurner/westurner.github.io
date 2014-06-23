@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.16)  9 APR 2014 17:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.16)  23 JUN 2014 08:34
 entering extended mode
  %&-line parsing enabled.
 **resume_wes-turner.tex
@@ -305,6 +305,10 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (/usr/share/texmf-texlive/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
+(/usr/share/texmf-texlive/tex/latex/upquote/upquote.sty
+Package: upquote 2003/08/11 v1.1 Covington's upright-quote modification to verb
+atim and verb
+)
 (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -485,27 +489,27 @@ ned.
 )
 \openout1 = `resume_wes-turner.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 127.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
 
  (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -520,7 +524,7 @@ LaTeX Font Info:    ... okay on input line 127.
 \MPnumerator=\count123
 \everyMPtoPDFconversion=\toks31
 )
-Package hyperref Info: Link coloring ON on input line 127.
+Package hyperref Info: Link coloring ON on input line 129.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -529,8 +533,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 127.
-LaTeX Info: Redefining \pageref on input line 127.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
 
 (./resume_wes-turner.out) (./resume_wes-turner.out)
 \@outlinefile=\write6
@@ -538,26 +542,26 @@ LaTeX Info: Redefining \pageref on input line 127.
 
 \AtBeginShipoutBox=\box41
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
  []
 
 <<ot1.cmap>>
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 130.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 132.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 130.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 130.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 132.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
 <<oml.cmap>><<oms.cmap>><<omx.cmap>> (./resume_wes-turner.toc)
 \tf@toc=\write7
 \openout7 = `resume_wes-turner.toc'.
@@ -566,21 +570,21 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 192.
  [2]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
  [3] [4] [5] [6] [7] [8]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 995.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 997.
 
 
 (/usr/share/texmf-texlive/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 995.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 997.
  [9] [10]
 (./resume_wes-turner.aux)
 
@@ -588,10 +592,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7617 strings out of 495061
- 106948 string characters out of 1182621
- 195019 words of memory out of 3000000
- 10548 multiletter control sequences out of 15000+50000
+ 7624 strings out of 495061
+ 107152 string characters out of 1182621
+ 195113 words of memory out of 3000000
+ 10551 multiletter control sequences out of 15000+50000
  16309 words of font info for 38 fonts, out of 3000000 for 9000
  29 hyphenation exceptions out of 8191
  45i,5n,45p,307b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -602,7 +606,7 @@ c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on resume_wes-turner.pdf (10 pages, 146086 bytes).
+Output written on resume_wes-turner.pdf (10 pages, 146083 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
