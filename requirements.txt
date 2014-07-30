@@ -1,2 +1,3 @@
 tinkerer
 ghp-import
+beautifulsoup4
