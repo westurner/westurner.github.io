@@ -15,7 +15,7 @@ log = logging.getLogger()
 
 def _repr(_str):
     if isinstance(_str, basestring):
-        return '"%s"' % repr(_str)[2:-1]
+        return '"%s"' % repr(_str)[1:-1]
     else:
         raise TypeError(_str)
 
