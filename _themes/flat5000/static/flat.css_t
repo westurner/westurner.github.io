@@ -66,7 +66,7 @@ header h1, span { margin: 0; }
 header h1 { padding: 0 20px; }
 header h2 { padding: 0 20px; display: block; }
 
-nav { padding: 5px 0; }
+nav { padding: 5px 0; margin-bottom: 12px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 nav li { text-align: center; width: 100%; }
 nav li.main-nav { padding: 10px 0; }
