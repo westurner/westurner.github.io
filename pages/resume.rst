@@ -302,6 +302,9 @@ Courses
 Projects
 ===========
 
+See: https://github.com/westurner/wiki/projects
+
+
 2007: Presense
 -----------------
 | Social Media Aggregation Concept & Gaussian Chart Generator
