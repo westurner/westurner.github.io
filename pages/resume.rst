@@ -302,7 +302,7 @@ Courses
 Projects
 ===========
 
-See: https://github.com/westurner/wiki/projects
+See: https://github.com/westurner/wiki/wiki/projects
 
 
 2007: Presense
