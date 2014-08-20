@@ -75,7 +75,7 @@ div.footer-container { margin: 20px 0; }
 footer { margin-bottom: 20px; padding: 20px; text-align: center; }
 
 @media only screen and (min-width: 480px) {
-    header { padding: 40px 0; }
+    header { margin: 40px 0; }
     header h1 { padding: 0 40px; }
     header h2 { padding: 0 40px; }
 
@@ -105,18 +105,18 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
 @media only screen and (min-width: 900px) {
     header { left: 0; top: 0; position: fixed; width: 26%; }
 
-    nav { left: 0; top: 40%; position: fixed; width: 26%; }
-    nav li { display: block; text-align: center; width: 100%; }
+    /* nav { left: 0; top: 40%; position: fixed; width: 26%; } */
+    nav li { text-align: center; width: 100%; }
 
     div.main-container { margin-left: 26%; }
     div.footer-container { margin-left: 26%; }
 }
 
 @media only screen and (min-width: 1200px) {
-    div.main-container { max-width: 48%; }
-    div.footer-container { max-width: 48%; }
+    div.main-container { max-width: 60%; }
+    div.footer-container { max-width: 60%; }
 
-    aside.sidebar { left: 74%; top: 0; position: absolute;  width: 26%; } 
+    /* aside.sidebar { left: 74%; top: 0; position: absolute;  width: 26%; }  */
 }
 
 
@@ -151,8 +151,8 @@ div.year h2 { margin-bottom: 20px; margin-top: 0; }
 @media only screen and (min-width: 480px) {
     div.year h1 { float: left; margin-right: -100%; }
 
-    div.year div.postmeta { margin: 0 0 40px 40%; }
-    div.year div.timestamp { float: left; margin-left: 20%; }
+    /* div.year div.postmeta { margin: 0 0 40px 40%; } */
+    div.year div.timestamp { float: none; clear: both; margin: 0; }
     div.year h2 { margin-left: 40%; }
 }
 
