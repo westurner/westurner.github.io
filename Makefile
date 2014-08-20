@@ -30,5 +30,8 @@ resume_commit: resume
 
 all: resume_commit build push push_source
 
+install:
+	pip install -r requirements.txt
+
 default: build
 
