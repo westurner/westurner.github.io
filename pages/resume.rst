@@ -489,13 +489,6 @@ Responsible for project management
 * Python, RDFLib, Jinja2, Pygments, n3pygments
 
 
-Open Source Contributions
----------------------------
-Primarily small contributions here and there to show my appreciation.
-
-See: https://github.com/westurner/wiki/wiki/contributions
-
-
 hello_world
 --------------
 | https://github.com/westurner/hello_world
@@ -515,6 +508,14 @@ Dotfiles
 .. raw:: pdf
 
    PageBreak oneColumn
+
+
+Open Source Contributions
+---------------------------
+Primarily small contributions here and there to show my appreciation.
+
+See: https://github.com/westurner/wiki/wiki/contributions
+
 
 
 Contact Information
