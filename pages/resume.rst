@@ -490,80 +490,7 @@ Open Source Contributions
 ---------------------------
 Primarily small contributions here and there to show my appreciation.
 
-From `pandas/CONTRIBUTING.md <https://github.com/pydata/pandas/blob/master/CONTRIBUTING.md#pull-requests>`_ :
-
-.. pull-quote::
-
-    | ENH: Enhancement, new functionality
-    | BUG: Bug fix
-    | DOC: Additions/updates to documentation
-    | TST: Additions/updates to tests
-    | BLD: Updates to the build process/scripts
-    | PERF: Performance improvement
-    | CLN: Code cleanup
-
-Python
-    | `Mailing List Feedback <https://www.google.com/search?q=site:mail.python.org+wes.turner%40gmail.com>`_
-    | `Patch to random.shuffle (rejected by rhettinger) <http://bugs.python.org/issue18511>`_
-    | http://reddit.com/r/python
-
-Pandas
-    | `ENH: Linked Data <https://github.com/pydata/pandas/issues/3402>`_
-    | `PERF/TST: generators in dataframe.from_records <https://github.com/pydata/pandas/issues/6700>`_
-
-Pyramid
-    | `DOC: Update quick_tour.rst: Typo: with -> which <https://github.com/Pylons/pyramid/pull/1106>`_
-
-Pip
-    | `site:github.com/pypa/pip westurner <https://www.google.com/search?q=site%3Agithub.com%2Fpypa%2Fpip+westurner>`_
-    | `SECURITY: Signature research <https://github.com/pypa/pip/issues/1035>`_
-
-scipy-lectures
-    | `DOC: Showing the effects of rounding <https://github.com/scipy-lectures/scipy-lecture-notes/pull/31>`_
-
-scientific-python-lectures
-    | `DOC: Updated Lecture-4-Matplotlib.ipynb: Syntax, FFMpeg workaround, clarification  <https://github.com/jrjohansson/scientific-python-lectures/pull/12>`_
-
-Statsmodels
-    | `DOC: Wikipedia page for Statsmodels (deleted) <https://groups.google.com/d/topic/pystatsmodels/JnxjtkZO2s8/discussion>`_
-
-Turses
-    | `ENH: Add mouse scroll wheel support <https://github.com/alejandrogomez/turses/issues/165>`_
-    | `PERF: Inverted configuration keybindings to make reverse lookups faster <https://github.com/alejandrogomez/turses/pull/172>`_
-
-Tinkerer
-    | `ENH: Added WAI-ARIA roles to templates <https://github.com/vladris/tinkerer/pull/43>`_
-
-Initializr-bootstrap
-    | `ENH: Added WAI-ARIA roles to templates <https://github.com/verekia/initializr-bootstrap/pull/6>`_
-
-Sphinx
-    | `ENH: Added WAI-ARIA roles to templates <https://github.com/verekia/initializr-bootstrap/pull/6>`_
-
-ReadTheDocs
-    | `ENH: Added WAI-ARIA roles to templates <https://github.com/snide/sphinx_rtd_theme/pull/86>`_
-
-sphinxjp.themes.basicstrap
-    | `ENH: Added WAI-ARIA roles to templates and optional navbar-fixed-top setting <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/7>`_
-
-Salt
-    | `DOC: dockerio module: docs syntax and formatting <https://github.com/saltstack/salt/pull/9294>`_
-
-IPython nbviewer
-    | `ENH: Redirect github blob URLs to raw.github URLs <https://github.com/ipython/nbviewer/pull/118>`_
-
-IPython-beautifulsoup
-    | `SECURITY: XSS: JS/CSS Injection <https://github.com/Psycojoker/ipython-beautifulsoup/issues/2>`_
-
-version_information
-    | `SECURITY: XSS: Escape JSON, HTML, and LaTeX strings <https://github.com/jrjohansson/version_information/pull/2>`_
-    | `ENH: Added check for pkg_resources version and extended __doc__ <https://github.com/jrjohansson/version_information/pull/3>`_
-
-Bento
-    | `DOC: refs to big-o cheatsheet, rosetta code <https://github.com/JonHMChan/bento/pull/88>`_
-
-Python-mode
-    | `DOC: Updated README.rst <https://github.com/klen/python-mode/pull/302>`_
+See: https://github.com/westurner/wiki/wiki/contributions
 
 
 hello_world
@@ -590,9 +517,7 @@ Dotfiles
 Contact Information
 ======================
 
-| `westurner.github.io <http://westurner.github.io>`_
+| `westurner.github.io <https://westurner.github.io>`_
 | `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`_
 | `wes.turner@gmail.com <wes.turner@gmail.com>`_
-| `+1-402-522-6937 <tel:+1-402-522-6937>`_
-
 
