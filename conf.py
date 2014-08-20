@@ -11,7 +11,7 @@ import tinkerer.paths
 project = 'Wes Turner'
 
 # Change this to the tagline of your blog
-tagline = '@westurner'
+tagline = 'westurner'
 
 # Change this to the description of your blog
 description = 'A code blog'
