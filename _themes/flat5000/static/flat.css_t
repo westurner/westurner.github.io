@@ -37,6 +37,8 @@ ul#accounts { list-style-type: none; padding: 0; }
 ul#accounts li { display: inline; }
 ul#accounts li a:hover { text-decoration: none; }
 
+#accounts_ { max-width: 120px; margin: 0 auto; }
+
 #searchbox input[type="text"], .searchbox input[type="text"] { width: 82%; border: 2px solid {{ border_color }}; }
 
 div.contents {  padding: 10px 0; }
