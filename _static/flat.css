@@ -150,7 +150,7 @@ div.year ul { display: inline; list-style-type: none; margin: 0; }
 
 div.year div.postmeta { margin: 10px 0 10px 0; }
 
-div.year div.timestamp { color: #0c0501; font-size: 1.6em; font-weight: normal; margin-top: 0; }
+div.year div.timestamp { color: #0c0501; font-size: 1.6em; font-weight: normal; margin-top: 20px; }
 
 div.year h2 { margin-bottom: 20px; margin-top: 0; }
 
