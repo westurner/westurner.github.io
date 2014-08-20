@@ -14,16 +14,21 @@
 {%- set archive_title = archive_title is not defined and ' Blog Archive ' or archive_title -%}
 
 {%- block body -%}
+    <div class="twitter">
+    <h1 id="twitter" class="h_underline">
+        <a href="https://twitter.com/westurner">@westurner</a>
+    </h1>
     <div class="twitter-widget">
         {% include "twitter.html" %}
     </div>
+    </div>
     <div class="posts">
-    <h1 id="posts" style="font-size:18px">
+    <h1 id="posts" class="h_underline">
         <a href="{{ pathto('archive') }}">Blog Posts</a>
     </h1>
     {%- for metadata in posts -%}
-        {{ timestamp(metadata.formatted_date) }}
         {{ metadata.body }}
+        {{ timestamp(metadata.formatted_date) }}
         {{ post_meta(metadata, metadata.comment_count) }}
         {%- if not loop.last -%}<div class="separator post_separator"></div>{%- endif -%}
     {%- endfor -%}

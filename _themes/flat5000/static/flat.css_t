@@ -19,6 +19,8 @@ header { text-align: center; }
 header h1 * { font-size: 1.25em; }
 header h2 { font-size: 1.4em; font-weight: normal; margin: 0; padding: 0; }
 
+.h_underline { border-bottom: 2px solid #ddd; }
+
 nav { font-size: 1.5em; }
 
 article p { line-height: 1.5; }
@@ -98,13 +100,13 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
     nav li.main-nav { margin: 20px 0; padding: 0; }
     nav li.main-nav a { padding: 0 20px; }
 
-    article { padding: 40px 40px 20px 40px; }
+    article { padding: 32px 40px 20px 40px; }
     ul.related { margin: 40px 0; padding: 20px 0 20px 0; }
     ul.related li { display: inline; line-height: 1em; }
     ul.related li.right { display: inline; float: right; }
     ul.related:first-child { padding-bottom: 20px; }
 
-    div.highlight { padding: 10px 20px; }
+    div.highlight { padding: 10px 20px; margin-bottom: 10px; }
 
     div.section + div.postmeta { margin: 40px 0; }
 
@@ -114,6 +116,8 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
 
     footer { padding: 10px 40px; }
 }
+
+div.main-container { background: #f7f7f7; }
 
 @media only screen and (min-width: 900px) {
     header { left: 0; top: 0; position: fixed; width: 26%; }

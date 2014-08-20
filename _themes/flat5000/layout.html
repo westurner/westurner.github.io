@@ -34,6 +34,19 @@
     </script>
 {%- endblock -%}
 
+{%- block header -%}
+    <header role="banner">
+      <hgroup>
+        <h1><a href="{{ pathto(pages[0][0]) }}">{{ shorttitle|e }}</a></h1>
+        {%- if tagline -%}<h2>{{ tagline|e }}</h2>{%- endif -%}
+      </hgroup>
+
+  <div id="accounts_">
+      {% include "accounts.html" %}
+  </div>
+  </header>
+{% endblock -%}
+
 {%- block navigation -%}
     <nav role="navigation">
     <ul>
