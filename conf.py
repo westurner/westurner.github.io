@@ -11,10 +11,10 @@ import tinkerer.paths
 project = 'Wes Turner'
 
 # Change this to the tagline of your blog
-tagline = 'Pro'
+tagline = '@westurner'
 
 # Change this to the description of your blog
-description = '...'
+description = 'A code blog'
 
 # Change this to your name
 author = 'Wes Turner'
@@ -23,7 +23,7 @@ author = 'Wes Turner'
 copyright = '2014 %s' % author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://westurner.github.io/'
+website = 'https://westurner.github.io/'
 
 # **************************************************************
 # More tweaks you can do

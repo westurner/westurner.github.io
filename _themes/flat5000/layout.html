@@ -37,31 +37,39 @@
 {%- block navigation -%}
     <nav role="navigation">
     <ul>
-        {%- block quicklinks -%}
-        {%- if rss_in_page_nav -%}
-        <li class="quicklink">{{ rss_link() }}</li>
-        {%- endif -%}
-        {%- endblock -%}
+        {#
         {% for page in pages -%}
         <li class="main-nav">
             <a href="{{ pathto(page[0]) }}">{{ page[1]|e }}</a>
         </li>
         {% endfor -%}
+        #}
+
         <li class="main-nav">
-            <a href="https://westurner.github.io/redditlog/">Redditlog</a>
+            <a href="/index.html">home</a>
         </li>
         <li class="main-nav">
-            <a href="https://westurner.github.io/healthref/">Healthref</a>
+            <a href="{{ pathto('archive') }}">blog</a>
         </li>
         <li class="main-nav">
-            <a href="https://github.com/westurner/wiki/wiki">Wiki</a>
+            <a href="https://github.com/westurner/wiki/wiki" target="_blank">wiki</a>
         </li>
         <li class="main-nav">
-            <a href="https://github.com/westurner/wiki/projects">Projects</a>
+            <a href="https://github.com/westurner/wiki/wiki/projects" target="_blank">projects</a>
         </li>
         <li class="main-nav">
-            <a href="https://github.com/westurner/wiki/contributions">Contributions</a>
+            <a href="https://github.com/westurner/wiki/wiki/contributions" target="_blank">contributions</a>
         </li>
+        <li class="main-nav">
+            <a href="{{ pathto('pages/resume') }}">resume</a>
+        </li>
+        <li class="main-nav">
+            <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
+        </li>
+        <li class="main-nav">
+            <a href="{{ pathto('pages/stream') }}">stream</a>
+        </li>
+
     </ul>
     </nav>
 {%- endblock -%}
@@ -77,7 +85,15 @@
 
 
 {%- block footer -%}
-          <footer class="wrapper" role="contentinfo">
+<footer class="wrapper" role="contentinfo">
+
+    <ul>
+        {%- block quicklinks -%}
+        {%- if rss_in_page_nav -%}
+        <li class="main-nav">{{ rss_link() }}</li>
+        {%- endif -%}
+        {%- endblock -%}
+    </ul>
           {%- if show_copyright -%}
             {% trans copyright=copyright|e -%}&copy; Copyright {{ copyright }}. {% endtrans -%}
           {%- endif -%}
