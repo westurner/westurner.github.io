@@ -11,6 +11,7 @@
 {%- set text_color = "#0c0501" -%}
 {%- set theme_color_light = "#93a4ad" -%}
 {%- set border_color = "#e0e0e0" -%}
+{%- set aside_header_color = "#424242" -%}
 
 
 body { font-family: {{ sans_serif_font }}; }
@@ -29,7 +30,7 @@ article p { line-height: 1.5; }
 .highlight pre { font-family: "Monaco", monospace; }
 
 
-aside.sidebar h1 { font-size: 1.2em; opacity: 0.2; }
+aside.sidebar h1, aside.sidebar h1 a { font-size: 1.2em; opacity: 0.2; color: {{ aside_header_color }}; }
 aside.sidebar { font-size: 1em; }
 aside.sidebar.highlight { font-size: .8em; }
 
@@ -37,7 +38,11 @@ ul#accounts { list-style-type: none; padding: 0; max-width: 670px; margin: 0 aut
 ul#accounts li { display: inline; }
 ul#accounts li a:hover { text-decoration: none; }
 
-#accounts_ { max-width: 120px; margin: 0 auto; }
+#accounts_ { margin: 0 10px; }
+
+@media only screen and (min-width: 240px) {
+    #accounts_ { max-width: 120px; margin: 0 auto; }
+}
 
 #searchbox input[type="text"], .searchbox input[type="text"] { width: 92%; border: 2px solid {{ border_color }}; }
 
@@ -79,6 +84,12 @@ article li { line-height: 1.5em; }
 article h1 { margin-top: 0; }
 ul.related:first-child { padding: 0 0 20px 0; }
 
+div.highlight, { background-color: #333 !important; }
+div.highlight .c,
+div.highlight .kn,
+div.highlight .nn
+div.highlight .n { background-color: inherit !important; }
+
 div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; padding: 5px 10px;  }
 
 div.post_separator { height: 40px; }
@@ -93,8 +104,8 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
 
 @media only screen and (min-width: 480px) {
     header { margin: 40px 0; }
-    header h1 { padding: 0 40px; }
-    header h2 { padding: 0 40px; }
+    header h1 { padding: 10px 0; }
+    header h2 { padding: 2px; }
 
     nav { padding: 10px 0; }
     nav ul { margin: 0 40px; padding: 0; text-align: center; }
