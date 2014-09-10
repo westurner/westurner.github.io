@@ -15,28 +15,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
         <meta name="viewport" content="width=device-width">
-        <title>A configuration trick &mdash; Wes Turner</title>
-            <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/flat.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-            <link rel="stylesheet" href="../../../_static/font-awesome.min.css" type="text/css">
+        <title>Posts tagged with vim &mdash; Wes Turner</title>
+            <link rel="stylesheet" href="../_static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="../_static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="../_static/main.css" type="text/css">
+            <link rel="stylesheet" href="../_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+            <link rel="stylesheet" href="../_static/font-awesome.min.css" type="text/css">
         <!-- Load modernizr and JQuery -->
-        <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../../_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-        <script src="../../../_static/plugins.js"></script>
-        <script src="../../../_static/main.js"></script>
-        <link rel="next" title="Tech News for America" href="../../../2013/12/15/tech-news-for-america.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
+        <script>window.jQuery || document.write('<script src="../_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="../_static/plugins.js"></script>
+        <script src="../_static/main.js"></script>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
+        URL_ROOT:    '../',
         VERSION:     '1.4.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../_static/underscore.js"></script><script type="text/javascript" src="../_static/doctools.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -45,6 +45,9 @@
             {
                 $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop - 44);
             }
+            $("a.external").attr('target', '_blank');
+            // $("a[href^='http'").attr('target', '_blank');
+
         });
     </script>
 
@@ -63,7 +66,7 @@
 
       <div id="container"><header role="banner">
       <hgroup>
-        <h1><a href="../../../index.html">Wes Turner</a></h1><h2>westurner</h2></hgroup>
+        <h1><a href="../index.html">Wes Turner</a></h1><h2>westurner</h2></hgroup>
 
   <div id="accounts_">
       <div class="widget">
@@ -270,7 +273,7 @@
             <a href="/index.html">home</a>
         </li>
         <li class="main-nav">
-            <a href="../../../archive.html">blog</a>
+            <a href="../archive.html">blog</a>
         </li>
         <li class="main-nav">
             <a href="https://github.com/westurner/wiki/wiki" target="_blank">wiki</a>
@@ -282,108 +285,25 @@
             <a href="https://github.com/westurner/wiki/wiki/contributions" target="_blank">contributions</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/resume.html">resume</a>
+            <a href="../pages/resume.html">resume</a>
         </li>
         <li class="main-nav">
             <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/stream.html">stream</a>
+            <a href="../pages/stream.html">stream</a>
         </li>
 
     </ul>
-    </nav><div class="main-container" role="main"><div class="main wrapper clearfix"><article role="main"><div class="timestamp postmeta">
-            <span>May 03, 2014</span>
+    </nav><div class="main-container" role="main"><div class="main wrapper clearfix"><article role="main"><div class="archive">
+        <h1>Posts tagged with <span class="title_tag">vim</span></h1><div class="year">
+            <h1>2014</h1>
+            <ul><li>
+                    <div class="timestamp postmeta">
+            <span>May 03</span>
         </div>
-    <div class="section" id="a-configuration-trick">
-<h1>A configuration trick</h1>
-<p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
-can be difficult to grep through. It&#8217;s not always easy
-<em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
-<p><strong>Solution</strong>: Approach configuration documentation
-like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
-&#8220;literate configuration&#8221;.</p>
-<ol class="arabic simple">
-<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
-<li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
-</ol>
-<p><strong>Example</strong></p>
-<p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/043037f9ac81a5d6f10d1ac3ce628910e57da774/etc/.i3/config">i3 config</a> that I cleaned up this morning:</p>
-<div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
-### Notes
-#  #  Default location: ~/.i3/config
-#  #  List the commented command shortcuts with::
-#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;
-#...
-## Change volume
-#  &lt;XF86AudioRaiseVolume&gt;   -- volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id $volume_up
-#  &lt;XF86AudioLowerVolume&gt;   -- volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id $volume_down
-
-## Start, stop, and reset xflux
-#  &lt;alt&gt; [         -- start xflux
-bindsym $mod+bracketleft    exec --no-startup-id $xflux_start
-#  &lt;alt&gt; ]         -- stop xflux
-bindsym $mod+bracketright   exec --no-startup-id $xflux_stop
-#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0
-bindsym $mod+Shift+bracketright  exec --no-startup-id $xflux_reset
-
-## Resize Mode
-#  &lt;alt&gt; r      -- enter resize mode
-bindsym $mod+r  mode &quot;resize&quot;
-
-mode &quot;resize&quot; {
-    ## Grow and shrink windows
-    # These bindings trigger as soon as you enter the resize mode
-    # ...
-    # back to normal: Enter or Escape
-    #  &lt;enter&gt;  -- exit resize mode
-    bindsym Return      mode &quot;default&quot;
-    #  &lt;esc&gt;    -- exit resize mode
-    bindsym Escape      mode &quot;default&quot;
-}
-</pre></div>
-</div>
-<p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
-with a simple conditional regular expression:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cat ~/.i3/config | egrep <span class="s1">&#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-</pre></div>
-</div>
-<p>Peruse the output for that one excellent keyboard shortcut:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
-<span class="c">### Notes</span>
-<span class="c">#  #  Default location: ~/.i3/config</span>
-<span class="c">#  #  List the commented command shortcuts with::</span>
-<span class="c">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-<span class="c">## Change volume</span>
-<span class="c">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
-<span class="c">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
-<span class="c">## Start, stop, and reset xflux</span>
-<span class="c">#  &lt;alt&gt; [         -- start xflux</span>
-<span class="c">#  &lt;alt&gt; ]         -- stop xflux</span>
-<span class="c">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
-<span class="c">## Resize Mode</span>
-<span class="c">#  &lt;alt&gt; r      -- enter resize mode</span>
-    <span class="c">## Grow and shrink windows</span>
-    <span class="c">#  &lt;enter&gt;  -- exit resize mode</span>
-    <span class="c">#  &lt;esc&gt;    -- exit resize mode</span>
-</pre></div>
-</div>
-<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
-of the relevant configuration file documentation.</p>
-<p>The <a class="reference external" href="https://jashkenas.github.io/docco/">docco</a> homepage lists quite a few more heavyweight approaches to
-generating documentation from comment strings embedded in various languages
-(such as Markdown in a shell script).</p>
-<p>A similar pattern has worked well in my <a class="reference external" href="https://github.com/westurner/dotvim/commit/e78c59ba048087422806c1c1e668be667f949260#diff-076d61938d25fd036d6436c94d8778faR123">vimrc</a> for a few years.</p>
-<p>I&#8217;ve also added this to the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed3110b581a42a77199e2c6708f5165683/Makefile#L83">Provis Makefile</a>,
-which I currently just include into the
-<a class="reference external" href="https://provis.readthedocs.org/en/latest/">Provis Documentation</a>.</p>
-<p>This simple pattern saves time when looking up custom keyboard shortcuts.</p>
-</div>
-
-    <div class="postmeta">
+                    <h2><a href="../2014/05/03/literate-configuration.html">Literate Configuration</a></h2>
+                    <div class="postmeta">
         <div class="author">
             <span>Posted by Wes Turner</span>
         </div>
@@ -391,25 +311,24 @@ which I currently just include into the
         <div class="tags">
             <span>
                 Tags:
-                <a href="../../../tags/bash.html">bash</a>, <a href="../../../tags/documentation.html">documentation</a>, <a href="../../../tags/literateprogramming.html">literateprogramming</a></span>
+                <a href="docs.html">docs</a>, <a href="literateprogramming.html">literateprogramming</a>, <a href="bash.html">bash</a>, <a href="#">vim</a>, <a href="i3wm.html">i3wm</a>, <a href="keyboard-shortcuts.html">keyboard_shortcuts</a></span>
         </div>
-        </div><ul class="related clearfix">
-            <li class="left"></li>
-            <li class="right"><a href="../../../2013/12/15/tech-news-for-america.html">Tech News for America</a> &raquo; </li>
-        </ul></article><aside class="sidebar"><section><div class="widget" id="searchbox" role="search">
+        </div>
+                </li></ul>
+        </div></div></article><aside class="sidebar"><section><div class="widget" id="searchbox" role="search">
     <h1>Search</h1>
-    <form action="../../../search.html" method="get">
+    <form action="../search.html" method="get">
         <input type="text" name="q" />
         <button type="submit"><span class="fa fa-search"></span></button>
     </form>
 </div></section><section><div class="widget">
-    <h1><a href="../../../archive.html">Recent Posts</a></h1>
+    <h1><a href="../archive.html">Recent Posts</a></h1>
     <ul><li>
-            <a href="#">A configuration trick</a>
+            <a href="../2014/05/03/literate-configuration.html">Literate Configuration</a>
         </li><li>
-            <a href="../../../2013/12/15/tech-news-for-america.html">Tech News for America</a>
+            <a href="../2013/12/15/tech-news-for-america.html">Tech News for America</a>
         </li><li>
-            <a href="../../../2013/11/25/hello_world.html">Hello World!</a>
+            <a href="../2013/11/25/hello_world.html">Hello World!</a>
         </li></ul>
 </div>
 </section><section><div class="widget">
@@ -610,7 +529,7 @@ which I currently just include into the
         <div class="footer-container" role="contentinfo"><footer class="wrapper" role="contentinfo">
 
     <ul><li class="main-nav"><div class="rss">
-        <a href="../../../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
+        <a href="../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li></ul>&copy; Copyright 2014 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>

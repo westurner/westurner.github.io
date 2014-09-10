@@ -14,8 +14,8 @@ https://en.wikipedia.org/wiki/Lean
 
 * https://westurner.github.io/self-directed-learning/
 
-  * https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)
-  * http://pages.github.com
+  * `<https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)>`_
+  * https://pages.github.com
   * http://pages.bitbucket.org
 
 * https://code.google.com/p/helphaitiproject/

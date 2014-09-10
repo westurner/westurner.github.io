@@ -8,10 +8,10 @@
         <pubDate>Sat, 03 May 2014 00:00:00 -0500</pubDate>
         
         <item>
-            <link>https://westurner.github.io/2014/05/03/a_configuration_trick.html</link>
-            <guid>https://westurner.github.io/2014/05/03/a_configuration_trick.html</guid>
-            <title><![CDATA[A configuration trick]]></title>
-            <description><![CDATA[<h1>A configuration trick</h1>
+            <link>https://westurner.github.io/2014/05/03/literate-configuration.html</link>
+            <guid>https://westurner.github.io/2014/05/03/literate-configuration.html</guid>
+            <title><![CDATA[Literate Configuration]]></title>
+            <description><![CDATA[<h1>Literate Configuration</h1>
 <p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
 can be difficult to grep through. It’s not always easy
 <em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
@@ -24,7 +24,7 @@ like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_
 </ol>
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/043037f9ac81a5d6f10d1ac3ce628910e57da774/etc/.i3/config">i3 config</a> that I cleaned up this morning:</p>
+<a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning:</p>
 <div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
 ### Notes
 #  #  Default location: ~/.i3/config
@@ -91,11 +91,17 @@ of the relevant configuration file documentation.</p>
 <p>The <a class="reference external" href="https://jashkenas.github.io/docco">docco</a> homepage lists quite a few more heavyweight approaches to
 generating documentation from comment strings embedded in various languages
 (such as Markdown in a shell script).</p>
-<p>A similar pattern has worked well in my <a class="reference external" href="https://github.com/westurner/dotvim/commit/e78c59ba048087422806c1c1e668be667f949260#diff-076d61938d25fd036d6436c94d8778faR123">vimrc</a> for a few years.</p>
-<p>I’ve also added this to the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed3110b581a42a77199e2c6708f5165683/Makefile#L83">Provis Makefile</a>,
-which I currently just include into the
-<a class="reference external" href="https://provis.readthedocs.org/en/latest">Provis Documentation</a>.</p>
-<p>This simple pattern saves time when looking up custom keyboard shortcuts.</p>
+<p>I’ve added documentation with this pattern to my <a class="reference external" href="https://github.com/westurner/dotfiles">dotfiles</a>:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/westurner/dotfiles/tree/master/etc/bash">bashrc</a>
+(<a class="reference external" href="http://wrdfiles.readthedocs.org/en/latest/usage.html#bash">bashrc docs</a>)</li>
+<li><a class="reference external" href="https://github.com/westurner/dotvim/blob/master/vimrc">vimrc</a>
+(<a class="reference external" href="http://wrdfiles.readthedocs.org/en/latest/usage.html#vim">vimrc docs</a>)</li>
+<li><a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a>
+(<a class="reference external" href="http://wrdfiles.readthedocs.org/en/latest/usage.html#i3wm">.i3/config docs</a>)</li>
+<li>and the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83">provis Makefile</a> (<a class="reference external" href="https://provis.readthedocs.org/en/latest/usage.html#Makefile">provis Makefile docs</a>)</li>
+</ul>
+<p>This simple pattern saves time when looking up <a class="reference external" href="http://wrdfiles.readthedocs.org/en/latest/usage.html#dotfiles-makefile">my keyboard shortcuts</a>.</p>
 ]]></description>
              <pubDate>Sat, 03 May 2014 00:00:00 -0500</pubDate>
         </item>
@@ -116,8 +122,8 @@ which I currently just include into the
 </ul>
 </li>
 <li><a class="reference external" href="https://westurner.github.io/self-directed-learning">https://westurner.github.io/self-directed-learning/</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator</a>)</li>
-<li><a class="reference external" href="http://pages.github.com">http://pages.github.com</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)</a></li>
+<li><a class="reference external" href="https://pages.github.com">https://pages.github.com</a></li>
 <li><a class="reference external" href="http://pages.bitbucket.org">http://pages.bitbucket.org</a></li>
 </ul>
 </li>

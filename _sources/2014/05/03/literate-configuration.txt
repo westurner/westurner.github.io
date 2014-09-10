@@ -1,5 +1,5 @@
-A configuration trick
-=====================
+Literate Configuration
+========================
 **Problem**: configuration files which specify keyboard shortcuts
 can be difficult to grep through. It's not always easy
 *to get a simple commented list of configured keyboard shortcuts*.
@@ -15,7 +15,7 @@ like `literate programming`_:
 **Example**
 
 Take an abbreviated excerpt from the `i3wm`_
-`i3 config`_ that I cleaned up this morning::
+`.i3/config`_ that I cleaned up this morning::
 
    #### i3 config file (v4)
    ### Notes
@@ -89,25 +89,38 @@ The `docco`_ homepage lists quite a few more heavyweight approaches to
 generating documentation from comment strings embedded in various languages
 (such as Markdown in a shell script).
 
-A similar pattern has worked well in my `vimrc`_ for a few years.
 
-I've also added this to the `Provis Makefile`_,
-which I currently just include into the 
-`Provis Documentation`_.
+I've added documentation with this pattern to my `dotfiles`_:
 
-This simple pattern saves time when looking up custom keyboard shortcuts.
+* `bashrc`_
+  (`bashrc docs`_)
+* `vimrc`_
+  (`vimrc docs`_)
+* `.i3/config`_
+  (`.i3/config docs`_)
+* and the `provis Makefile`_ (`provis Makefile docs`_)
+
+This simple pattern saves time when looking up `my keyboard shortcuts`_.
 
 
 .. _literate programming: https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation
 .. _i3wm: https://en.wikipedia.org/wiki/I3_(window_manager)
 .. _grep: https://en.wikipedia.org/wiki/Grep
-.. _i3 config: https://github.com/westurner/dotfiles/blob/043037f9ac81a5d6f10d1ac3ce628910e57da774/etc/.i3/config 
-.. _docco: https://jashkenas.github.io/docco/
-.. _vimrc: https://github.com/westurner/dotvim/commit/e78c59ba048087422806c1c1e668be667f949260#diff-076d61938d25fd036d6436c94d8778faR123 
-.. _provis makefile: https://github.com/westurner/provis/blob/8ee46bed3110b581a42a77199e2c6708f5165683/Makefile#L83
-.. _provis documentation: https://provis.readthedocs.org/en/latest/
+.. _docco: https://jashkenas.github.io/docco
+
+.. _dotfiles: https://github.com/westurner/dotfiles
+.. _bashrc: https://github.com/westurner/dotfiles/tree/master/etc/bash
+.. _bashrc docs: http://wrdfiles.readthedocs.org/en/latest/usage.html#bash   
+.. _vimrc: https://github.com/westurner/dotvim/blob/master/vimrc
+.. _vimrc docs: http://wrdfiles.readthedocs.org/en/latest/usage.html#vim
+.. _`.i3/config`: https://github.com/westurner/dotfiles/blob/master/etc/.i3/config   
+.. _`.i3/config docs`: http://wrdfiles.readthedocs.org/en/latest/usage.html#i3wm   
+.. _provis makefile: https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83
+.. _provis makefile docs: https://provis.readthedocs.org/en/latest/usage.html#Makefile
+
+.. _my keyboard shortcuts: http://wrdfiles.readthedocs.org/en/latest/usage.html#dotfiles-makefile   
 
 .. author:: default
 .. categories:: none
-.. tags:: bash, documentation, literateprogramming
+.. tags:: docs, literateprogramming, bash, vim, i3wm, keyboard_shortcuts
 .. comments::
