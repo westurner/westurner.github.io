@@ -1,5 +1,5 @@
 
-    <link href="http://christianv.github.io/jquery-lifestream/css/lifestream.css" rel="stylesheet" type="text/css">
+    <link href="../_static/css/lifestream.css" rel="stylesheet" type="text/css">
     <style type="text/css">
     #lifestream ul li { list-style-type: none;}
     #lifestream {
@@ -36,8 +36,8 @@
     }
     </style>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-    <script src="//rawgithub.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../_static/js/jquery.lifestream.min.js"></script>
+    <script src="../_static/js/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
     var accounts_list = [
     //{service:"bitbucket", user:"westurner"},
@@ -149,7 +149,7 @@
     {   service:"stackoverflow",
         user:"188833",
         template: {
-            global: '${text} <a href="${link}">${title}</a>'
+            global: '<i>${text}</i> <a href="${link}">${title}</a>'
         },
     },
     {   service:"tumblr",
@@ -157,7 +157,7 @@
     {   service:"twitter",
         user:"westurner",
         template: {
-            "posted": 'tweeted {{html tweet}}'
+          "posted": '<a href="${complete_url}">tweeted</a> <i>{{html tweet}}</i>'
         },
     },
     {service:"wikipedia", user:"Wes.turner"},
@@ -196,6 +196,7 @@
         feedloaded: function(){
           count++;
           // Check if all the feeds have been loaded
+          $("#lifestream a").attr('target','_blank');
           if( count === accounts_list.length + 1 ){
             $("#lifestream li").each(function(){
               var element = $(this),
