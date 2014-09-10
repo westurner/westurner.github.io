@@ -68,8 +68,7 @@
       <hgroup>
         <h1><a href="../index.html">Wes Turner</a></h1><h2>westurner</h2></hgroup>
 
-  <div id="accounts_">
-      <div class="widget">
+      <div id="accounts_"><div class="widget">
 <ul id="accounts">
 <li>
 <a href="https://github.com/westurner" title="GitHub" rel="me" target="_blank">
@@ -262,13 +261,11 @@
 </a>
 </li>
 </ul>
-</div>
-  </div>
-  </header>
+</div></div>
+    </header>
 <nav role="navigation">
     <ul>
         
-
         <li class="main-nav">
             <a href="/index.html">home</a>
         </li>
@@ -293,13 +290,12 @@
         <li class="main-nav">
             <a href="#">stream</a>
         </li>
-
     </ul>
     </nav><div class="main-container" role="main"><div class="main wrapper clearfix"><article role="main">
     <div class="section" id="stream">
 <h1>Stream</h1>
 
-    <link href="http://christianv.github.io/jquery-lifestream/css/lifestream.css" rel="stylesheet" type="text/css">
+    <link href="../_static/css/lifestream.css" rel="stylesheet" type="text/css">
     <style type="text/css">
     #lifestream ul li { list-style-type: none;}
     #lifestream {
@@ -336,8 +332,8 @@
     }
     </style>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-    <script src="//rawgithub.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../_static/js/jquery.lifestream.min.js"></script>
+    <script src="../_static/js/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
     var accounts_list = [
     //{service:"bitbucket", user:"westurner"},
@@ -449,7 +445,7 @@
     {   service:"stackoverflow",
         user:"188833",
         template: {
-            global: '${text} <a href="${link}">${title}</a>'
+            global: '<i>${text}</i> <a href="${link}">${title}</a>'
         },
     },
     {   service:"tumblr",
@@ -457,7 +453,7 @@
     {   service:"twitter",
         user:"westurner",
         template: {
-            "posted": 'tweeted {{html tweet}}'
+          "posted": '<a href="${complete_url}">tweeted</a> <i>{{html tweet}}</i>'
         },
     },
     {service:"wikipedia", user:"Wes.turner"},
@@ -496,6 +492,7 @@
         feedloaded: function(){
           count++;
           // Check if all the feeds have been loaded
+          $("#lifestream a").attr('target','_blank');
           if( count === accounts_list.length + 1 ){
             $("#lifestream li").each(function(){
               var element = $(this),
@@ -734,7 +731,6 @@ Many of the feeds list only <em>n recent items</em>.</p>
 </div></section></aside></div> <!-- #main --></div> <!-- #main-container -->
 
         <div class="footer-container" role="contentinfo"><footer class="wrapper" role="contentinfo">
-
     <ul><li class="main-nav"><div class="rss">
         <a href="../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li></ul>&copy; Copyright 2014 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
