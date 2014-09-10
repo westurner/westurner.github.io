@@ -177,11 +177,14 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
+RESUME_ROOT="$(SRCDIR)/resume.rst"
+RESUME_OUTPUT_PREFIX="resume_wes-turner"
+
 rst2html:
-	rst2html $(SRCDIR)/resume.rst > $(BUILDDIR)/resume_wes-turner.html
+	rst2html $(RESUME_ROOT) > $(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).html
 
 rst:
-	cp $(SRCDIR)/resume.rst $(BUILDDIR)/resume_wes-turner.rst
+	cp $(RESUME_ROOT) $(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).rst
 	@echo "Build finished. The RST file is in $(BUILDDIR)/"
 
 odt:
@@ -189,21 +192,21 @@ odt:
 		--stylesheet=styles.odt \
 		--strip-comments \
 		--no-doc-info \
-		$(SRCDIR)/resume.rst \
-		$(BUILDDIR)/resume_wes-turner.odt
+		$(RESUME_ROOT) \
+		$(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).odt
 	@echo "Build finished. The ODT file is in $(BUILDDIR)/"
 
 doc: odt
 	soffice --headless \
 		--convert-to doc \
-		$(BUILDDIR)/resume_wes-turner.odt \
+		$(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).odt \
 		--outdir $(BUILDDIR)
 	@echo "Build finished. The DOC file is in $(BUILDDIR)/"
 
 docx: odt
 	soffice --headless \
 		--convert-to docx \
-		$(BUILDDIR)/resume_wes-turner.odt \
+		$(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).odt \
 		--outdir $(BUILDDIR)
 	@echo "Build finished. The DOCX file is in $(BUILDDIR)/"
 
@@ -213,5 +216,7 @@ docx: odt
 #	@echo "Build finished. The DOCX file is in $(BUILDDIR)/docx."
 
 
-forweb: rst html singlehtml latexpdf odt doc docx
+forweb: rst html singlehtml
+
+forprint: latexpdf odt doc docx
 
