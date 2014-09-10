@@ -2,3 +2,4 @@
 *.draft.rst
 blog/
 _themes/boilerplate/
+*.un~
