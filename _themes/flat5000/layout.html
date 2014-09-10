@@ -21,6 +21,9 @@
             {
                 $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop - 44);
             }
+            $("a.external").attr('target', '_blank');
+            // $("a[href^='http'").attr('target', '_blank');
+
         });
     </script>
 
@@ -41,10 +44,10 @@
         {%- if tagline -%}<h2>{{ tagline|e }}</h2>{%- endif -%}
       </hgroup>
 
-  <div id="accounts_">
-      {% include "accounts.html" %}
-  </div>
-  </header>
+      <div id="accounts_">
+          {%- include "accounts.html" -%}
+      </div>
+    </header>
 {% endblock -%}
 
 {%- block navigation -%}
@@ -57,7 +60,6 @@
         </li>
         {% endfor -%}
         #}
-
         <li class="main-nav">
             <a href="/index.html">home</a>
         </li>
@@ -82,7 +84,6 @@
         <li class="main-nav">
             <a href="{{ pathto('pages/stream') }}">stream</a>
         </li>
-
     </ul>
     </nav>
 {%- endblock -%}
@@ -99,7 +100,6 @@
 
 {%- block footer -%}
 <footer class="wrapper" role="contentinfo">
-
     <ul>
         {%- block quicklinks -%}
         {%- if rss_in_page_nav -%}
