@@ -30,7 +30,8 @@ article p { line-height: 1.5; }
 .highlight pre { font-family: "Monaco", monospace; }
 
 
-aside.sidebar h1, aside.sidebar h1 a { font-size: 1.2em; opacity: 0.2; color: {{ aside_header_color }}; }
+aside.sidebar h1,
+aside.sidebar h1 a { font-size: 1.2em; color: {{ aside_header_color }}; }
 aside.sidebar { font-size: 1em; }
 aside.sidebar.highlight { font-size: .8em; }
 
@@ -55,7 +56,8 @@ table.footnote { opacity: 0.7; margin-top: 1em; }
 table.footnote td { vertical-align: middle; padding-right: 1em; }
 table.footnote td.label { vertical-align: top; word-break: initial; }
 
-footer { font-size: 0.8em; opacity: 0.2; }
+footer { font-size: 0.8em; opacity: 0.6; }
+footer ul { list-style-type: none; }
 
 code, kbd, pre, samp { font-family: {{ code_font }}; line-height: 1.4em; }
 
