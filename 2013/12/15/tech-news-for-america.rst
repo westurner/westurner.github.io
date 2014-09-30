@@ -217,6 +217,9 @@ https://en.wikipedia.org/wiki/Hyperlocal
 
 * https://en.wikipedia.org/wiki/Multiverse
 * https://en.wikipedia.org/wiki/Universe
+* https://en.wikipedia.org/wiki/Laniakea_Supercluster
+* https://en.wikipedia.org/wiki/Virgo_Supercluster  
+* https://en.wikipedia.org/wiki/Local_Group
 * https://en.wikipedia.org/wiki/Milky_Way
 * https://en.wikipedia.org/wiki/Solar_System
 * https://en.wikipedia.org/wiki/Earth
@@ -238,6 +241,9 @@ EDIT: 2014/02/02 Updated link to "Mathematics for Computer Science" PDF
 EDIT: 2014/09/21 Updated link to "Mathematics for Computer Science" PDF
 
 EDIT: 2014/09/29 Added links to "Multiverse" and "Universe"
+
+EDIT: 2014/09/29 Added links to "Laniakea Supercluster", "Virgo
+Supercluster", and "Local Group"
 
 .. author:: Wes Turner
 .. categories:: none
