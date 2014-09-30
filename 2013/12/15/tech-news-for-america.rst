@@ -56,7 +56,7 @@ Writing Code
 * https://www.khanacademy.org/cs
 * https://www.class-central.com/subject/cs
 * http://www.acm.org/education/curricula/ComputerScience2008.pdf [PDF]
-* http://courses.csail.mit.edu/6.042/fall13/mcs.pdf (#OCW #OER) [PDF]
+* http://courses.csail.mit.edu/6.042/spring14/mcs.pdf (#OCW #OER) [PDF]
 * https://en.wikipedia.org/wiki/Abstraction_(computer_science)
 * https://en.wikipedia.org/wiki/Category:Algorithms
 * http://rosettacode.org/wiki/Category:Programming_Tasks
@@ -234,6 +234,8 @@ https://en.wikipedia.org/wiki/Hyperlocal
   <https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&src=typd>`_
 
 EDIT: 2014/02/02 Updated link to "Mathematics for Computer Science" PDF
+
+EDIT: 2014/09/21 Updated link to "Mathematics for Computer Science" PDF
 
 EDIT: 2014/09/29 Added links to "Multiverse" and "Universe"
 
