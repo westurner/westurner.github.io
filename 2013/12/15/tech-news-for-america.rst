@@ -215,6 +215,8 @@ Hyperlocal
 -----------
 https://en.wikipedia.org/wiki/Hyperlocal
 
+* https://en.wikipedia.org/wiki/Multiverse
+* https://en.wikipedia.org/wiki/Universe
 * https://en.wikipedia.org/wiki/Milky_Way
 * https://en.wikipedia.org/wiki/Solar_System
 * https://en.wikipedia.org/wiki/Earth
@@ -232,6 +234,8 @@ https://en.wikipedia.org/wiki/Hyperlocal
   <https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&src=typd>`_
 
 EDIT: 2014/02/02 Updated link to "Mathematics for Computer Science" PDF
+
+EDIT: 2014/09/29 Added links to "Multiverse" and "Universe"
 
 .. author:: Wes Turner
 .. categories:: none
