@@ -15,14 +15,14 @@
     {{ super() }}
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            // Redirect to HTTPS if not on localhost
-            if (window.location.protocol !== "https:") {
-                if (window.location.hostname !== 'localhost' &&
-                    window.location.hostname !== '127.0.0.1') {
-                    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-                }
+        // Redirect to HTTPS if not on localhost
+        if (window.location.protocol !== "https:") {
+            if (window.location.hostname !== 'localhost' &&
+                window.location.hostname !== '127.0.0.1') {
+                window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
             }
+        }
+        $(document).ready(function () {
             // Scroll to content if on small screen
             if (document.body.clientWidth < 480)
             {
