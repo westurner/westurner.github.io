@@ -151,7 +151,7 @@ html_title = "Wes Turner"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['../_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -381,3 +381,47 @@ epub_copyright = u'2014 Wes Turner'
 #docx_descriptions = docx_title
 #docx_keywords = [docx_creator, u"resume", u"python", u"linux", u"open source"]
 #docx_style = NotImplemented # 'MyStyle.docx'
+
+def configure_meta_tags(app, pagename, templatename, context, doctree):
+    metatags = context.get('metatags', '')
+    metatags += """
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- OpenGraph metadata: ogp.me -->
+    <meta property="og:title" content="{title}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{og_site_name}" />
+    <!--
+    <meta property="og:description" content="{description}" />
+    -->
+    <meta property="og:image" content="{og_image_url}" />
+    <meta property="og:image:width" content="{og_image_width}" />
+    <meta property="og:image:height" content="{og_image_height}" />
+    <!--
+    <meta property="og:image:secure_url" content="./_static/img/logo.png" />
+    -->
+    <!-- Twitter metadata -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{title}" />
+    <meta property="twitter:description" content="{description}" />
+    <meta property="twitter:site" content="{twitter_user}" />
+    <meta property="twitter:creator" content="{twitter_user}" />
+    """.format(
+        title=context.get('title',''),
+        description=context.get('description', 'Resume'),
+        og_site_name="Wes Turner",
+        og_image_url="https://westurner.github.io/_static/img/bowtie/bowtie-v0.0.1-470x242.png",
+        og_image_width="470",
+        og_image_height="242",
+        twitter_user="westurner")
+    context['metatags'] = metatags
+
+def setup(app):
+    #app.add_javascript('js/local.js')
+    app.connect('html-page-context', configure_meta_tags)
+
+
+if __name__ == "__main__":
+    context = {}
+    output = configure_meta_tags(None, None, None, context, None)
+    print(context.get('metatags'))
+
