@@ -23,9 +23,9 @@ This blog is created from `reStructuredText
 <https://en.wikipedia.org/wiki/reStructuredText>`_
 `sources hosted by GitHub <https://github.com/westurner/westurner.github.io>`_
 which are processed by `Tinkerer <http://www.tinkerer.me/>`_
-(`source <https://github.com/vladris/tinkerer>`_),
+(`source <https://github.com/vladris/tinkerer>`__),
 which extends `Sphinx <https://sphinx-doc.org/>`_
-(`source <https://bitbucket.org/birkenfeld/sphinx>`_,
+(`source <https://bitbucket.org/birkenfeld/sphinx>`__,
 `wikipedia
 <https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)>`_).
 
@@ -42,13 +42,13 @@ and a
 in my
 `dotvim <https://github.com/westurner/dotvim>`_
 `Vim <http://vim.org/>`_
-(`source <https://vim.googlecode.com/hg/>`_,
-`wikipedia <https://en.wikipedia.org/wiki/Vim_(text_editor)>`_)
+(`source <https://vim.googlecode.com/hg/>`__,
+`wikipedia <https://en.wikipedia.org/wiki/Vim_(text_editor)>`__)
 configuration
 with a
 `Python <http://python.org>`_
-(`source <http://hg.python.org/cpython>`_,
-`wikipedia <https://en.wikipedia.org/wiki/Python_(programming_language)>`_)
+(`source <http://hg.python.org/cpython>`__,
+`wikipedia <https://en.wikipedia.org/wiki/Python_(programming_language)>`__)
 script called
 `vim2vim
 <https://github.com/westurner/vim2vim/blob/master/vim2vim/vim2vim.py>`_,
