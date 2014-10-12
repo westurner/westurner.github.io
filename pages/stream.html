@@ -41,13 +41,12 @@
     <script type="text/javascript">
         $(document).ready(function () {
             // Scroll to content if on small screen
-            if (screen.width < 480)
+            if (document.body.clientWidth < 480)
             {
-                $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop - 44);
+                $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop);
             }
             $("a.external").attr('target', '_blank');
             // $("a[href^='http'").attr('target', '_blank');
-
         });
     </script>
 
@@ -725,7 +724,10 @@ Many of the feeds list only <em>n recent items</em>.</p>
 </div></section></aside></div> <!-- #main --></div> <!-- #main-container -->
 
         <div class="footer-container" role="contentinfo"><footer class="wrapper" role="contentinfo">
-    <ul><li class="main-nav"><div class="rss">
+    <ul>
+        <li class="main-nav" style="margin-bottom:1em">
+            <a href="#">^top^</a>
+        </li><li class="main-nav"><div class="rss">
         <a href="../rss.html" title="Subscribe via RSS"><span class="webfont">B</span></a>
     </div></li></ul>&copy; Copyright 2014 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
