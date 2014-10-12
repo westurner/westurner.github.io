@@ -458,7 +458,7 @@ Responsible for project management
 --------------
 | Personal reddit data liberation backup utility
 | https://github.com/westurner/redem
-| http://westurner.github.io/redditlog/
+| https://westurner.github.io/redditlog/
 
 * Reddit reader: comments, submissions, links
 * Fetch last 1000 comments from Reddit
