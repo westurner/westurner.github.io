@@ -1,7 +1,7 @@
 Tech News for America
 ======================
 
-So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links -- because what good is an internet page without links -- from my trusty ol' redditlog, here: http://westurner.github.io/redditlog/.
+So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links -- because what good is an internet page without links -- from my trusty ol' redditlog, here: https://westurner.github.io/redditlog/.
 
 Lean Publishing
 ----------------

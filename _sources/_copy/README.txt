@@ -31,4 +31,4 @@ jQuery and jQuery lifestream are bundled
 Small portions of flat_css.t are derived from Bootstrap CSS
 (LICENSE.bootstrap).
 
-.. _`westurner.github.io`: http://westurner.github.io
+.. _`westurner.github.io`: https://westurner.github.io
