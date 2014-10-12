@@ -28,12 +28,12 @@
 Summary
 ========
 
+**Systems Engineer**
+
 **Objective**: Develop and contribute my skills and experience to
 achieve organizational mission objectives.
 
-*Full Stack Developer* with an entrepreneurial spirit streak
-
-Desire to:
+*What do I want to do?*
 
 * Collaborate with a **team** of bright, motivated individuals
 * **Learn** with agile, iterative, continuous integration and deployment
