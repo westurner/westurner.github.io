@@ -15,6 +15,12 @@
 	auto-setup \
 	auto-html
 
+ifeq ($(__IS_MAC),true)
+BROWSER="open"
+else
+BROWSER="x-www-browser"
+endif
+
 default: build
 
 
@@ -37,10 +43,10 @@ accounts:
 	#git commit
 
 serve:
-	python -m SimpleHTTPServer 18282
+	eval "python -m SimpleHTTPServer 18282 &"; PID=$$! ; echo "PID=$$PID"
 
 open:
-	open http://localhost:18282/
+	$(BROWSER) http://localhost:18282/ &
 
 view:
 	$(MAKE) serve & $(MAKE) open
