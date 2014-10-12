@@ -3,7 +3,7 @@
 :copyright: Copyright © 2014, All Rights Reserved
 
 ======================================================
-`Resume <https://westurner.github.io/pages/resume>`_
+`Resume <http://westurner.github.io/pages/resume>`_
 ======================================================
 
 .. raw:: latex
@@ -13,14 +13,14 @@
 .. raw:: html
 
    <div class="sidebar">
-   <p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/resume">Wes Turner</a></p>
+   <p class="first sidebar-title"><a class="reference external" href="http://westurner.github.io/resume">Wes Turner</a></p>
    <ul class="last simple">
-   <li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/html/resume.html">HTML</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/html/resume.html">HTML</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
+   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
    </ul>
    </div>
 
@@ -437,7 +437,7 @@ Responsible for project management
 
 2012: Self Directed Learning
 -------------------------------
-| https://westurner.github.io/self-directed-learning/
+| http://westurner.github.io/self-directed-learning/
 
 * Autodidactism
 * Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
@@ -456,7 +456,7 @@ Responsible for project management
 --------------
 | Personal reddit data liberation backup utility
 | https://github.com/westurner/redem
-| https://westurner.github.io/redditlog/
+| http://westurner.github.com/redditlog/
 
 * Reddit reader: comments, submissions, links
 * Fetch last 1000 comments from Reddit
