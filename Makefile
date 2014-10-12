@@ -64,8 +64,8 @@ resume-print:
 	$(MAKE) resume-commit
 
 resume-commit:
-	git add ./_copy/resume
-	git commit -m "Added updated resume build outputs"
+	git add ./_copy/resume && \
+		git commit -m "Added updated resume build outputs"
 
 
 install:
