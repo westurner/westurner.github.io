@@ -24,6 +24,8 @@ endif
 default: build
 
 all:
+	$(MAKE) fix-links
+	#$(MAKE) resume
 	$(MAKE) build
 	$(MAKE) push
 	$(MAKE) push-source
@@ -34,7 +36,6 @@ all:
 
 build:
 	# Building HTML
-	$(MAKE) fix-links
 	tinker --build
 
 accounts:
