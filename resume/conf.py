@@ -25,7 +25,10 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.viewcode']
+extensions = [
+    'sphinxjp.themes.basicstrap',
+#    'sphinx.ext.viewcode'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -94,12 +97,37 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'basicstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    'lang': 'en',
+    'nosidebar': False,
+    'rightsidebar': True,
+    'sidebar_span': 5,
+    #'nav_fixed_top': False,
+    'nav_fixed': False,
+    'nav_width': '900px',
+    'content_fixed': False,
+    'content_width': '768px',
+    'row_fixed': False,
+    'noresponsive': False,
+    'googlewebfont': False,
+    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Lily+Script+One',
+    'googlewebfont_style': u"font-family: 'Lily Script One' cursive;",
+    'header_inverse': False,
+    'relbar_inverse': False,
+    'inner_theme': False,
+    'inner_theme_name': 'bootswatch-readable',
+    #'h1_size': '3.0em',
+    #'h2_size': '2.6em',
+    #'h3_size': '2.2em',
+    #'h4_size': '1.8em',
+    #'h5_size': '1.4em',
+    #'h6_size': '1.1em',
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -134,7 +162,14 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {'**': [
+    'localtoc.html',
+    'download-links.html',
+    'relations.html',
+    'sourcelink.html',
+    'searchbox.html',
+]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
