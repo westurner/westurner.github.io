@@ -13,7 +13,7 @@
 
 .. raw:: html
 
-   <div class="sidebar">
+   <div class="sidebar sr-only">
    <p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/pages/resume.html">Wes Turner</a></p>
    <ul class="last simple">
    <li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
