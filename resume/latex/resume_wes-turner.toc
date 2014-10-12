@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {3.1}Omaha, NE, USA; St Louis, MO, USA}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}2007-2010: UNOmaha}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}2010-2014: Online Learning}{5}{subsection.3.3}
-\contentsline {section}{\numberline {4}Projects}{6}{section.4}
+\contentsline {section}{\numberline {4}Projects}{5}{section.4}
 \contentsline {subsection}{\numberline {4.1}2007: Presense}{6}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}2007: Eagle Financial Life Insurance Quotes}{6}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}2009: Nebraska Humane Society Nonprofit Consulting}{6}{subsection.4.3}
@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {4.14}2014: Health-marketplace}{8}{subsection.4.14}
 \contentsline {subsection}{\numberline {4.15}2014: Menuapp}{8}{subsection.4.15}
 \contentsline {subsection}{\numberline {4.16}2014: Healthref}{9}{subsection.4.16}
-\contentsline {subsection}{\numberline {4.17}Open Source Contributions}{9}{subsection.4.17}
-\contentsline {subsection}{\numberline {4.18}hello\_world}{10}{subsection.4.18}
-\contentsline {subsection}{\numberline {4.19}Dotfiles}{10}{subsection.4.19}
-\contentsline {section}{\numberline {5}Contact Information}{10}{section.5}
+\contentsline {subsection}{\numberline {4.17}hello\_world}{9}{subsection.4.17}
+\contentsline {subsection}{\numberline {4.18}Dotfiles}{9}{subsection.4.18}
+\contentsline {subsection}{\numberline {4.19}Open Source Contributions}{9}{subsection.4.19}
+\contentsline {section}{\numberline {5}Contact Information}{9}{section.5}
