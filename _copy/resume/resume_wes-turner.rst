@@ -31,7 +31,7 @@ Summary
 **Systems Engineer**
 
 **Objective**: Develop and contribute my skills and experience to
-achieve organizational mission objectives.
+achieve organizational mission objectives
 
 *What do I want to do?*
 
