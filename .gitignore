@@ -1,5 +1,6 @@
 
 autocompile.py
+.DS_store
 *.pyc
 *.draft.rst
 blog/
