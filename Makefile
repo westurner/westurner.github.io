@@ -12,7 +12,7 @@
 	resume-print \
 	resume-commit \
 	install \
-	auto-setup \
+	autocompile.py \
 	auto-html
 
 ifeq ($(__IS_MAC),true)
@@ -22,7 +22,6 @@ BROWSER="x-www-browser"
 endif
 
 default: build
-
 
 all:
 	$(MAKE) build
@@ -34,6 +33,8 @@ all:
 	## $ make resume all (resume-web, resume-print, resume-commit)
 
 build:
+	# Building HTML
+	$(MAKE) fix-links
 	tinker --build
 
 accounts:
@@ -53,7 +54,10 @@ view:
 
 push:
 	git status
-	ghp-import -n -b master -m 'Added output from `tinker --build` (`make build`)' -r origin -p ./blog/html/
+	ghp-import -n -b master \
+		-m 'Added output from `tinker --build` (`make build`)' \
+		-r origin \
+		-p ./blog/html/
 
 push-source:
 	git status
@@ -81,9 +85,22 @@ resume-commit:
 install:
 	pip install -r requirements.txt
 
-auto-setup:
+autocompile.py:
 	pip install pyinotify
 	wget https://raw.github.com/seb-m/pyinotify/master/python2/examples/autocompile.py
 
-auto-html: html_preview
-	python ./autocompile.py . '.rst,Makefile,conf.py,theme.conf' "make html"
+auto-html: autocompile.py
+	python ./autocompile.py . \
+		'.rst,Makefile,conf.py,theme.conf,.css_t,pygments.css' \
+		"make build"
+
+fix-links:
+	grin 'westurner.github.io' -l \
+		-e 'Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,#,.bak,\
+			.png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,\
+			.lib' | \
+		xargs -I % sed -i \
+		-e 's/westurner.github.com/westurner.github.io/g' %
+	grin 'https://westurner.github' -l | \
+		xargs -I % sed -i \
+		-e 's,https://westurner.github,https://westurner.github,g' %

@@ -1,3 +1,5 @@
+
+autocompile.py
 *.pyc
 *.draft.rst
 blog/
