@@ -1,15 +1,19 @@
 
+## westurner.github.io Makefile
+# https://westurner.github.io/
 
 .PHONY: default all build \
 	accounts \
 	serve open view \
 	push \
-	push_source \
+	push-source \
 	resume \
-	resume_commit \
+	resume-web \
+	resume-print \
+	resume-commit \
 	install \
-	auto_setup \
-	auto_html
+	auto-setup \
+	auto-html
 
 default: build
 
