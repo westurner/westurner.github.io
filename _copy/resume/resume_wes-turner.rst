@@ -1,10 +1,11 @@
+
 :title: Resume: Wes Turner
 :author: Wes Turner <wes.turner@gmail.com>
 :copyright: Copyright © 2014, All Rights Reserved
 
-======================================================
-`Resume <http://westurner.github.io/pages/resume>`_
-======================================================
+=========================================================
+`Resume <https://westurner.github.io/pages/resume.html>`_
+=========================================================
 
 .. raw:: latex
     
@@ -13,14 +14,14 @@
 .. raw:: html
 
    <div class="sidebar">
-   <p class="first sidebar-title"><a class="reference external" href="http://westurner.github.io/resume">Wes Turner</a></p>
+   <p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/pages/resume.html">Wes Turner</a></p>
    <ul class="last simple">
-   <li><a class="reference external" href="http://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/html/resume.html">HTML</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
-   <li><a class="reference external" href="http://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/html/resume.html">HTML</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
    </ul>
    </div>
 
@@ -116,7 +117,8 @@ Semantic web
 
 * Prototyped RDFa templates; Jinja2 block recursion
 * Developed an OWL-DL ontology based on DOAP, FOAF, and RDFS to describe
-  a systems component graph and metadata; Sesame, Redland, Protégé, Pellet, Turtle (TriG)
+  a systems component graph and metadata; Sesame, Redland, Protégé, Pellet,
+  Turtle (TriG)
 * Created tool to generate documentation reports from SPARQL queries
   of a component graph; RDFLib, FuXi, ReStructuredText
 
@@ -437,7 +439,7 @@ Responsible for project management
 
 2012: Self Directed Learning
 -------------------------------
-| http://westurner.github.io/self-directed-learning/
+| https://westurner.github.io/self-directed-learning/
 
 * Autodidactism
 * Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
@@ -473,7 +475,9 @@ Responsible for project management
 
 2014: Menuapp
 ----------------
-| Restaurant menu web application with `schema.org <http://schema.org/docs/full.html>`_ types
+| Restaurant menu web application with `schema.org`_ types
+
+.. _schema.org: http://schema.org/docs/full.html
 
 * Developed for a cupcake bakery FoodEstablishment
 * Python, Django, Django-nonrel, Google AppEngine
@@ -493,7 +497,8 @@ hello_world
 --------------
 | https://github.com/westurner/hello_world
 
-Language basics / code samples in C++, CoffeeScript, Cython, Go, Java, Javascript, Python, and Ruby
+Language basics / code samples in C++, CoffeeScript, Cython,
+Go, Java, Javascript, Python, and Ruby
 
 
 Dotfiles
