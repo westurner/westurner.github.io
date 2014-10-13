@@ -38,6 +38,14 @@ build:
 	# Building HTML
 	tinker --build
 
+STATIC:="./_static"
+LOCALJS="$(STATIC)/js/local.js"
+
+localjs:
+	echo '' > $(LOCALJS)
+	cat $(STATIC)/js/ga.js >> $(LOCALJS)
+	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
+
 accounts:
 	python ./get_accounts.py -d > ./_themes/flat5000/accounts.html
 	git add _static/service_icons/*
