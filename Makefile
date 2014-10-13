@@ -17,8 +17,10 @@
 
 ifeq ($(__IS_MAC),true)
 BROWSER="open"
+SEDOPTS=-i '' -e
 else
 BROWSER="x-www-browser"
+SEDOPTS=-i
 endif
 
 default: build
@@ -108,8 +110,8 @@ fix-links:
 		-e 'Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,#,.bak,\
 			.png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,\
 			.lib' | \
-		xargs -I % sed -i \
-		-e 's/westurner.github.com/westurner.github.io/g' %
+		xargs -I % sed $(SEDOPTS) \
+			's/westurner.github.com/westurner.github.io/g' %
 	grin 'https://westurner.github' -l | \
-		xargs -I % sed -i \
-		-e 's,https://westurner.github,https://westurner.github,g' %
+		xargs -I % sed $(SEDOPTS) \
+			's,https://westurner.github,https://westurner.github,g' %
