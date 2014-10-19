@@ -15,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
         <meta name="viewport" content="width=device-width">
-        <title>A configuration trick &mdash; Wes Turner</title>
+        <title>Hello World! &mdash; Wes Turner</title>
             <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
@@ -28,7 +28,7 @@
         <script>window.jQuery || document.write('<script src="../../../_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="../../../_static/plugins.js"></script>
         <script src="../../../_static/main.js"></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
+        <link rel="prev" title="Tech News for America" href="../../12/15/tech-news-for-america.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
         VERSION:     '1.4.2',
@@ -292,118 +292,102 @@
         </li>
     </ul>
     </nav><div class="main-container" role="main"><div class="main wrapper clearfix"><article role="main"><div class="timestamp postmeta">
-            <span>May 03, 2014</span>
+            <span>November 25, 2013</span>
         </div>
-    <div class="section" id="a-configuration-trick">
-<h1>A configuration trick</h1>
-<p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
-can be difficult to grep through. It&#8217;s not always easy
-<em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
-<p><strong>Solution</strong>: Approach configuration documentation
-like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
-&#8220;literate configuration&#8221;.</p>
-<ol class="arabic simple">
-<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
-<li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
-</ol>
-<p><strong>Example</strong></p>
-<p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/043037f9ac81a5d6f10d1ac3ce628910e57da774/etc/.i3/config">i3 config</a> that I cleaned up this morning:</p>
-<div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
-### Notes
-#  #  Default location: ~/.i3/config
-#  #  List the commented command shortcuts with::
-#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;
-#...
-## Change volume
-#  &lt;XF86AudioRaiseVolume&gt;   -- volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id $volume_up
-#  &lt;XF86AudioLowerVolume&gt;   -- volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id $volume_down
+    <div class="section" id="hello-world">
+<h1>Hello World!</h1>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 
-## Start, stop, and reset xflux
-#  &lt;alt&gt; [         -- start xflux
-bindsym $mod+bracketleft    exec --no-startup-id $xflux_start
-#  &lt;alt&gt; ]         -- stop xflux
-bindsym $mod+bracketright   exec --no-startup-id $xflux_stop
-#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0
-bindsym $mod+Shift+bracketright  exec --no-startup-id $xflux_reset
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&quot;Hello World!&quot;</span>
 
-## Resize Mode
-#  &lt;alt&gt; r      -- enter resize mode
-bindsym $mod+r  mode &quot;resize&quot;
-
-mode &quot;resize&quot; {
-    ## Grow and shrink windows
-    # These bindings trigger as soon as you enter the resize mode
-    # ...
-    # back to normal: Enter or Escape
-    #  &lt;enter&gt;  -- exit resize mode
-    bindsym Return      mode &quot;default&quot;
-    #  &lt;esc&gt;    -- exit resize mode
-    bindsym Escape      mode &quot;default&quot;
-}
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
-with a simple conditional regular expression:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cat ~/.i3/config | egrep <span class="s1">&#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-</pre></div>
+<p><strong>Updated: 2013-12-15</strong></p>
+<p>New blog! I thought best to accentuate &#8220;Hello World&#8221; with an exclamation
+point. <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
+<div class="section" id="this-blog">
+<h2>This Blog</h2>
+<p>This blog is created from <a class="reference external" href="https://en.wikipedia.org/wiki/reStructuredText">reStructuredText</a>
+<a class="reference external" href="https://github.com/westurner/westurner.github.io">sources hosted by GitHub</a>
+which are processed by <a class="reference external" href="http://www.tinkerer.me/">Tinkerer</a>
+(<a class="reference external" href="https://github.com/vladris/tinkerer">source</a>),
+which extends <a class="reference external" href="https://sphinx-doc.org/">Sphinx</a>
+(<a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx">source</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)">wikipedia</a>).</p>
+<div class="section" id="syntax-highlighting">
+<h3>Syntax Highlighting</h3>
+<p>Code syntax highlighting &#8211;
+<a class="reference external" href="https://github.com/westurner/pygments-style-jellywrd">pygments-style-jellywrd</a> &#8211;
+is adapted from
+<a class="reference external" href="https://github.com/nanotech/jellybeans.vim">jellybeans.vim</a>
+and a
+<a class="reference external" href="https://github.com/westurner/dotvim/blob/d9acce/vimrc#L426">PatchColors function</a>
+in my
+<a class="reference external" href="https://github.com/westurner/dotvim">dotvim</a>
+<a class="reference external" href="http://vim.org/">Vim</a>
+(<a class="reference external" href="https://vim.googlecode.com/hg/">source</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Vim_(text_editor)">wikipedia</a>)
+configuration
+with a
+<a class="reference external" href="http://python.org">Python</a>
+(<a class="reference external" href="http://hg.python.org/cpython">source</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Python_(programming_language)">wikipedia</a>)
+script called
+<a class="reference external" href="https://github.com/westurner/vim2vim/blob/master/vim2vim/vim2vim.py">vim2vim</a>,
+which generates the requisite
+<a class="reference external" href="http://pygments.org/">Pygments</a>
+(<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main">source</a>)
+style.</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>TIL that &#8220;Hello World&#8221; originated from
+<a class="reference external" href="https://en.wikipedia.org/wiki/The_C_Programming_Language_(book)">The C Programming Language</a>
+by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id2">[2]</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></td></tr>
+</tbody>
+</table>
 </div>
-<p>Peruse the output for that one excellent keyboard shortcut:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
-<span class="c">### Notes</span>
-<span class="c">#  #  Default location: ~/.i3/config</span>
-<span class="c">#  #  List the commented command shortcuts with::</span>
-<span class="c">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-<span class="c">## Change volume</span>
-<span class="c">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
-<span class="c">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
-<span class="c">## Start, stop, and reset xflux</span>
-<span class="c">#  &lt;alt&gt; [         -- start xflux</span>
-<span class="c">#  &lt;alt&gt; ]         -- stop xflux</span>
-<span class="c">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
-<span class="c">## Resize Mode</span>
-<span class="c">#  &lt;alt&gt; r      -- enter resize mode</span>
-    <span class="c">## Grow and shrink windows</span>
-    <span class="c">#  &lt;enter&gt;  -- exit resize mode</span>
-    <span class="c">#  &lt;esc&gt;    -- exit resize mode</span>
-</pre></div>
 </div>
-<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
-of the relevant configuration file documentation.</p>
-<p>The <a class="reference external" href="https://jashkenas.github.io/docco/">docco</a> homepage lists quite a few more heavyweight approaches to
-generating documentation from comment strings embedded in various languages
-(such as Markdown in a shell script).</p>
-<p>A similar pattern has worked well in my <a class="reference external" href="https://github.com/westurner/dotvim/commit/e78c59ba048087422806c1c1e668be667f949260#diff-076d61938d25fd036d6436c94d8778faR123">vimrc</a> for a few years.</p>
-<p>I&#8217;ve also added this to the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed3110b581a42a77199e2c6708f5165683/Makefile#L83">Provis Makefile</a>,
-which I currently just include into the
-<a class="reference external" href="https://provis.readthedocs.org/en/latest/">Provis Documentation</a>.</p>
-<p>This simple pattern saves time when looking up custom keyboard shortcuts.</p>
 </div>
 
     <div class="postmeta">
         <div class="author">
             <span>Posted by Wes Turner</span>
         </div>
-        
+        <div class="categories">
+            <span>
+                Filed under:
+                <a href="../../../categories/python.html">python</a></span>
+        </div>
         <div class="tags">
             <span>
                 Tags:
-                <a href="../../../tags/bash.html">#bash</a>&nbsp;<a href="../../../tags/documentation.html">#documentation</a>&nbsp;<a href="../../../tags/literateprogramming.html">#literateprogramming</a></span>
+                <a href="../../../tags/python.html">#python</a></span>
         </div>
-        </div></article><aside class="sidebar"><section><div class="widget">
+        </div><ul class="related clearfix">
+            <li class="left"> &laquo; <a href="../../12/15/tech-news-for-america.html">Tech News for America</a></li>
+            <li class="right"></li>
+        </ul></article><aside class="sidebar"><section><div class="widget">
     <h3><a href="../../../archive.html">Recent Posts</a></h3>
     <ul><li>
-            <a href="../../10/20/wrd-research-and-design.html">WRD Research and Design</a>
+            <a href="../../../2014/10/20/wrd-research-and-design.html">WRD Research and Design</a>
         </li><li>
-            <a href="../../10/20/working-on-lately.html">Working on lately</a>
+            <a href="../../../2014/10/20/working-on-lately.html">Working on Lately</a>
         </li><li>
-            <a href="literate-configuration.html">Literate Configuration</a>
+            <a href="../../../2014/05/03/literate-configuration.html">Literate Configuration</a>
         </li><li>
-            <a href="../../../2013/12/15/tech-news-for-america.html">Tech News for America</a>
+            <a href="../../12/15/tech-news-for-america.html">Tech News for America</a>
         </li><li>
-            <a href="../../../2013/11/25/hello_world.html">Hello World!</a>
+            <a href="#">Hello World!</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox" role="search">
@@ -414,7 +398,7 @@ which I currently just include into the
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
-    <div style="text-align: center"><a href="../../../tags/bash.html">#bash</a>&nbsp; <a href="../../../tags/community.html">#community</a>&nbsp; <a href="../../../tags/compsci.html">#compsci</a>&nbsp; <a href="../../../tags/docs.html">#docs</a>&nbsp; <a href="../../../tags/documentation.html">#documentation</a>&nbsp; <a href="../../../tags/entrepreneurship.html">#entrepreneurship</a>&nbsp; <a href="../../../tags/i3wm.html">#i3wm</a>&nbsp; <a href="../../../tags/keyboard-shortcuts.html">#keyboard_shortcuts</a>&nbsp; <a href="../../../tags/lately.html">#lately</a>&nbsp; <a href="../../../tags/learning.html">#learning</a>&nbsp; <a href="../../../tags/literateprogramming.html">#literateprogramming</a>&nbsp; <a href="../../../tags/python.html">#python</a>&nbsp; <a href="../../../tags/stem.html">#STEM</a>&nbsp; <a href="../../../tags/technews.html">#technews</a>&nbsp; <a href="../../../tags/vim.html">#vim</a>&nbsp; <a href="../../../tags/wiki.html">#wiki</a>&nbsp; <a href="../../../tags/wrdrd.html">#WRDRD</a></div>
+    <div style="text-align: center"><a href="../../../tags/bash.html">#bash</a>&nbsp; <a href="../../../tags/community.html">#community</a>&nbsp; <a href="../../../tags/compsci.html">#compsci</a>&nbsp; <a href="../../../tags/docs.html">#docs</a>&nbsp; <a href="../../../tags/entrepreneurship.html">#entrepreneurship</a>&nbsp; <a href="../../../tags/i3wm.html">#i3wm</a>&nbsp; <a href="../../../tags/keyboardshortcuts.html">#keyboardshortcuts</a>&nbsp; <a href="../../../tags/lately.html">#lately</a>&nbsp; <a href="../../../tags/learning.html">#learning</a>&nbsp; <a href="../../../tags/literateprogramming.html">#literateprogramming</a>&nbsp; <a href="../../../tags/python.html">#python</a>&nbsp; <a href="../../../tags/stem.html">#stem</a>&nbsp; <a href="../../../tags/technews.html">#technews</a>&nbsp; <a href="../../../tags/vim.html">#vim</a>&nbsp; <a href="../../../tags/wiki.html">#wiki</a>&nbsp; <a href="../../../tags/wrdrd.html">#wrdrd</a></div>
 </div></section><section><div class="widget">
 <ul id="accounts">
 <li>
