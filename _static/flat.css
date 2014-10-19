@@ -96,7 +96,7 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
     header h2 { padding: 2px; }
 
     nav { padding: 10px 0; }
-    nav ul { margin: 0 40px; padding: 0; text-align: center; }
+    nav ul { margin: 0; padding: 0; text-align: center; }
     nav li { display: inline; list-style-type: none; text-align: left; width: auto; }
     nav li.main-nav { margin: 20px 0; padding: 0; }
     nav li.main-nav a { padding: 0 20px; }
@@ -123,6 +123,8 @@ div.main-container { background: #f7f7f7; }
 @media only screen and (min-width: 900px) {
     header { left: 0; top: 0; position: fixed; width: 26%; }
 
+    nav { margin-left: 26%; }
+    nav ul { text-align: left; margin-left: 20px; }
     /* nav { left: 0; top: 40%; position: fixed; width: 26%; } */
     nav li { text-align: center; width: 100%; }
 
