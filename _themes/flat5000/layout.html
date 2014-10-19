@@ -47,7 +47,7 @@
 {%- block header -%}
     <header role="banner">
       <hgroup>
-        <h1><a href="{{ pathto(pages[0][0]) }}">{{ shorttitle|e }}</a></h1>
+        <h1><a href="/">{{ shorttitle|e }}</a></h1>
         {%- if tagline -%}<h2>{{ tagline|e }}</h2>{%- endif -%}
       </hgroup>
 
@@ -68,7 +68,7 @@
         {% endfor -%}
         #}
         <li class="main-nav">
-            <a href="/index.html">home</a>
+            <a href="/">home</a>
         </li>
         <li class="main-nav">
             <a href="{{ pathto('archive') }}">blog</a>
