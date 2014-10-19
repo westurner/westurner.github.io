@@ -19,5 +19,5 @@ https://westurner.github.io/resume/html/resume.html
 
 .. author:: default
 .. categories:: none
-.. tags:: wiki, lately
+.. tags:: wiki, resume, lately
 .. comments::
