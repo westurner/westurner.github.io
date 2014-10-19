@@ -1,4 +1,4 @@
-Working on lately
+Working on Lately
 =================
 
 GitHub Wiki

@@ -63,14 +63,14 @@ open:
 view:
 	$(MAKE) serve & $(MAKE) open
 
-push:
+gh-pages:
 	git status
 	ghp-import -n -b master \
 		-m 'Added output from `tinker --build` (`make build`)' \
 		-r origin \
 		-p ./blog/html/
 
-push-source:
+push:
 	git status
 	git push origin source
 
