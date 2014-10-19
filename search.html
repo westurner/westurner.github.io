@@ -52,7 +52,7 @@
         $(document).ready(function () {
             // Scroll to content if on small screen
             if ((document.body.clientWidth < 900) &&
-                (document.location.hash === ""))
+                (window.location.hash === ""))
             {
                 $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop);
             }
