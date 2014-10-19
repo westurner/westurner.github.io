@@ -205,3 +205,5 @@ ul.search { list-style-type: none; margin: 0; padding: 0; }
 ul.search li { background: #fff; padding: 10px; margin: 10px 0; }
 
 div.sidebar { padding: 1em; margin: 1em; float:right; background: white; }
+
+span.highlighted { font-weight: bold; background: yellow; padding: 4px; margin: -4px; }
