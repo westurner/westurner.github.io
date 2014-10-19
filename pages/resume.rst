@@ -80,7 +80,7 @@ Supported `UNMC
 and `NMC <https://en.wikipedia.org/wiki/Nebraska_Medical_Center>`_
 Doctors, Nurses, and Patients
 
-Overhauled a web application used for filing and printing medical orders
+Overhauled a Python web app used for filing and printing medical orders
 
 * Scoped, designed, coded, tested, and documented iterative releases
 * Managed release and deployment to dev/test/prod architecture
