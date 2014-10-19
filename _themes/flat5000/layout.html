@@ -24,7 +24,8 @@
         }
         $(document).ready(function () {
             // Scroll to content if on small screen
-            if (document.body.clientWidth < 900)
+            if ((document.body.clientWidth < 900) &&
+                (window.location.hash === ""))
             {
                 $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop);
             }
