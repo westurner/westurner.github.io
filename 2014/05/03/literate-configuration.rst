@@ -122,5 +122,5 @@ This simple pattern saves time when looking up `my keyboard shortcuts`_.
 
 .. author:: default
 .. categories:: none
-.. tags:: docs, literateprogramming, bash, vim, i3wm, keyboard_shortcuts
+.. tags:: docs, literateprogramming, bash, vim, i3wm, keyboardshortcuts
 .. comments::

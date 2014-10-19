@@ -13,5 +13,5 @@ https://wrdrd.github.io/docs/
 
 .. author:: default
 .. categories:: none
-.. tags:: WRDRD
+.. tags:: wrdrd
 .. comments::

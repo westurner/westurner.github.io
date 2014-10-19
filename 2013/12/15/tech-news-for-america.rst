@@ -247,5 +247,5 @@ Supercluster", and "Local Group"
 
 .. author:: Wes Turner
 .. categories:: none
-.. tags:: community, technews, compsci, STEM, learning, entrepreneurship
+.. tags:: community, technews, compsci, stem, learning, entrepreneurship
 .. comments::
