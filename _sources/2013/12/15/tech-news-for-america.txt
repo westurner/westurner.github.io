@@ -65,7 +65,7 @@ Writing Code
 
 Web Software Development
 -------------------------
-http://en.wikipedia.org/wiki/Web_development
+https://en.wikipedia.org/wiki/Web_development
 
 * http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a
 * http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w

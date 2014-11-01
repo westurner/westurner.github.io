@@ -304,7 +304,7 @@ Courses
 Projects
 ===========
 
-See: https://github.com/westurner/wiki/wiki/projects
+See: https://westurner.github.io/wiki/projects
 
 
 2007: Presense
@@ -503,11 +503,12 @@ Go, Java, Javascript, Python, and Ruby
 
 Dotfiles
 -----------
+| https://westurner.github.io/dotfiles/
 | https://github.com/westurner/dotfiles
 | https://github.com/westurner/dotvim
 
+* Python package with documentation
 * Configuration set for Bash, ZSH, Python, IPython, I3WM
-* Python package with various Paver tasks
 * Configuration set for Vim
 
 .. raw:: pdf
@@ -519,7 +520,7 @@ Open Source Contributions
 ---------------------------
 Primarily small contributions here and there to show my appreciation.
 
-See: https://github.com/westurner/wiki/wiki/contributions
+See: https://westurner.github.io/wiki/contributions
 
 
 
