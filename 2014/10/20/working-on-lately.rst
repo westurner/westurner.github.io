@@ -1,13 +1,13 @@
 Working on Lately
 =================
 
-GitHub Wiki
-------------
-https://github.com/westurner/wiki/wiki
+Wiki
+------
+https://westurner.github.io/wiki
 
-* https://github.com/westurner/wiki/wiki/projects
-* https://github.com/westurner/wiki/wiki/contributions
-* https://github.com/westurner/wiki/wiki/workflow
+* https://westurner.github.io/wiki/projects
+* https://westurner.github.io/wiki/contributions
+* https://westurner.github.io/wiki/workflow
 * https://github.com/westurner/wiki/blob/master/Makefile
 
 Resume
@@ -16,6 +16,8 @@ https://westurner.github.io/pages/resume.html
 
 https://westurner.github.io/resume/html/resume.html
 
+
+EDIT: 2014/11/01 Updated links to wiki
 
 .. author:: default
 .. categories:: none
