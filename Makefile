@@ -49,9 +49,9 @@ localjs:
 	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
 
 accounts:
-	python ./get_accounts.py -d > ./_themes/flat5000/accounts.html
+	python ./get_accounts.py -d > ./_templates/accounts.html
 	git add _static/service_icons/*
-	git add _themes/flat5000/accounts.html
+	git add _templates/accounts.html
 	#git commit
 
 serve:
