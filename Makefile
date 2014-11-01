@@ -105,13 +105,15 @@ auto-html: autocompile.py
 		'.rst,Makefile,conf.py,theme.conf,.css_t,pygments.css' \
 		"make build"
 
+GRIN_EXCLUDE='Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,.bak, \
+.png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,.lib'
 fix-links:
-	grin 'westurner.github.io' -l \
-		-e 'Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,#,.bak,\
-			.png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,\
-			.lib' | \
+	grin 'westurner.github.io' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
 			's/westurner.github.com/westurner.github.io/g' %
-	grin 'https://westurner.github' -l | \
+	grin 'http://westurner.github' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
-			's,https://westurner.github,https://westurner.github,g' %
+			's,http://westurner.github,https://westurner.github,g' %
+	grin 'http://en.wikipedia.org' -l -e $(GRIN_EXCLUDE) | \
+		xargs -I % sed $(SEDOPTS) \
+			's,http://en.wikipedia.org,https://en.wikipedia.org,g' %
