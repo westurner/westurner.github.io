@@ -117,3 +117,23 @@ fix-links:
 	grin 'http://en.wikipedia.org' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
 			's,http://en.wikipedia.org,https://en.wikipedia.org,g' %
+
+
+setup_texlive_ubuntu:
+	latex_build_deps_ubuntu:
+	sudo apt-get install -y \
+		texlive-latex-base \
+		texlive-latex-extra \
+		texlive-latex-recommended \
+		texlive-fonts-recommended
+	# texlive-fonts-extra
+
+setup_texlive_osx:
+	# MacPorts
+	# sudo port install texlive texlive-latex-extra
+	#
+	# Pkg
+	# open https://www.tug.org/mactex/
+	# wget 'https://www.tug.org/mactex/MacTeX.pkg.torrent'
+	## 'http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg'
+	#
