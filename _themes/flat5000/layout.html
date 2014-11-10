@@ -26,14 +26,10 @@
 
         $(document).ready(function () {
             // Scroll to content if on small screen
-            alert($(window).width());
-            alert(document.body.clientWidth);
-            alert(window.location.hash);
-            if ((document.body.clientWidth < 900) &&
+            if (Modernizr.mq('only screen and (max-width: 900px)') &&
                 (window.location.hash == ""))
             {
                 $target = $("article").get(0);
-                alert($target.offsetTop);
                 $.scrollTo($target.offsetTop + 20, 500);
             }
             $("a.external").attr('target', '_blank');
