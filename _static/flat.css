@@ -1,8 +1,8 @@
 /* Typography */
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);/* Palette */html { min-height: 100%; }
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);/* Palette */html { height: auto; }
 
-body { font-family: 'PT Sans', Helvetica, Arial, sans-serif; min-height: 100%; }
+body { font-family: 'PT Sans', Helvetica, Arial, sans-serif; height: auto; }
 
 header { text-align: center; }
 header h1 * { font-size: 1.25em; }
