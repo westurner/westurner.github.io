@@ -67,7 +67,7 @@ def google_plus_profile_links(iterable, icon_path=''):
         yield '<a href=%s title=%s rel="me" target="_blank">' % (
             _repr(link['href']),
             _repr(link['title']))
-        yield '<img src=%s alt=%s></img>' % (
+        yield '<img src=%s alt=%s width="16" height="16"></img>' % (
             _repr(build_data_uri(filepath, "image/png")),
             _repr(sitename))
         yield '</a>'
