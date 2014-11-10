@@ -51,6 +51,8 @@
 
         $(document).ready(function () {
             // Scroll to content if on small screen
+            alert(document.body.clientWidth);
+            alert(window.location.hash);
             if ((document.body.clientWidth < 900) &&
                 (window.location.hash == ""))
             {
