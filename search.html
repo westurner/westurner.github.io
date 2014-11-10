@@ -55,7 +55,7 @@
             if ((document.body.clientWidth < 900) &&
                 (window.location.hash === ""))
             {
-                $(document).scrollTop(document.getElementsByTagName("article")[0].offsetTop);
+                $(window).scrollTop(document.getElementsByTagName("article")[0].offsetTop);
             }
             $("a.external").attr('target', '_blank');
             // $("a[href^='http'").attr('target', '_blank');
