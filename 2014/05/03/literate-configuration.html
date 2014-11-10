@@ -45,20 +45,25 @@
         if (window.location.protocol !== "https:") {
             if (window.location.hostname !== 'localhost' &&
                 window.location.hostname !== '127.0.0.1') {
-                window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+                window.location.href = (
+                    "https:" + window.location.href.substring(
+                        window.location.protocol.length));
             }
         }
 
         $(document).ready(function () {
-            // Scroll to content if on small screen
-            if (Modernizr.mq('only screen and (max-width: 900px)') &&
-                (window.location.hash == ""))
-            {
-                $target = $("article").get(0);
-                $.scrollTo($target.offsetTop, 500);
-            }
+            // Open .external links in new tabs
             $("a.external").attr('target', '_blank');
             // $("a[href^='http'").attr('target', '_blank');
+        });
+        $(document).ready(function () {
+            // Scroll to content if on small screen
+            if (Modernizr.mq('only screen and (max-width: 900px)')) {
+                if (window.location.hash == "") {
+                    target = $("article").get(0);
+                    $.scrollTo(target.offsetTop, 500);
+                }
+            }
         });
     </script>
 
