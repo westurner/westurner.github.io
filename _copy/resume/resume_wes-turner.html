@@ -39,6 +39,7 @@
       };
     </script><script type="text/javascript" src="../../_static/underscore.js"></script><script type="text/javascript" src="../../_static/doctools.js"></script>
 
+    <script src="../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
         // Redirect to HTTPS if not on localhost
         if (window.location.protocol !== "https:") {
@@ -48,51 +49,14 @@
             }
         }
 
-        // http://stackoverflow.com/a/20699124
-        function animateScrollTop(target, duration) {
-            duration = duration || 16;
-
-            var $window = $(window);
-            var scrollTopProxy = { value: $window.scrollTop() };
-            var expectedScrollTop = scrollTopProxy.value;
-
-            if (scrollTopProxy.value != target) {
-                $(scrollTopProxy).animate(
-                    { value: target },
-                    {
-                        duration: duration,
-
-                        step: function (stepValue) {
-                            var roundedValue = Math.round(stepValue);
-                            if ($window.scrollTop() !== expectedScrollTop) {
-                                // The user has tried to scroll the page
-                                $(scrollTopProxy).stop();
-                            }
-                            $window.scrollTop(roundedValue);
-                            expectedScrollTop = roundedValue;
-                        },
-
-                        complete: function () {
-                            if ($window.scrollTop() != target) {
-                                setTimeout(function () {
-                                    animateScrollTop(target);
-                                }, 16);
-                            }
-                        }
-                    }
-                );
-            }
-        }
-        // </>
-
         $(document).ready(function () {
             // Scroll to content if on small screen
             if ((document.body.clientWidth < 900) &&
                 (window.location.hash == ""))
             {
-                animateScrollTop(
-                    document.getElementsByTagName("article")[0].offsetTop,
-                    500);
+                $target = $("article").get(0);
+                console.log($target);
+                $.scrollTo($target.offsetTop + 20, 500);
             }
             $("a.external").attr('target', '_blank');
             // $("a[href^='http'").attr('target', '_blank');
