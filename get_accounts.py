@@ -51,6 +51,11 @@ def download_service_icons(iterable, icon_path=''):
         log.debug('downloaded to: %r' % filepath)
 
 
+def build_data_uri(path, mimetype):
+    encoded = urllib.quote(open(path, "rb").read().encode("base64"))
+    return "data:{};base64,{}".format(mimetype, encoded)
+
+
 def google_plus_profile_links(iterable, icon_path=''):
     """
     mainfunc
@@ -63,7 +68,7 @@ def google_plus_profile_links(iterable, icon_path=''):
             _repr(link['href']),
             _repr(link['title']))
         yield '<img src=%s alt=%s></img>' % (
-            _repr('/' + filepath),
+            _repr(build_data_uri(filepath, "image/png")),
             _repr(sitename))
         yield '</a>'
         yield '</li>'
