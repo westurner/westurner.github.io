@@ -30,6 +30,7 @@
                 (window.location.hash == ""))
             {
                 $target = $("article").get(0);
+                alert($target.offsetTop);
                 $.scrollTo($target.offsetTop + 20, 500);
             }
             $("a.external").attr('target', '_blank');
