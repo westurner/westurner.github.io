@@ -13,8 +13,9 @@
 {%- set border_color = "#e0e0e0" -%}
 {%- set aside_header_color = "#424242" -%}
 
+html { min-height: 100%; }
 
-body { font-family: {{ sans_serif_font }}; }
+body { font-family: {{ sans_serif_font }}; min-height: 100%; }
 
 header { text-align: center; }
 header h1 * { font-size: 1.25em; }
