@@ -11,7 +11,12 @@ Valued Components
 * `Sphinx <http://sphinx-doc.org>`_ (https://github.com/vladris/tinkerer)
 * `Tinkerer <http://tinkerer.me>`_ (https://bitbucket.org/birkenfeld/sphinx)
 * `jQuery <http://jquery.com>`_ (https://github.com/jquery/jquery)
-* `jQuery-lifestream <http://christianv.github.com/jquery-lifestream/>`_ (https://github.com/christianv/jquery-lifestream)
+* `jquery-lifestream <http://christianv.github.com/jquery-lifestream/>`_
+  (https://github.com/christianv/jquery-lifestream)
+* `jquery-timeago <http://timeago.yarp.com/>`_
+  (https://github.com/rmm5t/jquery-timeago)
+* `jquery-scrollTo <http://demos.flesler.com/jquery/scrollTo/>`__ 
+  (https://github.com/flesler/jquery.scrollTo)  
 * `Bootstrap <http://getbootstrap.com>`_ (https://github.com/twbs/bootstrap)
 
 
@@ -25,10 +30,11 @@ The flat5000 theme is derived from the Tinkerer boilerplate and flat
 themes (LICENSE.tinkerer). searchtools.js_t (from Tinkerer, from Sphinx)
 has a modified error message (LICENSE.tinkerer (LICENSE.sphinx)).
 
-jQuery and jQuery lifestream are bundled
-(LICENSE.jquery, LICENSE.jquery-lifestream).
+jQuery, jQuery-lifestream, jQuery-timeago, and jQuery-scrollTo are bundled
+(LICENSE.jquery, LICENSE.jquery-lifestream, LICENSE.jquery-timeago,
+LICENSE.jquery-scrollTo).
 
 Small portions of flat_css.t are derived from Bootstrap CSS
 (LICENSE.bootstrap).
 
-.. _`westurner.github.io`: https://westurner.github.io
+.. _`westurner.github.io`: https://westurner.github.io/
