@@ -236,14 +236,16 @@ https://en.wikipedia.org/wiki/Hyperlocal
 * `twitter: near:"Omaha, Nebraska, USA" within:25mi
   <https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&src=typd>`_
 
-EDIT: 2014/02/02 Updated link to "Mathematics for Computer Science" PDF
+EDIT: 2014-02-02: Updated link to "Mathematics for Computer Science" PDF
 
-EDIT: 2014/09/21 Updated link to "Mathematics for Computer Science" PDF
+EDIT: 2014-09-21: Updated link to "Mathematics for Computer Science" PDF
 
-EDIT: 2014/09/29 Added links to "Multiverse" and "Universe"
+EDIT: 2014-09-29: Added links to "Multiverse" and "Universe"
 
-EDIT: 2014/09/29 Added links to "Laniakea Supercluster", "Virgo
+EDIT: 2014-09-29: Added links to "Laniakea Supercluster", "Virgo
 Supercluster", and "Local Group"
+
+EDIT: 2014-12-16: Updated date formats to https://en.wikipedia.org/wiki/ISO_8601
 
 .. author:: Wes Turner
 .. categories:: none
