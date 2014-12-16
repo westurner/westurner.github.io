@@ -2,7 +2,9 @@
 ## westurner.github.io Makefile
 # https://westurner.github.io/
 
-.PHONY: default all build \
+.PHONY: default \
+	all \
+	build \
 	accounts \
 	serve open view \
 	push \
@@ -13,7 +15,11 @@
 	resume-commit \
 	install \
 	autocompile.py \
-	auto-html
+	auto-html \
+	fix-links \
+	setup_texlive_ubuntu \
+	setup_texlive_osx \
+	upgrade_lifestream_js
 
 ifeq ($(__IS_MAC),true)
 BROWSER="open"
@@ -137,3 +143,16 @@ setup_texlive_osx:
 	# wget 'https://www.tug.org/mactex/MacTeX.pkg.torrent'
 	## 'http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg'
 	#
+	#
+
+upgrade_lifestream_js:
+	git status
+	wget 'https://raw.githubusercontent.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js' \
+		-O ./_static/js/jquery.lifestream.min.js
+	wget 'https://raw.githubusercontent.com/christianv/jquery-lifestream/master/jquery.lifestream.js' \
+		-O ./_static/js/jquery.lifestream.js
+	git status
+	git diff
+	git add ./_static/js/jquery.lifestream.*
+	git commit ./_static/js/jquery.lifestream.* \
+		-m "BLD: Update jquery.lifestream.js"
