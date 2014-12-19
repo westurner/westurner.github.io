@@ -2380,10 +2380,10 @@ $.fn.lifestream.feeds.tumblr = function( config, callback ) {
 
       var link = function( t ) {
         return t.replace(
-          /([a-z]+:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig,
-          function( m ) {
+          /([a-z]+:\/\/)([-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig,
+          function( m, m1, m2 ) {
             return $("<a></a>").attr("href", m).text(
-                ( ( m.length > 25 ) ? m.substr( 0, 24 ) + '...' : m )
+                ( ( m2.length > 35 ) ? m2.substr( 0, 34 ) + '...' : m2 )
             )[0].outerHTML;
           }
         );
@@ -2401,13 +2401,14 @@ $.fn.lifestream.feeds.tumblr = function( config, callback ) {
       },
       hash = function( t ) {
         return t.replace(
-          /(^|\B)#([a-zA-Z0-9ÅåÄäÖöØøÆæÉéÈèÜüÊêÛûÎî_]+)\b( |\r?\n|\r|$)/g,
+          /<a.*?<\/a>|(^|\r?\n|\r|\n|)#([a-zA-Z0-9ÅåÄäÖöØøÆæÉéÈèÜüÊêÛûÎî_]+)(\r?\n|\r|\n||$)/g,
           function( m, m1, m2, m3 ) {
+            if (typeof m2 == "undefined") return m;
             var elem = ($("<a></a>")
                      .attr("href",
                            "https://twitter.com/hashtag/" + m2 + "?src=hash")
                      .text("#" + m2))[0].outerHTML;
-            return m1 + elem + m3;
+            return (m1 + elem + m3);
           }
         );
       };
