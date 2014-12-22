@@ -46,6 +46,9 @@ build:
 	# Building HTML
 	tinker --build
 
+docs: build
+	# alias of 'build'
+
 STATIC:="./_static"
 LOCALJS="$(STATIC)/js/local.js"
 
