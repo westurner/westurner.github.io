@@ -72,7 +72,7 @@ view:
 gh-pages:
 	git status
 	ghp-import -n -b master \
-		-m 'Added output from `tinker --build` (`make build`)' \
+		-m 'RLS: `tinker --build` (`make build`)' \
 		-r origin \
 		-p ./blog/html/
 
