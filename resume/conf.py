@@ -417,6 +417,7 @@ def configure_meta_tags(app, pagename, templatename, context, doctree):
 
 def setup(app):
     app.add_javascript('js/local.js')
+    app.add_stylesheet('css/local.css')
     app.connect('html-page-context', configure_meta_tags)
 
 
