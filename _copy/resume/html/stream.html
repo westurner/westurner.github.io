@@ -50,6 +50,7 @@
 
 <link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/local.css" type="text/css" />
     
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
@@ -150,6 +151,7 @@
       padding: 5px 3px 5px 25px;
       background-repeat: no-repeat;
       background-position: left center;
+      white-space: pre-wrap;
     }
     #lifestream li:hover {
       /* color: #e9e9e9; */
@@ -278,8 +280,9 @@
             global: '<i>${text}</i> <a href="${link}">${title}</a>'
         },
     },
-    {   service:"tumblr",
-        user:"westurner" },
+    // NOP: Tumblr requests resources over HTTP
+    //{   service:"tumblr",
+    //    user:"westurner" },
     {   service:"twitter",
         user:"westurner",
         template: {
@@ -352,7 +355,7 @@ Many of the feeds list only <em>n recent items</em>.</p>
           </div>
         </div>
          
-<div class="col-md-5 hidden-xs">
+<div class="col-md-5 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
 <div>
     <h3><a href="#homepage" id="homepage">Homepage</a></h3>
@@ -403,11 +406,12 @@ Many of the feeds list only <em>n recent items</em>.</p>
       <div class="row footer-relbar">
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav ">
         <li><a href="resume.html">Wes Turner</a></li>
     </ul>
-    <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-       
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="#">^top^</a></li> 
       
     </ul>
   </div>
