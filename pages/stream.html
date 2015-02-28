@@ -356,7 +356,7 @@
       /* color: #e9e9e9; */
     }
     #lifestream .timeago {
-      display: block;
+      display: inline;
       clear:both;
       opacity: .5;
       border-bottom: 0 !important;
@@ -456,23 +456,23 @@
         user:"wes-turner"},
     {   service:"quora",
         user:"Wes-Turner-1"},
-    {   service:"reddit",
-        user:"westurner",
-        template: {
-            commented:
-                'commented on <a href="http://www.reddit.com/r/${item.data.subreddit}' +
-                '/comments/${item.data.link_id.substring(3)}/u/' +
-                '${item.data.name.substring(3)}?context=3">${item.data.link_title} ' +
-                '(${score})</a> in <a href="http://www.reddit.com/r/' +
-                '${item.data.subreddit}">${item.data.subreddit}</a>',
-            created:
-                'shared ' +
-                '<a href="http://www.reddit.com${item.data.permalink}">' +
-                '${item.data.title} (${score})</a> in ' +
-                '<a href="http://www.reddit.com/r/${item.data.subreddit}">' +
-                '${item.data.subreddit}</a>'
-        },
-    },
+    //{   service:"reddit",
+    //    user:"westurner",
+    //    template: {
+    //        commented:
+    //            'commented on <a href="http://www.reddit.com/r/${item.data.subreddit}' +
+    //            '/comments/${item.data.link_id.substring(3)}/u/' +
+    //            '${item.data.name.substring(3)}?context=3">${item.data.link_title} ' +
+    //            '(${score})</a> in <a href="http://www.reddit.com/r/' +
+    //            '${item.data.subreddit}">${item.data.subreddit}</a>',
+    //        created:
+    //            'shared ' +
+    //            '<a href="http://www.reddit.com${item.data.permalink}">' +
+    //            '${item.data.title} (${score})</a> in ' +
+    //            '<a href="http://www.reddit.com/r/${item.data.subreddit}">' +
+    //            '${item.data.subreddit}</a>'
+    //    },
+    //},
     {   service:"stackoverflow",
         user:"188833",
         template: {
