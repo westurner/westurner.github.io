@@ -239,3 +239,6 @@ localjs:
 	cat $(STATIC)/js/ga.js >> $(LOCALJS)
 	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
 	cat $(STATIC)/js/affix-sidenav.js >> $(LOCALJS)
+
+open:
+	open $(BUILDDIR)/html/resume.html
