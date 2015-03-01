@@ -5,11 +5,8 @@
     }
 
     #navbar-related, footer {
-        padding-right: 41.66666667%;
-    }
-
-    footer {
-        width: inherit;
+        width: 58.33333333%;
+        padding-left: 0;
     }
 }
 
