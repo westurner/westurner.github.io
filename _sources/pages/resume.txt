@@ -527,7 +527,7 @@ See: https://westurner.github.io/wiki/contributions
 Contact Information
 ======================
 
-| `westurner.github.io <https://westurner.github.io>`_
-| `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`_
-| `wes.turner@gmail.com <wes.turner@gmail.com>`_
+| Homepage: `westurner.github.io <https://westurner.github.io>`__
+| LinkedIn: `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`__
+| Twitter: `@westurner <https://twitter.com/westurner>`__
 
