@@ -216,7 +216,26 @@ docx: odt
 #	@echo "Build finished. The DOCX file is in $(BUILDDIR)/docx."
 
 
-forweb: rst html singlehtml
+forweb: rst localcss localjs html singlehtml cpstaticfiles 
+
+cpstaticfiles:
+	cp -Rv ./_static $(BUILDDIR)/html
+	cp -Rv ./_static $(BUILDDIR)/singlehtml
+	find $(BUILDDIR)/html -name '*.un~' -delete
+	find $(BUILDDIR)/singlehtml -name '*.un~' -delete
 
 forprint: latexpdf odt doc docx
 
+STATIC:=./_static
+LOCALCSS=$(STATIC)/css/local.css
+localcss:
+	echo '' > $(LOCALCSS)
+	cat $(STATIC)/css/custom.css >> $(LOCALCSS)
+	cat $(STATIC)/css/resume.css >> $(LOCALCSS)
+
+LOCALJS=$(STATIC)/js/local.js
+localjs:
+	echo '' > $(LOCALJS)
+	cat $(STATIC)/js/ga.js >> $(LOCALJS)
+	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
+	cat $(STATIC)/js/affix-sidenav.js >> $(LOCALJS)

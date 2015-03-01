@@ -1,5 +1,4 @@
 
-
 .navbar {
     margin-bottom: 0;
 }
@@ -93,22 +92,3 @@ footer {
 }
 
 
-/* TODO: responsive break */
-@media (min-width: 767px) {
-    #content-wrapper {
-        left: 0;
-    }
-
-    #navbar-related, footer {
-        padding-right: 41.66666667%;
-    }
-
-    footer {
-        width: inherit;
-    }
-}
-
-
-#sidebar-wrapper, #sidebar-wrapper.affix-bottom, #sidebar-wrapper.affix-top {
-    right: 0;
-}
