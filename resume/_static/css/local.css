@@ -112,3 +112,7 @@ footer {
 #sidebar-wrapper, #sidebar-wrapper.affix-bottom, #sidebar-wrapper.affix-top {
     right: 0;
 }
+
+div.sidebar {
+    padding-bottom: 9px;
+}
