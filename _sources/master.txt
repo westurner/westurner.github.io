@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/03/02/documentation
    2014/10/20/wrd-research-and-design
    2014/10/20/working-on-lately
    2014/05/03/literate-configuration

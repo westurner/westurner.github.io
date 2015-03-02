@@ -15,31 +15,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Literate Configuration &mdash; Wes Turner</title>
-            <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/flat.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
-            <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
+        <title>Posts tagged with sphinx &mdash; Wes Turner</title>
+            <link rel="stylesheet" href="../_static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="../_static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="../_static/main.css" type="text/css">
+            <link rel="stylesheet" href="../_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+            <!--<link rel="stylesheet" href="../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <!-- Load modernizr and JQuery -->
-        <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
-        <script src="../../../_static/plugins.js"></script>
-        <script src="../../../_static/main.js"></script>
-        <link rel="next" title="Tech News for America" href="../../../2013/12/15/tech-news-for-america.html" /><link rel="prev" title="Working on Lately" href="../../10/20/working-on-lately.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.html" /><script type="text/javascript">
+        <script>window.jQuery || document.write('<script src="../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
+        <script src="../_static/plugins.js"></script>
+        <script src="../_static/main.js"></script>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
+        URL_ROOT:    '../',
         VERSION:     '1.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../_static/underscore.js"></script><script type="text/javascript" src="../_static/doctools.js"></script>
 
-    <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
+    <script src="../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
         // Redirect to HTTPS if not on localhost
         if (window.location.protocol !== "https:") {
@@ -306,13 +306,13 @@
             <a href="/">home</a>
         </li>
         <li class="main-nav">
-            <a href="../../../archive.html">blog</a>
+            <a href="../archive.html">blog</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/resume.html">resume</a>
+            <a href="../pages/resume.html">resume</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/stream.html">stream</a>
+            <a href="../pages/stream.html">stream</a>
         </li>
         <li class="main-nav">
             <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
@@ -321,105 +321,15 @@
             <a href="https://westurner.github.io/wiki/" target="_blank">wiki</a>
         </li>
     </ul>
-    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="timestamp postmeta">
-            <span>May 03, 2014</span>
+    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="archive">
+        <h1>Posts tagged with <span class="title_tag">sphinx</span></h1><div class="year">
+            <h1>2015</h1>
+            <ul><li>
+                    <div class="timestamp postmeta">
+            <span>Mar 02</span>
         </div>
-    <div class="section" id="literate-configuration">
-<h1>Literate Configuration</h1>
-<p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
-can be difficult to grep through. It&#8217;s not always easy
-<em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
-<p><strong>Solution</strong>: Approach configuration documentation
-like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
-&#8220;literate configuration&#8221;.</p>
-<ol class="arabic simple">
-<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
-<li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
-</ol>
-<p><strong>Example</strong></p>
-<p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning:</p>
-<div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
-### Notes
-#  #  Default location: ~/.i3/config
-#  #  List the commented command shortcuts with::
-#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;
-#...
-## Change volume
-#  &lt;XF86AudioRaiseVolume&gt;   -- volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id $volume_up
-#  &lt;XF86AudioLowerVolume&gt;   -- volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id $volume_down
-
-## Start, stop, and reset xflux
-#  &lt;alt&gt; [         -- start xflux
-bindsym $mod+bracketleft    exec --no-startup-id $xflux_start
-#  &lt;alt&gt; ]         -- stop xflux
-bindsym $mod+bracketright   exec --no-startup-id $xflux_stop
-#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0
-bindsym $mod+Shift+bracketright  exec --no-startup-id $xflux_reset
-
-## Resize Mode
-#  &lt;alt&gt; r      -- enter resize mode
-bindsym $mod+r  mode &quot;resize&quot;
-
-mode &quot;resize&quot; {
-    ## Grow and shrink windows
-    # These bindings trigger as soon as you enter the resize mode
-    # ...
-    # back to normal: Enter or Escape
-    #  &lt;enter&gt;  -- exit resize mode
-    bindsym Return      mode &quot;default&quot;
-    #  &lt;esc&gt;    -- exit resize mode
-    bindsym Escape      mode &quot;default&quot;
-}
-</pre></div>
-</div>
-<p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
-with a simple conditional regular expression:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cat ~/.i3/config <span class="p">|</span> egrep <span class="s1">&#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-</pre></div>
-</div>
-<p>Peruse the output for that one excellent keyboard shortcut:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
-<span class="c">### Notes</span>
-<span class="c">#  #  Default location: ~/.i3/config</span>
-<span class="c">#  #  List the commented command shortcuts with::</span>
-<span class="c">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-<span class="c">## Change volume</span>
-<span class="c">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
-<span class="c">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
-<span class="c">## Start, stop, and reset xflux</span>
-<span class="c">#  &lt;alt&gt; [         -- start xflux</span>
-<span class="c">#  &lt;alt&gt; ]         -- stop xflux</span>
-<span class="c">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
-<span class="c">## Resize Mode</span>
-<span class="c">#  &lt;alt&gt; r      -- enter resize mode</span>
-    <span class="c">## Grow and shrink windows</span>
-    <span class="c">#  &lt;enter&gt;  -- exit resize mode</span>
-    <span class="c">#  &lt;esc&gt;    -- exit resize mode</span>
-</pre></div>
-</div>
-<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
-of the relevant configuration file documentation.</p>
-<p>The <a class="reference external" href="https://jashkenas.github.io/docco">docco</a> homepage lists quite a few more heavyweight approaches to
-generating documentation from comment strings embedded in various languages
-(such as Markdown in a shell script).</p>
-<p>I&#8217;ve added documentation with this pattern to my <a class="reference external" href="https://github.com/westurner/dotfiles">dotfiles</a>:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/tree/master/etc/bash">bashrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage.html#bash">bashrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotvim/blob/master/vimrc">vimrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage.html#vim">vimrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage.html#i3wm">.i3/config docs</a>)</li>
-<li>and the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83">provis Makefile</a> (<a class="reference external" href="https://provis.readthedocs.org/en/latest/usage.html#Makefile">provis Makefile docs</a>)</li>
-</ul>
-<p>This simple pattern saves time when looking up <a class="reference external" href="http://westurner.github.io/dotfiles/usage.html#dotfiles-makefile">my keyboard shortcuts</a>.</p>
-<p>EDIT: 2014-12-16: Updated links to <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></p>
-</div>
-
-    <div class="postmeta">
+                    <h2><a href="../2015/03/02/documentation.html">Documentation</a></h2>
+                    <div class="postmeta">
         <div class="author">
             <span>Posted by Wes Turner</span>
         </div>
@@ -427,36 +337,35 @@ generating documentation from comment strings embedded in various languages
         <div class="tags">
             <span>
                 Tags:
-                <a href="../../../tags/docs.html">#docs</a>&nbsp;<a href="../../../tags/literateprogramming.html">#literateprogramming</a>&nbsp;<a href="../../../tags/bash.html">#bash</a>&nbsp;<a href="../../../tags/vim.html">#vim</a>&nbsp;<a href="../../../tags/i3wm.html">#i3wm</a>&nbsp;<a href="../../../tags/keyboardshortcuts.html">#keyboardshortcuts</a></span>
+                <a href="#">#sphinx</a>&nbsp;<a href="documentation.html">#documentation</a>&nbsp;<a href="bootstrap.html">#bootstrap</a></span>
         </div>
-        </div><ul class="related clearfix">
-            <li class="left"> &laquo; <a href="../../10/20/working-on-lately.html">Working on Lately</a></li>
-            <li class="right"><a href="../../../2013/12/15/tech-news-for-america.html">Tech News for America</a> &raquo; </li>
-        </ul></article><aside class="sidebar"><section><div class="widget">
-    <h3><a href="../../../archive.html">Recent Posts</a></h3>
+        </div>
+                </li></ul>
+        </div></div></article><aside class="sidebar"><section><div class="widget">
+    <h3><a href="../archive.html">Recent Posts</a></h3>
     <ul><li>
-            <a href="../../../2015/03/02/documentation.html">Documentation</a>
+            <a href="../2015/03/02/documentation.html">Documentation</a>
         </li><li>
-            <a href="../../10/20/wrd-research-and-design.html">WRD Research and Design</a>
+            <a href="../2014/10/20/wrd-research-and-design.html">WRD Research and Design</a>
         </li><li>
-            <a href="../../10/20/working-on-lately.html">Working on Lately</a>
+            <a href="../2014/10/20/working-on-lately.html">Working on Lately</a>
         </li><li>
-            <a href="#">Literate Configuration</a>
+            <a href="../2014/05/03/literate-configuration.html">Literate Configuration</a>
         </li><li>
-            <a href="../../../2013/12/15/tech-news-for-america.html">Tech News for America</a>
+            <a href="../2013/12/15/tech-news-for-america.html">Tech News for America</a>
         </li><li>
-            <a href="../../../2013/11/25/hello-world.html">Hello World!</a>
+            <a href="../2013/11/25/hello-world.html">Hello World!</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox" role="search">
     <h1><a href="#searchbox">Search</a></h1>
-    <form action="../../../search.html" method="get">
+    <form action="../search.html" method="get">
         <input type="text" name="q" />
         <button type="submit"><span class="fa fa-search"></span></button>
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
-    <div style="text-align: center"><a href="../../../tags/bash.html">#bash</a>&nbsp; <a href="../../../tags/bootstrap.html">#bootstrap</a>&nbsp; <a href="../../../tags/community.html">#community</a>&nbsp; <a href="../../../tags/compsci.html">#compsci</a>&nbsp; <a href="../../../tags/docs.html">#docs</a>&nbsp; <a href="../../../tags/documentation.html">#documentation</a>&nbsp; <a href="../../../tags/entrepreneurship.html">#entrepreneurship</a>&nbsp; <a href="../../../tags/i3wm.html">#i3wm</a>&nbsp; <a href="../../../tags/keyboardshortcuts.html">#keyboardshortcuts</a>&nbsp; <a href="../../../tags/lately.html">#lately</a>&nbsp; <a href="../../../tags/learning.html">#learning</a>&nbsp; <a href="../../../tags/literateprogramming.html">#literateprogramming</a>&nbsp; <a href="../../../tags/python.html">#python</a>&nbsp; <a href="../../../tags/resume.html">#resume</a>&nbsp; <a href="../../../tags/sphinx.html">#sphinx</a>&nbsp; <a href="../../../tags/stem.html">#stem</a>&nbsp; <a href="../../../tags/technews.html">#technews</a>&nbsp; <a href="../../../tags/vim.html">#vim</a>&nbsp; <a href="../../../tags/wiki.html">#wiki</a>&nbsp; <a href="../../../tags/wrdrd.html">#wrdrd</a></div>
+    <div style="text-align: center"><a href="bash.html">#bash</a>&nbsp; <a href="bootstrap.html">#bootstrap</a>&nbsp; <a href="community.html">#community</a>&nbsp; <a href="compsci.html">#compsci</a>&nbsp; <a href="docs.html">#docs</a>&nbsp; <a href="documentation.html">#documentation</a>&nbsp; <a href="entrepreneurship.html">#entrepreneurship</a>&nbsp; <a href="i3wm.html">#i3wm</a>&nbsp; <a href="keyboardshortcuts.html">#keyboardshortcuts</a>&nbsp; <a href="lately.html">#lately</a>&nbsp; <a href="learning.html">#learning</a>&nbsp; <a href="literateprogramming.html">#literateprogramming</a>&nbsp; <a href="python.html">#python</a>&nbsp; <a href="resume.html">#resume</a>&nbsp; <a href="#">#sphinx</a>&nbsp; <a href="stem.html">#stem</a>&nbsp; <a href="technews.html">#technews</a>&nbsp; <a href="vim.html">#vim</a>&nbsp; <a href="wiki.html">#wiki</a>&nbsp; <a href="wrdrd.html">#wrdrd</a></div>
 </div></section><section><div class="widget">
 <ul id="accounts">
 <li>
@@ -677,7 +586,7 @@ generating documentation from comment strings embedded in various languages
         <li class="main-nav" style="margin-bottom:1em">
             <a href="#">^top^</a>
         </li><li class="main-nav"><div class="rss">
-        <a href="../../../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
+        <a href="../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li></ul>&copy; Copyright 2014 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>
