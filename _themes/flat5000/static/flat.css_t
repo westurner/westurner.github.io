@@ -211,4 +211,4 @@ div.sidebar { padding: 1em; margin: 1em; float:right; background: white; }
 
 span.highlighted { font-weight: bold; background: yellow; padding: 4px; margin: -4px; }
 
-#twitter-widget-0 { width: 100% !important; }
+#twitter-widget-0 { width: 100% !important; height: 400px; }
