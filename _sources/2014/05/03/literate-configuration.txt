@@ -103,7 +103,7 @@ I've added documentation with this pattern to my `dotfiles`_:
 This simple pattern saves time when looking up `my keyboard shortcuts`_.
 
 
-EDIT: 2014-12-16: Updated links to https://westurner.github.io/dotfiles/
+EDIT: 2014-12-16: Updated links to https://westurner.org/dotfiles/
 
 .. _literate programming: https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation
 .. _i3wm: https://en.wikipedia.org/wiki/I3_(window_manager)
@@ -112,15 +112,15 @@ EDIT: 2014-12-16: Updated links to https://westurner.github.io/dotfiles/
 
 .. _dotfiles: https://github.com/westurner/dotfiles
 .. _bashrc: https://github.com/westurner/dotfiles/tree/master/etc/bash
-.. _bashrc docs: http://westurner.github.io/dotfiles/usage.html#bash   
+.. _bashrc docs: http://westurner.org/dotfiles/usage.html#bash   
 .. _vimrc: https://github.com/westurner/dotvim/blob/master/vimrc
-.. _vimrc docs: http://westurner.github.io/dotfiles/usage.html#vim
+.. _vimrc docs: http://westurner.org/dotfiles/usage.html#vim
 .. _`.i3/config`: https://github.com/westurner/dotfiles/blob/master/etc/.i3/config   
-.. _`.i3/config docs`: http://westurner.github.io/dotfiles/usage.html#i3wm   
+.. _`.i3/config docs`: http://westurner.org/dotfiles/usage.html#i3wm   
 .. _provis makefile: https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83
 .. _provis makefile docs: https://provis.readthedocs.org/en/latest/usage.html#Makefile
 
-.. _my keyboard shortcuts: http://westurner.github.io/dotfiles/usage.html#dotfiles-makefile   
+.. _my keyboard shortcuts: http://westurner.org/dotfiles/usage.html#dotfiles-makefile   
 
 .. author:: default
 .. categories:: none

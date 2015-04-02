@@ -4,7 +4,7 @@
 :copyright: Copyright © 2014, All Rights Reserved
 
 =========================================================
-`Resume <https://westurner.github.io/pages/resume.html>`_
+`Resume <https://westurner.org/pages/resume.html>`_
 =========================================================
 
 .. raw:: latex
@@ -14,14 +14,14 @@
 .. raw:: html
 
    <div class="sidebar sr-only">
-   <p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/pages/resume.html">Wes Turner</a></p>
+   <p class="first sidebar-title"><a class="reference external" href="https://westurner.org/pages/resume.html">Wes Turner</a></p>
    <ul class="last simple">
-   <li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/html/resume.html">HTML</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
-   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/html/resume.html">HTML</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.odt">ODT</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.doc">DOC</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.docx">DOCX</a></li>
+   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.rst">RST</a></li>
    </ul>
    </div>
 
@@ -304,7 +304,7 @@ Courses
 Projects
 ===========
 
-See: https://westurner.github.io/wiki/projects
+See: https://westurner.org/wiki/projects
 
 
 2007: Presense
@@ -439,7 +439,7 @@ Responsible for project management
 
 2012: Self Directed Learning
 -------------------------------
-| https://westurner.github.io/self-directed-learning/
+| https://westurner.org/self-directed-learning/
 
 * Autodidactism
 * Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
@@ -458,7 +458,7 @@ Responsible for project management
 --------------
 | Personal reddit data liberation backup utility
 | https://github.com/westurner/redem
-| https://westurner.github.io/redditlog/
+| https://westurner.org/redditlog/
 
 * Reddit reader: comments, submissions, links
 * Fetch last 1000 comments from Reddit
@@ -503,7 +503,7 @@ Go, Java, Javascript, Python, and Ruby
 
 Dotfiles
 -----------
-| https://westurner.github.io/dotfiles/
+| https://westurner.org/dotfiles/
 | https://github.com/westurner/dotfiles
 | https://github.com/westurner/dotvim
 
@@ -520,14 +520,14 @@ Open Source Contributions
 ---------------------------
 Primarily small contributions here and there to show my appreciation.
 
-See: https://westurner.github.io/wiki/contributions
+See: https://westurner.org/wiki/contributions
 
 
 
 Contact Information
 ======================
 
-| Homepage: `westurner.github.io <https://westurner.github.io>`__
+| Homepage: `westurner.org <https://westurner.org>`__
 | LinkedIn: `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`__
 | Twitter: `@westurner <https://twitter.com/westurner>`__
 
