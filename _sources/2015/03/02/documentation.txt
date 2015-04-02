@@ -10,12 +10,12 @@ for Sphinx (with the excellent `sphinxjp.themes.basicstrap
 and have been merging the new styles into various
 sets of docs that I've been working on:
 
-* Concepts: https://wrdrd.github.io/docs/
+* Concepts: https://wrdrd.com/docs/
 
   * Knowledge Engineering:
-    https://wrdrd.github.io/docs/consulting/knowledge-engineering.html
+    https://wrdrd.com/docs/consulting/knowledge-engineering.html
   * Team Building and Collaboration:
-    https://wrdrd.github.io/docs/consulting/team-building.html
+    https://wrdrd.com/docs/consulting/team-building.html
 
 * Tools: https://westurner.org/tools/
 * Userspace Dotfiles: https://westurner.org/dotfiles/
