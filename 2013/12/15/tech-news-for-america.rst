@@ -1,7 +1,7 @@
 Tech News for America
 ======================
 
-So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links -- because what good is an internet page without links -- from my trusty ol' redditlog, here: https://westurner.github.io/redditlog/.
+So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links -- because what good is an internet page without links -- from my trusty ol' redditlog, here: https://westurner.org/redditlog/.
 
 Lean Publishing
 ----------------
@@ -12,7 +12,7 @@ https://en.wikipedia.org/wiki/Lean
   * https://en.wikipedia.org/wiki/Markdown
   * https://en.wikipedia.org/wiki/ReStructuredText
 
-* https://westurner.github.io/self-directed-learning/
+* https://westurner.org/self-directed-learning/
 
   * `<https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)>`_
   * https://pages.github.com

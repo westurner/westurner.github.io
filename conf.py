@@ -23,7 +23,7 @@ author = 'Wes Turner'
 copyright = '2014 %s' % author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'https://westurner.github.io/'
+website = 'https://westurner.org/'
 
 # **************************************************************
 # More tweaks you can do

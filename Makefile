@@ -1,6 +1,6 @@
 
-## westurner.github.io Makefile
-# https://westurner.github.io/
+## westurner.org Makefile
+# https://westurner.org/
 
 .PHONY: default \
 	all \
@@ -117,9 +117,9 @@ auto-html: autocompile.py
 GRIN_EXCLUDE='Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,.bak, \
 .png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,.lib'
 fix-links:
-	grin 'westurner.github.io' -l -e $(GRIN_EXCLUDE) | \
+	grin 'westurner.org' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
-			's/westurner.github.com/westurner.github.io/g' %
+			's/westurner.github.com/westurner.org/g' %
 	grin 'http://westurner.github' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
 			's,http://westurner.github,https://westurner.github,g' %

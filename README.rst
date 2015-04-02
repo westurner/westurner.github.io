@@ -1,6 +1,6 @@
 
 =======================
-`westurner.github.io`_
+`westurner.org`_
 =======================
 
 Personal homepage. Powered by Tinkerer and Sphinx.
@@ -37,4 +37,4 @@ LICENSE.jquery-scrollTo).
 Small portions of flat_css.t are derived from Bootstrap CSS
 (LICENSE.bootstrap).
 
-.. _`westurner.github.io`: https://westurner.github.io/
+.. _`westurner.org`: https://westurner.org/

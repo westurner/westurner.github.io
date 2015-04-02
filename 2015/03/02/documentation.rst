@@ -17,17 +17,17 @@ sets of docs that I've been working on:
   * Team Building and Collaboration:
     https://wrdrd.github.io/docs/consulting/team-building.html
 
-* Tools: https://westurner.github.io/tools/
-* Userspace Dotfiles: https://westurner.github.io/dotfiles/
+* Tools: https://westurner.org/tools/
+* Userspace Dotfiles: https://westurner.org/dotfiles/
 * Infrastructure: https://provis.readthedocs.org/en/latest/
-* Open Government: https://westurner.github.io/opengov/
-* Learning: https://westurner.github.io/self-directed-learning/
-* Resume: https://westurner.github.io/resume/html/resume
-* Wiki: https://westurner.github.io/wiki/
+* Open Government: https://westurner.org/opengov/
+* Learning: https://westurner.org/self-directed-learning/
+* Resume: https://westurner.org/resume/html/resume
+* Wiki: https://westurner.org/wiki/
 
-  * Workflow: https://westurner.github.io/wiki/workflow
-  * Projects: https://westurner.github.io/wiki/projects
-  * Contributions: https://westurner.github.io/wiki/contributions
+  * Workflow: https://westurner.org/wiki/workflow
+  * Projects: https://westurner.org/wiki/projects
+  * Contributions: https://westurner.org/wiki/contributions
 
 
 .. author:: default
