@@ -13,9 +13,9 @@ sets of docs that I've been working on:
 * Concepts: https://wrdrd.com/docs/
 
   * Knowledge Engineering:
-    https://wrdrd.com/docs/consulting/knowledge-engineering.html
+    https://wrdrd.com/docs/consulting/knowledge-engineering
   * Team Building and Collaboration:
-    https://wrdrd.com/docs/consulting/team-building.html
+    https://wrdrd.com/docs/consulting/team-building
 
 * Tools: https://westurner.org/tools/
 * Userspace Dotfiles: https://westurner.org/dotfiles/
