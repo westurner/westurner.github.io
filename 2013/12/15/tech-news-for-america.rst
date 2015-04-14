@@ -36,7 +36,7 @@ https://en.wikipedia.org/wiki/Category:Responsive_web_design
 STEM Learning
 --------------
 https://en.wikipedia.org/wiki/STEM_fields
-(`#STEM <htps://twitter.com/search?q=%23STEM&src=hash>`_)
+(`#STEM <https://twitter.com/search?q=%23STEM&src=hash>`_)
 
 * https://en.wikipedia.org/wiki/Open_educational_resources
   (`#OER <https://twitter.com/search?q=%23OER&src=hash>`_)
