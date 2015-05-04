@@ -100,3 +100,8 @@ html_title = project
 html_use_index = False
 html_show_sourcelink = True
 html_add_permalinks = None
+
+# Suffix for generated links to HTML files.
+# The default is whatever html_file_suffix is set to;
+# it can be set differently (e.g. to support different web server setups).
+html_link_suffix = ''
