@@ -74,7 +74,7 @@ serve:
 
 serve-pgs:
 	# Serve ./blog/html with pgs
-	(cd ./blog/html; pgs -p ./blog/html -P 18282)
+	(cd ./blog/html; pgs -p . -P 18282)
 
 GIT_WWW_BRANCH="master"  # gh-pages
 serve-gh-pages:
