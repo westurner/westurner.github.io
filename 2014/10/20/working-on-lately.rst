@@ -12,14 +12,19 @@ https://westurner.org/wiki/
 
 Resume
 -------
-https://westurner.org/pages/resume.html
 
-https://westurner.org/resume/html/resume.html
+https://westurner.org/pages/resume
+
+https://westurner.org/resume
+
+https://westurner.org/resume/html/resume
 
 
 EDIT: 2014-11-01: Updated links to wiki
 
 EDIT: 2014-12-16: Updated date format to https://en.wikipedia.org/wiki/ISO_8601
+
+EDIT: 2015-05-04: Updated links to resume
 
 .. author:: default
 .. categories:: none
