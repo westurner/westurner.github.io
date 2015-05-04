@@ -74,10 +74,12 @@ view:
 
 gh-pages:
 	git status
-	ghp-import -n -b master \
-		-m 'RLS: `tinker --build` (`make build`)' \
+	ghp-import -n \
+		-b master \
+		-m "RLS: gh-pages: '$(shell git describe --all)' '$(shell git rev-parse HEAD)'" \
 		-r origin \
-		-p ./blog/html/
+		-p \
+		./blog/html
 
 push:
 	git status
