@@ -43,7 +43,7 @@ all:
 	## $ make resume all (resume-web, resume-print, resume-commit)
 
 build:
-	# Building HTML
+	# Generate static HTML in ./blog/html
 	tinker --build
 
 docs: build
@@ -53,65 +53,97 @@ STATIC:="./_static"
 LOCALJS="$(STATIC)/js/local.js"
 
 localjs:
+	# Concatenate javascript files into $(LOCALJS)
 	echo '' > $(LOCALJS)
 	cat $(STATIC)/js/ga.js >> $(LOCALJS)
 	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
 
 accounts:
+	# Regenerate ./_templates/accounts.html
 	python ./get_accounts.py -d > ./_templates/accounts.html
 	git add _static/service_icons/*
 	git add _templates/accounts.html
-	#git commit
+	git status
+	# Note, to commit these changes, run:
+	#  git commit -m ./_static/service_icons ./_templates/accounts.html
 
 serve:
-	eval "python -m SimpleHTTPServer 18282 &"; PID=$$! ; echo "PID=$$PID"
+	# Serve ./blog/html with python 2 SimpleHTTPServer
+	(cd ./blog/html; \
+	eval "python -m SimpleHTTPServer 18282 &"; PID=$$! ; echo "PID=$$PID")
+
+serve-pgs:
+	# Serve ./blog/html with pgs
+	(cd ./blog/html; pgs -p ./blog/html -P 18282)
+
+GIT_WWW_BRANCH="master"  # gh-pages
+serve-gh-pages:
+	# Serve the ${GIT_WWW_BRANCH} of this repository
+	pgs -g . -r ${GIT_WWW_BRANCH} -P 18283
 
 open:
+	# Open a browser to locally served website
 	$(BROWSER) http://localhost:18282/ &
+	$(BROWSER) http://localhost:18283/ &
 
 view:
+	# Serve and open a browser to the website
 	$(MAKE) serve & $(MAKE) open
 
 gh-pages:
+	# Overwrite ${GIT_WWW_BRANCH} with contents from ./blog/html
+	# add a .nojekyll file for gh-pages (-n)
+	# add a commit message with the source hash (TODO: indicate status w/ **)
+	# **and** git push to origin ${GIT_WWW_BRANCH}
 	git status
-	ghp-import -n \
-		-b master \
+	ghp-import \
+		-n \
+		-b ${GIT_WWW_BRANCH} \
 		-m "RLS: gh-pages: '$(shell git describe --all)' '$(shell git rev-parse HEAD)'" \
 		-r origin \
 		-p \
 		./blog/html
+	GIT_PAGER="less -R | cat" git log -n6 master
 
 push:
+	# Git push to origin source
 	git status
 	git push origin source
 
 resume:
+	# Regenerate resume for web and for print
 	$(MAKE) resume-web
 	$(MAKE) resume-print
 
 resume-web:
+	# Regenerate resume for web (HTML)
 	cd resume && \
 		make forweb
 	$(MAKE) resume-commit
 
 resume-print:
+	# Regenerate resume for print (PDF, ...)
 	cd resume && \
 		make forprint
 	$(MAKE) resume-commit
 
 resume-commit:
+	# Commit resume build outputs in ./_copy/resume
 	git add ./_copy/resume && \
-		git commit -m "Added updated resume build outputs"
+		git commit ./_copy/resume -m "Added updated resume build outputs"
 
 
 install:
+	# Install requirements
 	pip install -r requirements.txt
 
 autocompile.py:
+	# Install pyinotify and get autocompile.py
 	pip install pyinotify
 	wget https://raw.github.com/seb-m/pyinotify/master/python2/examples/autocompile.py
 
 auto-html: autocompile.py
+	# Run "make build" when source files change (TODO: livereload)
 	python ./autocompile.py . \
 		'.rst,Makefile,conf.py,theme.conf,.css_t,pygments.css' \
 		"make build"
@@ -119,6 +151,7 @@ auto-html: autocompile.py
 GRIN_EXCLUDE='Makefile,.pyc,.pyo,.so,.o,.a,.tgz,.tar.gz,.un~,.zip,~,.bak, \
 .png,.jpg,.gif,.bmp,.tif,.tiff,.pyd,.dll,.exe,.obj,.lib'
 fix-links:
+	# Project-global URL transforms
 	grin 'westurner.org' -l -e $(GRIN_EXCLUDE) | \
 		xargs -I % sed $(SEDOPTS) \
 			's/westurner.github.com/westurner.org/g' %
@@ -131,6 +164,8 @@ fix-links:
 
 
 setup_texlive_ubuntu:
+	# Install sphinx latex/PDF build requirements w/ Ubuntu 12.04
+	# NOTE: This is over 1GB of LaTeX
 	latex_build_deps_ubuntu:
 	sudo apt-get install -y \
 		texlive-latex-base \
@@ -140,6 +175,7 @@ setup_texlive_ubuntu:
 	# texlive-fonts-extra
 
 setup_texlive_osx:
+	# Install sphinx latex/PDF build requirements w/ OSX
 	# MacPorts
 	# sudo port install texlive texlive-latex-extra
 	#
@@ -151,6 +187,8 @@ setup_texlive_osx:
 	#
 
 upgrade_lifestream_js:
+	# Get, add/overwrite, and commit the latest jquery.lifestream.js
+	# from upstream
 	git status
 	wget 'https://raw.githubusercontent.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js' \
 		-O ./_static/js/jquery.lifestream.min.js
