@@ -105,8 +105,8 @@ like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_
 </ol>
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning:</p>
-<div class="highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
+<a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning.</p>
+<div class="code highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
 ### Notes
 #  #  Default location: ~/.i3/config
 #  #  List the commented command shortcuts with::
@@ -144,11 +144,11 @@ mode "resize" {
 </div>
 <p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
 with a simple conditional regular expression:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cat ~/.i3/config <span class="p">|</span> egrep <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
+<div class="code bash highlight-python"><div class="highlight"><pre>cat ~/.i3/config | egrep '(^(\s+)?##+ |^(\s+)?#  )'
 </pre></div>
 </div>
-<p>Peruse the output for that one excellent keyboard shortcut:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
+<p>Peruse the output for that one excellent keyboard shortcut</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
 <span class="c">### Notes</span>
 <span class="c">#  #  Default location: ~/.i3/config</span>
 <span class="c">#  #  List the commented command shortcuts with::</span>

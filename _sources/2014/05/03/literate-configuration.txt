@@ -15,7 +15,9 @@ like `literate programming`_:
 **Example**
 
 Take an abbreviated excerpt from the `i3wm`_
-`.i3/config`_ that I cleaned up this morning::
+`.i3/config`_ that I cleaned up this morning.
+
+.. code::
 
    #### i3 config file (v4)
    ### Notes
@@ -56,12 +58,14 @@ Take an abbreviated excerpt from the `i3wm`_
 Run it through extended `grep`_
 with a simple conditional regular expression:
 
-.. code-block:: bash
+.. code:: bash
 
    cat ~/.i3/config | egrep '(^(\s+)?##+ |^(\s+)?#  )'
 
    
-Peruse the output for that one excellent keyboard shortcut::
+Peruse the output for that one excellent keyboard shortcut
+
+.. code::
 
    #### i3 config file (v4)
    ### Notes
