@@ -104,7 +104,7 @@ Update: 2015-07-03
           to the given ``#anchor``;
           and that link is not displayed,
           **scroll** the sidebar navbar
-          so that the heading is displayed
+          so that the given navbar link is displayed
           (with a few at the top, for context).
 
           .. code:: javascript
