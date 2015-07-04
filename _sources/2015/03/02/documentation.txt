@@ -43,23 +43,44 @@ sets of docs that I've been working on:
 * `Tools`: https://westurner.org/tools/
 * Dotfiles: https://westurner.org/dotfiles/
 
-  * Usage: https://westurner.org/dotfiles/usage
+  * Usage: https://westurner.org/dotfiles/usage (
+    `tools/#bash <https://westurner.org/tools/#bash>`__
 
     * ``bootstrap_dotfiles.sh`` Usage: https://westurner.org/dotfiles/usage#bootstrap-dotfiles-sh
     * ``Makefile`` Usage: https://westurner.org/dotfiles/usage#makefile
+      [`tools/#make <https://westurner.org/tools/#make>`__]
     * Bash Usage: https://westurner.org/dotfiles/usage#bash
+      [`tools/#bash <https://westurner.org/tools/#bash>`__]
     * Vim Usage: https://westurner.org/dotfiles/usage#vim
+      [`tools/#vim <https://westurner.org/tools/#vim>`__]
     * i3wm Usage: https://westurner.org/dotfiles/usage#i3wm
+      [`tools/#i3wm <https://westurner.org/tools/#i3wm>`__]
     * ``./scripts`` Usage: https://westurner.org/dotfiles/usage#scripts
 
-      * ``PATH_prepend "${__DOTFILES}/scripts"`` 
+      * ``PATH_prepend "${__DOTFILES}/scripts"``
         (e.g. ``dotfiles_add_path()`` in `<https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh>`__)
 
   * Venv: https://westurner.org/dotfiles/venv
+    [`tools/#venv <https://westurner.org/dotfiles/tools/#venv>`__,
+    `tools/#virtualenv <https://westurner.org/dotfiles/tools/#virtualenv>`__,
+    `tools/#virtualenvwrapper
+    <https://westurner.org/dotfiles/tools/#virtualenvwrapper>`__]
   * Usrlog: https://westurner.org/dotfiles/usrlog
   * `Tools`: https://westurner.org/dotfiles/tools/
 
 * Infrastructure: https://westurner.org/provis/
+
+  * `WRD R&D Documentation > Information Systems > Clouds
+    <https://wrdrd.com/docs/consulting/information-systems#clouds>`__
+  * `WRD R&D Documentation > Information Systems > Cloud Application Layers
+    <https://wrdrd.com/docs/consulting/information-systems#cloud-application-layers>`__
+  * `tools/#operating-systems
+    <https://wrdrd.com/docs/tools/#operating-systems>`__
+  * `tools/#virtualization
+    <https://wrdrd.com/docs/tools/#virtualization>`__
+  * `tools/#configuration-management
+    <https://wrdrd.com/docs/tools/#configuration-management>`__
+
 * Open Government: https://westurner.org/opengov/
 * Learning: https://westurner.org/self-directed-learning/
 * Resume: https://westurner.org/resume/html/resume
