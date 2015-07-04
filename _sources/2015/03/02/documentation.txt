@@ -45,9 +45,20 @@ sets of docs that I've been working on:
 
   * Usage: https://westurner.org/dotfiles/usage
 
-    * Bash Usage: https://westurner.org/dotfiles/usage/#bash
-    * Vim Usage: https://westurner.org/dotfiles/usage/#vim
-    * i3wm Usage: https://westurner.org/dotfiles/usage/#i3wm
+    * ``bootstrap_dotfiles.sh`` Usage: https://westurner.org/dotfiles/usage#bootstrap-dotfiles-sh
+    * ``Makefile`` Usage: https://westurner.org/dotfiles/usage#makefile
+    * Bash Usage: https://westurner.org/dotfiles/usage#bash
+    * Vim Usage: https://westurner.org/dotfiles/usage#vim
+    * i3wm Usage: https://westurner.org/dotfiles/usage#i3wm
+    * ``./scripts`` Usage: https://westurner.org/dotfiles/usage#scripts
+
+      * From
+        `<https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh>`__:
+
+        .. code:: bash
+
+            PATH_prepend "${__DOTFILES}/scripts"
+
 
   * Venv: https://westurner.org/dotfiles/venv
   * Usrlog: https://westurner.org/dotfiles/usrlog
