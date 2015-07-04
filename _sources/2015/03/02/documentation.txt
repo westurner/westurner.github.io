@@ -13,31 +13,31 @@ sets of docs that I've been working on:
 
   * Open Source:
     https://wrdrd.com/docs/consulting/open-source
-  * Small Business Consulting
+  * Small Business Consulting:
     https://wrdrd.com/docs/consulting/small-business
-  * Web Development
+  * Web Development:
     https://wrdrd.com/docs/consulting/web-development
-  * Software Development
+  * Software Development:
     https://wrdrd.com/docs/consulting/software-development
-  * Computer Engineering
+  * Computer Engineering:
     https://wrdrd.com/docs/consulting/computer-engineering
-  * Information Systems
+  * Information Systems:
     https://wrdrd.com/docs/consulting/information-systems
-  * Data Science
+  * Data Science:
     https://wrdrd.com/docs/consulting/data-science
-  * Knowledge Engineering
+  * Knowledge Engineering:
     https://wrdrd.com/docs/consulting/knowledge-engineering
-  * Entrepreneurship
+  * Entrepreneurship:
     https://wrdrd.com/docs/consulting/entrepreneurship
-  * Education Technology
+  * Education Technology:
     https://wrdrd.com/docs/consulting/education-technology
-  * Art & Design
+  * Art & Design:
     https://wrdrd.com/docs/consulting/art-design
-  * Team Building
+  * Team Building:
     https://wrdrd.com/docs/consulting/team-building
-  * Collaboration Plan
+  * Collaboration Plan:
     https://wrdrd.com/docs/consulting/collaboration-plan
-  * Tools
+  * Tools:
     https://wrdrd.com/docs/consulting/tools
 
 * Tools: https://westurner.org/tools/
