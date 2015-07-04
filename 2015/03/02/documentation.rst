@@ -52,13 +52,8 @@ sets of docs that I've been working on:
     * i3wm Usage: https://westurner.org/dotfiles/usage#i3wm
     * ``./scripts`` Usage: https://westurner.org/dotfiles/usage#scripts
 
-      * From
-        `<https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh>`__:
-
-        .. code:: bash
-
-            PATH_prepend "${__DOTFILES}/scripts"
-
+      * ``PATH_prepend "${__DOTFILES}/scripts"`` 
+        (e.g. ``dotfiles_add_path()`` in `<https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh>`__)
 
   * Venv: https://westurner.org/dotfiles/venv
   * Usrlog: https://westurner.org/dotfiles/usrlog
