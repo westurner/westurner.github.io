@@ -121,7 +121,7 @@ Update: 2015-07-03
 
 * [ ] Learn `Bootstrap`_ `ScrollSpy`_
   because it's already bundled with the bootstrap JS
-  in sphinxjp.themes.basicstrap.
+  in `sphinxjp.themes.basicstrap`_.
 
   | Docs: http://getbootstrap.com/javascript/#scrollspy
   | Source: https://github.com/twbs/bootstrap/blob/master/js/scrollspy.js
