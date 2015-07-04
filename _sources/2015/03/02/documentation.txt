@@ -37,11 +37,22 @@ sets of docs that I've been working on:
     https://wrdrd.com/docs/consulting/team-building
   * Collaboration Plan:
     https://wrdrd.com/docs/consulting/collaboration-plan
-  * Tools:
-    https://wrdrd.com/docs/consulting/tools
+  * `Tools`:
+    https://wrdrd.com/docs/tools/
 
-* Tools: https://westurner.org/tools/
+* `Tools`: https://westurner.org/tools/
 * Dotfiles: https://westurner.org/dotfiles/
+
+  * Usage: https://westurner.org/dotfiles/usage
+
+    * Bash Usage: https://westurner.org/dotfiles/usage/#bash
+    * Vim Usage: https://westurner.org/dotfiles/usage/#vim
+    * i3wm Usage: https://westurner.org/dotfiles/usage/#i3wm
+
+  * Venv: https://westurner.org/dotfiles/venv
+  * Usrlog: https://westurner.org/dotfiles/usrlog
+  * `Tools`: https://westurner.org/dotfiles/tools/
+
 * Infrastructure: https://westurner.org/provis/
 * Open Government: https://westurner.org/opengov/
 * Learning: https://westurner.org/self-directed-learning/
@@ -62,9 +73,9 @@ Update: 2015-07-03
 * [X] DOC: 2015/03/02/documentation.rst: Update inlined
   `WRD R&D Documentation`_ Table of Contents
 * [x] UBY: show current location in navbar toctree (#6)
-  
+
   `gh:westurner/wiki#6`
-  
+
   https://github.com/westurner/wiki/issues/6
 
   * [ ] [UBY] show the currently ``#manually-selected`` link in the navbar
@@ -74,15 +85,15 @@ Update: 2015-07-03
 
     * [x] Assert ``#anchor`` exists as a `DOM`_ element
       with an ``id="#anchor"`` property.
-    * [o] Find and style each link to ``#anchor`` 
+    * [o] Find and style each link to ``#anchor``
 
       * [X] *mobile header navbar*:
 
         + [X] UBY: **Bold** and add an **arrow** ⬅
           next to the heading,
           in place of the ¶ sphinx heading selector link.
-    
-      * [X] *full width sidebar navbar*: 
+
+      * [X] *full width sidebar navbar*:
 
         + [X] UBY: **Bold** and add an **arrow** ⬅
           next to the heading,
@@ -95,7 +106,7 @@ Update: 2015-07-03
           **scroll** the sidebar navbar
           so that the heading is displayed
           (with a few at the top, for context).
-      
+
           .. code:: javascript
 
               ## pseudo-JS
