@@ -78,14 +78,14 @@ Update: 2015-07-03
 
   https://github.com/westurner/wiki/issues/6
 
-  * [ ] [UBY] show the currently ``#manually-selected`` link in the navbar
+  * [o] [UBY] show the currently ``#manually-selected`` link in the navbar
     when the fixed navbar is scrolled beyond the viewport
     (i.e. when showing the complete table of contents in the
     *full width sidebar navbar*).
 
     * [x] Assert ``#anchor`` exists as a `DOM`_ element
-      with an ``id="#anchor"`` property.
-    * [o] Find and style each link to ``#anchor``
+      with an ``id="anchor"`` property.
+    * [o] Find and style each link to ``#anchor`` (``href="#anchor"``):
 
       * [X] *mobile header navbar*:
 
