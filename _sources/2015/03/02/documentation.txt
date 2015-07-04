@@ -94,7 +94,7 @@ sets of docs that I've been working on:
 .. _WRD R&D Documentation: https://wrdrd.com/docs/
 
 
-Update: 2015-07-03
+Update: 2015-07-04
 ********************
 
 * [X] DOC: 2015/03/02/documentation.rst: Update inlined
