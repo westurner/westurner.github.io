@@ -19,6 +19,8 @@
 	fix-links \
 	setup_texlive_ubuntu \
 	setup_texlive_osx \
+	setup_texlive_yum \
+	setup_texlive_dnf \
 	upgrade_lifestream_js
 
 ifeq ($(__IS_MAC),true)
@@ -173,6 +175,18 @@ setup_texlive_ubuntu:
 		texlive-latex-recommended \
 		texlive-fonts-recommended
 	# texlive-fonts-extra
+
+setup_texlive_yum:
+	sudo yum install -y texlive-collection-latexextra \
+		texlive-collection-fontsextra
+
+setup_texlive_dnf:
+	# Install sphinx latex/PDF build requirements w/ Fedora 22
+	# NOTE: This is over 800MB of LaTeX
+	#sudo dnf install -y libxml2-devel libxslt-devel  # lxml build
+	#pip install -r ./requirements.txt
+	sudo dnf install -y texlive-collection-latexextra \
+		texlive-collection-fontsextra
 
 setup_texlive_osx:
 	# Install sphinx latex/PDF build requirements w/ OSX
