@@ -231,6 +231,7 @@ LOCALCSS=$(STATIC)/css/local.css
 localcss:
 	echo '' > $(LOCALCSS)
 	cat $(STATIC)/css/custom.css >> $(LOCALCSS)
+	cat $(STATIC)/css/sidenav-scrollto.css >> $(LOCALCSS)
 	cat $(STATIC)/css/resume.css >> $(LOCALCSS)
 
 LOCALJS=$(STATIC)/js/local.js
@@ -238,7 +239,19 @@ localjs:
 	echo '' > $(LOCALJS)
 	cat $(STATIC)/js/ga.js >> $(LOCALJS)
 	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
-	cat $(STATIC)/js/affix-sidenav.js >> $(LOCALJS)
+	cat $(STATIC)/js/sidenav-affix.js >> $(LOCALJS)
+	cat $(STATIC)/js/jquery.scrollTo.js >> $(LOCALJS)
+	cat $(STATIC)/js/jquery.isonscreen.js >> $(LOCALJS)
+	cat $(STATIC)/js/sidenav-scrollto.js >> $(LOCALJS)
+
+
+ifeq ($(__IS_MAC),true)
+BROWSER="open"
+#SEDOPTS=-i '' -e
+else
+BROWSER="web"
+#SEDOPTS=-i
+endif
 
 open:
-	open $(BUILDDIR)/html/resume.html
+	$(BROWSER) '$(BUILDDIR)/html/resume.html'
