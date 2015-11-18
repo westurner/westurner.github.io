@@ -27,7 +27,7 @@ ifeq ($(__IS_MAC),true)
 BROWSER="open"
 SEDOPTS=-i '' -e
 else
-BROWSER="x-www-browser"
+BROWSER="web"
 SEDOPTS=-i
 endif
 
