@@ -202,3 +202,7 @@ div.sidebar { padding: 1em; margin: 1em; float:right; background: white; box-sha
 span.highlighted { font-weight: bold; background: yellow; padding: 4px; margin: -4px; }
 
 #twitter-widget-0 { width: 100% !important; height: 400px; }
+
+#lifestream ul li {
+    border-bottom: 1px solid #e0e0e0;
+}
