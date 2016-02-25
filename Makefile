@@ -132,7 +132,7 @@ resume-print:
 resume-commit:
 	# Commit resume build outputs in ./_copy/resume
 	git add ./_copy/resume && \
-		git commit ./_copy/resume -m "Added updated resume build outputs"
+		git commit ./_copy/resume -m "RLS: updated resume build outputs :boat:"
 
 
 install:
