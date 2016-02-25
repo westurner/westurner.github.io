@@ -1,7 +1,7 @@
 
 :title: Resume: Wes Turner
 :author: Wes Turner <wes.turner@gmail.com>
-:copyright: Copyright © 2014, All Rights Reserved
+:copyright: Copyright © 2016, All Rights Reserved
 
 =========================================================
 `Resume <https://westurner.org/pages/resume.html>`_
