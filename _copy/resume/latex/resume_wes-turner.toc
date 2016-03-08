@@ -39,5 +39,5 @@
 \contentsline {subsection}{\numberline {4.23}venv}{11}{subsection.4.23}
 \contentsline {subsection}{\numberline {4.24}hello\_world}{11}{subsection.4.24}
 \contentsline {subsection}{\numberline {4.25}Dotfiles}{11}{subsection.4.25}
-\contentsline {subsection}{\numberline {4.26}Open Source Contributions}{11}{subsection.4.26}
+\contentsline {subsection}{\numberline {4.26}Open Source Contributions}{12}{subsection.4.26}
 \contentsline {section}{\numberline {5}Contact Information}{12}{section.5}
