@@ -74,6 +74,7 @@ Employment
 | Initially contacted by and contracted through Kelly IT Resources
 | Omaha, Nebraska, USA
 | Feb 2009 - Oct 2010
+| http://unmc.edu/
 
 Supported `UNMC 
 <https://en.wikipedia.org/wiki/University_of_Nebraska_Medical_Center>`_
@@ -129,10 +130,11 @@ End of cycle resignation
 * Amicably resigned October 2010
 
 
-2007-2008: Web Developer @ UNOmaha
+2007-2008: Web Developer @ UN NUCIA
 -------------------------------------
-| Nebraska University Consortium on Information Assurance (NUCIA)
-| University of Nebraska at Omaha (UNO)
+| Nebraska University Consortium for Information Assurance (NUCIA)
+| Nebraska University Center for Information Assurance (NUCIA)
+| University of Nebraska at Omaha (UNO, UNOmaha)
 | Peter Kiewit Institute (PKI)
 | Omaha, Nebraska, USA
 | January 2007 - March 2008
@@ -328,7 +330,7 @@ See: https://westurner.org/wiki/projects
 | UNOmaha: Distributed Systems
 | Team of four
 | Responsible for design, coding; presentation lead
-| https://bitbucket.org/westurner/eaglefin
+| Src: https://bitbucket.org/westurner/eaglefin
 
 * Python, JavaScript, CSS, XHTML
 * Django, 960.gs
@@ -347,8 +349,8 @@ See: https://westurner.org/wiki/projects
 | UNOmaha: Special Topics Consulting
 | Merged teams of six and then ten
 | Responsible for concept, design, coding; presentation lead
-| https://nhs-adoptions.appspot.com
-| https://bitbucket.org/westurner/nhs-social-web
+| Web: https://nhs-adoptions.appspot.com
+| Src: https://bitbucket.org/westurner/nhs-social-web
 
 * Created collaboration plan: Team Site, Mailing List; Google Sites and Groups
 * Researched strategies and metrics for maximizing social media goodwill
@@ -364,8 +366,8 @@ See: https://westurner.org/wiki/projects
 | UNO: Systems Analysis & Design / Systems Design & Implementation
 | Team of four
 | Responsible for design, coding, and presentation
-| http://code.google.com/p/wbcms
-| https://bitbucket.org/westurner/wbcms
+| Src: http://code.google.com/p/wbcms
+| Src: https://bitbucket.org/westurner/wbcms
 
 * Python, JavaScript, CSS, XHTML
 * Django, YUI Layouts
@@ -400,7 +402,7 @@ See: https://westurner.org/wiki/projects
 | WordPress Instance for Haiti Earthquake Awareness
 | UNOmaha: Managing in the Digital World
 | Three geo-distributed teams of four to five
-| http://code.google.com/p/helphaitiproject
+| Src: http://code.google.com/p/helphaitiproject
 
 Responsible for project management
 
@@ -426,11 +428,13 @@ Responsible for project management
 * Performance Monitoring
 * Cobbler, Vagrant, Puppet, SaltStack, Ansible, Nagios
 * DHCP, DNS, Apache, TLS
+* https://github.com/westurner/provis (2014) -- Packer, Vagrant, Salt, *Make*
 
 
 2011: Flowstat
 -----------------
 | Pyramid polyglot sandbox 
+| Src: https://bitbucket.org/westurner/flowstat
 
 * Agglomeration of utilities: prime numbers, spectrum bands
 * RDF integration: RDFLib, surf, virtuoso, deniz, SPARQL
@@ -439,7 +443,8 @@ Responsible for project management
 
 2012: Self Directed Learning
 -------------------------------
-| https://westurner.org/self-directed-learning/
+| Web: https://westurner.org/self-directed-learning/
+| Src: https://github.com/westurner/self-directed-learning
 
 * Autodidactism
 * Open Tools, Data, and Analysis for STEM Learning ("STEM Labs")
@@ -449,7 +454,7 @@ Responsible for project management
 2012: Pycd10api
 ------------------
 | REST API wrapper for ICD 10 CM and PCS XML files 
-| https://github.com/westurner/pycd10api
+| Web: https://github.com/westurner/pycd10api
 
 * Python, Pyramid, Cornice, lxml, XPath
 
@@ -457,18 +462,20 @@ Responsible for project management
 2013: Redem
 --------------
 | Personal reddit data liberation backup utility
-| https://github.com/westurner/redem
-| https://westurner.org/redditlog/
+| Src: https://github.com/westurner/redem
 
 * Reddit reader: comments, submissions, links
 * Fetch last 1000 comments from Reddit
 * Aggregate into static sortable and filterable HTML tables
 * Python, PRAW, Requests, Jinja2, Bootstrap 2, DataTables
 
+| https://westurner.org/redditlog/
+
+
 2014: Health-marketplace
 ---------------------------
 | Health marketplace web application
-| https://github.com/westurner/health-marketplace
+| Src: https://github.com/westurner/health-marketplace
 
 * Python, Django, Django-nonrel, Google AppEngine
 
@@ -487,10 +494,72 @@ Responsible for project management
 2014: Healthref
 ------------------
 | Health reference demo application
-| https://github.com/westurner/healthref
+| Src: https://github.com/westurner/healthref
 
 * Generates good HTML from an RDF Graph in Turtle Syntax
 * Python, RDFLib, Jinja2, Pygments, n3pygments
+
+
+2014: sphinxcontrib-srclinks
+-------------------------------
+| Src: https://github.com/westurner/sphinxcontrib-srclinks
+
+2014: WRD R&D Documentation
+-----------------------------
+| Web: https://wrdrd.com/docs/
+| Src: https://github.com/wrdrd/docs
+
+An outline of notes and points
+written in ReStructuredText.
+
+* Tools Docs:
+  https://wrdrd.com/docs/tools/
+
+
+2015: Pgs
+-----------
+| Src: https://github.com/westurner/pgs
+
+A bottle webapp for serving static files from a git branch, or from the local filesystem.
+
+
+2015: elasticsearchjsonld
+---------------------------
+| Src: https://github.com/westurner/elasticsearchjsonld
+
+Generate JSON-LD @contexts from ElasticSearch JSON Mappings
+with Python and JSON-LD.
+
+
+2015: pypfi
+------------
+| Src: https://github.com/westurner/pypfi
+
+Parse a transaction CSV with Python
+
+And then ofxparse:
+
+* https://pypi.python.org/pypi/ofxparse
+* https://github.com/conda/conda-recipes/blob/762c8e5/ofxparse/meta.yaml
+* https://github.com/conda/conda-recipes/blob/master/python/ofxparse/meta.yaml
+
+
+2015: pyglobalgoals
+---------------------
+| Src: https://github.com/westurner/pyglobalgoals
+
+`<https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb>`__
+* https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
+
+
+venv
+------------
+| Docs: https://westurner.org/dotfiles/venv
+
+venv.vim
+
+* | Src: https://github.com/westurner/venv.vim (``:Cdhere``,
+  ``:Cdworkonhome``, ``:Cdwh``, ``:Cdhelp``, (``$ cdhelp``))
 
 
 hello_world
