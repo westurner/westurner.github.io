@@ -101,7 +101,7 @@ gh-pages:
 	ghp-import \
 		-n \
 		-b ${GIT_WWW_BRANCH} \
-		-m "RLS: gh-pages: '$(shell git describe --all)' '$(shell git rev-parse HEAD)'" \
+		-m "RLS: gh-pages: :books: '$(shell git describe --all)' '$(shell git rev-parse HEAD)'" \
 		-r origin \
 		-p \
 		./blog/html
