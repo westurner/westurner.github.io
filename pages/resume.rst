@@ -493,6 +493,25 @@ Responsible for project management
 * Python, RDFLib, Jinja2, Pygments, n3pygments
 
 
+2014: WRD R&D Documentation
+-----------------------------
+| Web: https://wrdrd.com/docs/
+| Src: https://github.com/wrdrd/docs
+
+An outline of notes and points
+written in ReStructuredText.
+
+* Tools Docs:
+  https://wrdrd.com/docs/tools/
+
+
+2015: Pgs
+-----------
+| Src: https://github.com/westurner/pgs
+
+A bottle webapp for serving static files from a git branch, or from the local filesystem.
+
+
 hello_world
 --------------
 | https://github.com/westurner/hello_world
