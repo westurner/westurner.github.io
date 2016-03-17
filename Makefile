@@ -108,9 +108,14 @@ gh-pages:
 	GIT_PAGER="less -R | cat" git log -n6 master
 
 push:
-	# Git push to origin source
+	# Git push to origin/source
 	git status
 	git push origin source
+
+pull:
+	# Git pull from origin/source
+	git status
+	git pull origin source
 
 resume:
 	# Regenerate resume for web and for print
