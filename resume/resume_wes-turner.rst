@@ -589,7 +589,14 @@ Open Source Contributions
 ---------------------------
 Primarily small contributions here and there to show my appreciation.
 
-See: https://westurner.org/wiki/contributions
+See:
+
+* https://westurner.org/wiki/contributions
+* https://westurner.org/wiki/github
+
+  * https://githubcontributions.io/user/westurner
+
+    * 2016-03-08: "westurner made 6411 contributions to 345 repositories"
 
 
 

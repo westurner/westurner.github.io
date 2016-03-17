@@ -593,9 +593,10 @@ See:
 
 * https://westurner.org/wiki/contributions
 * https://westurner.org/wiki/github
-* https://githubcontributions.io/user/westurner
 
-  * 2016-03-08: "westurner made 6411 contributions to 345 repositories"
+  * https://githubcontributions.io/user/westurner
+
+    * 2016-03-08: "westurner made 6411 contributions to 345 repositories"
 
 
 
