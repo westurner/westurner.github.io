@@ -101,7 +101,7 @@ gh-pages:
 	ghp-import \
 		-n \
 		-b ${GIT_WWW_BRANCH} \
-		-m "RLS: gh-pages: :books: '$(shell git describe --all)' '$(shell git rev-parse HEAD)'" \
+		-m "RLS: gh-pages: :books: $(shell git rev-parse --short HEAD) '$(shell git describe --all)'" \
 		-r origin \
 		-p \
 		./blog/html
@@ -132,7 +132,7 @@ resume-print:
 resume-commit:
 	# Commit resume build outputs in ./_copy/resume
 	git add ./_copy/resume && \
-		git commit ./_copy/resume -m "RLS: updated resume build outputs :boat:"
+		git commit ./_copy/resume -m "RLS: :boat: resume"
 
 
 install:
