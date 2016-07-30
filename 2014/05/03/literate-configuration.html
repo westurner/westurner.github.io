@@ -97,7 +97,7 @@
 </a>
 </li>
 <li>
-<a href="https://facebook.com/wes.turner" title="Facebook" rel="me" target="_blank">
+<a href="https://facebook.com/westurner" title="Facebook" rel="me" target="_blank">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAPZJREFU%0AOI1jYKAQMDIwMDC4pa44/OXlLRtSNPKIqx3ZNTvCloWBgYHh34/PNnwiiiTZ/OfHZxsGBgYGFgYG%0ABgYWVg6cCvm42RkKEi0YTHSlGL5%2B%2B83w8s0XhoLWHXA9LIRsyow2YbA0lGVgYGBgEOBjZhDgQ7WM%0AoAFmetIMDAwMDAX1SxlOX7gHcRWSdwkawMXJxsDAwMBw9f43BmzhhNOA7XNjUPi7F6UyMDAwMDx5%0A8YkhtXoTXJyJkAvQwcHj14hzgbV/MwMDAwPD0Y21KHw2LgEGDi5Bwgag%2BxdXOiHZC4PUACEZ/SOk%0AahSRNjhKqeUMDAwMDABFgzKv9kFMnQAAAABJRU5ErkJggg%3D%3D%0A" alt="facebook.com" width="16" height="16"></img>
 </a>
 </li>
@@ -339,7 +339,7 @@ like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
 <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning.</p>
-<div class="code highlight-python"><div class="highlight"><pre>#### i3 config file (v4)
+<div class="code highlight-default"><div class="highlight"><pre><span></span>#### i3 config file (v4)
 ### Notes
 #  #  Default location: ~/.i3/config
 #  #  List the commented command shortcuts with::
@@ -377,27 +377,27 @@ mode &quot;resize&quot; {
 </div>
 <p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
 with a simple conditional regular expression:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">~/.</span><span class="n">i3</span><span class="o">/</span><span class="n">config</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">&#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
 </pre></div>
 </div>
 <p>Peruse the output for that one excellent keyboard shortcut</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="c">#### i3 config file (v4)</span>
-<span class="c">### Notes</span>
-<span class="c">#  #  Default location: ~/.i3/config</span>
-<span class="c">#  #  List the commented command shortcuts with::</span>
-<span class="c">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-<span class="c">## Change volume</span>
-<span class="c">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
-<span class="c">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
-<span class="c">## Start, stop, and reset xflux</span>
-<span class="c">#  &lt;alt&gt; [         -- start xflux</span>
-<span class="c">#  &lt;alt&gt; ]         -- stop xflux</span>
-<span class="c">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
-<span class="c">## Resize Mode</span>
-<span class="c">#  &lt;alt&gt; r      -- enter resize mode</span>
-    <span class="c">## Grow and shrink windows</span>
-    <span class="c">#  &lt;enter&gt;  -- exit resize mode</span>
-    <span class="c">#  &lt;esc&gt;    -- exit resize mode</span>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1">#### i3 config file (v4)</span>
+<span class="c1">### Notes</span>
+<span class="c1">#  #  Default location: ~/.i3/config</span>
+<span class="c1">#  #  List the commented command shortcuts with::</span>
+<span class="c1">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
+<span class="c1">## Change volume</span>
+<span class="c1">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
+<span class="c1">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
+<span class="c1">## Start, stop, and reset xflux</span>
+<span class="c1">#  &lt;alt&gt; [         -- start xflux</span>
+<span class="c1">#  &lt;alt&gt; ]         -- stop xflux</span>
+<span class="c1">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
+<span class="c1">## Resize Mode</span>
+<span class="c1">#  &lt;alt&gt; r      -- enter resize mode</span>
+    <span class="c1">## Grow and shrink windows</span>
+    <span class="c1">#  &lt;enter&gt;  -- exit resize mode</span>
+    <span class="c1">#  &lt;esc&gt;    -- exit resize mode</span>
 </pre></div>
 </div>
 <p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
@@ -470,7 +470,7 @@ generating documentation from comment strings embedded in various languages
 </a>
 </li>
 <li>
-<a href="https://facebook.com/wes.turner" title="Facebook" rel="me" target="_blank">
+<a href="https://facebook.com/westurner" title="Facebook" rel="me" target="_blank">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAPZJREFU%0AOI1jYKAQMDIwMDC4pa44/OXlLRtSNPKIqx3ZNTvCloWBgYHh34/PNnwiiiTZ/OfHZxsGBgYGFgYG%0ABgYWVg6cCvm42RkKEi0YTHSlGL5%2B%2B83w8s0XhoLWHXA9LIRsyow2YbA0lGVgYGBgEOBjZhDgQ7WM%0AoAFmetIMDAwMDAX1SxlOX7gHcRWSdwkawMXJxsDAwMBw9f43BmzhhNOA7XNjUPi7F6UyMDAwMDx5%0A8YkhtXoTXJyJkAvQwcHj14hzgbV/MwMDAwPD0Y21KHw2LgEGDi5Bwgag%2BxdXOiHZC4PUACEZ/SOk%0AahSRNjhKqeUMDAwMDABFgzKv9kFMnQAAAABJRU5ErkJggg%3D%3D%0A" alt="facebook.com" width="16" height="16"></img>
 </a>
 </li>
