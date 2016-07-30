@@ -124,14 +124,12 @@ resume:
 
 resume-web:
 	# Regenerate resume for web (HTML)
-	cd resume && \
-		make forweb
+	$(MAKE) -C resume forweb
 	$(MAKE) resume-commit
 
 resume-print:
 	# Regenerate resume for print (PDF, ...)
-	cd resume && \
-		make forprint
+	$(MAKE) -C resume forprint
 	$(MAKE) resume-commit
 
 resume-commit:
