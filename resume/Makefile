@@ -192,6 +192,8 @@ odt:
 		--stylesheet=styles.odt \
 		--strip-comments \
 		--no-doc-info \
+		--create-links \
+		--time \
 		$(RESUME_ROOT) \
 		$(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).odt
 	@echo "Build finished. The ODT file is in $(BUILDDIR)/"
