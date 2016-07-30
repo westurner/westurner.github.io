@@ -37,6 +37,7 @@
 \contentsline {subsection}{\numberline {4.21}2015: pypfi}{11}{subsection.4.21}
 \contentsline {subsection}{\numberline {4.22}2015: pyglobalgoals}{11}{subsection.4.22}
 \contentsline {subsection}{\numberline {4.23}venv}{11}{subsection.4.23}
+\contentsline {subsubsection}{venv.vim}{11}{subsubsection*.6}
 \contentsline {subsection}{\numberline {4.24}hello\_world}{11}{subsection.4.24}
 \contentsline {subsection}{\numberline {4.25}Dotfiles}{11}{subsection.4.25}
 \contentsline {subsection}{\numberline {4.26}Open Source Contributions}{12}{subsection.4.26}

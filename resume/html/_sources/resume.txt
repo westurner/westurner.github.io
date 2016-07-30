@@ -557,9 +557,12 @@ venv
 | Docs: https://westurner.org/dotfiles/venv
 
 venv.vim
+~~~~~~~~~
+| Src: https://github.com/westurner/venv.vim
 
-* | Src: https://github.com/westurner/venv.vim (``:Cdhere``,
-  ``:Cdworkonhome``, ``:Cdwh``, ``:Cdhelp``, (``$ cdhelp``))
+(``:Cdhere``, ``:Cdworkonhome``, ``:Cdwh``, ``:Cdhelp``, (``$ cdhelp``))
+
+- https://westurner.org/dotfiles/venv#cdalias
 
 
 hello_world
