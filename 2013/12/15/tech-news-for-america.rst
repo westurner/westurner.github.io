@@ -109,7 +109,7 @@ https://en.wikipedia.org/wiki/Sentiment_analysis
 * https://en.wikipedia.org/wiki/Semantic_analysis
 * http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro
 * http://textblob.readthedocs.org/en/latest/
-* http://docs.continuum.io/anaconda/pkgs.html
+* https://docs.continuum.io/anaconda/pkg-docs
 
 
 Science
