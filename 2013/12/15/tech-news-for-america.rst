@@ -77,7 +77,7 @@ https://en.wikipedia.org/wiki/Software_engineering
 
 * https://en.wikipedia.org/wiki/Software_development_process
 * https://en.wikipedia.org/wiki/Category:Software_design_patterns
-* https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)
+* `<https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)>`__
 * http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa
 
 
@@ -236,16 +236,15 @@ https://en.wikipedia.org/wiki/Hyperlocal
 * `twitter: near:"Omaha, Nebraska, USA" within:25mi
   <https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&src=typd>`_
 
-EDIT: 2014-02-02: Updated link to "Mathematics for Computer Science" PDF
+.
 
-EDIT: 2014-09-21: Updated link to "Mathematics for Computer Science" PDF
-
-EDIT: 2014-09-29: Added links to "Multiverse" and "Universe"
-
-EDIT: 2014-09-29: Added links to "Laniakea Supercluster", "Virgo
-Supercluster", and "Local Group"
-
-EDIT: 2014-12-16: Updated date formats to https://en.wikipedia.org/wiki/ISO_8601
+- EDIT: 2014-02-02: Updated link to "Mathematics for Computer Science" PDF
+- EDIT: 2014-09-21: Updated link to "Mathematics for Computer Science" PDF
+- EDIT: 2014-09-29: Added links to "Multiverse" and "Universe"
+- EDIT: 2014-09-29: Added links to "Laniakea Supercluster", "Virgo
+  Supercluster", and "Local Group"
+- EDIT: 2014-12-16: Updated date formats to https://en.wikipedia.org/wiki/ISO_8601
+- EDIT: 2016-09-04: Updated links
 
 .. author:: Wes Turner
 .. categories:: none
