@@ -23,7 +23,7 @@ article p { line-height: 1.5; }
 
 aside.sidebar h1,
 aside.sidebar h1 a { font-size: 1.2em; color: #424242; }
-aside.sidebar { font-size: 1em; }
+aside.sidebar { padding: 20px 0; font-size: 1em; background: #e7e7e7; }
 aside.sidebar.highlight { font-size: .8em; }
 
 ul#accounts { list-style-type: none; padding: 0; max-width: 670px; margin: 0 auto; text-align: center; }
@@ -106,7 +106,7 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
     nav li.main-nav { margin: 20px 0; padding: 0; }
     nav li.main-nav a { padding: 0 20px; }
 
-    article { padding: 40px 40px 0 40px; }
+    article { padding: 40px 40px 20px 40px; }
     ul.related { margin: 40px 0; padding: 20px 0 20px 0; }
     ul.related li { display: inline; line-height: 1em; }
     ul.related li.right { display: inline; float: right; }
@@ -116,7 +116,7 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
 
     /* div.section + div.postmeta { margin: 40px 0; } */
 
-    aside.sidebar div.widget { margin: 40px 0; padding: 0 40px; }
+    aside.sidebar div.widget { margin-bottom: 30px; padding: 0 40px; }
 
     div.archive_link { padding-top: 20px; text-align: center; }
 
