@@ -53,9 +53,9 @@ And then run the automated tests:
 
 .. code:: bash
 
-   python -m site                    # sys.path and $PWD (`pwd`)
-   python -m unittest helloworld     # ./helloworld.py
-   python -m unittest -v helloworld  # ./helloworld.py
+   python -m site                         # sys.path and $PWD (`pwd`)
+   python -m unittest test_helloworld     # ./helloworld.py
+   python -m unittest -v test_helloworld  # ./helloworld.py
    test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
 
 Why should this first run of the tests fail?
