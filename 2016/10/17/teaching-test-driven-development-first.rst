@@ -71,6 +71,7 @@ Advantages of this Test-Driven-Development (TDD) first approach:
 - This teaches Object-Orientation (OO) (Encapsulation, Separation of
   Concerns)
 - This teaches separation of data and code.
+- This teaches Given-When-Then.
 
 And then what? (Teach what next?):
 
@@ -96,6 +97,10 @@ Concepts and References:
 
 - https://en.wikipedia.org/wiki/Separation_of_concerns
 - https://en.wikipedia.org/wiki/Software_design_pattern
+- https://en.wikipedia.org/wiki/Given-When-Then
+
+  - https://wrdrd.com/docs/consulting/software-development#given-when-then
+
 - https://wrdrd.com/docs/consulting/software-development#test-driven-development
 - https://westurner.org/2013/11/25/hello-world.html
 
