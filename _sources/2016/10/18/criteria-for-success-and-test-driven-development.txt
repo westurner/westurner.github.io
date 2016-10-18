@@ -5,7 +5,7 @@ There are conceptual similarities and differences among
 TDD, the Scientific Method, and Goal-Directed Organizational Planning.
 
 How does Test-Driven-Development (TDD) relate to experimental
-hypotheses?
+Hypotheses?
 
 When practicing the Scientific Method (and keeping with Design of
 Experiments), we're supposed to **start with a hypothesis**,
@@ -14,7 +14,7 @@ before drawing a conclusion.
 
 - If the hypothesis is not met (in terms of statistical constraints,
   boolean test pass/fail), then we reject the conclusion.
-- With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control)
+- With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control),
   in the Control step we re-evaluate whether the implemented approach
   is achieving the intended objectives that we defined ahead-of-time.
 
@@ -44,7 +44,7 @@ flows (sort of like nodes with magnitude and uni-/bi-directional edges
 with magnitude). A systems metaphor: a balloon animal filled with water.
 
 We'd like to think that software is more discrete; that is,
-software is descriable in terms of how output results from changes in
+software is describable in terms of how output results from changes in
 input variables.
 
 Formal methods of software design and analysis are often cost-prohibitive.
@@ -62,19 +62,19 @@ expectations:
 - Functional Specification Coverage: whether all of the desired
   behaviors are enumerated in at least one test.
 
-    - Each Use Case and/or User Story should have at least one test.
-      (Behavior-Driven-Development tools make it easier to write
-      these tests with something like natural language;
-      so that developers/engineers can do what they do best).
-    - User Stories can be written and rewritten from
-      the 5 W's (Who, What, When, Where, Why)
-      to a Given-When-Then (and Why) pattern:
+  - Each Use Case and/or User Story should have at least one test.
+    (Behavior-Driven-Development tools make it easier to write
+    these tests with something like natural language;
+    so that developers/engineers can do what they do best).
+  - User Stories can be written and rewritten from
+    the 5 W's (Who, What, When, Where, Why)
+    to a Given-When-Then (and Why) pattern:
 
-      - "Users can register for user accounts"
-      - "As an unregistered user, when I complete the registration form,
-        and then click on the confirmation link sent to my email,
-        then I have a registered user account (obviously: in order to
-        onboard new users)"
+    - "Users can register for user accounts"
+    - "As an unregistered user, when I complete the registration form,
+      and then click on the confirmation link sent to my email,
+      then I have a registered user account (obviously: in order to
+      onboard new users)"
 
 - Code Coverage: whether all of the actual code in the software is
   covered by at least one test.
@@ -156,7 +156,7 @@ Objectives):
 - [...]
 
 With tests for things in the future, we can define confidence intervals
-(low, medium, high) as e.g. "pessimstic", "realistic", and "optimistic".
+(low, medium, high) as e.g. "pessimistic", "realistic", and "optimistic".
 
 Assuming the objective is to maximize,
 given an interval,
@@ -200,9 +200,9 @@ A bit about the Global Goals:
 
   - Goal
 
-     - Target
+    - Target
 
-        - Indicator(s)
+      - Indicator(s)
 
 - Some Indicators are relevant to multiple Targets.
 - All Indicators should be relevant to all of us ("you people").
@@ -233,11 +233,12 @@ Concepts / References
 - https://en.wikipedia.org/wiki/Confounding
 - https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
 - https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis
+- https://en.wikipedia.org/wiki/User_story
 - https://en.wikipedia.org/wiki/Code_coverage
 - https://en.wikipedia.org/wiki/Conditional_independence
 - https://en.wikipedia.org/wiki/SMART_criteria
-- https://westurner.org/opengov/un/#un-sustainable-development-goals
 - https://en.wikipedia.org/wiki/Sustainable_Development_Goals
+- https://westurner.org/opengov/un/#un-sustainable-development-goals
 - http://www.globalgoals.org/
 
 
