@@ -377,14 +377,14 @@
 </div>
 <p>And then run the automated tests:</p>
 <div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                         # sys.path and $PWD (`pwd`)
-python -m unittest test_helloworld     # ./helloworld.py
-python -m unittest -v test_helloworld  # ./helloworld.py
+python -m unittest test_helloworld     # ./test_helloworld.py
+python -m unittest -v test_helloworld  # ./test_helloworld.py
 test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
 </pre></div>
 </div>
 <p>Why should this first run of the tests fail?</p>
 <ul class="simple">
-<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">helloworld.py</span></span>.</li>
+<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">test_helloworld.py</span></span>.</li>
 <li>Because, in keeping with TDD, we run the test first to make sure it
 actually fails without our changes.</li>
 </ul>

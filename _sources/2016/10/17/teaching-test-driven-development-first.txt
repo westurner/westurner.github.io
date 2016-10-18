@@ -54,13 +54,13 @@ And then run the automated tests:
 .. code:: bash
 
    python -m site                         # sys.path and $PWD (`pwd`)
-   python -m unittest test_helloworld     # ./helloworld.py
-   python -m unittest -v test_helloworld  # ./helloworld.py
+   python -m unittest test_helloworld     # ./test_helloworld.py
+   python -m unittest -v test_helloworld  # ./test_helloworld.py
    test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
 
 Why should this first run of the tests fail?
 
-- Because we didn't remember to import ``helloworld`` in ``helloworld.py``.
+- Because we didn't remember to import ``from helloworld import helloworld`` in ``test_helloworld.py``.
 - Because, in keeping with TDD, we run the test first to make sure it
   actually fails without our changes.
 
