@@ -207,6 +207,6 @@ span.highlighted { font-weight: bold; background: yellow; padding: 4px; margin: 
     border-bottom: 1px solid #e0e0e0;
 }
 
-img {
-  overflow-x: hidden;
+img.img-100 {
+    width: 100%;
 }
