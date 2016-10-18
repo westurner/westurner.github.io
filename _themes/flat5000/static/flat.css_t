@@ -219,3 +219,7 @@ span.highlighted { font-weight: bold; background: yellow; padding: 4px; margin: 
 #lifestream ul li {
     border-bottom: 1px solid #e0e0e0;
 }
+
+img {
+  overflow-x: hidden;
+}
