@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2016/10/18/criteria-for-success-and-test-driven-development
    2016/10/17/teaching-test-driven-development-first
    2015/03/02/documentation
    2014/10/20/wrd-research-and-development
