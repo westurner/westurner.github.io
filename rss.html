@@ -53,9 +53,9 @@
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                    # sys.path and $PWD (`pwd`)
-python -m unittest helloworld     # ./helloworld.py
-python -m unittest -v helloworld  # ./helloworld.py
+<div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                         # sys.path and $PWD (`pwd`)
+python -m unittest test_helloworld     # ./helloworld.py
+python -m unittest -v test_helloworld  # ./helloworld.py
 test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
 </pre></div>
 </div>
@@ -72,6 +72,7 @@ actually fails without our changes.</li>
 <li>This teaches Object-Orientation (OO) (Encapsulation, Separation of
 Concerns)</li>
 <li>This teaches separation of data and code.</li>
+<li>This teaches Given-When-Then.</li>
 </ul>
 <p>And then what? (Teach what next?):</p>
 <ul class="simple">
@@ -98,6 +99,10 @@ Concerns)</li>
 </li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></li>
 <li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Given-When-Then">https://en.wikipedia.org/wiki/Given-When-Then</a><ul>
+<li><a class="reference external" href="https://wrdrd.com/docs/consulting/software-development#given-when-then">https://wrdrd.com/docs/consulting/software-development#given-when-then</a></li>
+</ul>
+</li>
 <li><a class="reference external" href="https://wrdrd.com/docs/consulting/software-development#test-driven-development">https://wrdrd.com/docs/consulting/software-development#test-driven-development</a></li>
 <li><a class="reference external" href="https://westurner.org/2013/11/25/hello-world.html">https://westurner.org/2013/11/25/hello-world.html</a></li>
 </ul>
