@@ -15,31 +15,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts tagged with affordances &mdash; Wes Turner</title>
-            <link rel="stylesheet" href="../_static/normalize.css" type="text/css">
-            <link rel="stylesheet" href="../_static/sphinx.css" type="text/css">
-            <link rel="stylesheet" href="../_static/main.css" type="text/css">
-            <link rel="stylesheet" href="../_static/flat.css" type="text/css">
-            <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
-            <!--<link rel="stylesheet" href="../_static/fontawesome/font-awesome.min.css" type="text/css">-->
+        <title>Criteria for Success and Test Driven Development &mdash; Wes Turner</title>
+            <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
+            <link rel="stylesheet" href="../../../_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+            <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <!-- Load modernizr and JQuery -->
-        <script src="../_static/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
-        <script src="../_static/plugins.js"></script>
-        <script src="../_static/main.js"></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss" /><script type="text/javascript">
+        <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
+        <script src="../../../_static/plugins.js"></script>
+        <script src="../../../_static/main.js"></script>
+        <link rel="next" title="Teaching Test-Driven-Development First" href="../17/teaching-test-driven-development-first" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
+        URL_ROOT:    '../../../',
         VERSION:     '1.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../_static/underscore.js"></script><script type="text/javascript" src="../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
-    <script src="../_static/js/jquery.scrollTo.min.js" ></script>
+    <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
         // Redirect to HTTPS if not on localhost
         if (window.location.protocol !== "https:") {
@@ -306,13 +306,13 @@
             <a href="/">home</a>
         </li>
         <li class="main-nav">
-            <a href="../archive">blog</a>
+            <a href="../../../archive">blog</a>
         </li>
         <li class="main-nav">
-            <a href="../pages/resume">resume</a>
+            <a href="../../../pages/resume">resume</a>
         </li>
         <li class="main-nav">
-            <a href="../pages/stream">stream</a>
+            <a href="../../../pages/stream">stream</a>
         </li>
         <li class="main-nav">
             <a href="https://westurner.org/redditlog/" target="_blank">redditlog</a>
@@ -321,15 +321,263 @@
             <a href="https://westurner.org/wiki/" target="_blank">wiki</a>
         </li>
     </ul>
-    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="archive">
-        <h1>Posts tagged with <span class="title_tag">affordances</span></h1><div class="year">
-            <h1>2015</h1>
-            <ul><li>
-                    <div class="timestamp postmeta">
-            <span>Mar 02</span>
+    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="timestamp postmeta">
+            <span>October 18, 2016</span>
         </div>
-                    <h2><a href="../2015/03/02/documentation">Documentation</a></h2>
-                    <div class="postmeta">
+    <div class="section" id="criteria-for-success-and-test-driven-development">
+<h1>Criteria for Success and Test Driven Development</h1>
+<p>There are conceptual similarities and differences among
+TDD, the Scientific Method, and Goal-Directed Organizational Planning.</p>
+<p>How does Test-Driven-Development (TDD) relate to experimental
+hypotheses?</p>
+<p>When practicing the Scientific Method (and keeping with Design of
+Experiments), we&#8217;re supposed to <strong>start with a hypothesis</strong>,
+experiment, and then <strong>test the hypothesis</strong>
+before drawing a conclusion.</p>
+<ul class="simple">
+<li>If the hypothesis is not met (in terms of statistical constraints,
+boolean test pass/fail), then we reject the conclusion.</li>
+<li>With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control)
+in the Control step we re-evaluate whether the implemented approach
+is achieving the intended objectives that we defined ahead-of-time.<ul>
+<li>&#8220;Validated Learning&#8221; emphasizes the need to control given changes
+in predefined metrics, as well.</li>
+</ul>
+</li>
+<li>Control Theory and Systems Theory are all about how
+changes in inputs (and feedback) affect measurable state
+(outputs, systemic outcomes).</li>
+</ul>
+<p>History, and various domains of science and policy, is chock-full of
+examples of how attempts to Optimize (Minimize or Maximize) for certain
+metrics have resulted in Unintended Consequences: where changes in
+unmeasured variables are resultant from (or just &#8220;linked with&#8221;, in terms
+of Confounding, Correlation and Causation) attempts to optimize. Can you
+think of a few salient examples in your domains of knowledge?</p>
+<p>There is math for solving multi-dimensional (&#8220;high-dimensional&#8221;)
+optimization problems.</p>
+<ul class="simple">
+<li>MCDA (<em>Multiple-Criteria Decision Analysis</em>) intends to find &#8211; often
+multiple &#8211; solutions to multi-dimensional optimization problems.</li>
+</ul>
+<p>Most systems are inherently multi-dimensional: there are stocks and
+flows (sort of like nodes with magnitude and uni-/bi-directional edges
+with magnitude). A systems metaphor: a balloon animal filled with water.</p>
+<p>We&#8217;d like to think that software is more discrete; that is,
+software is descriable in terms of how output results from changes in
+input variables.</p>
+<p>Formal methods of software design and analysis are often cost-prohibitive.
+Practically, the problems we intend to solve with software are often
+ill-specified: we don&#8217;t start with a complete functional specification,
+we start with a vague idea of the problem we&#8217;d like to solve
+(more efficient, more auditable, more logs) and work from there.
+Agile development methods are designed to support teams of stakeholders
+who are seeking continuous success in satisfying changing objectives.</p>
+<p>So, then, there are two things to optimize (maximize) for
+when attempting to deliver software which successfully achieves customer
+expectations:</p>
+<ul>
+<li><p class="first">Functional Specification Coverage: whether all of the desired
+behaviors are enumerated in at least one test.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Each Use Case and/or User Story should have at least one test.
+(Behavior-Driven-Development tools make it easier to write
+these tests with something like natural language;
+so that developers/engineers can do what they do best).</li>
+<li>User Stories can be written and rewritten from
+the 5 W&#8217;s (Who, What, When, Where, Why)
+to a Given-When-Then (and Why) pattern:<ul>
+<li>&#8220;Users can register for user accounts&#8221;</li>
+<li>&#8220;As an unregistered user, when I complete the registration form,
+and then click on the confirmation link sent to my email,
+then I have a registered user account (obviously: in order to
+onboard new users)&#8221;</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Code Coverage: whether all of the actual code in the software is
+covered by at least one test.</p>
+<ul>
+<li><p class="first">When some of the tests no longer pass, this is called &#8220;breaking the
+build&#8221;. Teams working with Continuous Integration (<em>CI</em>) are aware
+of this because all of the tests run for every change to the software.</p>
+<ul class="simple">
+<li>When the build breaks, it is the whole team&#8217;s (and specifically,
+the person whose changes broke the build&#8217;s) responsibility to
+stop what they are doing and un-break the build (often by just
+&#8220;backing out&#8221; the new changes (where they can remain in a separate
+feature branch)) so that the whole team is not blocked.</li>
+<li>Teams devise various ways to indicate that the build is broken
+(CI emails, a <em>build lamp</em>, respectful verbal indications).</li>
+</ul>
+</li>
+<li><p class="first">Function Coverage, Statement Coverage, Branch Coverage, Condition
+Coverage:</p>
+<p>Statement Coverage is a Code Coverage metric for
+determining whether each text line of the software is executed by the tests.
+Statement Coverage can be misleading for a number of reasons:</p>
+<ol class="arabic simple">
+<li>There may be multiple branches on the same line.</li>
+</ol>
+<blockquote>
+<div><div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">test_func</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">func</span><span class="p">(</span><span class="mi">271</span><span class="p">,</span> <span class="mi">314</span><span class="p">)</span>  <span class="c1"># 100% coverage</span>
+    <span class="k">assert</span> <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>      <span class="c1"># still 100% coverage</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>So, optimizing for Statement Coverage (when what we really want is
+<em>Branch Coverage</em>) can be misleading: can lead to false confidence.</p>
+<p>Branch Coverage and Statement Coverage <strong>are not</strong> independent
+measurements: if there&#8217;s high Branch Coverage, there&#8217;s likely also
+high Statement Coverage. Stated another way, change in Statement
+Coverage can be predicted given change in Branch Coverage. Is this
+confounding?</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Because Branch Coverage and Statement Coverage <strong>are not</strong>
+<em>conditionally independent</em>, there are a number of mathematical
+analyses which are not appropriate (e.g. Bayesian inference).</p>
+<p class="last">It can be said, then, that Branch Coverage and Statement Coverage
+are not <em>independent components</em>.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<p>How does TDD relate to goal-driven organizational planning?</p>
+<p>How do we know whether we&#8217;ve gotten there if we haven&#8217;t yet defined
+where we need to be?</p>
+<p>Organizations define criteria for success:</p>
+<ul class="simple">
+<li>Mission</li>
+<li>Goals</li>
+<li>Objectives / Targets</li>
+<li>Indicators / Metrics / Key Performance Indicators</li>
+</ul>
+<p>In terms of Test-Driven-Development, many organizational &#8220;tests&#8221;
+are not yet &#8220;passing&#8221; (&#8220;reasonability&#8221;, &#8220;realism&#8221;).</p>
+<p>There&#8217;s an acronym for defining objectives: &#8220;SMART&#8221;.
+There are various interpretations of each of the letters.
+One such interpretation is &#8220;Specific, Measurable, Achievable, Relevant,
+Time-Bound&#8221;. Here, we&#8217;ll assume that a Goal is more of a high-level
+grouping for one or more objectives (though it could be argued that
+really all we have are nested sets of Goals or nested sets of
+Objectives):</p>
+<ul class="simple">
+<li>Are we upholding the Organizational Mission?</li>
+<li>Is this objective {S, M, A, R, and T}?</li>
+<li>Is this objective Measurable?</li>
+<li>Is this objective Achievable (Assignable)?</li>
+<li>[...]</li>
+</ul>
+<p>With tests for things in the future, we can define confidence intervals
+(low, medium, high) as e.g. &#8220;pessimstic&#8221;, &#8220;realistic&#8221;, and &#8220;optimistic&#8221;.</p>
+<p>Assuming the objective is to maximize,
+given an interval,
+there are then four possible boolean tests for success
+(or just one, if we limit ourselves to TDD pass/fail):</p>
+<ul class="simple">
+<li>Is the metric between the low and high thresholds?</li>
+<li>Is the metric above the low threshold?</li>
+<li>Is the metric within a defined threshold around the medium threshold?</li>
+<li>Is the metric below the high threshold?</li>
+</ul>
+<p>System Administrators sometimes define events for these types of
+threshold intervals:</p>
+<ul class="simple">
+<li>If utilization is below L, reduce the number of allocated servers.</li>
+<li>If utilization is above H, increase the number of allocated servers.</li>
+</ul>
+<p>Organizations sometimes define events for these types of threshold
+intervals:</p>
+<ul class="simple">
+<li>If we reach our sales target by date/time, everyone gets a raise. (See
+also: profit sharing).</li>
+<li>If the planetary temperature increases by n degrees,
+we&#8217;ll suddenly realize we need to minimize the effects of climate
+change. (And, by then, it&#8217;ll be too late)</li>
+</ul>
+<p>These are <em>reactive</em> approaches.</p>
+<p>TDD is proactive, in that we test first, early, and often.</p>
+<p>So, there are differences and similarities between defining criteria for
+success in software development and in adaptive, proactive,
+organizations.</p>
+<p>A bit about the Global Goals:</p>
+<ul>
+<li><p class="first">The Global Goals for Sustainable Development are also known as
+the United Nations Sustainable Development Goals (SDGs).</p>
+</li>
+<li><p class="first">There are 17 Global Goals (<strong>#Goal1</strong> &#8211; <strong>#Goal17</strong>).</p>
+</li>
+<li><p class="first">There are Targets for each Goal, and there are Indicators for Targets:</p>
+<ul>
+<li><p class="first">Goal</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Target</p>
+<blockquote>
+<div><ul class="simple">
+<li>Indicator(s)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p class="first">Some Indicators are relevant to multiple Targets.</p>
+</li>
+<li><p class="first">All Indicators should be relevant to all of us (&#8220;you people&#8221;).</p>
+</li>
+<li><p class="first">The UN Millennium Development Goals were through 2015.</p>
+</li>
+<li><p class="first">The UN Sustainable Development Goals are through 2030.</p>
+<ul class="simple">
+<li>By 2030, we intend to be able to say that we&#8217;ve achieved ( or
+exceeded) each Target, given an evaluation of the Indicators. This
+is our <strong>criteria for success</strong>.<ul>
+<li>We aren&#8217;t yet passing the tests we&#8217;ve set for ourselves.</li>
+<li>We&#8217;re all working to find and implement solutions for achieving
+these Targets in our own states and worldwide.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Concepts / References</p>
+<ul class="simple">
+<li><a class="reference external" href="https://westurner.org/2016/10/17/teaching-test-driven-development-first.html">https://westurner.org/2016/10/17/teaching-test-driven-development-first.html</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Hypothesis">https://en.wikipedia.org/wiki/Hypothesis</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Design_of_experiments">https://en.wikipedia.org/wiki/Design_of_experiments</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Six_Sigma#DMAIC">https://en.wikipedia.org/wiki/Six_Sigma#DMAIC</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Validated_learning">https://en.wikipedia.org/wiki/Validated_learning</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Unintended_consequences">https://en.wikipedia.org/wiki/Unintended_consequences</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Confounding">https://en.wikipedia.org/wiki/Confounding</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_coverage">https://en.wikipedia.org/wiki/Code_coverage</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_independence">https://en.wikipedia.org/wiki/Conditional_independence</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/SMART_criteria">https://en.wikipedia.org/wiki/SMART_criteria</a></li>
+<li><a class="reference external" href="https://westurner.org/opengov/un/#un-sustainable-development-goals">https://westurner.org/opengov/un/#un-sustainable-development-goals</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">https://en.wikipedia.org/wiki/Sustainable_Development_Goals</a></li>
+<li><a class="reference external" href="http://www.globalgoals.org/">http://www.globalgoals.org/</a></li>
+</ul>
+</div>
+
+    <div class="postmeta">
         <div class="author">
             <span>Posted by Wes Turner</span>
         </div>
@@ -337,39 +585,40 @@
         <div class="tags">
             <span>
                 Tags:
-                <a href="doc.html">#DOC</a>&nbsp;<a href="documentation.html">#documentation</a>&nbsp;<a href="uby.html">#UBY</a>&nbsp;<a href="usability.html">#usability</a>&nbsp;<a href="enh.html">#ENH</a>&nbsp;<a href="enhancement.html">#enhancement</a>&nbsp;<a href="sphinx.html">#sphinx</a>&nbsp;<a href="bootstrap.html">#bootstrap</a>&nbsp;<a href="affordances.html">#affordances</a></span>
+                <a href="../../../tags/tdd.html">#TDD</a>&nbsp;<a href="../../../tags/tst.html">#TST</a>&nbsp;<a href="../../../tags/testing.html">#Testing</a>&nbsp;<a href="../../../tags/success.html">#Success</a>&nbsp;<a href="../../../tags/planning.html">#Planning</a>&nbsp;<a href="../../../tags/goals.html">#Goals</a></span>
         </div>
-        </div>
-                </li></ul>
-        </div></div></article><aside class="sidebar"><section><div class="widget">
-    <h3><a href="../archive">Recent Posts</a></h3>
+        </div><ul class="related clearfix">
+            <li class="left"></li>
+            <li class="right"><a href="../17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a> &raquo; </li>
+        </ul></article><aside class="sidebar"><section><div class="widget">
+    <h3><a href="../../../archive">Recent Posts</a></h3>
     <ul><li>
-            <a href="../2016/10/18/criteria-for-success-and-test-driven-development">Criteria for Success and Test Driven Development</a>
+            <a href="#">Criteria for Success and Test Driven Development</a>
         </li><li>
-            <a href="../2016/10/17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a>
+            <a href="../17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a>
         </li><li>
-            <a href="../2015/03/02/documentation">Documentation</a>
+            <a href="../../../2015/03/02/documentation">Documentation</a>
         </li><li>
-            <a href="../2014/10/20/wrd-research-and-development">WRD Research and Development</a>
+            <a href="../../../2014/10/20/wrd-research-and-development">WRD Research and Development</a>
         </li><li>
-            <a href="../2014/10/20/working-on-lately">Working on Lately</a>
+            <a href="../../../2014/10/20/working-on-lately">Working on Lately</a>
         </li><li>
-            <a href="../2014/05/03/literate-configuration">Literate Configuration</a>
+            <a href="../../../2014/05/03/literate-configuration">Literate Configuration</a>
         </li><li>
-            <a href="../2013/12/15/tech-news-for-america">Tech News for America</a>
+            <a href="../../../2013/12/15/tech-news-for-america">Tech News for America</a>
         </li><li>
-            <a href="../2013/11/25/hello-world">Hello World!</a>
+            <a href="../../../2013/11/25/hello-world">Hello World!</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox" role="search">
     <h1><a href="#searchbox">Search</a></h1>
-    <form action="../search" method="get">
+    <form action="../../../search" method="get">
         <input type="text" name="q" />
         <button type="submit"><span class="fa fa-search"></span></button>
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
-    <div style="text-align: center"><a href="#">#affordances</a>&nbsp; <a href="bash">#bash</a>&nbsp; <a href="bootstrap">#bootstrap</a>&nbsp; <a href="community">#community</a>&nbsp; <a href="compsci">#compsci</a>&nbsp; <a href="doc">#DOC</a>&nbsp; <a href="docs">#docs</a>&nbsp; <a href="documentation">#documentation</a>&nbsp; <a href="enh">#ENH</a>&nbsp; <a href="enhancement">#enhancement</a>&nbsp; <a href="entrepreneurship">#entrepreneurship</a>&nbsp; <a href="goals">#Goals</a>&nbsp; <a href="i3wm">#i3wm</a>&nbsp; <a href="keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="lately">#lately</a>&nbsp; <a href="learning">#learning</a>&nbsp; <a href="learning">#Learning</a>&nbsp; <a href="literateprogramming">#literateprogramming</a>&nbsp; <a href="oo">#OO</a>&nbsp; <a href="planning">#Planning</a>&nbsp; <a href="python">#Python</a>&nbsp; <a href="python">#python</a>&nbsp; <a href="resume">#resume</a>&nbsp; <a href="sphinx">#sphinx</a>&nbsp; <a href="stem">#stem</a>&nbsp; <a href="success">#Success</a>&nbsp; <a href="tdd">#TDD</a>&nbsp; <a href="technews">#technews</a>&nbsp; <a href="testing">#Testing</a>&nbsp; <a href="tst">#TST</a>&nbsp; <a href="uby">#UBY</a>&nbsp; <a href="usability">#usability</a>&nbsp; <a href="vim">#vim</a>&nbsp; <a href="wiki">#wiki</a>&nbsp; <a href="wrdrd">#wrdrd</a></div>
+    <div style="text-align: center"><a href="../../../tags/affordances">#affordances</a>&nbsp; <a href="../../../tags/bash">#bash</a>&nbsp; <a href="../../../tags/bootstrap">#bootstrap</a>&nbsp; <a href="../../../tags/community">#community</a>&nbsp; <a href="../../../tags/compsci">#compsci</a>&nbsp; <a href="../../../tags/doc">#DOC</a>&nbsp; <a href="../../../tags/docs">#docs</a>&nbsp; <a href="../../../tags/documentation">#documentation</a>&nbsp; <a href="../../../tags/enh">#ENH</a>&nbsp; <a href="../../../tags/enhancement">#enhancement</a>&nbsp; <a href="../../../tags/entrepreneurship">#entrepreneurship</a>&nbsp; <a href="../../../tags/goals">#Goals</a>&nbsp; <a href="../../../tags/i3wm">#i3wm</a>&nbsp; <a href="../../../tags/keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="../../../tags/lately">#lately</a>&nbsp; <a href="../../../tags/learning">#learning</a>&nbsp; <a href="../../../tags/learning">#Learning</a>&nbsp; <a href="../../../tags/literateprogramming">#literateprogramming</a>&nbsp; <a href="../../../tags/oo">#OO</a>&nbsp; <a href="../../../tags/planning">#Planning</a>&nbsp; <a href="../../../tags/python">#Python</a>&nbsp; <a href="../../../tags/python">#python</a>&nbsp; <a href="../../../tags/resume">#resume</a>&nbsp; <a href="../../../tags/sphinx">#sphinx</a>&nbsp; <a href="../../../tags/stem">#stem</a>&nbsp; <a href="../../../tags/success">#Success</a>&nbsp; <a href="../../../tags/tdd">#TDD</a>&nbsp; <a href="../../../tags/technews">#technews</a>&nbsp; <a href="../../../tags/testing">#Testing</a>&nbsp; <a href="../../../tags/tst">#TST</a>&nbsp; <a href="../../../tags/uby">#UBY</a>&nbsp; <a href="../../../tags/usability">#usability</a>&nbsp; <a href="../../../tags/vim">#vim</a>&nbsp; <a href="../../../tags/wiki">#wiki</a>&nbsp; <a href="../../../tags/wrdrd">#wrdrd</a></div>
 </div></section><section><div class="widget">
 <ul id="accounts">
 <li>
@@ -590,7 +839,7 @@
         <li class="main-nav" style="margin-bottom:1em">
             <a href="#">^top^</a>
         </li><li class="main-nav"><div class="rss">
-        <a href="../rss" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
+        <a href="../../../rss" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li></ul>&copy; Copyright 2016 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>
