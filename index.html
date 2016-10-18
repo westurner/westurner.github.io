@@ -334,6 +334,111 @@
     <h1 id="posts" class="h_underline">
         <a href="archive">Blog</a>
     </h1><div class="post">
+        <h1><a href="2016/10/17/teaching-test-driven-development-first.html">Teaching Test-Driven-Development First</a></h1>
+<p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
+<p>A traditional first hello world program:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
+
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>  <span class="c1"># w/o __name__ this'd run inadvertantly</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">(</span><span class="s2">"@westurner"</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>And then run the program:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span/><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># "It should say 'Hello, @westurner!'"  # (check this manually every time)</span>
+</pre></div>
+</div>
+<p>Hello world with tests (Test-Driven-Development (TDD)):</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># print("setUp")</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'TestName'</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+        <span class="n">expected_output</span> <span class="o">=</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">expected_output</span> <span class="o">==</span> <span class="n">output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">ouput</span><span class="p">,</span> <span class="n">expected_output</span><span class="p">)</span>
+
+     <span class="c1"># def tearDown(self):</span>
+     <span class="c1">#    print("tearDown")</span>
+     <span class="c1">#    print(json.dumps(self.data, indent=2))</span>
+</pre></div>
+</div>
+<p>And then run the automated tests:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                    # sys.path and $PWD (`pwd`)
+python -m unittest helloworld     # ./helloworld.py
+python -m unittest -v helloworld  # ./helloworld.py
+test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
+</pre></div>
+</div>
+<p>Why should this first run of the tests fail?</p>
+<ul class="simple">
+<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">helloworld.py</span></span>.</li>
+<li>Because, in keeping with TDD, we run the test first to make sure it
+actually fails without our changes.</li>
+</ul>
+<p>Advantages of this Test-Driven-Development (TDD) first approach:</p>
+<ul class="simple">
+<li>TDD from the start: any future breaking changes will be detected
+(given the completeness of the functional test specification)</li>
+<li>This teaches Object-Orientation (OO) (Encapsulation, Separation of
+Concerns)</li>
+<li>This teaches separation of data and code.</li>
+</ul>
+<p>And then what? (Teach what next?):</p>
+<ul class="simple">
+<li>Testable software design patterns<ul>
+<li>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></li>
+<li>Test factories / test fixtures</li>
+</ul>
+</li>
+<li>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):<ul>
+<li>pytest</li>
+<li>Nose</li>
+<li>WebTest, Selenium, HTML/JSON Parsing</li>
+<li><a class="reference external" href="https://westurner.org/wiki/awesome-python-testing">https://westurner.org/wiki/awesome-python-testing</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts and References:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></li>
+<li><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a><ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
+<li><a class="reference external" href="https://wrdrd.com/docs/consulting/software-development#test-driven-development">https://wrdrd.com/docs/consulting/software-development#test-driven-development</a></li>
+<li><a class="reference external" href="https://westurner.org/2013/11/25/hello-world.html">https://westurner.org/2013/11/25/hello-world.html</a></li>
+</ul>
+
+        <div class="timestamp postmeta">
+            <span>October 17, 2016</span>
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by Wes Turner</span>
+        </div>
+        
+        <div class="tags">
+            <span>
+                Tags:
+                <a href="tags/learning.html">#Learning</a>&nbsp;<a href="tags/oo.html">#OO</a>&nbsp;<a href="tags/tdd.html">#TDD</a>&nbsp;<a href="tags/testing.html">#Testing</a>&nbsp;<a href="tags/tst.html">#TST</a>&nbsp;<a href="tags/python.html">#Python</a></span>
+        </div>
+        </div><div class="separator post_separator"></div></div><div class="post">
         <h1><a href="2015/03/02/documentation.html">Documentation</a></h1>
 <p>This weekend, I managed to get a fixed navigation bar configured
 with the <a class="reference external" href="http://getbootstrap.com/javascript/#affix">Bootstrap affix JS</a>
@@ -1050,6 +1155,8 @@ by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id2
     </div></article><aside class="sidebar"><section><div class="widget">
     <h3><a href="archive">Recent Posts</a></h3>
     <ul><li>
+            <a href="2016/10/17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a>
+        </li><li>
             <a href="2015/03/02/documentation">Documentation</a>
         </li><li>
             <a href="2014/10/20/wrd-research-and-development">WRD Research and Development</a>
@@ -1071,7 +1178,7 @@ by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id2
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
-    <div style="text-align: center"><a href="tags/affordances">#affordances</a>&nbsp; <a href="tags/bash">#bash</a>&nbsp; <a href="tags/bootstrap">#bootstrap</a>&nbsp; <a href="tags/community">#community</a>&nbsp; <a href="tags/compsci">#compsci</a>&nbsp; <a href="tags/doc">#DOC</a>&nbsp; <a href="tags/docs">#docs</a>&nbsp; <a href="tags/documentation">#documentation</a>&nbsp; <a href="tags/enh">#ENH</a>&nbsp; <a href="tags/enhancement">#enhancement</a>&nbsp; <a href="tags/entrepreneurship">#entrepreneurship</a>&nbsp; <a href="tags/i3wm">#i3wm</a>&nbsp; <a href="tags/keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="tags/lately">#lately</a>&nbsp; <a href="tags/learning">#learning</a>&nbsp; <a href="tags/literateprogramming">#literateprogramming</a>&nbsp; <a href="tags/python">#python</a>&nbsp; <a href="tags/resume">#resume</a>&nbsp; <a href="tags/sphinx">#sphinx</a>&nbsp; <a href="tags/stem">#stem</a>&nbsp; <a href="tags/technews">#technews</a>&nbsp; <a href="tags/uby">#UBY</a>&nbsp; <a href="tags/usability">#usability</a>&nbsp; <a href="tags/vim">#vim</a>&nbsp; <a href="tags/wiki">#wiki</a>&nbsp; <a href="tags/wrdrd">#wrdrd</a></div>
+    <div style="text-align: center"><a href="tags/affordances">#affordances</a>&nbsp; <a href="tags/bash">#bash</a>&nbsp; <a href="tags/bootstrap">#bootstrap</a>&nbsp; <a href="tags/community">#community</a>&nbsp; <a href="tags/compsci">#compsci</a>&nbsp; <a href="tags/doc">#DOC</a>&nbsp; <a href="tags/docs">#docs</a>&nbsp; <a href="tags/documentation">#documentation</a>&nbsp; <a href="tags/enh">#ENH</a>&nbsp; <a href="tags/enhancement">#enhancement</a>&nbsp; <a href="tags/entrepreneurship">#entrepreneurship</a>&nbsp; <a href="tags/i3wm">#i3wm</a>&nbsp; <a href="tags/keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="tags/lately">#lately</a>&nbsp; <a href="tags/learning">#learning</a>&nbsp; <a href="tags/learning">#Learning</a>&nbsp; <a href="tags/literateprogramming">#literateprogramming</a>&nbsp; <a href="tags/oo">#OO</a>&nbsp; <a href="tags/python">#Python</a>&nbsp; <a href="tags/python">#python</a>&nbsp; <a href="tags/resume">#resume</a>&nbsp; <a href="tags/sphinx">#sphinx</a>&nbsp; <a href="tags/stem">#stem</a>&nbsp; <a href="tags/tdd">#TDD</a>&nbsp; <a href="tags/technews">#technews</a>&nbsp; <a href="tags/testing">#Testing</a>&nbsp; <a href="tags/tst">#TST</a>&nbsp; <a href="tags/uby">#UBY</a>&nbsp; <a href="tags/usability">#usability</a>&nbsp; <a href="tags/vim">#vim</a>&nbsp; <a href="tags/wiki">#wiki</a>&nbsp; <a href="tags/wrdrd">#wrdrd</a></div>
 </div></section><section><div class="widget">
 <ul id="accounts">
 <li>

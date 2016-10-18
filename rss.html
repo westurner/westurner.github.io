@@ -5,8 +5,106 @@
         <link>https://westurner.org/</link>
         <description>westurner</description>
         <language>en-us</language>
-        <pubDate>Mon, 02 Mar 2015 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 17 Oct 2016 00:00:00 -0500</pubDate>
         
+        <item>
+            <link>https://westurner.org/2016/10/17/teaching-test-driven-development-first.html</link>
+            <guid>https://westurner.org/2016/10/17/teaching-test-driven-development-first.html</guid>
+            <title><![CDATA[Teaching Test-Driven-Development First]]></title>
+            <description><![CDATA[<h1>Teaching Test-Driven-Development First</h1>
+<p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
+<p>A traditional first hello world program:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
+
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>  <span class="c1"># w/o __name__ this'd run inadvertantly</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">(</span><span class="s2">"@westurner"</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>And then run the program:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span/><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># "It should say 'Hello, @westurner!'"  # (check this manually every time)</span>
+</pre></div>
+</div>
+<p>Hello world with tests (Test-Driven-Development (TDD)):</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># print("setUp")</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'TestName'</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+        <span class="n">expected_output</span> <span class="o">=</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">expected_output</span> <span class="o">==</span> <span class="n">output</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">ouput</span><span class="p">,</span> <span class="n">expected_output</span><span class="p">)</span>
+
+     <span class="c1"># def tearDown(self):</span>
+     <span class="c1">#    print("tearDown")</span>
+     <span class="c1">#    print(json.dumps(self.data, indent=2))</span>
+</pre></div>
+</div>
+<p>And then run the automated tests:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                    # sys.path and $PWD (`pwd`)
+python -m unittest helloworld     # ./helloworld.py
+python -m unittest -v helloworld  # ./helloworld.py
+test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
+</pre></div>
+</div>
+<p>Why should this first run of the tests fail?</p>
+<ul class="simple">
+<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">helloworld.py</span></span>.</li>
+<li>Because, in keeping with TDD, we run the test first to make sure it
+actually fails without our changes.</li>
+</ul>
+<p>Advantages of this Test-Driven-Development (TDD) first approach:</p>
+<ul class="simple">
+<li>TDD from the start: any future breaking changes will be detected
+(given the completeness of the functional test specification)</li>
+<li>This teaches Object-Orientation (OO) (Encapsulation, Separation of
+Concerns)</li>
+<li>This teaches separation of data and code.</li>
+</ul>
+<p>And then what? (Teach what next?):</p>
+<ul class="simple">
+<li>Testable software design patterns<ul>
+<li>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></li>
+<li>Test factories / test fixtures</li>
+</ul>
+</li>
+<li>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):<ul>
+<li>pytest</li>
+<li>Nose</li>
+<li>WebTest, Selenium, HTML/JSON Parsing</li>
+<li><a class="reference external" href="https://westurner.org/wiki/awesome-python-testing">https://westurner.org/wiki/awesome-python-testing</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts and References:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></li>
+<li><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a><ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
+<li><a class="reference external" href="https://wrdrd.com/docs/consulting/software-development#test-driven-development">https://wrdrd.com/docs/consulting/software-development#test-driven-development</a></li>
+<li><a class="reference external" href="https://westurner.org/2013/11/25/hello-world.html">https://westurner.org/2013/11/25/hello-world.html</a></li>
+</ul>
+]]></description>
+             <pubDate>Mon, 17 Oct 2016 00:00:00 -0500</pubDate>
+        </item>
+    
         <item>
             <link>https://westurner.org/2015/03/02/documentation.html</link>
             <guid>https://westurner.org/2015/03/02/documentation.html</guid>
