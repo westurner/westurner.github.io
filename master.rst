@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2016/10/17/teaching-test-driven-development-first
    2015/03/02/documentation
    2014/10/20/wrd-research-and-development
    2014/10/20/working-on-lately
