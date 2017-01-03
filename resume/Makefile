@@ -187,6 +187,7 @@ rst:
 	cp $(RESUME_ROOT) $(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).rst
 	@echo "Build finished. The RST file is in $(BUILDDIR)/"
 
+
 odt:
 	rst2odt.py \
 		--stylesheet=styles.odt \
@@ -226,7 +227,33 @@ cpstaticfiles:
 	find $(BUILDDIR)/html -name '*.un~' -delete
 	find $(BUILDDIR)/singlehtml -name '*.un~' -delete
 
-forprint: latexpdf odt doc docx
+SRCDIR_STRIPPED=$(SRCDIR)/_
+
+stripextratoc:
+	mkdir $(SRCDIR)/_ || true
+	python ./strip_extra_table_of_contents.py \
+		-i $(SRCDIR)/resume.rst \
+		-o $(SRCDIR_STRIPPED)/resume.rst
+
+forprint:
+	$(MAKE) stripextratoc
+	$(MAKE) latexpdf odt doc docx SRCDIR=$(SRCDIR_STRIPPED)
+
+updateodtindex:
+	# TODO: this doesn't seem to persist after --convert-to (macros, gui
+	# scripting)
+	# 1. Right click the TOC
+	# 2. Click 'Update Index'
+	# 3. Ctrl-S : Save
+	# 4. Ctrl-Q : Quit
+	soffice $(BUILDDIR)/$(RESUME_OUTPUT_PREFIX).odt
+
+forprint-withindexes:
+	$(MAKE) stripextratoc
+	$(MAKE) latexpdf SRCDIR=$(SRCDIR_STRIPPED)
+	$(MAKE) odt
+	$(MAKE) updateodtindex
+	$(MAKE) doc docx
 
 STATIC:=./_static
 LOCALCSS=$(STATIC)/css/local.css

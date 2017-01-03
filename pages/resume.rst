@@ -56,12 +56,23 @@ Experience:
 
    PageBreak oneColumn
 
+.. raw:: latex
+
+   \newpage
+
+.. <extratoc>
 
 Table of Contents
 ===================
 
 .. contents::
    :depth: 10
+
+.. raw:: latex
+
+   \newpage
+
+.. </extratoc>
 
 
 Employment
