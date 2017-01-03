@@ -57,10 +57,11 @@ Experience:
    PageBreak oneColumn
 
 
-.. only: html and text
+Table of Contents
+===================
 
-   .. contents:: `Outline`_
-      :local:
+.. contents::
+   :depth: 10
 
 
 Employment
@@ -451,7 +452,7 @@ Responsible for project management
 * Science, Technology, Engineering, and Mathematics
 
 
-2012: Pycd10api
+2012: pycd10api
 ------------------
 | REST API wrapper for ICD 10 CM and PCS XML files 
 | Web: https://github.com/westurner/pycd10api
@@ -459,7 +460,7 @@ Responsible for project management
 * Python, Pyramid, Cornice, lxml, XPath
 
 
-2013: Redem
+2013: medem
 --------------
 | Personal reddit data liberation backup utility
 | Src: https://github.com/westurner/redem
@@ -480,7 +481,7 @@ Responsible for project management
 * Python, Django, Django-nonrel, Google AppEngine
 
 
-2014: Menuapp
+2014: menuapp
 ----------------
 | Restaurant menu web application with `schema.org`_ types
 
@@ -491,7 +492,7 @@ Responsible for project management
 * REST API: Django TastyPie
 
 
-2014: Healthref
+2014: healthref
 ------------------
 | Health reference demo application
 | Src: https://github.com/westurner/healthref
@@ -516,7 +517,7 @@ written in ReStructuredText.
   https://wrdrd.com/docs/tools/
 
 
-2015: Pgs
+2015: pgs
 -----------
 | Src: https://github.com/westurner/pgs
 
@@ -548,9 +549,49 @@ And then ofxparse:
 ---------------------
 | Src: https://github.com/westurner/pyglobalgoals
 
+    pyglobalgoals is a Python package, Python module, and a set of
+    Python Jupyter notebooks for working with JSON-LD, RDFa, schema.org
+    and The Global Goals For Sustainable Development (#GlobalGoals #GGs
+    #SDG #SDGs) #GG17
+
 `<https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb>`__
 * https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
 
+- https://westurner.org/opengov/un/#pyglobalgoals
+
+
+2016: djangotestapp
+---------------------
+| Src: https://github.com/westurner/djangotestapp
+
+- **#Hashtags** and **@at_tags**
+- Django REST Framework, Haystack, ElasticSearch, python-social-auth
+  OAuth2, Docker Compose
+- https://github.com/westurner/djangotestapp/blob/develop/djangotestapp/testapp/tests.py
+
+
+2016: Omaha Python Users Group
+---------------------------------
+| Homepage: http://www.omahapython.org/blog/
+| Src: https://github.com/omahapython
+
+- Presented `2015: pyglobalgoals` during **#GlobalGoals** week
+
+  - http://www.omahapython.org/blog/archives/504
+
+- Contributed to the Omaha Python Data Science team
+
+  - Created https://github.com/omahapython
+  - Created https://github.com/orgs/omahapython/teams/datascience
+
+    - Researched "Kaggle Best Practices"
+      https://github.com/omahapython/datascience/issues/3
+
+  - Created https://github.com/omahapython/kaggle-houseprices
+
+  - https://github.com/westurner/house_prices
+
+    - NumPy, Pandas, scikit-learn, TPOT, auto_ml
 
 venv
 ------------
@@ -599,7 +640,7 @@ See:
 
   * https://githubcontributions.io/user/westurner
 
-    * 2016-08-18: "westurner made 7028 contributions to 378 repositories"
+    * 2017-01-02: "westurner made 7323 contributions to 399 repositories"
 
 
 
