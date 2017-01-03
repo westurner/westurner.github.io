@@ -244,5 +244,5 @@ Concepts / References
 
 .. author:: default
 .. categories:: none
-.. tags:: TDD, TST, Testing, Success, Planning, Goals
+.. tags:: TDD, TST, testing, success, planning, goals
 .. comments::

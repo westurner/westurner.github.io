@@ -108,5 +108,5 @@ Concepts and References:
 
 .. author:: default
 .. categories:: none
-.. tags:: Learning, OO, TDD, Testing, TST, Python
+.. tags:: learning, OO, TDD, testing, TST, python
 .. comments::
