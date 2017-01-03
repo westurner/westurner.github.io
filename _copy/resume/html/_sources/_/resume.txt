@@ -28,7 +28,7 @@
 Summary
 ========
 
-**Systems Engineer**
+**Web Engineer**
 
 **Objective**: Develop and contribute my skills and experience to
 achieve organizational mission objectives
@@ -564,7 +564,7 @@ And then ofxparse:
 ---------------------
 | Src: https://github.com/westurner/djangotestapp
 
-- **#Hashtags** and **@at_tags**
+- **#HashTags** and **@AtTags**
 - Django REST Framework, Haystack, ElasticSearch, python-social-auth
   OAuth2, Docker Compose
 - https://github.com/westurner/djangotestapp/blob/develop/djangotestapp/testapp/tests.py
