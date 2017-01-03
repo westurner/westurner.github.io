@@ -6,3 +6,4 @@ autocompile.py
 blog/
 _themes/boilerplate/
 *.un~
+pages/_/
