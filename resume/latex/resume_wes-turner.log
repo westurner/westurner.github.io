@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.3)  3 JAN 2017 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.3)  3 JAN 2017 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,64 +665,57 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 147.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./resume_wes-turner.toc [1
-
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
+(./resume_wes-turner.toc)
 \tf@toc=\write7
 \openout7 = `resume_wes-turner.toc'.
 
- [2]
-Overfull \hbox (14.79999pt too wide) in paragraph at lines 365--365
- [] 
- []
+ [1
 
-[3]
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 371.
- [4]
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 207.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
- [5] [6] [7] [8] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+ [4] [5] [6] [7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1073
 []\OT1/cmr/m/n/10 IPython note-book: [][]$https : / / github . com / westurner 
 / pyglobalgoals / blob / master / notebooks /
  []
 
-[12]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1316.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1152.
 <<ot1tt.cmap>>
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 132
-3.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 115
+9.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1393.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1393.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1229.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1229.
  (./resume_wes-turner.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1393.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1393.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1229.
 
 Package rerunfilecheck Info: File `resume_wes-turner.out' has not changed.
-(rerunfilecheck)             Checksum: 85F20ECD0F8CC6DAF2ED803DCE52A4C3;3364.
+(rerunfilecheck)             Checksum: 78C36485CFFBD814D5F74621107CABC4;3310.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1393.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1229.
  ) 
 Here is how much of TeX's memory you used:
- 9963 strings out of 494911
- 142289 string characters out of 6180106
- 260586 words of memory out of 5000000
- 12903 multiletter control sequences out of 15000+600000
+ 9862 strings out of 494911
+ 141071 string characters out of 6180106
+ 249573 words of memory out of 5000000
+ 12851 multiletter control sequences out of 15000+600000
  20666 words of font info for 51 fonts, out of 8000000 for 9000
  35 hyphenation exceptions out of 8191
- 36i,6n,45p,299b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,45p,259b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/us
 r/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist
@@ -732,10 +725,10 @@ public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-sup
 er/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on resume_wes-turner.pdf (14 pages, 146354 bytes).
+Output written on resume_wes-turner.pdf (13 pages, 132760 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 504 compressed objects within 6 object streams
- 113 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 424 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
