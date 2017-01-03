@@ -548,9 +548,49 @@ And then ofxparse:
 ---------------------
 | Src: https://github.com/westurner/pyglobalgoals
 
+    pyglobalgoals is a Python package, Python module, and a set of
+    Python Jupyter notebooks for working with JSON-LD, RDFa, schema.org
+    and The Global Goals For Sustainable Development (#GlobalGoals #GGs
+    #SDG #SDGs) #GG17
+
 `<https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb>`__
 * https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
 
+- https://westurner.org/opengov/un/#pyglobalgoals
+
+
+2016: djangotestapp
+---------------------
+| Src: https://github.com/westurner/djangotestapp
+
+- **#Hashtags** and **@at_tags**
+- Django REST Framework, Haystack, ElasticSearch, python-social-auth
+  OAuth2, Docker Compose
+- https://github.com/westurner/djangotestapp/blob/develop/djangotestapp/testapp/tests.py
+
+
+2016: Omaha Python Users Group
+---------------------------------
+| Homepage: http://www.omahapython.org/blog/
+| Src: https://github.com/omahapython
+
+- Presented `2015: pyglobalgoals` during **#GlobalGoals** week
+
+  - http://www.omahapython.org/blog/archives/504
+
+- Contributed to the Omaha Python Data Science team
+
+  - Created https://github.com/omahapython
+  - Created https://github.com/orgs/omahapython/teams/datascience
+
+    - Researched "Kaggle Best Practices"
+      https://github.com/omahapython/datascience/issues/3
+
+  - Created https://github.com/omahapython/kaggle-houseprices
+
+  - https://github.com/westurner/house_prices
+
+    - NumPy, Pandas, scikit-learn, TPOT, auto_ml
 
 venv
 ------------
@@ -599,7 +639,8 @@ See:
 
   * https://githubcontributions.io/user/westurner
 
-    * 2016-03-08: "westurner made 6411 contributions to 345 repositories"
+    * 2016-08-18: "westurner made 7028 contributions to 378 repositories"
+    * 2016-01-02: "
 
 
 
