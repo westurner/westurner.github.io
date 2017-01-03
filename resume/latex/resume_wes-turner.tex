@@ -8,8 +8,8 @@
 
 \usepackage{amsmath,amssymb}
 \usepackage[english]{babel}
-
-
+\usepackage{times}
+\usepackage[Bjarne]{fncychap}
 \usepackage{longtable}
 \usepackage{sphinx}
 \usepackage{multirow}
@@ -24,7 +24,7 @@
 
 
 
-\usepackage{helvet}
+\usepackage{times}
 
 %\usepackage{setspace}
 %\singlespace
@@ -34,12 +34,16 @@
 \usepackage{enumitem}
 \setlist[1]{itemsep=-5pt}
 
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+
 
 \title{Resume: Wes Turner}
 \date{Jan 03, 2017}
 \release{}
 \author{}
-\newcommand{\sphinxlogo}{}
+\newcommand{\sphinxlogo}{\includegraphics{bowtie.png}\par}
 \renewcommand{\releasename}{westurner.org/resume}
 \makeindex
 
@@ -578,13 +582,13 @@ QBasic, HTML, C++ for Dummies, PHP, IDLE, VB6, Java, VB.net, Ruby, Python
 \end{DUlineblock}
 \begin{itemize}
 \item {} 
-{\hyperref[resume:uno\string-misso\string-president]{\crossref{MISSO: President}}}
+{\hyperref[resume:uno\string-misso\string-president]{\crossref{MISSO: President}}} (\autopageref*{resume:uno-misso-president})
 
 \item {} 
-{\hyperref[resume:ais\string-student\string-chapters\string-representative]{\crossref{AISSC: Student Representative}}}
+{\hyperref[resume:ais\string-student\string-chapters\string-representative]{\crossref{AISSC: Student Representative}}} (\autopageref*{resume:ais-student-chapters-representative})
 
 \item {} 
-{\hyperref[resume:id2]{\crossref{Nebraska Humane Society Nonprofit Consulting}}}
+{\hyperref[resume:id2]{\crossref{Nebraska Humane Society Nonprofit Consulting}}} (\autopageref*{resume:id2})
 
 \item {} 
 Learned through collaboration by collaborating to publish
@@ -1108,7 +1112,7 @@ OAuth2, Docker Compose
 \end{DUlineblock}
 \begin{itemize}
 \item {} 
-Presented {\hyperref[resume:pyglobalgoals]{\crossref{2015: pyglobalgoals}}} during \textbf{\#GlobalGoals} week:
+Presented {\hyperref[resume:pyglobalgoals]{\crossref{2015: pyglobalgoals}}} (\autopageref*{resume:pyglobalgoals}) during \textbf{\#GlobalGoals} week:
 \url{http://www.omahapython.org/blog/archives/504}
 
 \item {} 
