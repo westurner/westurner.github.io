@@ -554,10 +554,12 @@ And then ofxparse:
     and The Global Goals For Sustainable Development (#GlobalGoals #GGs
     #SDG #SDGs) #GG17
 
-`<https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb>`__
-* https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
+* IPython notebook:
+  `<https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb>`__
+* Draft GlobalGoals JSONLD @context:
+  https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
 
-- https://westurner.org/opengov/un/#pyglobalgoals
+* https://westurner.org/opengov/un/#pyglobalgoals
 
 
 2016: djangotestapp
@@ -575,10 +577,8 @@ And then ofxparse:
 | Homepage: http://www.omahapython.org/blog/
 | Src: https://github.com/omahapython
 
-- Presented `2015: pyglobalgoals` during **#GlobalGoals** week
-
-  - http://www.omahapython.org/blog/archives/504
-
+- Presented `2015: pyglobalgoals`_ during **#GlobalGoals** week:
+  http://www.omahapython.org/blog/archives/504
 - Contributed to the Omaha Python Data Science team
 
   - Created https://github.com/omahapython
@@ -588,8 +588,7 @@ And then ofxparse:
       https://github.com/omahapython/datascience/issues/3
 
   - Created https://github.com/omahapython/kaggle-houseprices
-
-  - https://github.com/westurner/house_prices
+  - Developed: https://github.com/westurner/house_prices
 
     - NumPy, Pandas, scikit-learn, TPOT, auto_ml
 
