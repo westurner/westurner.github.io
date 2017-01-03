@@ -1,47 +1,46 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Summary}{3}{section.1}
-\contentsline {section}{\numberline {2}Table of Contents}{3}{section.2}
-\contentsline {section}{\numberline {3}Employment}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}2009-2010: Programmer Analyst I @ UNMC}{4}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}2007-2008: Web Developer @ UN NUCIA}{5}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}2005-2006: Systems Developer @ D-Line Marketing}{6}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}2004-2004: Dietary Aid @ Autumn View Gardens}{6}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}2003-2004: Systems @ V Internet Enterprises}{6}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}2002-2007: Independent Web Consultant}{7}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}2002-2003: Construction Assistant @ East Coast Pizza}{7}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}1996: Windows 3.1 Support}{7}{subsection.3.8}
-\contentsline {section}{\numberline {4}Education}{7}{section.4}
-\contentsline {subsection}{\numberline {4.1}Omaha, NE, USA; St Louis, MO, USA}{7}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}2007-2010: UNOmaha}{8}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}2010-2014: Online Learning}{8}{subsection.4.3}
-\contentsline {section}{\numberline {5}Projects}{8}{section.5}
-\contentsline {subsection}{\numberline {5.1}2007: Presense}{8}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}2007: Eagle Financial Life Insurance Quotes}{9}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}2009: Nebraska Humane Society Nonprofit Consulting}{9}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}2009: Tiger Solutions Web Based Course Management System}{9}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}2009-2010: UNO MISSO President}{9}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}2009-2010: AIS Student Chapters Representative}{10}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}2010: Help Haiti Project}{10}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}2010: Workhours}{10}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}2010: Cloud Provisioning Research}{10}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}2011: Flowstat}{10}{subsection.5.10}
-\contentsline {subsection}{\numberline {5.11}2012: Self Directed Learning}{11}{subsection.5.11}
-\contentsline {subsection}{\numberline {5.12}2012: pycd10api}{11}{subsection.5.12}
-\contentsline {subsection}{\numberline {5.13}2013: medem}{11}{subsection.5.13}
-\contentsline {subsection}{\numberline {5.14}2014: Health-marketplace}{11}{subsection.5.14}
-\contentsline {subsection}{\numberline {5.15}2014: menuapp}{11}{subsection.5.15}
-\contentsline {subsection}{\numberline {5.16}2014: healthref}{11}{subsection.5.16}
-\contentsline {subsection}{\numberline {5.17}2014: sphinxcontrib-srclinks}{12}{subsection.5.17}
-\contentsline {subsection}{\numberline {5.18}2014: WRD R\&D Documentation}{12}{subsection.5.18}
-\contentsline {subsection}{\numberline {5.19}2015: pgs}{12}{subsection.5.19}
-\contentsline {subsection}{\numberline {5.20}2015: elasticsearchjsonld}{12}{subsection.5.20}
-\contentsline {subsection}{\numberline {5.21}2015: pypfi}{12}{subsection.5.21}
-\contentsline {subsection}{\numberline {5.22}2015: pyglobalgoals}{12}{subsection.5.22}
-\contentsline {subsection}{\numberline {5.23}2016: djangotestapp}{13}{subsection.5.23}
-\contentsline {subsection}{\numberline {5.24}2016: Omaha Python Users Group}{13}{subsection.5.24}
-\contentsline {subsection}{\numberline {5.25}venv}{13}{subsection.5.25}
-\contentsline {subsubsection}{venv.vim}{13}{subsubsection*.53}
-\contentsline {subsection}{\numberline {5.26}hello\_world}{13}{subsection.5.26}
-\contentsline {subsection}{\numberline {5.27}Dotfiles}{13}{subsection.5.27}
-\contentsline {subsection}{\numberline {5.28}Open Source Contributions}{14}{subsection.5.28}
-\contentsline {section}{\numberline {6}Contact Information}{14}{section.6}
+\contentsline {section}{\numberline {2}Employment}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}2009-2010: Programmer Analyst I @ UNMC}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}2007-2008: Web Developer @ UN NUCIA}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}2005-2006: Systems Developer @ D-Line Marketing}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}2004-2004: Dietary Aid @ Autumn View Gardens}{5}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}2003-2004: Systems @ V Internet Enterprises}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}2002-2007: Independent Web Consultant}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}2002-2003: Construction Assistant @ East Coast Pizza}{6}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}1996: Windows 3.1 Support}{6}{subsection.2.8}
+\contentsline {section}{\numberline {3}Education}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Omaha, NE, USA; St Louis, MO, USA}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}2007-2010: UNOmaha}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}2010-2014: Online Learning}{7}{subsection.3.3}
+\contentsline {section}{\numberline {4}Projects}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}2007: Presense}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}2007: Eagle Financial Life Insurance Quotes}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}2009: Nebraska Humane Society Nonprofit Consulting}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}2009: Tiger Solutions Web Based Course Management System}{8}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}2009-2010: UNO MISSO President}{9}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}2009-2010: AIS Student Chapters Representative}{9}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}2010: Help Haiti Project}{9}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}2010: Workhours}{9}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}2010: Cloud Provisioning Research}{9}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}2011: Flowstat}{10}{subsection.4.10}
+\contentsline {subsection}{\numberline {4.11}2012: Self Directed Learning}{10}{subsection.4.11}
+\contentsline {subsection}{\numberline {4.12}2012: pycd10api}{10}{subsection.4.12}
+\contentsline {subsection}{\numberline {4.13}2013: medem}{10}{subsection.4.13}
+\contentsline {subsection}{\numberline {4.14}2014: Health-marketplace}{10}{subsection.4.14}
+\contentsline {subsection}{\numberline {4.15}2014: menuapp}{10}{subsection.4.15}
+\contentsline {subsection}{\numberline {4.16}2014: healthref}{11}{subsection.4.16}
+\contentsline {subsection}{\numberline {4.17}2014: sphinxcontrib-srclinks}{11}{subsection.4.17}
+\contentsline {subsection}{\numberline {4.18}2014: WRD R\&D Documentation}{11}{subsection.4.18}
+\contentsline {subsection}{\numberline {4.19}2015: pgs}{11}{subsection.4.19}
+\contentsline {subsection}{\numberline {4.20}2015: elasticsearchjsonld}{11}{subsection.4.20}
+\contentsline {subsection}{\numberline {4.21}2015: pypfi}{11}{subsection.4.21}
+\contentsline {subsection}{\numberline {4.22}2015: pyglobalgoals}{12}{subsection.4.22}
+\contentsline {subsection}{\numberline {4.23}2016: djangotestapp}{12}{subsection.4.23}
+\contentsline {subsection}{\numberline {4.24}2016: Omaha Python Users Group}{12}{subsection.4.24}
+\contentsline {subsection}{\numberline {4.25}venv}{12}{subsection.4.25}
+\contentsline {subsubsection}{venv.vim}{12}{subsubsection*.6}
+\contentsline {subsection}{\numberline {4.26}hello\_world}{13}{subsection.4.26}
+\contentsline {subsection}{\numberline {4.27}Dotfiles}{13}{subsection.4.27}
+\contentsline {subsection}{\numberline {4.28}Open Source Contributions}{13}{subsection.4.28}
+\contentsline {section}{\numberline {5}Contact Information}{13}{section.5}
