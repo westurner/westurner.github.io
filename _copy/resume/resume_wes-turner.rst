@@ -451,7 +451,7 @@ Responsible for project management
 * Science, Technology, Engineering, and Mathematics
 
 
-2012: Pycd10api
+2012: pycd10api
 ------------------
 | REST API wrapper for ICD 10 CM and PCS XML files 
 | Web: https://github.com/westurner/pycd10api
@@ -459,7 +459,7 @@ Responsible for project management
 * Python, Pyramid, Cornice, lxml, XPath
 
 
-2013: Redem
+2013: medem
 --------------
 | Personal reddit data liberation backup utility
 | Src: https://github.com/westurner/redem
@@ -480,7 +480,7 @@ Responsible for project management
 * Python, Django, Django-nonrel, Google AppEngine
 
 
-2014: Menuapp
+2014: menuapp
 ----------------
 | Restaurant menu web application with `schema.org`_ types
 
@@ -491,7 +491,7 @@ Responsible for project management
 * REST API: Django TastyPie
 
 
-2014: Healthref
+2014: healthref
 ------------------
 | Health reference demo application
 | Src: https://github.com/westurner/healthref
@@ -516,7 +516,7 @@ written in ReStructuredText.
   https://wrdrd.com/docs/tools/
 
 
-2015: Pgs
+2015: pgs
 -----------
 | Src: https://github.com/westurner/pgs
 
