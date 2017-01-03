@@ -458,7 +458,7 @@ Responsible for project management
 * Python, Pyramid, Cornice, lxml, XPath
 
 
-2013: medem
+2013: redem
 --------------
 | Personal reddit data liberation backup utility
 | Src: https://github.com/westurner/redem
