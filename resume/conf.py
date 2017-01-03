@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import datetime
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -215,8 +215,8 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': """
-\usepackage{helvet}
+'preamble': r"""
+\usepackage{times}
 
 %\usepackage{setspace}
 %\singlespace
@@ -225,11 +225,15 @@ latex_elements = {
 
 \usepackage{enumitem}
 \setlist[1]{itemsep=-5pt}
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+
 """,
 
 'papersize': 'letter',
-'fontpkg': '',
-'fncychap': '',
+#'fontpkg': '',
+'fncychap': '\\usepackage[Bjarne]{fncychap}',
 #'maketitle': '\cover',
 'pointsize': '',
 #'preamble': '',
@@ -242,6 +246,7 @@ latex_elements = {
 'inputenc': '',
 'classoptions': ',openany,oneside',
 'utf8extra': '',
+'atendofbody': '@westurner.org/resume - %s' % datetime.datetime.now().isoformat()
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -253,14 +258,14 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = './_static/img/bowtie.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
 latex_use_parts = False
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
 #latex_show_urls = False
