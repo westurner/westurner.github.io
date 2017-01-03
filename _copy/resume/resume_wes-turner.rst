@@ -57,10 +57,11 @@ Experience:
    PageBreak oneColumn
 
 
-.. only: html and text
+Table of Contents
+===================
 
-   .. contents:: `Outline`_
-      :local:
+.. contents::
+   :depth: 10
 
 
 Employment
@@ -639,8 +640,7 @@ See:
 
   * https://githubcontributions.io/user/westurner
 
-    * 2016-08-18: "westurner made 7028 contributions to 378 repositories"
-    * 2016-01-02: "
+    * 2017-01-02: "westurner made 7323 contributions to 399 repositories"
 
 
 
