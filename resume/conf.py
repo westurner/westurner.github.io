@@ -238,7 +238,7 @@ latex_elements = {
 'pointsize': '',
 #'preamble': '',
 'release': "",
-'releasename': "westurner.org/resume", # Hexagon
+'releasename': "westurner.github.io/resume", # Hexagon
 'author': "",
 'babel' : '\\usepackage[english]{babel}',
 'printindex': '',
@@ -246,7 +246,7 @@ latex_elements = {
 'inputenc': '',
 'classoptions': ',openany,oneside',
 'utf8extra': '',
-'atendofbody': '@westurner.org/resume - %s' % datetime.datetime.now().isoformat()
+'atendofbody': '@westurner.github.io/resume - %s' % datetime.datetime.now().isoformat()
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -414,7 +414,7 @@ def configure_meta_tags(app, pagename, templatename, context, doctree):
         title=context.get('title',''),
         description=context.get('description', 'Resume'),
         og_site_name="Wes Turner",
-        og_image_url="https://westurner.org/_static/img/bowtie/bowtie-v0.0.1-470x242.png",
+        og_image_url="https://westurner.github.io/_static/img/bowtie/bowtie-v0.0.1-470x242.png",
         og_image_width="470",
         og_image_height="242",
         twitter_user="westurner")
