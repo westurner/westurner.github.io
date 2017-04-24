@@ -4,7 +4,7 @@
 :copyright: Copyright © 2017, All Rights Reserved
 
 =========================================================
-`Resume <https://westurner.org/pages/resume.html>`_
+`Resume <https://westurner.github.io/pages/resume.html>`_
 =========================================================
 
 .. raw:: latex
@@ -14,14 +14,14 @@
 .. raw:: html
 
    <div class="sidebar sr-only">
-   <p class="first sidebar-title"><a class="reference external" href="https://westurner.org/pages/resume.html">Wes Turner</a></p>
+   <p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/pages/resume.html">Wes Turner</a></p>
    <ul class="last simple">
-   <li><a class="reference external" href="https://westurner.org/resume/latex/resume_wes-turner.pdf">PDF</a></li>
-   <li><a class="reference external" href="https://westurner.org/resume/html/resume.html">HTML</a></li>
-   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.odt">ODT</a></li>
-   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.doc">DOC</a></li>
-   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.docx">DOCX</a></li>
-   <li><a class="reference external" href="https://westurner.org/resume/resume_wes-turner.rst">RST</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/html/resume.html">HTML</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
+   <li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
    </ul>
    </div>
 
@@ -318,7 +318,7 @@ Courses
 Projects
 ===========
 
-See: https://westurner.org/wiki/projects
+See: https://westurner.github.io/wiki/projects
 
 
 2007: Presense
@@ -455,7 +455,7 @@ Responsible for project management
 
 2012: Self Directed Learning
 -------------------------------
-| Web: https://westurner.org/self-directed-learning/
+| Web: https://westurner.github.io/self-directed-learning/
 | Src: https://github.com/westurner/self-directed-learning
 
 * Autodidactism
@@ -481,7 +481,7 @@ Responsible for project management
 * Aggregate into static sortable and filterable HTML tables
 * Python, PRAW, Requests, Jinja2, Bootstrap 2, DataTables
 
-| https://westurner.org/redditlog/
+| https://westurner.github.io/redditlog/
 
 
 2014: Health-marketplace
@@ -518,14 +518,14 @@ Responsible for project management
 
 2014: WRD R&D Documentation
 -----------------------------
-| Web: https://wrdrd.com/docs/
+| Web: https://wrdrd.github.io/docs/
 | Src: https://github.com/wrdrd/docs
 
 An outline of notes and points
 written in ReStructuredText.
 
 * Tools Docs:
-  https://wrdrd.com/docs/tools/
+  https://wrdrd.github.io/docs/tools/
 
 
 2015: pgs
@@ -570,7 +570,7 @@ And then ofxparse:
 * Draft GlobalGoals JSONLD @context:
   https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld
 
-* https://westurner.org/opengov/un/#pyglobalgoals
+* https://westurner.github.io/opengov/un/#pyglobalgoals
 
 
 2016: djangotestapp
@@ -605,12 +605,12 @@ And then ofxparse:
 
 venv
 ------------
-| Docs: https://westurner.org/dotfiles/venv
+| Docs: https://westurner.github.io/dotfiles/venv
 
 venv.vim
 ~~~~~~~~~
 | Src: https://github.com/westurner/venv.vim
-| Docs: https://westurner.org/dotfiles/venv#cdalias
+| Docs: https://westurner.github.io/dotfiles/venv#cdalias
 
 (``:Cdhere``, ``:Cdworkonhome``, ``:Cdwh``, ``:Cdhelp``, (``$ cdhelp``))
 
@@ -626,7 +626,7 @@ Go, Java, Javascript, Python, and Ruby
 
 Dotfiles
 -----------
-| https://westurner.org/dotfiles/
+| https://westurner.github.io/dotfiles/
 | https://github.com/westurner/dotfiles
 | https://github.com/westurner/dotvim
 
@@ -645,8 +645,8 @@ Primarily small contributions here and there to show my appreciation.
 
 See:
 
-* https://westurner.org/wiki/contributions
-* https://westurner.org/wiki/github
+* https://westurner.github.io/wiki/contributions
+* https://westurner.github.io/wiki/github
 
   * https://githubcontributions.io/user/westurner
 
@@ -657,7 +657,7 @@ See:
 Contact Information
 ======================
 
-| Homepage: `westurner.org <https://westurner.org>`__
+| Homepage: `westurner.github.io <https://westurner.github.io>`__
 | LinkedIn: `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`__
 | Twitter: `@westurner <https://twitter.com/westurner>`__
 
