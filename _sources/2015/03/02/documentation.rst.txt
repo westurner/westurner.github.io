@@ -9,89 +9,89 @@ for Sphinx (with the excellent `sphinxjp.themes.basicstrap`_)
 and have been merging the new styles into various
 sets of docs that I've been working on:
 
-* Concepts: https://wrdrd.com/docs/
+* Concepts: https://wrdrd.github.io/docs/
 
   * Open Source:
-    https://wrdrd.com/docs/consulting/open-source
+    https://wrdrd.github.io/docs/consulting/open-source
   * Small Business Consulting:
-    https://wrdrd.com/docs/consulting/small-business
+    https://wrdrd.github.io/docs/consulting/small-business
   * Web Development:
-    https://wrdrd.com/docs/consulting/web-development
+    https://wrdrd.github.io/docs/consulting/web-development
   * Software Development:
-    https://wrdrd.com/docs/consulting/software-development
+    https://wrdrd.github.io/docs/consulting/software-development
   * Computer Engineering:
-    https://wrdrd.com/docs/consulting/computer-engineering
+    https://wrdrd.github.io/docs/consulting/computer-engineering
   * Information Systems:
-    https://wrdrd.com/docs/consulting/information-systems
+    https://wrdrd.github.io/docs/consulting/information-systems
   * Data Science:
-    https://wrdrd.com/docs/consulting/data-science
+    https://wrdrd.github.io/docs/consulting/data-science
   * Knowledge Engineering:
-    https://wrdrd.com/docs/consulting/knowledge-engineering
+    https://wrdrd.github.io/docs/consulting/knowledge-engineering
   * Entrepreneurship:
-    https://wrdrd.com/docs/consulting/entrepreneurship
+    https://wrdrd.github.io/docs/consulting/entrepreneurship
   * Education Technology:
-    https://wrdrd.com/docs/consulting/education-technology
+    https://wrdrd.github.io/docs/consulting/education-technology
   * Art & Design:
-    https://wrdrd.com/docs/consulting/art-design
+    https://wrdrd.github.io/docs/consulting/art-design
   * Team Building:
-    https://wrdrd.com/docs/consulting/team-building
+    https://wrdrd.github.io/docs/consulting/team-building
   * Collaboration Plan:
-    https://wrdrd.com/docs/consulting/collaboration-plan
+    https://wrdrd.github.io/docs/consulting/collaboration-plan
   * `Tools`:
-    https://wrdrd.com/docs/tools/
+    https://wrdrd.github.io/docs/tools/
 
-* `Tools`: https://westurner.org/tools/
-* Dotfiles: https://westurner.org/dotfiles/
+* `Tools`: https://westurner.github.io/tools/
+* Dotfiles: https://westurner.github.io/dotfiles/
 
-  * Usage: https://westurner.org/dotfiles/usage (
-    `tools/#bash <https://westurner.org/tools/#bash>`__
+  * Usage: https://westurner.github.io/dotfiles/usage (
+    `tools/#bash <https://westurner.github.io/tools/#bash>`__
 
-    * ``bootstrap_dotfiles.sh`` Usage: https://westurner.org/dotfiles/usage#bootstrap-dotfiles-sh
-    * ``Makefile`` Usage: https://westurner.org/dotfiles/usage#makefile
-      [`tools/#make <https://westurner.org/tools/#make>`__]
-    * Bash Usage: https://westurner.org/dotfiles/usage#bash
-      [`tools/#bash <https://westurner.org/tools/#bash>`__]
-    * Vim Usage: https://westurner.org/dotfiles/usage#vim
-      [`tools/#vim <https://westurner.org/tools/#vim>`__]
-    * i3wm Usage: https://westurner.org/dotfiles/usage#i3wm
-      [`tools/#i3wm <https://westurner.org/tools/#i3wm>`__]
-    * ``./scripts`` Usage: https://westurner.org/dotfiles/usage#scripts
+    * ``bootstrap_dotfiles.sh`` Usage: https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh
+    * ``Makefile`` Usage: https://westurner.github.io/dotfiles/usage#makefile
+      [`tools/#make <https://westurner.github.io/tools/#make>`__]
+    * Bash Usage: https://westurner.github.io/dotfiles/usage#bash
+      [`tools/#bash <https://westurner.github.io/tools/#bash>`__]
+    * Vim Usage: https://westurner.github.io/dotfiles/usage#vim
+      [`tools/#vim <https://westurner.github.io/tools/#vim>`__]
+    * i3wm Usage: https://westurner.github.io/dotfiles/usage#i3wm
+      [`tools/#i3wm <https://westurner.github.io/tools/#i3wm>`__]
+    * ``./scripts`` Usage: https://westurner.github.io/dotfiles/usage#scripts
 
       * ``PATH_prepend "${__DOTFILES}/scripts"``
         (e.g. ``dotfiles_add_path()`` in `<https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh>`__)
 
-  * Venv: https://westurner.org/dotfiles/venv
-    [`tools/#venv <https://westurner.org/dotfiles/tools/#venv>`__,
-    `tools/#virtualenv <https://westurner.org/dotfiles/tools/#virtualenv>`__,
+  * Venv: https://westurner.github.io/dotfiles/venv
+    [`tools/#venv <https://westurner.github.io/dotfiles/tools/#venv>`__,
+    `tools/#virtualenv <https://westurner.github.io/dotfiles/tools/#virtualenv>`__,
     `tools/#virtualenvwrapper
-    <https://westurner.org/dotfiles/tools/#virtualenvwrapper>`__]
-  * Usrlog: https://westurner.org/dotfiles/usrlog
-  * `Tools`: https://westurner.org/dotfiles/tools/
+    <https://westurner.github.io/dotfiles/tools/#virtualenvwrapper>`__]
+  * Usrlog: https://westurner.github.io/dotfiles/usrlog
+  * `Tools`: https://westurner.github.io/dotfiles/tools/
 
-* Infrastructure: https://westurner.org/provis/
+* Infrastructure: https://westurner.github.io/provis/
 
   * `WRD R&D Documentation > Information Systems > Clouds
-    <https://wrdrd.com/docs/consulting/information-systems#clouds>`__
+    <https://wrdrd.github.io/docs/consulting/information-systems#clouds>`__
   * `WRD R&D Documentation > Information Systems > Cloud Application Layers
-    <https://wrdrd.com/docs/consulting/information-systems#cloud-application-layers>`__
+    <https://wrdrd.github.io/docs/consulting/information-systems#cloud-application-layers>`__
   * `tools/#operating-systems
-    <https://wrdrd.com/docs/tools/#operating-systems>`__
+    <https://wrdrd.github.io/docs/tools/#operating-systems>`__
   * `tools/#virtualization
-    <https://wrdrd.com/docs/tools/#virtualization>`__
+    <https://wrdrd.github.io/docs/tools/#virtualization>`__
   * `tools/#configuration-management
-    <https://wrdrd.com/docs/tools/#configuration-management>`__
+    <https://wrdrd.github.io/docs/tools/#configuration-management>`__
 
-* Open Government: https://westurner.org/opengov/
-* Learning: https://westurner.org/self-directed-learning/
-* Resume: https://westurner.org/resume/html/resume
-* Wiki: https://westurner.org/wiki/
+* Open Government: https://westurner.github.io/opengov/
+* Learning: https://westurner.github.io/self-directed-learning/
+* Resume: https://westurner.github.io/resume/html/resume
+* Wiki: https://westurner.github.io/wiki/
 
-  * Workflow: https://westurner.org/wiki/workflow
-  * Projects: https://westurner.org/wiki/projects
-  * Contributions: https://westurner.org/wiki/contributions
+  * Workflow: https://westurner.github.io/wiki/workflow
+  * Projects: https://westurner.github.io/wiki/projects
+  * Contributions: https://westurner.github.io/wiki/contributions
 
 .. _sphinxjp.themes.basicstrap: https://github.com/tell-k/sphinxjp.themes.basicstrap
-.. _WRD R&D Documentation: https://wrdrd.com/docs/
+.. _WRD R&D Documentation: https://wrdrd.github.io/docs/
 
 
 Update: 2015-07-04
@@ -143,7 +143,7 @@ Update: 2015-07-04
                   jquery.scrollTo(sidebar, link);
               }
 
-.. _DOM: https://wrdrd.com/docs/consulting/web-development#term-dom
+.. _DOM: https://wrdrd.github.io/docs/consulting/web-development#term-dom
 
 
 * [ ] Learn `Bootstrap`_ `ScrollSpy`_

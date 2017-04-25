@@ -85,7 +85,7 @@ And then what? (Teach what next?):
   - pytest
   - Nose
   - WebTest, Selenium, HTML/JSON Parsing
-  - https://westurner.org/wiki/awesome-python-testing
+  - https://westurner.github.io/wiki/awesome-python-testing
 
 Concepts and References:
 
@@ -99,10 +99,10 @@ Concepts and References:
 - https://en.wikipedia.org/wiki/Software_design_pattern
 - https://en.wikipedia.org/wiki/Given-When-Then
 
-  - https://wrdrd.com/docs/consulting/software-development#given-when-then
+  - https://wrdrd.github.io/docs/consulting/software-development#given-when-then
 
-- https://wrdrd.com/docs/consulting/software-development#test-driven-development
-- https://westurner.org/2013/11/25/hello-world.html
+- https://wrdrd.github.io/docs/consulting/software-development#test-driven-development
+- https://westurner.github.io/2013/11/25/hello-world.html
 
 
 

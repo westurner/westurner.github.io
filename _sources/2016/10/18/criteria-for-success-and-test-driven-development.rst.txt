@@ -220,7 +220,7 @@ A bit about the Global Goals:
 
 Concepts / References
 
-- https://westurner.org/2016/10/17/teaching-test-driven-development-first.html
+- https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html
 - https://en.wikipedia.org/wiki/Test-driven_development
 - https://en.wikipedia.org/wiki/Scientific_method
 - https://en.wikipedia.org/wiki/Hypothesis
@@ -238,7 +238,7 @@ Concepts / References
 - https://en.wikipedia.org/wiki/Conditional_independence
 - https://en.wikipedia.org/wiki/SMART_criteria
 - https://en.wikipedia.org/wiki/Sustainable_Development_Goals
-- https://westurner.org/opengov/un/#un-sustainable-development-goals
+- https://westurner.github.io/opengov/un/#un-sustainable-development-goals
 - http://www.globalgoals.org/
 
 
