@@ -3,21 +3,21 @@ Working on Lately
 
 Wiki
 ------
-https://westurner.org/wiki/
+https://westurner.github.io/wiki/
 
-* https://westurner.org/wiki/projects
-* https://westurner.org/wiki/contributions
-* https://westurner.org/wiki/workflow
+* https://westurner.github.io/wiki/projects
+* https://westurner.github.io/wiki/contributions
+* https://westurner.github.io/wiki/workflow
 * https://github.com/westurner/wiki/blob/master/Makefile
 
 Resume
 -------
 
-https://westurner.org/pages/resume
+https://westurner.github.io/pages/resume
 
-https://westurner.org/resume
+https://westurner.github.io/resume
 
-https://westurner.org/resume/html/resume
+https://westurner.github.io/resume/html/resume
 
 
 EDIT: 2014-11-01: Updated links to wiki
