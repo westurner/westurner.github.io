@@ -106,6 +106,7 @@ gh-pages:
 		-p \
 		./blog/html
 	GIT_PAGER="less -R | cat" git log -n6 master
+	@echo ''
 
 push:
 	# Git push to origin/source
