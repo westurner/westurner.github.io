@@ -1,5 +1,6 @@
 .navbar {
     margin-bottom: 0;
+    border: 0;
 }
 
 #sidebar-wrapper {
@@ -38,6 +39,12 @@ div.body h1 {
 div.body a {
     word-wrap: break-word;
 }
+
+/* fix for unnecessary responsive margin */
+div.row {
+    margin-right: 0;
+}
+/* end fix for unnecessary responsive margin */
 
 
 #sidebar-wrapper {
