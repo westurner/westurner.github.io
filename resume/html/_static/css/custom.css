@@ -3,6 +3,15 @@
     border: 0;
 }
 
+.navbar-nav {
+    margin: 0;
+}
+
+.navbar-toggle {
+    background-color: #f0f0f0;
+    z-index: 100000;
+}
+
 #sidebar-wrapper {
     background: #f8f8f8;
     /* border-color: #e7e7e7;
