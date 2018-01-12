@@ -44,7 +44,7 @@ master_doc = 'resume'
 
 # General information about the project.
 project = u'resume.westurner'
-copyright = u'2014 Wes Turner'
+copyright = u'2018 Wes Turner'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -322,7 +322,7 @@ texinfo_documents = [
 epub_title = u'Resume : Wes Turner'
 epub_author = u'Wes Turner'
 epub_publisher = u'Wes Turner'
-epub_copyright = u'2014 Wes Turner'
+epub_copyright = u'2018 Wes Turner'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
