@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.3)  25 APR 2017 01:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.3)  12 JAN 2018 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,20 +723,9 @@ LaTeX Info: Redefining \nameref on input line 62.
 \@outlinefile=\write5
 \openout5 = `resume_wes-turner.out'.
 
-
-<bowtie.png, id=185, 346.896pt x 177.0615pt>
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 65.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)<<ot1tt.cmap>>
-File: bowtie.png Graphic file (type png)
-
-<use bowtie.png>
-Package pdftex.def Info: bowtie.png used on input line 65.
-(pdftex.def)             Requested size: 346.89514pt x 177.06104pt.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
@@ -755,8 +744,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 65.
 <<oml.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Try loading font information for U+msa on input line 65.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 65.
@@ -769,15 +757,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
  [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map} <./bowtie.pn
-g>])
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write6
 \openout6 = `resume_wes-turner.toc'.
 
  [2]
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 79.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [3]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
@@ -786,14 +772,18 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
- [4] [5] [6]
-[7] [8] [9] [10] [11]
+ [4] [5] [6] [7] [8] [9] [10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 989--991
 []\OT1/ptm/m/n/10 IPython note-book: [][]$https : / / github . com / westurner 
 / pyglobalgoals / blob / master / notebooks /
  []
 
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)<<ot1tt.cmap>>
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 1.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [12]
@@ -814,23 +804,23 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1147.
  ) 
 Here is how much of TeX's memory you used:
- 13714 strings out of 494911
- 192114 string characters out of 6180106
- 284098 words of memory out of 5000000
- 16663 multiletter control sequences out of 15000+600000
+ 13709 strings out of 494911
+ 192047 string characters out of 6180106
+ 285084 words of memory out of 5000000
+ 16659 multiletter control sequences out of 15000+600000
  25637 words of font info for 56 fonts, out of 8000000 for 9000
  35 hyphenation exceptions out of 8191
- 37i,11n,45p,416b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,45p,416b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on resume_wes-turner.pdf (13 pages, 112717 bytes).
+Output written on resume_wes-turner.pdf (13 pages, 110834 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
+ 415 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
  64 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

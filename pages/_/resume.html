@@ -15,31 +15,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Literate Configuration &mdash; Wes Turner</title>
-            <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/flat.css" type="text/css">
-            <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
-            <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
+        <title>Resume &mdash; Wes Turner</title>
+            <link rel="stylesheet" href="../../_static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="../../_static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="../../_static/main.css" type="text/css">
+            <link rel="stylesheet" href="../../_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
+            <!--<link rel="stylesheet" href="../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <!-- Load modernizr and JQuery -->
-        <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
-        <script src="../../../_static/plugins.js"></script>
-        <script src="../../../_static/main.js"></script>
-        <link rel="search" title="Search" href="../../../search" /><link rel="next" title="Tech News for America" href="../../../2013/12/15/tech-news-for-america" /><link rel="prev" title="Working on Lately" href="../../10/20/working-on-lately" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss" /><script type="text/javascript">
+        <script>window.jQuery || document.write('<script src="../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
+        <script src="../../_static/plugins.js"></script>
+        <script src="../../_static/main.js"></script>
+        <link rel="search" title="Search" href="../../search" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
+        URL_ROOT:    '../../',
         VERSION:     '1.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../../_static/underscore.js"></script><script type="text/javascript" src="../../_static/doctools.js"></script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
-    <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
+    <script src="../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
         // Redirect to HTTPS if not on localhost
         if (window.location.protocol !== "https:") {
@@ -306,13 +306,13 @@
             <a href="/">home</a>
         </li>
         <li class="main-nav">
-            <a href="../../../archive">blog</a>
+            <a href="../../archive">blog</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/resume">resume</a>
+            <a href="../resume">resume</a>
         </li>
         <li class="main-nav">
-            <a href="../../../pages/stream">stream</a>
+            <a href="../stream">stream</a>
         </li>
         <li class="main-nav">
             <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
@@ -321,146 +321,697 @@
             <a href="https://westurner.github.io/wiki/" target="_blank">wiki</a>
         </li>
     </ul>
-    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="timestamp postmeta">
-            <span>May 03, 2014</span>
-        </div>
-    <div class="section" id="literate-configuration">
-<h1>Literate Configuration</h1>
-<p><strong>Problem</strong>: configuration files which specify keyboard shortcuts
-can be difficult to grep through. It&#8217;s not always easy
-<em>to get a simple commented list of configured keyboard shortcuts</em>.</p>
-<p><strong>Solution</strong>: Approach configuration documentation
-like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
-&#8220;literate configuration&#8221;.</p>
-<ol class="arabic simple">
-<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
-<li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
-</ol>
-<p><strong>Example</strong></p>
-<p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
-<a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>#### i3 config file (v4)
-### Notes
-#  #  Default location: ~/.i3/config
-#  #  List the commented command shortcuts with::
-#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;
-#...
-## Change volume
-#  &lt;XF86AudioRaiseVolume&gt;   -- volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id $volume_up
-#  &lt;XF86AudioLowerVolume&gt;   -- volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id $volume_down
-
-## Start, stop, and reset xflux
-#  &lt;alt&gt; [         -- start xflux
-bindsym $mod+bracketleft    exec --no-startup-id $xflux_start
-#  &lt;alt&gt; ]         -- stop xflux
-bindsym $mod+bracketright   exec --no-startup-id $xflux_stop
-#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0
-bindsym $mod+Shift+bracketright  exec --no-startup-id $xflux_reset
-
-## Resize Mode
-#  &lt;alt&gt; r      -- enter resize mode
-bindsym $mod+r  mode &quot;resize&quot;
-
-mode &quot;resize&quot; {
-    ## Grow and shrink windows
-    # These bindings trigger as soon as you enter the resize mode
-    # ...
-    # back to normal: Enter or Escape
-    #  &lt;enter&gt;  -- exit resize mode
-    bindsym Return      mode &quot;default&quot;
-    #  &lt;esc&gt;    -- exit resize mode
-    bindsym Escape      mode &quot;default&quot;
-}
-</pre></div>
-</div>
-<p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
-with a simple conditional regular expression:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">~/.</span><span class="n">i3</span><span class="o">/</span><span class="n">config</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">&#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-</pre></div>
-</div>
-<p>Peruse the output for that one excellent keyboard shortcut</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1">#### i3 config file (v4)</span>
-<span class="c1">### Notes</span>
-<span class="c1">#  #  Default location: ~/.i3/config</span>
-<span class="c1">#  #  List the commented command shortcuts with::</span>
-<span class="c1">#  #     cat ~/.i3/config | egrep &#39;(^(\s+)?##+ |^(\s+)?#  )&#39;</span>
-<span class="c1">## Change volume</span>
-<span class="c1">#  &lt;XF86AudioRaiseVolume&gt;   -- volume up</span>
-<span class="c1">#  &lt;XF86AudioLowerVolume&gt;   -- volume down</span>
-<span class="c1">## Start, stop, and reset xflux</span>
-<span class="c1">#  &lt;alt&gt; [         -- start xflux</span>
-<span class="c1">#  &lt;alt&gt; ]         -- stop xflux</span>
-<span class="c1">#  &lt;alt&gt;&lt;shift&gt; ]  -- reset gamma to 1.0</span>
-<span class="c1">## Resize Mode</span>
-<span class="c1">#  &lt;alt&gt; r      -- enter resize mode</span>
-    <span class="c1">## Grow and shrink windows</span>
-    <span class="c1">#  &lt;enter&gt;  -- exit resize mode</span>
-    <span class="c1">#  &lt;esc&gt;    -- exit resize mode</span>
-</pre></div>
-</div>
-<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
-of the relevant configuration file documentation.</p>
-<p>The <a class="reference external" href="https://jashkenas.github.io/docco">docco</a> homepage lists quite a few more heavyweight approaches to
-generating documentation from comment strings embedded in various languages
-(such as Markdown in a shell script).</p>
-<p>I&#8217;ve added documentation with this pattern to my <a class="reference external" href="https://github.com/westurner/dotfiles">dotfiles</a>:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/tree/master/etc/bash">bashrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#bash">bashrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotvim/blob/master/vimrc">vimrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#vim">vimrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#i3wm">.i3/config docs</a>)</li>
-<li>and the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83">provis Makefile</a> (<a class="reference external" href="https://provis.readthedocs.org/en/latest/usage#Makefile">provis Makefile docs</a>)</li>
+    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main">
+    <div class="section" id="id1">
+<h1><a class="reference external" href="https://westurner.github.io/pages/resume.html">Resume</a></h1>
+<div class="sidebar sr-only">
+<p class="first sidebar-title"><a class="reference external" href="https://westurner.github.io/pages/resume.html">Wes Turner</a></p>
+<ul class="last simple">
+<li><a class="reference external" href="https://westurner.github.io/resume/latex/resume_wes-turner.pdf">PDF</a></li>
+<li><a class="reference external" href="https://westurner.github.io/resume/html/resume.html">HTML</a></li>
+<li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.odt">ODT</a></li>
+<li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.doc">DOC</a></li>
+<li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.docx">DOCX</a></li>
+<li><a class="reference external" href="https://westurner.github.io/resume/resume_wes-turner.rst">RST</a></li>
 </ul>
-<p>This simple pattern saves time when looking up <a class="reference external" href="http://westurner.github.io/dotfiles/usage#dotfiles-makefile">my keyboard shortcuts</a>.</p>
-<p>EDIT: 2014-12-16: Updated links to <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></p>
+</div><div class="section" id="summary">
+<h2>Summary</h2>
+<p><strong>Web Engineer</strong></p>
+<p><strong>Objective</strong>: Develop and contribute my skills and experience to
+achieve organizational mission objectives</p>
+<p><em>What do I want to do?</em></p>
+<ul class="simple">
+<li>Collaborate with a <strong>team</strong> of bright, motivated individuals</li>
+<li><strong>Learn</strong> with agile, iterative, continuous integration and deployment</li>
+<li>Develop <strong>applications</strong>, <strong>distributed systems</strong>, and <strong>portfolios</strong></li>
+<li>Secure web applications</li>
+<li><strong>Build</strong> secure distributed systems</li>
+<li><strong>Create</strong> beautiful interfaces</li>
+</ul>
+<p>Experience:</p>
+<ul class="simple">
+<li>Independent web design and development entrepreneur</li>
+<li>Objective focused organizations</li>
+<li>Web applications / systems developer for university security organization</li>
+<li>Web applications / systems developer for hospital</li>
+<li>10+ years Linux</li>
+<li>5+ years Python</li>
+</ul>
+</div>
+<div class="section" id="employment">
+<h2>Employment</h2>
+<div class="section" id="programmer-analyst-i-unmc">
+<h3>2009-2010: Programmer Analyst I &#64; UNMC</h3>
+<div class="line-block">
+<div class="line">Section of Cardiology</div>
+<div class="line">Knowledge Engineering Group (KEG)</div>
+<div class="line">University of Nebraska Medical Center (UNMC)</div>
+<div class="line">Initially contacted by and contracted through Kelly IT Resources</div>
+<div class="line">Omaha, Nebraska, USA</div>
+<div class="line">Feb 2009 - Oct 2010</div>
+<div class="line"><a class="reference external" href="http://unmc.edu/">http://unmc.edu/</a></div>
+</div>
+<p>Supported <a class="reference external" href="https://en.wikipedia.org/wiki/University_of_Nebraska_Medical_Center">UNMC</a>
+and <a class="reference external" href="https://en.wikipedia.org/wiki/Nebraska_Medical_Center">NMC</a>
+Doctors, Nurses, and Patients</p>
+<p>Overhauled a Python web app used for filing and printing medical orders</p>
+<ul class="simple">
+<li>Scoped, designed, coded, tested, and documented iterative releases</li>
+<li>Managed release and deployment to dev/test/prod architecture</li>
+<li>Instrumented and optimized for security, stability, and performance</li>
+<li>Supported application troubleshooting and maintenance</li>
+</ul>
+<p>Increased productivity by shortening stakeholder and DevOps feedback loops</p>
+<ul class="simple">
+<li>Introduced XP, Scrum, Trac, Agilo, Mercurial, Test-driven Development, Nose</li>
+<li>Added an in-application feedback form</li>
+<li>Wrote user stories and functional/unit tests for new and existing specs</li>
+<li>Designed, tested, developed, and implemented prioritized user stories</li>
+<li>Introduced Continuous Integration; Hudson, Shell Scripting</li>
+</ul>
+<p>Trained team members</p>
+<ul class="simple">
+<li>Refactored out of Zope towards WSGI and what is now Pyramid</li>
+<li>Introduced JSON API and cross-browser compatible JavaScript framework</li>
+<li>Identified and mitigated CWEs to reduce surface</li>
+<li>Consolidated into a single-page-application</li>
+<li>Extended and refactored interface; YUI GUI</li>
+<li>Created command line utility to simplify application management</li>
+<li>Added docstrings with parameter and return value specs; ReStructuredText</li>
+<li>Drafted narrative systems documentation; ReStructuredText, Sphinx</li>
+</ul>
+<p>Standardized data model</p>
+<ul class="simple">
+<li>Extracted, mapped, and migrated MySQL / document object schema; SQLAlchemy</li>
+<li>Implemented transactions for consistency and referential integrity</li>
+<li>Implemented an integrated task queue; Celery, AMQP</li>
+<li>Wrote online and offline MySQL reports</li>
+</ul>
+<p>Semantic web</p>
+<ul class="simple">
+<li>Prototyped RDFa templates; Jinja2 block recursion</li>
+<li>Developed an OWL-DL ontology based on DOAP, FOAF, and RDFS to describe
+a systems component graph and metadata; Sesame, Redland, Protégé, Pellet,
+Turtle (TriG)</li>
+<li>Created tool to generate documentation reports from SPARQL queries
+of a component graph; RDFLib, FuXi, ReStructuredText</li>
+</ul>
+<p>End of cycle resignation</p>
+<ul class="simple">
+<li>Hospital will be very satisfied with integrated Epic/MUMPS adoption</li>
+<li>Amicably resigned October 2010</li>
+</ul>
+</div>
+<div class="section" id="web-developer-un-nucia">
+<h3>2007-2008: Web Developer &#64; UN NUCIA</h3>
+<div class="line-block">
+<div class="line">Nebraska University Consortium for Information Assurance (NUCIA)</div>
+<div class="line">Nebraska University Center for Information Assurance (NUCIA)</div>
+<div class="line">University of Nebraska at Omaha (UNO, UNOmaha)</div>
+<div class="line">Peter Kiewit Institute (PKI)</div>
+<div class="line">Omaha, Nebraska, USA</div>
+<div class="line">January 2007 - March 2008</div>
+</div>
+<p>Python Web Developer</p>
+<ul class="simple">
+<li>Scratched, forked, and extended another Content Management System</li>
+<li>Collaborated with graphic designer</li>
+<li>Designed and developed events calendar app<ul>
+<li>Created hCalendar microformat templates</li>
+<li>Wrote iCal download views</li>
+<li>Integrated Simile Timeline widget</li>
+</ul>
+</li>
+<li>Extended MediaWiki syntax parser with JavaScript AJAX XHR</li>
+<li>Learned about web application and OS security</li>
+<li>Python: Django 0.97-1.0, Plone</li>
+<li>JavaScript: jQuery, Dojo</li>
+<li>MySQL, PostgreSQL</li>
+</ul>
+<p>Systems Infrastructure Management</p>
+<ul class="simple">
+<li>Intrapreneured &#8220;NUCIA Web Services&#8221; web systems acronym moniker</li>
+<li>Partitioned and virtualized a series of intranet applications</li>
+<li>Contributed platform to Vulnerability Discovery course</li>
+</ul>
+</div>
+<div class="section" id="systems-developer-d-line-marketing">
+<h3>2005-2006: Systems Developer &#64; D-Line Marketing</h3>
+<div class="line-block">
+<div class="line">Internet Marketing Firm</div>
+<div class="line">V Internet Enterprises after reorganization</div>
+<div class="line">Ballwin, Missouri, USA</div>
+<div class="line">October 2005 - June 2006</div>
+</div>
+<p>Systems Developer</p>
+<ul class="simple">
+<li>Prototyped video chat subscription logic; Java, Javascript, PHP</li>
+<li>Maintained VPN link to work remotely from school</li>
+<li>Tested various streaming services: Darwin Streaming Server, FMS, Red5</li>
+</ul>
+</div>
+<div class="section" id="dietary-aid-autumn-view-gardens">
+<h3>2004-2004: Dietary Aid &#64; Autumn View Gardens</h3>
+<div class="line-block">
+<div class="line">Assisted Living Center</div>
+<div class="line">Bethesda Healthcare</div>
+<div class="line">Ballwin, Missouri, USA</div>
+<div class="line">May 2004 - December 2004</div>
+</div>
+<p>Dietary Aid</p>
+<ul class="simple">
+<li>Took order for and served residents and guests</li>
+<li>Served 6am breakfast, lunch, and 5 course dinners</li>
+<li>Served occasionally disgruntled residents with a smile</li>
+<li>Learned the true meaning of Service</li>
+<li>Resigned due to early HS graduation</li>
+</ul>
+</div>
+<div class="section" id="systems-v-internet-enterprises">
+<h3>2003-2004: Systems &#64; V Internet Enterprises</h3>
+<div class="line-block">
+<div class="line">Internet Marketing Firm</div>
+<div class="line">Ballwin, Missouri, USA</div>
+<div class="line">May 2003 - October 2004</div>
+</div>
+<p>Systems Administrator / Systems Programmer</p>
+<ul class="simple">
+<li>Supported day-to-day operations; RedHat Linux, DNS, Network Troubleshooting</li>
+<li>Developed affiliate conversion tracking system; PHP, MySQL</li>
+<li>Various automation tools: VB6, VB.net, SOAP, and XML-RPC</li>
+</ul>
+</div>
+<div class="section" id="independent-web-consultant">
+<h3>2002-2007: Independent Web Consultant</h3>
+<div class="line-block">
+<div class="line">Small Business Consulting</div>
+<div class="line">West County; St. Louis, Missouri, USA</div>
+</div>
+<ul class="simple">
+<li>Desktop Support</li>
+<li>Web Design and Development</li>
+<li>LAMP CMS Hosting, Configuration, Templating</li>
+<li>Custom Web Application Development: Web Frameworks</li>
+</ul>
+<p>Clients:</p>
+<ul class="simple">
+<li>2002: East Coast Pizza</li>
+<li>2003: Gifts St. Louis</li>
+<li>2003: LHS Wrestling</li>
+<li>2004: Soda Jerks</li>
+<li>2006-07: Superior Pro Painting; PHP, MODx, Python, Django</li>
+</ul>
+</div>
+<div class="section" id="construction-assistant-east-coast-pizza">
+<h3>2002-2003: Construction Assistant &#64; East Coast Pizza</h3>
+<div class="line-block">
+<div class="line">Family-owned Pizza and Pasta place with Calzones and Strombolis</div>
+<div class="line">Now Under New Management</div>
+<div class="line">Chesterfield, MO, USA</div>
+<div class="line">May 2002 - May 2003</div>
+</div>
+<ul class="simple">
+<li>Construction Assistant: Oven-brick carrier and arranger, Tiler, Sweeper</li>
+<li>Cat-5 terminator</li>
+<li>Web Designer</li>
+<li>Web Developer</li>
+</ul>
+</div>
+<div class="section" id="windows-3-1-support">
+<h3>1996: Windows 3.1 Support</h3>
+<div class="line-block">
+<div class="line">West Omaha, NE, USA</div>
+</div>
+<ul class="simple">
+<li>Helped neighbors fix their Windows 3.1 desktop QuickBooks installation</li>
+<li>QBasic, Dr. Sbaitso</li>
+</ul>
+</div>
+</div>
+<div class="section" id="education">
+<h2>Education</h2>
+<div class="section" id="omaha-ne-usa-st-louis-mo-usa">
+<h3>Omaha, NE, USA; St Louis, MO, USA</h3>
+<ul class="simple">
+<li>Night Owl</li>
+<li>RPMs on 3.5&#8221; diskettes, Corel Linux, BeOS</li>
+<li><em>Gifted</em> programs, summer classes, work-school program; graduated early</li>
+<li>Forensics: Policy Debate, Extemporaneous Speaking</li>
+<li>AP Computer Science B, AP Statistics 4</li>
+<li>QBasic, HTML, C++ for Dummies, PHP, IDLE, VB6, Java, VB.net, Ruby, Python</li>
+</ul>
+</div>
+<div class="section" id="unomaha">
+<h3>2007-2010: UNOmaha</h3>
+<div class="line-block">
+<div class="line">University of Nebraska-Omaha</div>
+<div class="line">BSc Management Information Systems (MIS)</div>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="#uno-misso-president">MISSO: President</a></li>
+<li><a class="reference internal" href="#ais-student-chapters-representative">AISSC: Student Representative</a></li>
+<li><a class="reference internal" href="#id2">Nebraska Humane Society Nonprofit Consulting</a></li>
+<li>Learned through collaboration by collaborating to publish
+Principles of Collaboration, Second Edition</li>
+<li>Intro C++, Perl, Oracle SQL, Systems Analysis, Distributed Systems</li>
+<li>Outstanding Technical Writing course remaining</li>
+</ul>
+</div>
+<div class="section" id="online-learning">
+<h3>2010-2014: Online Learning</h3>
+<p>Research Topics</p>
+<ul class="simple">
+<li>DevOps: SaltStack, Puppet, Cobbler, OpenStack</li>
+<li>Graph Theory: wrote a better fdupes with NetworkX</li>
+<li>Big Data: MapReduce, Pregel, Hadoop, Cloudera</li>
+<li>Linked Data: Triplestore CAP, Federation</li>
+<li>Go, Rust, Scala, Haskell</li>
+<li>Bioinformatics: <a class="reference external" href="http://rosalind.info/users/westurner/">http://rosalind.info/users/westurner/</a></li>
+</ul>
+<p>Courses</p>
+<ul class="simple">
+<li><a class="reference external" href="http://class-central.com">http://class-central.com</a></li>
+<li><a class="reference external" href="https://www.khanacademy.org/profile/westurner1">https://www.khanacademy.org/profile/westurner1</a></li>
+<li><a class="reference external" href="https://www.coursera.org/course/introfinance">Introduction to Finance</a></li>
+<li><a class="reference external" href="https://www.coursera.org/course/ml">Machine Learning</a></li>
+<li><a class="reference external" href="https://webaccessibility.withgoogle.com/course">Introduction to Web Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="projects">
+<h2>Projects</h2>
+<p>See: <a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></p>
+<div class="section" id="presense">
+<h3>2007: Presense</h3>
+<div class="line-block">
+<div class="line">Social Media Aggregation Concept &amp; Gaussian Chart Generator</div>
+<div class="line">UNOmaha: Graphical User Interface Design</div>
+<div class="line">Team of three</div>
+<div class="line">Responsible for concept, design, coding; presentation lead</div>
+</div>
+<ul class="simple">
+<li>Google Charts API</li>
+<li>Prior to Task Queues</li>
+<li>BeautifulSoup</li>
+<li>Python, JavaScript, CSS, XHTML</li>
+<li>Django, jQuery, jQote, YUI CSS Templates</li>
+<li>Google AppEngine: Python</li>
+</ul>
+</div>
+<div class="section" id="eagle-financial-life-insurance-quotes">
+<h3>2007: Eagle Financial Life Insurance Quotes</h3>
+<div class="line-block">
+<div class="line">Insurance Quote Models, Views, and Templates</div>
+<div class="line">UNOmaha: Distributed Systems</div>
+<div class="line">Team of four</div>
+<div class="line">Responsible for design, coding; presentation lead</div>
+<div class="line">Src: <a class="reference external" href="https://bitbucket.org/westurner/eaglefin">https://bitbucket.org/westurner/eaglefin</a></div>
+</div>
+<ul class="simple">
+<li>Python, JavaScript, CSS, XHTML</li>
+<li>Django, 960.gs</li>
+<li>Google AppEngine: Python</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>2009: Nebraska Humane Society Nonprofit Consulting</h3>
+<div class="line-block">
+<div class="line">Social Web Team</div>
+<div class="line">Social Media Consulting Recommendations Report</div>
+<div class="line">Adoption Listings Crawler &amp; Website Prototype</div>
+<div class="line">UNOmaha: Special Topics Consulting</div>
+<div class="line">Merged teams of six and then ten</div>
+<div class="line">Responsible for concept, design, coding; presentation lead</div>
+<div class="line">Web: <a class="reference external" href="https://nhs-adoptions.appspot.com">https://nhs-adoptions.appspot.com</a></div>
+<div class="line">Src: <a class="reference external" href="https://bitbucket.org/westurner/nhs-social-web">https://bitbucket.org/westurner/nhs-social-web</a></div>
+</div>
+<ul class="simple">
+<li>Created collaboration plan: Team Site, Mailing List; Google Sites and Groups</li>
+<li>Researched strategies and metrics for maximizing social media goodwill</li>
+<li>Developed adoption listings harvester and static page templates</li>
+<li>Google AppEngine: Python (before the introduction of Blobstore)</li>
+<li>Task Queues, JSONP API</li>
+<li>Python, Django, JavaScript, jQuery, CSS, 960.gs, XHTML</li>
+</ul>
+</div>
+<div class="section" id="tiger-solutions-web-based-course-management-system">
+<h3>2009: Tiger Solutions Web Based Course Management System</h3>
+<div class="line-block">
+<div class="line">Django app for Listing Available Courses and Scheduling Course Requests</div>
+<div class="line">UNO: Systems Analysis &amp; Design / Systems Design &amp; Implementation</div>
+<div class="line">Team of four</div>
+<div class="line">Responsible for design, coding, and presentation</div>
+<div class="line">Src: <a class="reference external" href="http://code.google.com/p/wbcms">http://code.google.com/p/wbcms</a></div>
+<div class="line">Src: <a class="reference external" href="https://bitbucket.org/westurner/wbcms">https://bitbucket.org/westurner/wbcms</a></div>
+</div>
+<ul class="simple">
+<li>Python, JavaScript, CSS, XHTML</li>
+<li>Django, YUI Layouts</li>
+<li>MySQL, SQL Server ODBC</li>
+<li>SVN</li>
+<li>Theory X but really Theory Y</li>
+</ul>
+</div>
+<div class="section" id="uno-misso-president">
+<h3>2009-2010: UNO MISSO President</h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://www.isqa.unomaha.edu/misso.htm">UNO Management Information Systems Student Organization</a></div>
+</div>
+<ul class="simple">
+<li>Hosted monthly industry speakers</li>
+<li>Developed an approach for social media</li>
+<li>Created <a class="reference external" href="https://www.facebook.com/UNO.MISSO">facebook.com/UNO.MISSO</a></li>
+</ul>
+</div>
+<div class="section" id="ais-student-chapters-representative">
+<h3>2009-2010: AIS Student Chapters Representative</h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://sc.aisnet.org/">Association for Information Systems Student Chapters</a></div>
+</div>
+<ul class="simple">
+<li>Worked with AIS Student Chapter Presidents to found AISSC</li>
+<li>Created <a class="reference external" href="https://www.facebook.com/AISSC">facebook.com/AISSC</a> and
+<a class="reference external" href="htps://twitter.com/AISSC">twitter.com/AISSC</a></li>
+<li>2010 AIS Student Chapters Outstanding Communications Award</li>
+</ul>
+</div>
+<div class="section" id="help-haiti-project">
+<h3>2010: Help Haiti Project</h3>
+<div class="line-block">
+<div class="line">WordPress Instance for Haiti Earthquake Awareness</div>
+<div class="line">UNOmaha: Managing in the Digital World</div>
+<div class="line">Three geo-distributed teams of four to five</div>
+<div class="line">Src: <a class="reference external" href="http://code.google.com/p/helphaitiproject">http://code.google.com/p/helphaitiproject</a></div>
+</div>
+<p>Responsible for project management</p>
+<ul class="simple">
+<li>Something like Theory Y</li>
+<li>User Stories as Tickets</li>
+<li>WordPress, Extensions</li>
+</ul>
+</div>
+<div class="section" id="workhours">
+<h3>2010: Workhours</h3>
+<div class="line-block">
+<div class="line">Personal project accounting and log processing tool</div>
+</div>
+<ul class="simple">
+<li>Events (bookmarks, log entries, mtimes) to tuples to [SQL]</li>
+<li>Infinite-scrolling tables</li>
+<li>Pyramid, SQLAlchemy, Pyramid Restler REST API, DataTables</li>
+</ul>
+</div>
+<div class="section" id="cloud-provisioning-research">
+<h3>2010: Cloud Provisioning Research</h3>
+<div class="line-block">
+<div class="line">Survey, evaluation, adaptation, and integration for DevOps efficiency</div>
+</div>
+<ul class="simple">
+<li>Configuration Management</li>
+<li>Performance Monitoring</li>
+<li>Cobbler, Vagrant, Puppet, SaltStack, Ansible, Nagios</li>
+<li>DHCP, DNS, Apache, TLS</li>
+<li><a class="reference external" href="https://github.com/westurner/provis">https://github.com/westurner/provis</a> (2014) &#8211; Packer, Vagrant, Salt, <em>Make</em></li>
+</ul>
+</div>
+<div class="section" id="flowstat">
+<h3>2011: Flowstat</h3>
+<div class="line-block">
+<div class="line">Pyramid polyglot sandbox</div>
+<div class="line">Src: <a class="reference external" href="https://bitbucket.org/westurner/flowstat">https://bitbucket.org/westurner/flowstat</a></div>
+</div>
+<ul class="simple">
+<li>Agglomeration of utilities: prime numbers, spectrum bands</li>
+<li>RDF integration: RDFLib, surf, virtuoso, deniz, SPARQL</li>
+<li>Pyramid + SQLAlchemy REST API</li>
+</ul>
+</div>
+<div class="section" id="self-directed-learning">
+<h3>2012: Self Directed Learning</h3>
+<div class="line-block">
+<div class="line">Web: <a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></div>
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/self-directed-learning">https://github.com/westurner/self-directed-learning</a></div>
+</div>
+<ul class="simple">
+<li>Autodidactism</li>
+<li>Open Tools, Data, and Analysis for STEM Learning (&#8220;STEM Labs&#8221;)</li>
+<li>Science, Technology, Engineering, and Mathematics</li>
+</ul>
+</div>
+<div class="section" id="pycd10api">
+<h3>2012: pycd10api</h3>
+<div class="line-block">
+<div class="line">REST API wrapper for ICD 10 CM and PCS XML files</div>
+<div class="line">Web: <a class="reference external" href="https://github.com/westurner/pycd10api">https://github.com/westurner/pycd10api</a></div>
+</div>
+<ul class="simple">
+<li>Python, Pyramid, Cornice, lxml, XPath</li>
+</ul>
+</div>
+<div class="section" id="redem">
+<h3>2013: redem</h3>
+<div class="line-block">
+<div class="line">Personal reddit data liberation backup utility</div>
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/redem">https://github.com/westurner/redem</a></div>
+</div>
+<ul class="simple">
+<li>Reddit reader: comments, submissions, links</li>
+<li>Fetch last 1000 comments from Reddit</li>
+<li>Aggregate into static sortable and filterable HTML tables</li>
+<li>Python, PRAW, Requests, Jinja2, Bootstrap 2, DataTables</li>
+</ul>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://westurner.github.io/redditlog/">https://westurner.github.io/redditlog/</a></div>
+</div>
+</div>
+<div class="section" id="health-marketplace">
+<h3>2014: Health-marketplace</h3>
+<div class="line-block">
+<div class="line">Health marketplace web application</div>
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/health-marketplace">https://github.com/westurner/health-marketplace</a></div>
+</div>
+<ul class="simple">
+<li>Python, Django, Django-nonrel, Google AppEngine</li>
+</ul>
+</div>
+<div class="section" id="menuapp">
+<h3>2014: menuapp</h3>
+<div class="line-block">
+<div class="line">Restaurant menu web application with <a class="reference external" href="http://schema.org/docs/full.html">schema.org</a> types</div>
+</div>
+<ul class="simple">
+<li>Developed for a cupcake bakery FoodEstablishment</li>
+<li>Python, Django, Django-nonrel, Google AppEngine</li>
+<li>REST API: Django TastyPie</li>
+</ul>
+</div>
+<div class="section" id="healthref">
+<h3>2014: healthref</h3>
+<div class="line-block">
+<div class="line">Health reference demo application</div>
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/healthref">https://github.com/westurner/healthref</a></div>
+</div>
+<ul class="simple">
+<li>Generates good HTML from an RDF Graph in Turtle Syntax</li>
+<li>Python, RDFLib, Jinja2, Pygments, n3pygments</li>
+</ul>
+</div>
+<div class="section" id="sphinxcontrib-srclinks">
+<h3>2014: sphinxcontrib-srclinks</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/sphinxcontrib-srclinks">https://github.com/westurner/sphinxcontrib-srclinks</a></div>
+</div>
+</div>
+<div class="section" id="wrd-r-d-documentation">
+<h3>2014: WRD R&amp;D Documentation</h3>
+<div class="line-block">
+<div class="line">Web: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a></div>
+<div class="line">Src: <a class="reference external" href="https://github.com/wrdrd/docs">https://github.com/wrdrd/docs</a></div>
+</div>
+<p>An outline of notes and points
+written in ReStructuredText.</p>
+<ul class="simple">
+<li>Tools Docs:
+<a class="reference external" href="https://wrdrd.github.io/docs/tools/">https://wrdrd.github.io/docs/tools/</a></li>
+</ul>
+</div>
+<div class="section" id="pgs">
+<h3>2015: pgs</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/pgs">https://github.com/westurner/pgs</a></div>
+</div>
+<p>A bottle webapp for serving static files from a git branch, or from the local filesystem.</p>
+</div>
+<div class="section" id="elasticsearchjsonld">
+<h3>2015: elasticsearchjsonld</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/elasticsearchjsonld">https://github.com/westurner/elasticsearchjsonld</a></div>
+</div>
+<p>Generate JSON-LD &#64;contexts from ElasticSearch JSON Mappings
+with Python and JSON-LD.</p>
+</div>
+<div class="section" id="pypfi">
+<h3>2015: pypfi</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/pypfi">https://github.com/westurner/pypfi</a></div>
+</div>
+<p>Parse a transaction CSV with Python</p>
+<p>And then ofxparse:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://pypi.python.org/pypi/ofxparse">https://pypi.python.org/pypi/ofxparse</a></li>
+<li><a class="reference external" href="https://github.com/conda/conda-recipes/blob/762c8e5/ofxparse/meta.yaml">https://github.com/conda/conda-recipes/blob/762c8e5/ofxparse/meta.yaml</a></li>
+<li><a class="reference external" href="https://github.com/conda/conda-recipes/blob/master/python/ofxparse/meta.yaml">https://github.com/conda/conda-recipes/blob/master/python/ofxparse/meta.yaml</a></li>
+</ul>
+</div>
+<div class="section" id="pyglobalgoals">
+<h3>2015: pyglobalgoals</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/pyglobalgoals">https://github.com/westurner/pyglobalgoals</a></div>
+</div>
+<blockquote>
+<div>pyglobalgoals is a Python package, Python module, and a set of
+Python Jupyter notebooks for working with JSON-LD, RDFa, schema.org
+and The Global Goals For Sustainable Development (#GlobalGoals #GGs
+#SDG #SDGs) #GG17</div></blockquote>
+<ul class="simple">
+<li>IPython notebook:
+<a class="reference external" href="https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb">https://github.com/westurner/pyglobalgoals/blob/master/notebooks/globalgoals-pyglobalgoals.py.ipynb</a></li>
+<li>Draft GlobalGoals JSONLD &#64;context:
+<a class="reference external" href="https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld">https://github.com/westurner/pyglobalgoals/blob/master/notebooks/data/globalgoals.jsonld</a></li>
+<li><a class="reference external" href="https://westurner.github.io/opengov/un/#pyglobalgoals">https://westurner.github.io/opengov/un/#pyglobalgoals</a></li>
+</ul>
+</div>
+<div class="section" id="djangotestapp">
+<h3>2016: djangotestapp</h3>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/djangotestapp">https://github.com/westurner/djangotestapp</a></div>
+</div>
+<ul class="simple">
+<li><strong>#HashTags</strong> and <strong>&#64;AtTags</strong></li>
+<li>Django REST Framework, Haystack, ElasticSearch, python-social-auth
+OAuth2, Docker Compose</li>
+<li><a class="reference external" href="https://github.com/westurner/djangotestapp/blob/develop/djangotestapp/testapp/tests.py">https://github.com/westurner/djangotestapp/blob/develop/djangotestapp/testapp/tests.py</a></li>
+</ul>
+</div>
+<div class="section" id="omaha-python-users-group">
+<h3>2016: Omaha Python Users Group</h3>
+<div class="line-block">
+<div class="line">Homepage: <a class="reference external" href="http://www.omahapython.org/blog/">http://www.omahapython.org/blog/</a></div>
+<div class="line">Src: <a class="reference external" href="https://github.com/omahapython">https://github.com/omahapython</a></div>
+</div>
+<ul class="simple">
+<li>Presented <a class="reference internal" href="#pyglobalgoals">2015: pyglobalgoals</a> during <strong>#GlobalGoals</strong> week:
+<a class="reference external" href="http://www.omahapython.org/blog/archives/504">http://www.omahapython.org/blog/archives/504</a></li>
+<li>Contributed to the Omaha Python Data Science team<ul>
+<li>Created <a class="reference external" href="https://github.com/omahapython">https://github.com/omahapython</a></li>
+<li>Created <a class="reference external" href="https://github.com/orgs/omahapython/teams/datascience">https://github.com/orgs/omahapython/teams/datascience</a><ul>
+<li>Researched &#8220;Kaggle Best Practices&#8221;
+<a class="reference external" href="https://github.com/omahapython/datascience/issues/3">https://github.com/omahapython/datascience/issues/3</a></li>
+</ul>
+</li>
+<li>Created <a class="reference external" href="https://github.com/omahapython/kaggle-houseprices">https://github.com/omahapython/kaggle-houseprices</a></li>
+<li>Developed: <a class="reference external" href="https://github.com/westurner/house_prices">https://github.com/westurner/house_prices</a><ul>
+<li>NumPy, Pandas, scikit-learn, TPOT, auto_ml</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="venv">
+<h3>venv</h3>
+<div class="line-block">
+<div class="line">Docs: <a class="reference external" href="https://westurner.github.io/dotfiles/venv">https://westurner.github.io/dotfiles/venv</a></div>
+</div>
+<div class="section" id="venv-vim">
+<h4>venv.vim</h4>
+<div class="line-block">
+<div class="line">Src: <a class="reference external" href="https://github.com/westurner/venv.vim">https://github.com/westurner/venv.vim</a></div>
+<div class="line">Docs: <a class="reference external" href="https://westurner.github.io/dotfiles/venv#cdalias">https://westurner.github.io/dotfiles/venv#cdalias</a></div>
+</div>
+<p>(<span class="docutils literal"><span class="pre">:Cdhere</span></span>, <span class="docutils literal"><span class="pre">:Cdworkonhome</span></span>, <span class="docutils literal"><span class="pre">:Cdwh</span></span>, <span class="docutils literal"><span class="pre">:Cdhelp</span></span>, (<span class="docutils literal"><span class="pre">$</span> <span class="pre">cdhelp</span></span>))</p>
+</div>
+</div>
+<div class="section" id="hello-world">
+<h3>hello_world</h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/westurner/hello_world">https://github.com/westurner/hello_world</a></div>
+</div>
+<p>Language basics / code samples in C++, CoffeeScript, Cython,
+Go, Java, Javascript, Python, and Ruby</p>
+</div>
+<div class="section" id="dotfiles">
+<h3>Dotfiles</h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></div>
+<div class="line"><a class="reference external" href="https://github.com/westurner/dotfiles">https://github.com/westurner/dotfiles</a></div>
+<div class="line"><a class="reference external" href="https://github.com/westurner/dotvim">https://github.com/westurner/dotvim</a></div>
+</div>
+<ul class="simple">
+<li>Python package with documentation</li>
+<li>Configuration set for Bash, ZSH, Python, IPython, I3WM</li>
+<li>Configuration set for Vim</li>
+</ul>
+</div>
+<div class="section" id="open-source-contributions">
+<h3>Open Source Contributions</h3>
+<p>Primarily small contributions here and there to show my appreciation.</p>
+<p>See:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></li>
+<li><a class="reference external" href="https://westurner.github.io/wiki/github">https://westurner.github.io/wiki/github</a><ul>
+<li><a class="reference external" href="https://githubcontributions.io/user/westurner">https://githubcontributions.io/user/westurner</a><ul>
+<li>2017-01-02: &#8220;westurner made 7323 contributions to 399 repositories&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="contact-information">
+<h2>Contact Information</h2>
+<div class="line-block">
+<div class="line">Homepage: <a class="reference external" href="https://westurner.github.io">westurner.github.io</a></div>
+<div class="line">LinkedIn: <a class="reference external" href="http://www.linkedin.com/in/westurner">linkedin.com/in/westurner</a></div>
+<div class="line">Twitter: <a class="reference external" href="https://twitter.com/westurner">&#64;westurner</a></div>
+</div>
+</div>
 </div>
 
     <div class="postmeta">
-        <div class="author">
-            <span>Posted by Wes Turner</span>
-        </div>
         
-        <div class="tags">
-            <span>
-                Tags:
-                <a href="../../../tags/docs.html">#docs</a>&nbsp;<a href="../../../tags/literateprogramming.html">#literateprogramming</a>&nbsp;<a href="../../../tags/bash.html">#bash</a>&nbsp;<a href="../../../tags/vim.html">#vim</a>&nbsp;<a href="../../../tags/i3wm.html">#i3wm</a>&nbsp;<a href="../../../tags/keyboardshortcuts.html">#keyboardshortcuts</a></span>
-        </div>
-        </div><ul class="related clearfix">
-            <li class="left"> &laquo; <a href="../../10/20/working-on-lately">Working on Lately</a></li>
-            <li class="right"><a href="../../../2013/12/15/tech-news-for-america">Tech News for America</a> &raquo; </li>
-        </ul></article><aside class="sidebar"><section><div class="widget">
-    <h3><a href="../../../archive">Recent Posts</a></h3>
+        
+        
+        </div></article><aside class="sidebar"><section><div class="widget">
+    <h3><a href="../../archive">Recent Posts</a></h3>
     <ul><li>
-            <a href="../../../2016/10/18/criteria-for-success-and-test-driven-development">Criteria for Success and Test-Driven-Development</a>
+            <a href="../../2016/10/18/criteria-for-success-and-test-driven-development">Criteria for Success and Test-Driven-Development</a>
         </li><li>
-            <a href="../../../2016/10/17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a>
+            <a href="../../2016/10/17/teaching-test-driven-development-first">Teaching Test-Driven-Development First</a>
         </li><li>
-            <a href="../../../2015/03/02/documentation">Documentation</a>
+            <a href="../../2015/03/02/documentation">Documentation</a>
         </li><li>
-            <a href="../../10/20/wrd-research-and-development">WRD Research and Development</a>
+            <a href="../../2014/10/20/wrd-research-and-development">WRD Research and Development</a>
         </li><li>
-            <a href="../../10/20/working-on-lately">Working on Lately</a>
+            <a href="../../2014/10/20/working-on-lately">Working on Lately</a>
         </li><li>
-            <a href="#">Literate Configuration</a>
+            <a href="../../2014/05/03/literate-configuration">Literate Configuration</a>
         </li><li>
-            <a href="../../../2013/12/15/tech-news-for-america">Tech News for America</a>
+            <a href="../../2013/12/15/tech-news-for-america">Tech News for America</a>
         </li><li>
-            <a href="../../../2013/11/25/hello-world">Hello World!</a>
+            <a href="../../2013/11/25/hello-world">Hello World!</a>
         </li></ul>
 </div>
 </section><section><div class="widget" id="searchbox" role="search">
     <h1><a href="#searchbox">Search</a></h1>
-    <form action="../../../search" method="get">
+    <form action="../../search" method="get">
         <input type="text" name="q" />
         <button type="submit"><span class="fa fa-search"></span></button>
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
-    <div style="text-align: center"><a href="../../../tags/affordances">#affordances</a>&nbsp; <a href="../../../tags/bash">#bash</a>&nbsp; <a href="../../../tags/bootstrap">#bootstrap</a>&nbsp; <a href="../../../tags/community">#community</a>&nbsp; <a href="../../../tags/compsci">#compsci</a>&nbsp; <a href="../../../tags/doc">#DOC</a>&nbsp; <a href="../../../tags/docs">#docs</a>&nbsp; <a href="../../../tags/documentation">#documentation</a>&nbsp; <a href="../../../tags/enh">#ENH</a>&nbsp; <a href="../../../tags/enhancement">#enhancement</a>&nbsp; <a href="../../../tags/entrepreneurship">#entrepreneurship</a>&nbsp; <a href="../../../tags/goals">#goals</a>&nbsp; <a href="../../../tags/i3wm">#i3wm</a>&nbsp; <a href="../../../tags/keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="../../../tags/lately">#lately</a>&nbsp; <a href="../../../tags/learning">#learning</a>&nbsp; <a href="../../../tags/literateprogramming">#literateprogramming</a>&nbsp; <a href="../../../tags/oo">#OO</a>&nbsp; <a href="../../../tags/planning">#planning</a>&nbsp; <a href="../../../tags/python">#python</a>&nbsp; <a href="../../../tags/resume">#resume</a>&nbsp; <a href="../../../tags/sphinx">#sphinx</a>&nbsp; <a href="../../../tags/stem">#stem</a>&nbsp; <a href="../../../tags/success">#success</a>&nbsp; <a href="../../../tags/tdd">#TDD</a>&nbsp; <a href="../../../tags/technews">#technews</a>&nbsp; <a href="../../../tags/testing">#testing</a>&nbsp; <a href="../../../tags/tst">#TST</a>&nbsp; <a href="../../../tags/uby">#UBY</a>&nbsp; <a href="../../../tags/usability">#usability</a>&nbsp; <a href="../../../tags/vim">#vim</a>&nbsp; <a href="../../../tags/wiki">#wiki</a>&nbsp; <a href="../../../tags/wrdrd">#wrdrd</a></div>
+    <div style="text-align: center"><a href="../../tags/affordances">#affordances</a>&nbsp; <a href="../../tags/bash">#bash</a>&nbsp; <a href="../../tags/bootstrap">#bootstrap</a>&nbsp; <a href="../../tags/community">#community</a>&nbsp; <a href="../../tags/compsci">#compsci</a>&nbsp; <a href="../../tags/doc">#DOC</a>&nbsp; <a href="../../tags/docs">#docs</a>&nbsp; <a href="../../tags/documentation">#documentation</a>&nbsp; <a href="../../tags/enh">#ENH</a>&nbsp; <a href="../../tags/enhancement">#enhancement</a>&nbsp; <a href="../../tags/entrepreneurship">#entrepreneurship</a>&nbsp; <a href="../../tags/goals">#goals</a>&nbsp; <a href="../../tags/i3wm">#i3wm</a>&nbsp; <a href="../../tags/keyboardshortcuts">#keyboardshortcuts</a>&nbsp; <a href="../../tags/lately">#lately</a>&nbsp; <a href="../../tags/learning">#learning</a>&nbsp; <a href="../../tags/literateprogramming">#literateprogramming</a>&nbsp; <a href="../../tags/oo">#OO</a>&nbsp; <a href="../../tags/planning">#planning</a>&nbsp; <a href="../../tags/python">#python</a>&nbsp; <a href="../../tags/resume">#resume</a>&nbsp; <a href="../../tags/sphinx">#sphinx</a>&nbsp; <a href="../../tags/stem">#stem</a>&nbsp; <a href="../../tags/success">#success</a>&nbsp; <a href="../../tags/tdd">#TDD</a>&nbsp; <a href="../../tags/technews">#technews</a>&nbsp; <a href="../../tags/testing">#testing</a>&nbsp; <a href="../../tags/tst">#TST</a>&nbsp; <a href="../../tags/uby">#UBY</a>&nbsp; <a href="../../tags/usability">#usability</a>&nbsp; <a href="../../tags/vim">#vim</a>&nbsp; <a href="../../tags/wiki">#wiki</a>&nbsp; <a href="../../tags/wrdrd">#wrdrd</a></div>
 </div></section><section><div class="widget">
 <ul id="accounts">
 <li>
@@ -681,7 +1232,7 @@ generating documentation from comment strings embedded in various languages
         <li class="main-nav" style="margin-bottom:1em">
             <a href="#">^top^</a>
         </li><li class="main-nav"><div class="rss">
-        <a href="../../../rss" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
+        <a href="../../rss" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
     </div></li></ul>&copy; Copyright 2016 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>
