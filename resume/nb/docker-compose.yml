@@ -1,0 +1,34 @@
+
+version: "2"
+
+build:
+    context: ./docker/nb
+    dockerfile: ./docker/nb/Dockerfile
+    label: westurner/resume-nlp
+
+build:
+    context: ./docker/web
+    dockerfile: ./docker/web/Dockerfile
+    label: westurner/westurner.github.io
+
+services:
+    nbr:
+        image: westurner/resume-nlp
+        expose:
+            - "8888"
+
+    web:
+        image: westurner/westurner.github.io
+
+
+        cd /workspace
+        git clone --depth=1 https://github.com/westurner/westurner.github.io /var/www/html
+
+        # pgs
+        pgs -p /var/www/html
+        pgs -b gh_pages /var/www/html
+
+        # nginx
+        cp app.conf /etc/nginx/sites-available/
+        ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
+
