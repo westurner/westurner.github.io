@@ -221,3 +221,6 @@ upgrade_lifestream_js:
 
 pygments_remove_background_color:
 	sed -i 's/background-color: #040404 //' _themes/flat5000/static/pygments.css
+
+pygments_set_highlight_background_color:
+	sed -i 's/.highlight  { background: #040404/.highlight  { background: #101010/g' _themes/flat5000/static/pygments.css
