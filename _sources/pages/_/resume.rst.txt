@@ -1,7 +1,7 @@
 
 :title: Resume: Wes Turner
 :author: Wes Turner <wes.turner@gmail.com>
-:copyright: Copyright © 2017, All Rights Reserved
+:copyright: Copyright © 2019, All Rights Reserved
 
 =========================================================
 `Resume <https://westurner.github.io/pages/resume.html>`_
@@ -645,6 +645,7 @@ Contact Information
 ======================
 
 | Homepage: `westurner.github.io <https://westurner.github.io>`__
-| LinkedIn: `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`__
+| LinkedIn: `linkedin.com/in/westurner <https://www.linkedin.com/in/westurner>`__
+| AngelList: `angel.co/westurner <https://angel.co/westurner>`__
 | Twitter: `@westurner <https://twitter.com/westurner>`__
 
