@@ -8,16 +8,16 @@ Personal homepage. Powered by Tinkerer and Sphinx.
 
 Valued Components
 ===================
-* `Sphinx <http://sphinx-doc.org>`_ (https://github.com/vladris/tinkerer)
-* `Tinkerer <http://tinkerer.me>`_ (https://bitbucket.org/birkenfeld/sphinx)
-* `jQuery <http://jquery.com>`_ (https://github.com/jquery/jquery)
-* `jquery-lifestream <http://christianv.github.com/jquery-lifestream/>`_
+* `Sphinx <http://sphinx-doc.org>`__ (https://github.com/sphinx-doc/sphinx)
+* `Tinkerer <http://tinkerer.me>`__ (https://github.com/vladris/tinkerer)
+* `jQuery <http://jquery.com>`__ (https://github.com/jquery/jquery)
+* `jquery-lifestream <http://christianv.github.com/jquery-lifestream/>`__
   (https://github.com/christianv/jquery-lifestream)
-* `jquery-timeago <http://timeago.yarp.com/>`_
+* `jquery-timeago <http://timeago.yarp.com/>`__
   (https://github.com/rmm5t/jquery-timeago)
 * `jquery-scrollTo <http://demos.flesler.com/jquery/scrollTo/>`__ 
   (https://github.com/flesler/jquery.scrollTo)  
-* `Bootstrap <http://getbootstrap.com>`_ (https://github.com/twbs/bootstrap)
+* `Bootstrap <http://getbootstrap.com>`__ (https://github.com/twbs/bootstrap)
 
 
 Licenses
