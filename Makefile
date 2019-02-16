@@ -217,3 +217,7 @@ upgrade_lifestream_js:
 	git add ./_static/js/jquery.lifestream.*
 	git commit ./_static/js/jquery.lifestream.* \
 		-m "BLD: Update jquery.lifestream.js"
+
+
+pygments_remove_background_color:
+	sed -i 's/background-color: #040404 //' _themes/flat5000/static/pygments.css
