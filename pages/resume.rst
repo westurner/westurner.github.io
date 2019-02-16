@@ -658,6 +658,7 @@ Contact Information
 ======================
 
 | Homepage: `westurner.github.io <https://westurner.github.io>`__
-| LinkedIn: `linkedin.com/in/westurner <http://www.linkedin.com/in/westurner>`__
+| LinkedIn: `linkedin.com/in/westurner <https://www.linkedin.com/in/westurner>`__
+| AngelList: `angel.co/westurner <https://angel.co/westurner>`__
 | Twitter: `@westurner <https://twitter.com/westurner>`__
 
