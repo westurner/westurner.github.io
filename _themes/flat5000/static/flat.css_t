@@ -125,7 +125,12 @@ footer { margin-bottom: 20px; padding: 20px; text-align: center; }
     ul.related li.right { display: inline; float: right; }
     ul.related:first-child { padding-bottom: 20px; }
 
-    div.highlight { padding: 10px 20px; margin-bottom: 10px; }
+    div.highlight {
+        padding: 10px 30px;
+        margin-bottom: 10px;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
 
     /* div.section + div.postmeta { margin: 40px 0; } */
 
