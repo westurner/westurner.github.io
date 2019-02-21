@@ -107,7 +107,7 @@ Statement Coverage can be misleading for a number of reasons:</p>
 <li>There may be multiple branches on the same line.</li>
 </ol>
 <blockquote>
-<div><div class="code python highlight-default"><div class="highlight"><pre><span/><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 
@@ -160,7 +160,7 @@ Objectives):</p>
 <li>Is this objective {S, M, A, R, and T}?</li>
 <li>Is this objective Measurable?</li>
 <li>Is this objective Achievable (Assignable)?</li>
-<li>[...]</li>
+<li>[…]</li>
 </ul>
 <p>With tests for things in the future, we can define confidence intervals
 (low, medium, high) as e.g. “pessimistic”, “realistic”, and “optimistic”.</p>
@@ -258,7 +258,7 @@ these Targets in our own states and worldwide.</li>
             <description><![CDATA[<h1>Teaching Test-Driven-Development First</h1>
 <p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
 <p>A traditional first hello world program:</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -268,12 +268,12 @@ these Targets in our own states and worldwide.</li>
 </pre></div>
 </div>
 <p>And then run the program:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span/><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
 <span class="c1"># "It should say 'Hello, @westurner!'"  # (check this manually every time)</span>
 </pre></div>
 </div>
 <p>Hello world with tests (Test-Driven-Development (TDD)):</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
 
 <span class="kn">import</span> <span class="nn">unittest</span>
 
@@ -297,7 +297,7 @@ these Targets in our own states and worldwide.</li>
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span/>python -m site                         # sys.path and $PWD (`pwd`)
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/>python -m site                         # sys.path and $PWD (`pwd`)
 python -m unittest test_helloworld     # ./test_helloworld.py
 python -m unittest -v test_helloworld  # ./test_helloworld.py
 test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
@@ -483,7 +483,7 @@ and that link is not displayed,
 <strong>scroll</strong> the sidebar navbar
 so that the given navbar link is displayed
 (with a few at the top, for context).</p>
-<div class="code javascript highlight-default"><div class="highlight"><pre><span/>## pseudo-JS
+<div class="code javascript highlight-default notranslate"><div class="highlight"><pre><span/>// this is pseudo-JS
 sidebar = $('#sidebar');
 link =  $(sidebar).find('a[href=&lt;#anchor&gt;]');
 if !(jquery.isonscreen.js(sidebar, link)) {
@@ -535,7 +535,7 @@ without something like isonscreen and scrollTo (ENH?,TST)</li>
 </li>
 <li><p class="first">Sphinx themes are configured in a <span class="docutils literal"><span class="pre">conf.py</span></span> file.
 From <a class="reference external" href="http://stackoverflow.com/a/25007833">http://stackoverflow.com/a/25007833</a> (CC-BY-SA 3.0):</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span/><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">on_rtd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'READTHEDOCS'</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'True'</span>
 
@@ -631,7 +631,7 @@ like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
 <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span/>#### i3 config file (v4)
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span/>#### i3 config file (v4)
 ### Notes
 #  #  Default location: ~/.i3/config
 #  #  List the commented command shortcuts with::
@@ -669,11 +669,11 @@ mode "resize" {
 </div>
 <p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
 with a simple conditional regular expression:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span/><span class="n">cat</span> <span class="o">~/.</span><span class="n">i3</span><span class="o">/</span><span class="n">config</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/><span class="n">cat</span> <span class="o">~/.</span><span class="n">i3</span><span class="o">/</span><span class="n">config</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
 </pre></div>
 </div>
 <p>Peruse the output for that one excellent keyboard shortcut</p>
-<div class="code highlight-default"><div class="highlight"><pre><span/><span class="c1">#### i3 config file (v4)</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1">#### i3 config file (v4)</span>
 <span class="c1">### Notes</span>
 <span class="c1">#  #  Default location: ~/.i3/config</span>
 <span class="c1">#  #  List the commented command shortcuts with::</span>
@@ -960,7 +960,7 @@ Supercluster”, and “Local Group”</li>
             <guid>https://westurner.github.io/2013/11/25/hello-world.html</guid>
             <title><![CDATA[Hello World!]]></title>
             <description><![CDATA[<h1>Hello World!</h1>
-<div class="highlight-python"><div class="highlight"><pre><span/><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">return</span> <span class="s2">"Hello World!"</span>
