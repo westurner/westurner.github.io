@@ -72,7 +72,7 @@ accounts:
 serve:
 	# Serve ./blog/html with python 2 SimpleHTTPServer
 	(cd ./blog/html; \
-	eval "python -m SimpleHTTPServer 18282 &"; PID=$$! ; echo "PID=$$PID")
+	python -m SimpleHTTPServer 18282)
 
 serve-pgs:
 	# Serve ./blog/html with pgs
