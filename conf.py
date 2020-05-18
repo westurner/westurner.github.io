@@ -11,7 +11,7 @@ import tinkerer.paths
 project = 'Wes Turner'
 
 # Change this to the tagline of your blog
-tagline = 'westurner'
+tagline = '@westurner'
 
 # Change this to the description of your blog
 description = 'A code blog'
@@ -20,7 +20,7 @@ description = 'A code blog'
 author = 'Wes Turner'
 
 # Change this to your copyright string
-copyright = '2019 %s' % author
+copyright = '2020 %s' % author
 
 # Change this to your blog root URL (required for RSS feed)
 website = 'https://westurner.github.io/'
