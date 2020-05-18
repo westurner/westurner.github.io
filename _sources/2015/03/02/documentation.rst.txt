@@ -136,7 +136,7 @@ Update: 2015-07-04
 
           .. code:: javascript
 
-              // this is pseudo-JS
+              ## pseudo-JS
               sidebar = $('#sidebar');
               link =  $(sidebar).find('a[href=<#anchor>]');
               if !(jquery.isonscreen.js(sidebar, link)) {
