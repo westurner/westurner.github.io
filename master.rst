@@ -4,6 +4,8 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2020/11/07/example-notebook.ipynb
+   2020/11/07/prompts-for-learning
    2016/10/18/criteria-for-success-and-test-driven-development
    2016/10/17/teaching-test-driven-development-first
    2015/03/02/documentation
@@ -14,4 +16,3 @@ Sitemap
    2013/11/25/hello-world
    pages/resume
    pages/stream
-
