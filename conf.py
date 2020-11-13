@@ -63,6 +63,7 @@ extensions = [
     'tinkerer.ext.blog',
     'tinkerer.ext.disqus',
     'withgithub',
+    'myst_nb',
 ]
 
 # Add other template paths here
@@ -99,7 +100,7 @@ release = tinkerer.__version__
 html_title = project
 html_use_index = False
 html_show_sourcelink = True
-html_add_permalinks = None
+html_add_permalinks = True
 
 # Suffix for generated links to HTML files.
 # The default is whatever html_file_suffix is set to;

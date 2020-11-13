@@ -5,3 +5,4 @@ https://github.com/westurner/pygments-style-jellywrd/archive/pygments-style-jell
 beautifulsoup4
 grin
 -e git+https://github.com/westurner/sphinxjp.themes.basicstrap#egg=sphinxjp.themes.basicstrap
+myst-nb
