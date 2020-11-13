@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
             <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <!-- Load modernizr and JQuery -->
+        <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" /><link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" /><!-- Load modernizr and JQuery -->
         <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
@@ -37,7 +37,7 @@
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script><script type="text/javascript" src="../../../_static/language_data.js"></script><script type="text/javascript" src="../../../_static/togglebutton.js"></script><script type="text/javascript" src="../../../None"></script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
     <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
@@ -328,10 +328,10 @@
             <span>October 17, 2016</span>
         </div>
     <div class="section" id="teaching-test-driven-development-first">
-<h1>Teaching Test-Driven-Development First</h1>
+<h1>Teaching Test-Driven-Development First<a class="headerlink" href="#teaching-test-driven-development-first" title="Permalink to this headline">¶</a></h1>
 <p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
 <p>A traditional first hello world program:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># helloworld.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># helloworld.py</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">&quot;Hello, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -341,12 +341,12 @@
 </pre></div>
 </div>
 <p>And then run the program:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python ./helloworld.py
 <span class="c1"># &quot;It should say &#39;Hello, @westurner!&#39;&quot;  # (check this manually every time)</span>
 </pre></div>
 </div>
 <p>Hello world with tests (Test-Driven-Development (TDD)):</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_helloworld.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_helloworld.py</span>
 
 <span class="kn">import</span> <span class="nn">unittest</span>
 
@@ -370,58 +370,62 @@
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>python -m site                         # sys.path and $PWD (`pwd`)
-python -m unittest test_helloworld     # ./test_helloworld.py
-python -m unittest -v test_helloworld  # ./test_helloworld.py
-test $? -eq 0 || echo &quot;Tests failed! (nonzero returncode)&quot;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m site                         <span class="c1"># sys.path and $PWD (`pwd`)</span>
+python -m unittest test_helloworld     <span class="c1"># ./test_helloworld.py</span>
+python -m unittest -v test_helloworld  <span class="c1"># ./test_helloworld.py</span>
+<span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Tests failed! (nonzero returncode)&quot;</span>
 </pre></div>
 </div>
 <p>Why should this first run of the tests fail?</p>
 <ul class="simple">
-<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">test_helloworld.py</span></span>.</li>
-<li>Because, in keeping with TDD, we run the test first to make sure it
-actually fails without our changes.</li>
+<li><p>Because we didn’t remember to import <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></code> in <code class="docutils literal notranslate"><span class="pre">test_helloworld.py</span></code>.</p></li>
+<li><p>Because, in keeping with TDD, we run the test first to make sure it
+actually fails without our changes.</p></li>
 </ul>
 <p>Advantages of this Test-Driven-Development (TDD) first approach:</p>
 <ul class="simple">
-<li>TDD from the start: any future breaking changes will be detected
-(given the completeness of the functional test specification)</li>
-<li>This teaches Object-Orientation (OO) (Encapsulation, Separation of
-Concerns)</li>
-<li>This teaches separation of data and code.</li>
-<li>This teaches Given-When-Then.</li>
+<li><p>TDD from the start: any future breaking changes will be detected
+(given the completeness of the functional test specification)</p></li>
+<li><p>This teaches Object-Orientation (OO) (Encapsulation, Separation of
+Concerns)</p></li>
+<li><p>This teaches separation of data and code.</p></li>
+<li><p>This teaches Given-When-Then.</p></li>
 </ul>
 <p>And then what? (Teach what next?):</p>
 <ul class="simple">
-<li>Testable software design patterns<ul>
-<li>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></li>
-<li>Test factories / test fixtures</li>
+<li><p>Testable software design patterns</p>
+<ul>
+<li><p>Refactoring: Square, Rectangle, Triangle <code class="docutils literal notranslate"><span class="pre">obj.area()</span></code></p></li>
+<li><p>Test factories / test fixtures</p></li>
 </ul>
 </li>
-<li>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):<ul>
-<li>pytest</li>
-<li>Nose</li>
-<li>WebTest, Selenium, HTML/JSON Parsing</li>
-<li><a class="reference external" href="https://westurner.github.io/wiki/awesome-python-testing">https://westurner.github.io/wiki/awesome-python-testing</a></li>
+<li><p>Additional testing tools (beyond <code class="docutils literal notranslate"><span class="pre">unittest</span></code>):</p>
+<ul>
+<li><p>pytest</p></li>
+<li><p>Nose</p></li>
+<li><p>WebTest, Selenium, HTML/JSON Parsing</p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/wiki/awesome-python-testing">https://westurner.github.io/wiki/awesome-python-testing</a></p></li>
 </ul>
 </li>
 </ul>
 <p>Concepts and References:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></li>
-<li><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Given-When-Then">https://en.wikipedia.org/wiki/Given-When-Then</a><ul>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#given-when-then">https://wrdrd.github.io/docs/consulting/software-development#given-when-then</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Given-When-Then">https://en.wikipedia.org/wiki/Given-When-Then</a></p>
+<ul>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#given-when-then">https://wrdrd.github.io/docs/consulting/software-development#given-when-then</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#test-driven-development">https://wrdrd.github.io/docs/consulting/software-development#test-driven-development</a></li>
-<li><a class="reference external" href="https://westurner.github.io/2013/11/25/hello-world.html">https://westurner.github.io/2013/11/25/hello-world.html</a></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#test-driven-development">https://wrdrd.github.io/docs/consulting/software-development#test-driven-development</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/2013/11/25/hello-world.html">https://westurner.github.io/2013/11/25/hello-world.html</a></p></li>
 </ul>
 </div>
 

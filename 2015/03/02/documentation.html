@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
             <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <!-- Load modernizr and JQuery -->
+        <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" /><link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" /><!-- Load modernizr and JQuery -->
         <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
@@ -37,7 +37,7 @@
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script><script type="text/javascript" src="../../../_static/language_data.js"></script><script type="text/javascript" src="../../../_static/togglebutton.js"></script><script type="text/javascript" src="../../../None"></script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
     <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
@@ -328,7 +328,7 @@
             <span>March 02, 2015</span>
         </div>
     <div class="section" id="documentation">
-<h1>Documentation</h1>
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
 <p>This weekend, I managed to get a fixed navigation bar configured
 with the <a class="reference external" href="http://getbootstrap.com/javascript/#affix">Bootstrap affix JS</a>
 and a fair amount of CSS iteration
@@ -336,124 +336,127 @@ for Sphinx (with the excellent <a class="reference external" href="https://githu
 and have been merging the new styles into various
 sets of docs that I’ve been working on:</p>
 <ul class="simple">
-<li>Concepts: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a><ul>
-<li>Open Source:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/open-source">https://wrdrd.github.io/docs/consulting/open-source</a></li>
-<li>Small Business Consulting:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/small-business">https://wrdrd.github.io/docs/consulting/small-business</a></li>
-<li>Web Development:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development">https://wrdrd.github.io/docs/consulting/web-development</a></li>
-<li>Software Development:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development">https://wrdrd.github.io/docs/consulting/software-development</a></li>
-<li>Computer Engineering:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/computer-engineering">https://wrdrd.github.io/docs/consulting/computer-engineering</a></li>
-<li>Information Systems:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems">https://wrdrd.github.io/docs/consulting/information-systems</a></li>
-<li>Data Science:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/data-science">https://wrdrd.github.io/docs/consulting/data-science</a></li>
-<li>Knowledge Engineering:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/knowledge-engineering">https://wrdrd.github.io/docs/consulting/knowledge-engineering</a></li>
-<li>Entrepreneurship:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/entrepreneurship">https://wrdrd.github.io/docs/consulting/entrepreneurship</a></li>
-<li>Education Technology:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/education-technology">https://wrdrd.github.io/docs/consulting/education-technology</a></li>
-<li>Art &amp; Design:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/art-design">https://wrdrd.github.io/docs/consulting/art-design</a></li>
-<li>Team Building:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/team-building">https://wrdrd.github.io/docs/consulting/team-building</a></li>
-<li>Collaboration Plan:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/collaboration-plan">https://wrdrd.github.io/docs/consulting/collaboration-plan</a></li>
-<li><cite>Tools</cite>:
-<a class="reference external" href="https://wrdrd.github.io/docs/tools/">https://wrdrd.github.io/docs/tools/</a></li>
+<li><p>Concepts: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a></p>
+<ul>
+<li><p>Open Source:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/open-source">https://wrdrd.github.io/docs/consulting/open-source</a></p></li>
+<li><p>Small Business Consulting:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/small-business">https://wrdrd.github.io/docs/consulting/small-business</a></p></li>
+<li><p>Web Development:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development">https://wrdrd.github.io/docs/consulting/web-development</a></p></li>
+<li><p>Software Development:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development">https://wrdrd.github.io/docs/consulting/software-development</a></p></li>
+<li><p>Computer Engineering:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/computer-engineering">https://wrdrd.github.io/docs/consulting/computer-engineering</a></p></li>
+<li><p>Information Systems:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems">https://wrdrd.github.io/docs/consulting/information-systems</a></p></li>
+<li><p>Data Science:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/data-science">https://wrdrd.github.io/docs/consulting/data-science</a></p></li>
+<li><p>Knowledge Engineering:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/knowledge-engineering">https://wrdrd.github.io/docs/consulting/knowledge-engineering</a></p></li>
+<li><p>Entrepreneurship:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/entrepreneurship">https://wrdrd.github.io/docs/consulting/entrepreneurship</a></p></li>
+<li><p>Education Technology:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/education-technology">https://wrdrd.github.io/docs/consulting/education-technology</a></p></li>
+<li><p>Art &amp; Design:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/art-design">https://wrdrd.github.io/docs/consulting/art-design</a></p></li>
+<li><p>Team Building:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/team-building">https://wrdrd.github.io/docs/consulting/team-building</a></p></li>
+<li><p>Collaboration Plan:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/collaboration-plan">https://wrdrd.github.io/docs/consulting/collaboration-plan</a></p></li>
+<li><p><cite>Tools</cite>:
+<a class="reference external" href="https://wrdrd.github.io/docs/tools/">https://wrdrd.github.io/docs/tools/</a></p></li>
 </ul>
 </li>
-<li><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/tools/">https://westurner.github.io/tools/</a></li>
-<li>Dotfiles: <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a><ul>
-<li>Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage">https://westurner.github.io/dotfiles/usage</a> (
-<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a><ul>
-<li><span class="docutils literal"><span class="pre">bootstrap_dotfiles.sh</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></li>
-<li><span class="docutils literal"><span class="pre">Makefile</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#make">tools/#make</a>]</li>
-<li>Bash Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bash">https://westurner.github.io/dotfiles/usage#bash</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a>]</li>
-<li>Vim Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#vim">https://westurner.github.io/dotfiles/usage#vim</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#vim">tools/#vim</a>]</li>
-<li>i3wm Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#i3wm">https://westurner.github.io/dotfiles/usage#i3wm</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#i3wm">tools/#i3wm</a>]</li>
-<li><span class="docutils literal"><span class="pre">./scripts</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a><ul>
-<li><span class="docutils literal"><span class="pre">PATH_prepend</span> <span class="pre">&quot;${__DOTFILES}/scripts&quot;</span></span>
-(e.g. <span class="docutils literal"><span class="pre">dotfiles_add_path()</span></span> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</li>
+<li><p><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/tools/">https://westurner.github.io/tools/</a></p></li>
+<li><p>Dotfiles: <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></p>
+<ul>
+<li><p>Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage">https://westurner.github.io/dotfiles/usage</a> (
+<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootstrap_dotfiles.sh</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#make">tools/#make</a>]</p></li>
+<li><p>Bash Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bash">https://westurner.github.io/dotfiles/usage#bash</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a>]</p></li>
+<li><p>Vim Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#vim">https://westurner.github.io/dotfiles/usage#vim</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#vim">tools/#vim</a>]</p></li>
+<li><p>i3wm Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#i3wm">https://westurner.github.io/dotfiles/usage#i3wm</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#i3wm">tools/#i3wm</a>]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./scripts</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">PATH_prepend</span> <span class="pre">&quot;${__DOTFILES}/scripts&quot;</span></code>
+(e.g. <code class="docutils literal notranslate"><span class="pre">dotfiles_add_path()</span></code> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Venv: <a class="reference external" href="https://westurner.github.io/dotfiles/venv">https://westurner.github.io/dotfiles/venv</a>
+<li><p>Venv: <a class="reference external" href="https://westurner.github.io/dotfiles/venv">https://westurner.github.io/dotfiles/venv</a>
 [<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#venv">tools/#venv</a>,
 <a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenv">tools/#virtualenv</a>,
-<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenvwrapper">tools/#virtualenvwrapper</a>]</li>
-<li>Usrlog: <a class="reference external" href="https://westurner.github.io/dotfiles/usrlog">https://westurner.github.io/dotfiles/usrlog</a></li>
-<li><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/dotfiles/tools/">https://westurner.github.io/dotfiles/tools/</a></li>
+<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenvwrapper">tools/#virtualenvwrapper</a>]</p></li>
+<li><p>Usrlog: <a class="reference external" href="https://westurner.github.io/dotfiles/usrlog">https://westurner.github.io/dotfiles/usrlog</a></p></li>
+<li><p><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/dotfiles/tools/">https://westurner.github.io/dotfiles/tools/</a></p></li>
 </ul>
 </li>
-<li>Infrastructure: <a class="reference external" href="https://westurner.github.io/provis/">https://westurner.github.io/provis/</a><ul>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#clouds">WRD R&amp;D Documentation &gt; Information Systems &gt; Clouds</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#cloud-application-layers">WRD R&amp;D Documentation &gt; Information Systems &gt; Cloud Application Layers</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#operating-systems">tools/#operating-systems</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#virtualization">tools/#virtualization</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#configuration-management">tools/#configuration-management</a></li>
+<li><p>Infrastructure: <a class="reference external" href="https://westurner.github.io/provis/">https://westurner.github.io/provis/</a></p>
+<ul>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#clouds">WRD R&amp;D Documentation &gt; Information Systems &gt; Clouds</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#cloud-application-layers">WRD R&amp;D Documentation &gt; Information Systems &gt; Cloud Application Layers</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#operating-systems">tools/#operating-systems</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#virtualization">tools/#virtualization</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#configuration-management">tools/#configuration-management</a></p></li>
 </ul>
 </li>
-<li>Open Government: <a class="reference external" href="https://westurner.github.io/opengov/">https://westurner.github.io/opengov/</a></li>
-<li>Learning: <a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></li>
-<li>Resume: <a class="reference external" href="https://westurner.github.io/resume/html/resume">https://westurner.github.io/resume/html/resume</a></li>
-<li>Wiki: <a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a><ul>
-<li>Workflow: <a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></li>
-<li>Projects: <a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></li>
-<li>Contributions: <a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></li>
+<li><p>Open Government: <a class="reference external" href="https://westurner.github.io/opengov/">https://westurner.github.io/opengov/</a></p></li>
+<li><p>Learning: <a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></p></li>
+<li><p>Resume: <a class="reference external" href="https://westurner.github.io/resume/html/resume">https://westurner.github.io/resume/html/resume</a></p></li>
+<li><p>Wiki: <a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a></p>
+<ul>
+<li><p>Workflow: <a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></p></li>
+<li><p>Projects: <a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></p></li>
+<li><p>Contributions: <a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></p></li>
 </ul>
 </li>
 </ul>
 <div class="section" id="update-2015-07-04">
-<h2>Update: 2015-07-04</h2>
+<h2>Update: 2015-07-04<a class="headerlink" href="#update-2015-07-04" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">[X] DOC: 2015/03/02/documentation.rst: Update inlined
-<a class="reference external" href="https://wrdrd.github.io/docs/">WRD R&amp;D Documentation</a> Table of Contents</p>
-</li>
-<li><p class="first">[x] UBY: show current location in navbar toctree (#6)</p>
+<li><p>[X] DOC: 2015/03/02/documentation.rst: Update inlined
+<a class="reference external" href="https://wrdrd.github.io/docs/">WRD R&amp;D Documentation</a> Table of Contents</p></li>
+<li><p>[x] UBY: show current location in navbar toctree (#6)</p>
 <p><cite>gh:westurner/wiki#6</cite></p>
 <p><a class="reference external" href="https://github.com/westurner/wiki/issues/6">https://github.com/westurner/wiki/issues/6</a></p>
 <ul>
-<li><p class="first">[o] [UBY] show the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link in the navbar
+<li><p>[o] [UBY] show the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link in the navbar
 when the fixed navbar is scrolled beyond the viewport
 (i.e. when showing the complete table of contents in the
 <em>full width sidebar navbar</em>).</p>
 <ul>
-<li><p class="first">[x] Assert <span class="docutils literal"><span class="pre">#anchor</span></span> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
-with an <span class="docutils literal"><span class="pre">id=&quot;anchor&quot;</span></span> property.</p>
-</li>
-<li><p class="first">[o] Find and style each link to <span class="docutils literal"><span class="pre">#anchor</span></span> (<span class="docutils literal"><span class="pre">href=&quot;#anchor&quot;</span></span>):</p>
+<li><p>[x] Assert <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
+with an <code class="docutils literal notranslate"><span class="pre">id=&quot;anchor&quot;</span></code> property.</p></li>
+<li><p>[o] Find and style each link to <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> (<code class="docutils literal notranslate"><span class="pre">href=&quot;#anchor&quot;</span></code>):</p>
 <ul>
-<li><p class="first">[X] <em>mobile header navbar</em>:</p>
+<li><p>[X] <em>mobile header navbar</em>:</p>
 <ul class="simple">
-<li>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
+<li><p>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
 next to the heading,
-in place of the ¶ sphinx heading selector link.</li>
+in place of the ¶ sphinx heading selector link.</p></li>
 </ul>
 </li>
-<li><p class="first">[X] <em>full width sidebar navbar</em>:</p>
+<li><p>[X] <em>full width sidebar navbar</em>:</p>
 <ul>
-<li><p class="first">[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
+<li><p>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
 next to the heading,
-in place of the ¶ sphinx heading selector link.</p>
-</li>
-<li><p class="first">[X] UBY: If the <em>full width sidebar navbar</em> is on the screen;
+in place of the ¶ sphinx heading selector link.</p></li>
+<li><p>[X] UBY: If the <em>full width sidebar navbar</em> is on the screen;
 and there’s a link in the table of contents
-to the given <span class="docutils literal"><span class="pre">#anchor</span></span>;
+to the given <code class="docutils literal notranslate"><span class="pre">#anchor</span></code>;
 and that link is not displayed,
 <strong>scroll</strong> the sidebar navbar
 so that the given navbar link is displayed
 (with a few at the top, for context).</p>
-<div class="code javascript highlight-default notranslate"><div class="highlight"><pre><span></span>## pseudo-JS
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>## pseudo-JS
 sidebar = $(&#39;#sidebar&#39;);
 link =  $(sidebar).find(&#39;a[href=&lt;#anchor&gt;]&#39;);
 if !(jquery.isonscreen.js(sidebar, link)) {
@@ -472,7 +475,7 @@ if !(jquery.isonscreen.js(sidebar, link)) {
 </li>
 </ul>
 <ul>
-<li><p class="first">[ ] Learn <a class="reference external" href="https://github.com/twbs/bootstrap">Bootstrap</a> <a class="reference external" href="http://getbootstrap.com/javascript/#scrollspy">ScrollSpy</a>
+<li><p>[ ] Learn <a class="reference external" href="https://github.com/twbs/bootstrap">Bootstrap</a> <a class="reference external" href="http://getbootstrap.com/javascript/#scrollspy">ScrollSpy</a>
 because it’s already bundled with the bootstrap JS
 in <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes.basicstrap">sphinxjp.themes.basicstrap</a>.</p>
 <div class="line-block">
@@ -483,29 +486,29 @@ in <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes
 <div class="line">CDNJS: <a class="reference external" href="https://cdnjs.com/libraries/twitter-bootstrap">https://cdnjs.com/libraries/twitter-bootstrap</a></div>
 </div>
 <ul class="simple">
-<li>ScrollSpy overwrites the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link on scroll.</li>
-<li>ScrollSpy synchronizes all page scroll action with navbar current link
-indication.</li>
-<li>[ ] ScrollSpy does not work w/ a fixed navbar
-because <span class="docutils literal"><span class="pre">#anchors</span></span> are hidden
+<li><p>ScrollSpy overwrites the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link on scroll.</p></li>
+<li><p>ScrollSpy synchronizes all page scroll action with navbar current link
+indication.</p></li>
+<li><p>[ ] ScrollSpy does not work w/ a fixed navbar
+because <code class="docutils literal notranslate"><span class="pre">#anchors</span></code> are hidden
 (and otherwise remain scrolled out of the vieport
-without something like isonscreen and scrollTo (ENH?,TST)</li>
+without something like isonscreen and scrollTo (ENH?,TST)</p></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p class="first">[ ] Learn <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/">ReadTheDocs</a> in order to <a class="reference external" href="http://www.writethedocs.org/">WriteTheDocs</a>:</p>
+<li><p>[ ] Learn <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/">ReadTheDocs</a> in order to <a class="reference external" href="http://www.writethedocs.org/">WriteTheDocs</a>:</p>
 <ul>
-<li><p class="first">The default ReadTheDocs theme is sphinx_rtd_theme.</p>
+<li><p>The default ReadTheDocs theme is sphinx_rtd_theme.</p>
 <div class="line-block">
 <div class="line">Source: git <a class="reference external" href="https://github.com/snide/sphinx_rtd_theme">https://github.com/snide/sphinx_rtd_theme</a></div>
 <div class="line">PyPI: <a class="reference external" href="https://pypi.python.org/pypi/sphinx_rtd_theme">https://pypi.python.org/pypi/sphinx_rtd_theme</a></div>
 <div class="line">Docs: <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/theme.html">https://read-the-docs.readthedocs.org/en/latest/theme.html</a></div>
 </div>
 </li>
-<li><p class="first">Sphinx themes are configured in a <span class="docutils literal"><span class="pre">conf.py</span></span> file.
+<li><p>Sphinx themes are configured in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.
 From <a class="reference external" href="http://stackoverflow.com/a/25007833">http://stackoverflow.com/a/25007833</a> (CC-BY-SA 3.0):</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">on_rtd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;READTHEDOCS&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
 
@@ -518,16 +521,16 @@ From <a class="reference external" href="http://stackoverflow.com/a/25007833">ht
 </pre></div>
 </div>
 </li>
-<li><p class="first">From casual inspection,
+<li><p>From casual inspection,
 ReadTheDocs rtd_theme takes a different approach:</p>
 <ul class="simple">
-<li>ReadTheDocs rtd_theme does support scrolling the left navbar
-independently from the document;</li>
-<li>ReadTheDocs rtd_theme scrolls the navbar and the document;</li>
-<li>The ReadTheDocs rtd_theme navbar displays
+<li><p>ReadTheDocs rtd_theme does support scrolling the left navbar
+independently from the document;</p></li>
+<li><p>ReadTheDocs rtd_theme scrolls the navbar and the document;</p></li>
+<li><p>The ReadTheDocs rtd_theme navbar displays
 a document-expanded
 but otherwise collapsed
-table of contents.</li>
+table of contents.</p></li>
 </ul>
 </li>
 </ul>

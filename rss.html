@@ -21,18 +21,19 @@ Experiments), we’re supposed to <strong>start with a hypothesis</strong>,
 experiment, and then <strong>test the hypothesis</strong>
 before drawing a conclusion.</p>
 <ul class="simple">
-<li>If the hypothesis is not met (in terms of statistical constraints,
-boolean test pass/fail), then we reject the conclusion.</li>
-<li>With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control),
+<li><p>If the hypothesis is not met (in terms of statistical constraints,
+boolean test pass/fail), then we reject the conclusion.</p></li>
+<li><p>With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control),
 in the Control step we re-evaluate whether the implemented approach
-is achieving the intended objectives that we defined ahead-of-time.<ul>
-<li>“Validated Learning” emphasizes the need to control given changes
-in predefined metrics, as well.</li>
+is achieving the intended objectives that we defined ahead-of-time.</p>
+<ul>
+<li><p>“Validated Learning” emphasizes the need to control given changes
+in predefined metrics, as well.</p></li>
 </ul>
 </li>
-<li>Control Theory and Systems Theory are all about how
+<li><p>Control Theory and Systems Theory are all about how
 changes in inputs (and feedback) affect measurable state
-(outputs, systemic outcomes).</li>
+(outputs, systemic outcomes).</p></li>
 </ul>
 <p>History, and various domains of science and policy, is chock-full of
 examples of how attempts to Optimize (Minimize or Maximize) for certain
@@ -43,8 +44,8 @@ think of a few salient examples in your domains of knowledge?</p>
 <p>There is math for solving multi-dimensional (“high-dimensional”)
 optimization problems.</p>
 <ul class="simple">
-<li>MCDA (<em>Multiple-Criteria Decision Analysis</em>) intends to find – often
-multiple – solutions to multi-dimensional optimization problems.</li>
+<li><p>MCDA (<em>Multiple-Criteria Decision Analysis</em>) intends to find – often
+multiple – solutions to multi-dimensional optimization problems.</p></li>
 </ul>
 <p>Most systems are inherently multi-dimensional: there are stocks and
 flows (sort of like nodes with magnitude and uni-/bi-directional edges
@@ -63,51 +64,52 @@ who are seeking continuous success in satisfying changing objectives.</p>
 when attempting to deliver software which successfully achieves customer
 expectations:</p>
 <ul>
-<li><p class="first">Functional Specification Coverage: whether all of the desired
+<li><p>Functional Specification Coverage: whether all of the desired
 behaviors are enumerated in at least one test.</p>
 <ul class="simple">
-<li>Each Use Case and/or User Story should have at least one test.
+<li><p>Each Use Case and/or User Story should have at least one test.
 (Behavior-Driven-Development tools make it easier to write
 these tests with something like natural language;
-so that developers/engineers can do what they do best).</li>
-<li>User Stories can be written and rewritten from
+so that developers/engineers can do what they do best).</p></li>
+<li><p>User Stories can be written and rewritten from
 the 5 W’s (Who, What, When, Where, Why)
-to a Given-When-Then (and Why) pattern:<ul>
-<li>“Users can register for user accounts”</li>
-<li>“As an unregistered user, when I complete the registration form,
+to a Given-When-Then (and Why) pattern:</p>
+<ul>
+<li><p>“Users can register for user accounts”</p></li>
+<li><p>“As an unregistered user, when I complete the registration form,
 and then click on the confirmation link sent to my email,
 then I have a registered user account (obviously: in order to
-onboard new users)”</li>
+onboard new users)”</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p class="first">Code Coverage: whether all of the actual code in the software is
+<li><p>Code Coverage: whether all of the actual code in the software is
 covered by at least one test.</p>
 <ul>
-<li><p class="first">When some of the tests no longer pass, this is called “breaking the
+<li><p>When some of the tests no longer pass, this is called “breaking the
 build”. Teams working with Continuous Integration (<em>CI</em>) are aware
 of this because all of the tests run for every change to the software.</p>
 <ul class="simple">
-<li>When the build breaks, it is the whole team’s (and specifically,
+<li><p>When the build breaks, it is the whole team’s (and specifically,
 the person whose changes broke the build’s) responsibility to
 stop what they are doing and un-break the build (often by just
 “backing out” the new changes (where they can remain in a separate
-feature branch)) so that the whole team is not blocked.</li>
-<li>Teams devise various ways to indicate that the build is broken
-(CI emails, a <em>build lamp</em>, respectful verbal indications).</li>
+feature branch)) so that the whole team is not blocked.</p></li>
+<li><p>Teams devise various ways to indicate that the build is broken
+(CI emails, a <em>build lamp</em>, respectful verbal indications).</p></li>
 </ul>
 </li>
-<li><p class="first">Function Coverage, Statement Coverage, Branch Coverage, Condition
+<li><p>Function Coverage, Statement Coverage, Branch Coverage, Condition
 Coverage:</p>
 <p>Statement Coverage is a Code Coverage metric for
 determining whether each text line of the software is executed by the tests.
 Statement Coverage can be misleading for a number of reasons:</p>
 <ol class="arabic simple">
-<li>There may be multiple branches on the same line.</li>
+<li><p>There may be multiple branches on the same line.</p></li>
 </ol>
 <blockquote>
-<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 
@@ -125,11 +127,11 @@ high Statement Coverage. Stated another way, change in Statement
 Coverage can be predicted given change in Branch Coverage. Is this
 confounding?</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>Because Branch Coverage and Statement Coverage <strong>are not</strong>
 <em>conditionally independent</em>, there are a number of mathematical
 analyses which are not appropriate (e.g. Bayesian inference).</p>
-<p class="last">It can be said, then, that Branch Coverage and Statement Coverage
+<p>It can be said, then, that Branch Coverage and Statement Coverage
 are not <em>independent components</em>.</p>
 </div>
 </li>
@@ -141,10 +143,10 @@ are not <em>independent components</em>.</p>
 where we need to be?</p>
 <p>Organizations define criteria for success:</p>
 <ul class="simple">
-<li>Mission</li>
-<li>Goals</li>
-<li>Objectives / Targets</li>
-<li>Indicators / Metrics / Key Performance Indicators</li>
+<li><p>Mission</p></li>
+<li><p>Goals</p></li>
+<li><p>Objectives / Targets</p></li>
+<li><p>Indicators / Metrics / Key Performance Indicators</p></li>
 </ul>
 <p>In terms of Test-Driven-Development, many organizational “tests”
 are not yet “passing” (“reasonability”, “realism”).</p>
@@ -156,11 +158,11 @@ grouping for one or more objectives (though it could be argued that
 really all we have are nested sets of Goals or nested sets of
 Objectives):</p>
 <ul class="simple">
-<li>Are we upholding the Organizational Mission?</li>
-<li>Is this objective {S, M, A, R, and T}?</li>
-<li>Is this objective Measurable?</li>
-<li>Is this objective Achievable (Assignable)?</li>
-<li>[…]</li>
+<li><p>Are we upholding the Organizational Mission?</p></li>
+<li><p>Is this objective {S, M, A, R, and T}?</p></li>
+<li><p>Is this objective Measurable?</p></li>
+<li><p>Is this objective Achievable (Assignable)?</p></li>
+<li><p>[…]</p></li>
 </ul>
 <p>With tests for things in the future, we can define confidence intervals
 (low, medium, high) as e.g. “pessimistic”, “realistic”, and “optimistic”.</p>
@@ -169,25 +171,25 @@ given an interval,
 there are then four possible boolean tests for success
 (or just one, if we limit ourselves to TDD pass/fail):</p>
 <ul class="simple">
-<li>Is the metric between the low and high thresholds?</li>
-<li>Is the metric above the low threshold?</li>
-<li>Is the metric within a defined threshold around the medium threshold?</li>
-<li>Is the metric below the high threshold?</li>
+<li><p>Is the metric between the low and high thresholds?</p></li>
+<li><p>Is the metric above the low threshold?</p></li>
+<li><p>Is the metric within a defined threshold around the medium threshold?</p></li>
+<li><p>Is the metric below the high threshold?</p></li>
 </ul>
 <p>System Administrators sometimes define events for these types of
 threshold intervals:</p>
 <ul class="simple">
-<li>If utilization is below L, reduce the number of allocated servers.</li>
-<li>If utilization is above H, increase the number of allocated servers.</li>
+<li><p>If utilization is below L, reduce the number of allocated servers.</p></li>
+<li><p>If utilization is above H, increase the number of allocated servers.</p></li>
 </ul>
 <p>Organizations sometimes define events for these types of threshold
 intervals:</p>
 <ul class="simple">
-<li>If we reach our sales target by date/time, everyone gets a raise. (See
-also: profit sharing).</li>
-<li>If the planetary temperature increases by n degrees,
+<li><p>If we reach our sales target by date/time, everyone gets a raise. (See
+also: profit sharing).</p></li>
+<li><p>If the planetary temperature increases by n degrees,
 we’ll suddenly realize we need to minimize the effects of climate
-change. (And, by then, it’ll be too late)</li>
+change. (And, by then, it’ll be too late)</p></li>
 </ul>
 <p>These are <em>reactive</em> approaches.</p>
 <p>TDD is proactive, in that we test first, early, and often.</p>
@@ -196,29 +198,34 @@ success in software development and in adaptive, proactive,
 organizations.</p>
 <p>A bit about the Global Goals:</p>
 <ul class="simple">
-<li>The Global Goals for Sustainable Development are also known as
-the United Nations Sustainable Development Goals (SDGs).</li>
-<li>There are 17 Global Goals (<strong>#Goal1</strong> – <strong>#Goal17</strong>).</li>
-<li>There are Targets for each Goal, and there are Indicators for Targets:<ul>
-<li>Goal<ul>
-<li>Target<ul>
-<li>Indicator(s)</li>
+<li><p>The Global Goals for Sustainable Development are also known as
+the United Nations Sustainable Development Goals (SDGs).</p></li>
+<li><p>There are 17 Global Goals (<strong>#Goal1</strong> – <strong>#Goal17</strong>).</p></li>
+<li><p>There are Targets for each Goal, and there are Indicators for Targets:</p>
+<ul>
+<li><p>Goal</p>
+<ul>
+<li><p>Target</p>
+<ul>
+<li><p>Indicator(s)</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Some Indicators are relevant to multiple Targets.</li>
-<li>All Indicators should be relevant to all of us (“you people”).</li>
-<li>The UN Millennium Development Goals were through 2015.</li>
-<li>The UN Sustainable Development Goals are through 2030.<ul>
-<li>By 2030, we intend to be able to say that we’ve achieved ( or
+<li><p>Some Indicators are relevant to multiple Targets.</p></li>
+<li><p>All Indicators should be relevant to all of us (“you people”).</p></li>
+<li><p>The UN Millennium Development Goals were through 2015.</p></li>
+<li><p>The UN Sustainable Development Goals are through 2030.</p>
+<ul>
+<li><p>By 2030, we intend to be able to say that we’ve achieved ( or
 exceeded) each Target, given an evaluation of the Indicators. This
-is our <strong>criteria for success</strong>.<ul>
-<li>We aren’t yet passing the tests we’ve set for ourselves.</li>
-<li>We’re all working to find and implement solutions for achieving
-these Targets in our own states and worldwide.</li>
+is our <strong>criteria for success</strong>.</p>
+<ul>
+<li><p>We aren’t yet passing the tests we’ve set for ourselves.</p></li>
+<li><p>We’re all working to find and implement solutions for achieving
+these Targets in our own states and worldwide.</p></li>
 </ul>
 </li>
 </ul>
@@ -226,26 +233,26 @@ these Targets in our own states and worldwide.</li>
 </ul>
 <p>Concepts / References</p>
 <ul class="simple">
-<li><a class="reference external" href="https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html">https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Hypothesis">https://en.wikipedia.org/wiki/Hypothesis</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Design_of_experiments">https://en.wikipedia.org/wiki/Design_of_experiments</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Six_Sigma#DMAIC">https://en.wikipedia.org/wiki/Six_Sigma#DMAIC</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Validated_learning">https://en.wikipedia.org/wiki/Validated_learning</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Unintended_consequences">https://en.wikipedia.org/wiki/Unintended_consequences</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Confounding">https://en.wikipedia.org/wiki/Confounding</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/User_story">https://en.wikipedia.org/wiki/User_story</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_coverage">https://en.wikipedia.org/wiki/Code_coverage</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_independence">https://en.wikipedia.org/wiki/Conditional_independence</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/SMART_criteria">https://en.wikipedia.org/wiki/SMART_criteria</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">https://en.wikipedia.org/wiki/Sustainable_Development_Goals</a></li>
-<li><a class="reference external" href="https://westurner.github.io/opengov/un/#un-sustainable-development-goals">https://westurner.github.io/opengov/un/#un-sustainable-development-goals</a></li>
-<li><a class="reference external" href="http://www.globalgoals.org/">http://www.globalgoals.org/</a></li>
+<li><p><a class="reference external" href="https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html">https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hypothesis">https://en.wikipedia.org/wiki/Hypothesis</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Design_of_experiments">https://en.wikipedia.org/wiki/Design_of_experiments</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Six_Sigma#DMAIC">https://en.wikipedia.org/wiki/Six_Sigma#DMAIC</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Validated_learning">https://en.wikipedia.org/wiki/Validated_learning</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unintended_consequences">https://en.wikipedia.org/wiki/Unintended_consequences</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Confounding">https://en.wikipedia.org/wiki/Confounding</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/User_story">https://en.wikipedia.org/wiki/User_story</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Code_coverage">https://en.wikipedia.org/wiki/Code_coverage</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_independence">https://en.wikipedia.org/wiki/Conditional_independence</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SMART_criteria">https://en.wikipedia.org/wiki/SMART_criteria</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">https://en.wikipedia.org/wiki/Sustainable_Development_Goals</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/opengov/un/#un-sustainable-development-goals">https://westurner.github.io/opengov/un/#un-sustainable-development-goals</a></p></li>
+<li><p><a class="reference external" href="http://www.globalgoals.org/">http://www.globalgoals.org/</a></p></li>
 </ul>
 ]]></description>
              <pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
@@ -258,7 +265,7 @@ these Targets in our own states and worldwide.</li>
             <description><![CDATA[<h1>Teaching Test-Driven-Development First</h1>
 <p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
 <p>A traditional first hello world program:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -268,12 +275,12 @@ these Targets in our own states and worldwide.</li>
 </pre></div>
 </div>
 <p>And then run the program:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/><span class="n">python</span> <span class="o">./</span><span class="n">helloworld</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python ./helloworld.py
 <span class="c1"># "It should say 'Hello, @westurner!'"  # (check this manually every time)</span>
 </pre></div>
 </div>
 <p>Hello world with tests (Test-Driven-Development (TDD)):</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
 
 <span class="kn">import</span> <span class="nn">unittest</span>
 
@@ -297,58 +304,62 @@ these Targets in our own states and worldwide.</li>
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/>python -m site                         # sys.path and $PWD (`pwd`)
-python -m unittest test_helloworld     # ./test_helloworld.py
-python -m unittest -v test_helloworld  # ./test_helloworld.py
-test $? -eq 0 || echo "Tests failed! (nonzero returncode)"
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python -m site                         <span class="c1"># sys.path and $PWD (`pwd`)</span>
+python -m unittest test_helloworld     <span class="c1"># ./test_helloworld.py</span>
+python -m unittest -v test_helloworld  <span class="c1"># ./test_helloworld.py</span>
+<span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"Tests failed! (nonzero returncode)"</span>
 </pre></div>
 </div>
 <p>Why should this first run of the tests fail?</p>
 <ul class="simple">
-<li>Because we didn’t remember to import <span class="docutils literal"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">test_helloworld.py</span></span>.</li>
-<li>Because, in keeping with TDD, we run the test first to make sure it
-actually fails without our changes.</li>
+<li><p>Because we didn’t remember to import <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></code> in <code class="docutils literal notranslate"><span class="pre">test_helloworld.py</span></code>.</p></li>
+<li><p>Because, in keeping with TDD, we run the test first to make sure it
+actually fails without our changes.</p></li>
 </ul>
 <p>Advantages of this Test-Driven-Development (TDD) first approach:</p>
 <ul class="simple">
-<li>TDD from the start: any future breaking changes will be detected
-(given the completeness of the functional test specification)</li>
-<li>This teaches Object-Orientation (OO) (Encapsulation, Separation of
-Concerns)</li>
-<li>This teaches separation of data and code.</li>
-<li>This teaches Given-When-Then.</li>
+<li><p>TDD from the start: any future breaking changes will be detected
+(given the completeness of the functional test specification)</p></li>
+<li><p>This teaches Object-Orientation (OO) (Encapsulation, Separation of
+Concerns)</p></li>
+<li><p>This teaches separation of data and code.</p></li>
+<li><p>This teaches Given-When-Then.</p></li>
 </ul>
 <p>And then what? (Teach what next?):</p>
 <ul class="simple">
-<li>Testable software design patterns<ul>
-<li>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></li>
-<li>Test factories / test fixtures</li>
+<li><p>Testable software design patterns</p>
+<ul>
+<li><p>Refactoring: Square, Rectangle, Triangle <code class="docutils literal notranslate"><span class="pre">obj.area()</span></code></p></li>
+<li><p>Test factories / test fixtures</p></li>
 </ul>
 </li>
-<li>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):<ul>
-<li>pytest</li>
-<li>Nose</li>
-<li>WebTest, Selenium, HTML/JSON Parsing</li>
-<li><a class="reference external" href="https://westurner.github.io/wiki/awesome-python-testing">https://westurner.github.io/wiki/awesome-python-testing</a></li>
+<li><p>Additional testing tools (beyond <code class="docutils literal notranslate"><span class="pre">unittest</span></code>):</p>
+<ul>
+<li><p>pytest</p></li>
+<li><p>Nose</p></li>
+<li><p>WebTest, Selenium, HTML/JSON Parsing</p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/wiki/awesome-python-testing">https://westurner.github.io/wiki/awesome-python-testing</a></p></li>
 </ul>
 </li>
 </ul>
 <p>Concepts and References:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></li>
-<li><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">https://en.wikipedia.org/wiki/%22Hello,_World!%22_program</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Given-When-Then">https://en.wikipedia.org/wiki/Given-When-Then</a><ul>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#given-when-then">https://wrdrd.github.io/docs/consulting/software-development#given-when-then</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">https://en.wikipedia.org/wiki/Separation_of_concerns</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_design_pattern">https://en.wikipedia.org/wiki/Software_design_pattern</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Given-When-Then">https://en.wikipedia.org/wiki/Given-When-Then</a></p>
+<ul>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#given-when-then">https://wrdrd.github.io/docs/consulting/software-development#given-when-then</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#test-driven-development">https://wrdrd.github.io/docs/consulting/software-development#test-driven-development</a></li>
-<li><a class="reference external" href="https://westurner.github.io/2013/11/25/hello-world.html">https://westurner.github.io/2013/11/25/hello-world.html</a></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#test-driven-development">https://wrdrd.github.io/docs/consulting/software-development#test-driven-development</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/2013/11/25/hello-world.html">https://westurner.github.io/2013/11/25/hello-world.html</a></p></li>
 </ul>
 ]]></description>
              <pubDate>Mon, 17 Oct 2016 00:00:00 -0400</pubDate>
@@ -366,124 +377,127 @@ for Sphinx (with the excellent <a class="reference external" href="https://githu
 and have been merging the new styles into various
 sets of docs that I’ve been working on:</p>
 <ul class="simple">
-<li>Concepts: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a><ul>
-<li>Open Source:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/open-source">https://wrdrd.github.io/docs/consulting/open-source</a></li>
-<li>Small Business Consulting:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/small-business">https://wrdrd.github.io/docs/consulting/small-business</a></li>
-<li>Web Development:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development">https://wrdrd.github.io/docs/consulting/web-development</a></li>
-<li>Software Development:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development">https://wrdrd.github.io/docs/consulting/software-development</a></li>
-<li>Computer Engineering:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/computer-engineering">https://wrdrd.github.io/docs/consulting/computer-engineering</a></li>
-<li>Information Systems:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems">https://wrdrd.github.io/docs/consulting/information-systems</a></li>
-<li>Data Science:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/data-science">https://wrdrd.github.io/docs/consulting/data-science</a></li>
-<li>Knowledge Engineering:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/knowledge-engineering">https://wrdrd.github.io/docs/consulting/knowledge-engineering</a></li>
-<li>Entrepreneurship:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/entrepreneurship">https://wrdrd.github.io/docs/consulting/entrepreneurship</a></li>
-<li>Education Technology:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/education-technology">https://wrdrd.github.io/docs/consulting/education-technology</a></li>
-<li>Art &amp; Design:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/art-design">https://wrdrd.github.io/docs/consulting/art-design</a></li>
-<li>Team Building:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/team-building">https://wrdrd.github.io/docs/consulting/team-building</a></li>
-<li>Collaboration Plan:
-<a class="reference external" href="https://wrdrd.github.io/docs/consulting/collaboration-plan">https://wrdrd.github.io/docs/consulting/collaboration-plan</a></li>
-<li><cite>Tools</cite>:
-<a class="reference external" href="https://wrdrd.github.io/docs/tools/">https://wrdrd.github.io/docs/tools/</a></li>
+<li><p>Concepts: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a></p>
+<ul>
+<li><p>Open Source:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/open-source">https://wrdrd.github.io/docs/consulting/open-source</a></p></li>
+<li><p>Small Business Consulting:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/small-business">https://wrdrd.github.io/docs/consulting/small-business</a></p></li>
+<li><p>Web Development:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development">https://wrdrd.github.io/docs/consulting/web-development</a></p></li>
+<li><p>Software Development:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development">https://wrdrd.github.io/docs/consulting/software-development</a></p></li>
+<li><p>Computer Engineering:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/computer-engineering">https://wrdrd.github.io/docs/consulting/computer-engineering</a></p></li>
+<li><p>Information Systems:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems">https://wrdrd.github.io/docs/consulting/information-systems</a></p></li>
+<li><p>Data Science:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/data-science">https://wrdrd.github.io/docs/consulting/data-science</a></p></li>
+<li><p>Knowledge Engineering:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/knowledge-engineering">https://wrdrd.github.io/docs/consulting/knowledge-engineering</a></p></li>
+<li><p>Entrepreneurship:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/entrepreneurship">https://wrdrd.github.io/docs/consulting/entrepreneurship</a></p></li>
+<li><p>Education Technology:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/education-technology">https://wrdrd.github.io/docs/consulting/education-technology</a></p></li>
+<li><p>Art &amp; Design:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/art-design">https://wrdrd.github.io/docs/consulting/art-design</a></p></li>
+<li><p>Team Building:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/team-building">https://wrdrd.github.io/docs/consulting/team-building</a></p></li>
+<li><p>Collaboration Plan:
+<a class="reference external" href="https://wrdrd.github.io/docs/consulting/collaboration-plan">https://wrdrd.github.io/docs/consulting/collaboration-plan</a></p></li>
+<li><p><cite>Tools</cite>:
+<a class="reference external" href="https://wrdrd.github.io/docs/tools/">https://wrdrd.github.io/docs/tools/</a></p></li>
 </ul>
 </li>
-<li><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/tools/">https://westurner.github.io/tools/</a></li>
-<li>Dotfiles: <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a><ul>
-<li>Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage">https://westurner.github.io/dotfiles/usage</a> (
-<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a><ul>
-<li><span class="docutils literal"><span class="pre">bootstrap_dotfiles.sh</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></li>
-<li><span class="docutils literal"><span class="pre">Makefile</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#make">tools/#make</a>]</li>
-<li>Bash Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bash">https://westurner.github.io/dotfiles/usage#bash</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a>]</li>
-<li>Vim Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#vim">https://westurner.github.io/dotfiles/usage#vim</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#vim">tools/#vim</a>]</li>
-<li>i3wm Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#i3wm">https://westurner.github.io/dotfiles/usage#i3wm</a>
-[<a class="reference external" href="https://westurner.github.io/tools/#i3wm">tools/#i3wm</a>]</li>
-<li><span class="docutils literal"><span class="pre">./scripts</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a><ul>
-<li><span class="docutils literal"><span class="pre">PATH_prepend</span> <span class="pre">"${__DOTFILES}/scripts"</span></span>
-(e.g. <span class="docutils literal"><span class="pre">dotfiles_add_path()</span></span> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</li>
+<li><p><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/tools/">https://westurner.github.io/tools/</a></p></li>
+<li><p>Dotfiles: <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></p>
+<ul>
+<li><p>Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage">https://westurner.github.io/dotfiles/usage</a> (
+<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootstrap_dotfiles.sh</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#make">tools/#make</a>]</p></li>
+<li><p>Bash Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bash">https://westurner.github.io/dotfiles/usage#bash</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a>]</p></li>
+<li><p>Vim Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#vim">https://westurner.github.io/dotfiles/usage#vim</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#vim">tools/#vim</a>]</p></li>
+<li><p>i3wm Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#i3wm">https://westurner.github.io/dotfiles/usage#i3wm</a>
+[<a class="reference external" href="https://westurner.github.io/tools/#i3wm">tools/#i3wm</a>]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./scripts</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">PATH_prepend</span> <span class="pre">"${__DOTFILES}/scripts"</span></code>
+(e.g. <code class="docutils literal notranslate"><span class="pre">dotfiles_add_path()</span></code> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Venv: <a class="reference external" href="https://westurner.github.io/dotfiles/venv">https://westurner.github.io/dotfiles/venv</a>
+<li><p>Venv: <a class="reference external" href="https://westurner.github.io/dotfiles/venv">https://westurner.github.io/dotfiles/venv</a>
 [<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#venv">tools/#venv</a>,
 <a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenv">tools/#virtualenv</a>,
-<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenvwrapper">tools/#virtualenvwrapper</a>]</li>
-<li>Usrlog: <a class="reference external" href="https://westurner.github.io/dotfiles/usrlog">https://westurner.github.io/dotfiles/usrlog</a></li>
-<li><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/dotfiles/tools/">https://westurner.github.io/dotfiles/tools/</a></li>
+<a class="reference external" href="https://westurner.github.io/dotfiles/tools/#virtualenvwrapper">tools/#virtualenvwrapper</a>]</p></li>
+<li><p>Usrlog: <a class="reference external" href="https://westurner.github.io/dotfiles/usrlog">https://westurner.github.io/dotfiles/usrlog</a></p></li>
+<li><p><cite>Tools</cite>: <a class="reference external" href="https://westurner.github.io/dotfiles/tools/">https://westurner.github.io/dotfiles/tools/</a></p></li>
 </ul>
 </li>
-<li>Infrastructure: <a class="reference external" href="https://westurner.github.io/provis/">https://westurner.github.io/provis/</a><ul>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#clouds">WRD R&amp;D Documentation &gt; Information Systems &gt; Clouds</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#cloud-application-layers">WRD R&amp;D Documentation &gt; Information Systems &gt; Cloud Application Layers</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#operating-systems">tools/#operating-systems</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#virtualization">tools/#virtualization</a></li>
-<li><a class="reference external" href="https://wrdrd.github.io/docs/tools/#configuration-management">tools/#configuration-management</a></li>
+<li><p>Infrastructure: <a class="reference external" href="https://westurner.github.io/provis/">https://westurner.github.io/provis/</a></p>
+<ul>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#clouds">WRD R&amp;D Documentation &gt; Information Systems &gt; Clouds</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/information-systems#cloud-application-layers">WRD R&amp;D Documentation &gt; Information Systems &gt; Cloud Application Layers</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#operating-systems">tools/#operating-systems</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#virtualization">tools/#virtualization</a></p></li>
+<li><p><a class="reference external" href="https://wrdrd.github.io/docs/tools/#configuration-management">tools/#configuration-management</a></p></li>
 </ul>
 </li>
-<li>Open Government: <a class="reference external" href="https://westurner.github.io/opengov/">https://westurner.github.io/opengov/</a></li>
-<li>Learning: <a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></li>
-<li>Resume: <a class="reference external" href="https://westurner.github.io/resume/html/resume">https://westurner.github.io/resume/html/resume</a></li>
-<li>Wiki: <a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a><ul>
-<li>Workflow: <a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></li>
-<li>Projects: <a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></li>
-<li>Contributions: <a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></li>
+<li><p>Open Government: <a class="reference external" href="https://westurner.github.io/opengov/">https://westurner.github.io/opengov/</a></p></li>
+<li><p>Learning: <a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></p></li>
+<li><p>Resume: <a class="reference external" href="https://westurner.github.io/resume/html/resume">https://westurner.github.io/resume/html/resume</a></p></li>
+<li><p>Wiki: <a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a></p>
+<ul>
+<li><p>Workflow: <a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></p></li>
+<li><p>Projects: <a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></p></li>
+<li><p>Contributions: <a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></p></li>
 </ul>
 </li>
 </ul>
 <div class="section" id="update-2015-07-04">
 <h2>Update: 2015-07-04</h2>
 <ul>
-<li><p class="first">[X] DOC: 2015/03/02/documentation.rst: Update inlined
-<a class="reference external" href="https://wrdrd.github.io/docs/">WRD R&amp;D Documentation</a> Table of Contents</p>
-</li>
-<li><p class="first">[x] UBY: show current location in navbar toctree (#6)</p>
+<li><p>[X] DOC: 2015/03/02/documentation.rst: Update inlined
+<a class="reference external" href="https://wrdrd.github.io/docs/">WRD R&amp;D Documentation</a> Table of Contents</p></li>
+<li><p>[x] UBY: show current location in navbar toctree (#6)</p>
 <p><cite>gh:westurner/wiki#6</cite></p>
 <p><a class="reference external" href="https://github.com/westurner/wiki/issues/6">https://github.com/westurner/wiki/issues/6</a></p>
 <ul>
-<li><p class="first">[o] [UBY] show the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link in the navbar
+<li><p>[o] [UBY] show the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link in the navbar
 when the fixed navbar is scrolled beyond the viewport
 (i.e. when showing the complete table of contents in the
 <em>full width sidebar navbar</em>).</p>
 <ul>
-<li><p class="first">[x] Assert <span class="docutils literal"><span class="pre">#anchor</span></span> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
-with an <span class="docutils literal"><span class="pre">id="anchor"</span></span> property.</p>
-</li>
-<li><p class="first">[o] Find and style each link to <span class="docutils literal"><span class="pre">#anchor</span></span> (<span class="docutils literal"><span class="pre">href="#anchor"</span></span>):</p>
+<li><p>[x] Assert <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
+with an <code class="docutils literal notranslate"><span class="pre">id="anchor"</span></code> property.</p></li>
+<li><p>[o] Find and style each link to <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> (<code class="docutils literal notranslate"><span class="pre">href="#anchor"</span></code>):</p>
 <ul>
-<li><p class="first">[X] <em>mobile header navbar</em>:</p>
+<li><p>[X] <em>mobile header navbar</em>:</p>
 <ul class="simple">
-<li>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
+<li><p>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
 next to the heading,
-in place of the ¶ sphinx heading selector link.</li>
+in place of the ¶ sphinx heading selector link.</p></li>
 </ul>
 </li>
-<li><p class="first">[X] <em>full width sidebar navbar</em>:</p>
+<li><p>[X] <em>full width sidebar navbar</em>:</p>
 <ul>
-<li><p class="first">[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
+<li><p>[X] UBY: <strong>Bold</strong> and add an <strong>arrow</strong> ⬅
 next to the heading,
-in place of the ¶ sphinx heading selector link.</p>
-</li>
-<li><p class="first">[X] UBY: If the <em>full width sidebar navbar</em> is on the screen;
+in place of the ¶ sphinx heading selector link.</p></li>
+<li><p>[X] UBY: If the <em>full width sidebar navbar</em> is on the screen;
 and there’s a link in the table of contents
-to the given <span class="docutils literal"><span class="pre">#anchor</span></span>;
+to the given <code class="docutils literal notranslate"><span class="pre">#anchor</span></code>;
 and that link is not displayed,
 <strong>scroll</strong> the sidebar navbar
 so that the given navbar link is displayed
 (with a few at the top, for context).</p>
-<div class="code javascript highlight-default notranslate"><div class="highlight"><pre><span/>## pseudo-JS
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span/>## pseudo-JS
 sidebar = $('#sidebar');
 link =  $(sidebar).find('a[href=&lt;#anchor&gt;]');
 if !(jquery.isonscreen.js(sidebar, link)) {
@@ -502,7 +516,7 @@ if !(jquery.isonscreen.js(sidebar, link)) {
 </li>
 </ul>
 <ul>
-<li><p class="first">[ ] Learn <a class="reference external" href="https://github.com/twbs/bootstrap">Bootstrap</a> <a class="reference external" href="http://getbootstrap.com/javascript/#scrollspy">ScrollSpy</a>
+<li><p>[ ] Learn <a class="reference external" href="https://github.com/twbs/bootstrap">Bootstrap</a> <a class="reference external" href="http://getbootstrap.com/javascript/#scrollspy">ScrollSpy</a>
 because it’s already bundled with the bootstrap JS
 in <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes.basicstrap">sphinxjp.themes.basicstrap</a>.</p>
 <div class="line-block">
@@ -513,29 +527,29 @@ in <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes
 <div class="line">CDNJS: <a class="reference external" href="https://cdnjs.com/libraries/twitter-bootstrap">https://cdnjs.com/libraries/twitter-bootstrap</a></div>
 </div>
 <ul class="simple">
-<li>ScrollSpy overwrites the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link on scroll.</li>
-<li>ScrollSpy synchronizes all page scroll action with navbar current link
-indication.</li>
-<li>[ ] ScrollSpy does not work w/ a fixed navbar
-because <span class="docutils literal"><span class="pre">#anchors</span></span> are hidden
+<li><p>ScrollSpy overwrites the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link on scroll.</p></li>
+<li><p>ScrollSpy synchronizes all page scroll action with navbar current link
+indication.</p></li>
+<li><p>[ ] ScrollSpy does not work w/ a fixed navbar
+because <code class="docutils literal notranslate"><span class="pre">#anchors</span></code> are hidden
 (and otherwise remain scrolled out of the vieport
-without something like isonscreen and scrollTo (ENH?,TST)</li>
+without something like isonscreen and scrollTo (ENH?,TST)</p></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p class="first">[ ] Learn <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/">ReadTheDocs</a> in order to <a class="reference external" href="http://www.writethedocs.org/">WriteTheDocs</a>:</p>
+<li><p>[ ] Learn <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/">ReadTheDocs</a> in order to <a class="reference external" href="http://www.writethedocs.org/">WriteTheDocs</a>:</p>
 <ul>
-<li><p class="first">The default ReadTheDocs theme is sphinx_rtd_theme.</p>
+<li><p>The default ReadTheDocs theme is sphinx_rtd_theme.</p>
 <div class="line-block">
 <div class="line">Source: git <a class="reference external" href="https://github.com/snide/sphinx_rtd_theme">https://github.com/snide/sphinx_rtd_theme</a></div>
 <div class="line">PyPI: <a class="reference external" href="https://pypi.python.org/pypi/sphinx_rtd_theme">https://pypi.python.org/pypi/sphinx_rtd_theme</a></div>
 <div class="line">Docs: <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/theme.html">https://read-the-docs.readthedocs.org/en/latest/theme.html</a></div>
 </div>
 </li>
-<li><p class="first">Sphinx themes are configured in a <span class="docutils literal"><span class="pre">conf.py</span></span> file.
+<li><p>Sphinx themes are configured in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.
 From <a class="reference external" href="http://stackoverflow.com/a/25007833">http://stackoverflow.com/a/25007833</a> (CC-BY-SA 3.0):</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">on_rtd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'READTHEDOCS'</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'True'</span>
 
@@ -548,16 +562,16 @@ From <a class="reference external" href="http://stackoverflow.com/a/25007833">ht
 </pre></div>
 </div>
 </li>
-<li><p class="first">From casual inspection,
+<li><p>From casual inspection,
 ReadTheDocs rtd_theme takes a different approach:</p>
 <ul class="simple">
-<li>ReadTheDocs rtd_theme does support scrolling the left navbar
-independently from the document;</li>
-<li>ReadTheDocs rtd_theme scrolls the navbar and the document;</li>
-<li>The ReadTheDocs rtd_theme navbar displays
+<li><p>ReadTheDocs rtd_theme does support scrolling the left navbar
+independently from the document;</p></li>
+<li><p>ReadTheDocs rtd_theme scrolls the navbar and the document;</p></li>
+<li><p>The ReadTheDocs rtd_theme navbar displays
 a document-expanded
 but otherwise collapsed
-table of contents.</li>
+table of contents.</p></li>
 </ul>
 </li>
 </ul>
@@ -594,10 +608,10 @@ table of contents.</li>
 <h2>Wiki</h2>
 <p><a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></li>
-<li><a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></li>
-<li><a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></li>
-<li><a class="reference external" href="https://github.com/westurner/wiki/blob/master/Makefile">https://github.com/westurner/wiki/blob/master/Makefile</a></li>
+<li><p><a class="reference external" href="https://westurner.github.io/wiki/projects">https://westurner.github.io/wiki/projects</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/wiki/contributions">https://westurner.github.io/wiki/contributions</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></p></li>
+<li><p><a class="reference external" href="https://github.com/westurner/wiki/blob/master/Makefile">https://github.com/westurner/wiki/blob/master/Makefile</a></p></li>
 </ul>
 </div>
 <div class="section" id="resume">
@@ -625,13 +639,13 @@ can be difficult to grep through. It’s not always easy
 like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
 “literate configuration”.</p>
 <ol class="arabic simple">
-<li>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</li>
-<li>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</li>
+<li><p>Markup headings with two or more <code class="docutils literal notranslate"><span class="pre">#</span></code> signs.</p></li>
+<li><p>Markup comment lines with a <code class="docutils literal notranslate"><span class="pre">#</span></code> prefix and at least two spaces.</p></li>
 </ol>
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
 <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a> that I cleaned up this morning.</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span/>#### i3 config file (v4)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span/>#### i3 config file (v4)
 ### Notes
 #  #  Default location: ~/.i3/config
 #  #  List the commented command shortcuts with::
@@ -669,11 +683,11 @@ mode "resize" {
 </div>
 <p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
 with a simple conditional regular expression:</p>
-<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span/><span class="n">cat</span> <span class="o">~/.</span><span class="n">i3</span><span class="o">/</span><span class="n">config</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>cat ~/.i3/config <span class="p">|</span> egrep <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
 </pre></div>
 </div>
 <p>Peruse the output for that one excellent keyboard shortcut</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1">#### i3 config file (v4)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span/><span class="c1">#### i3 config file (v4)</span>
 <span class="c1">### Notes</span>
 <span class="c1">#  #  Default location: ~/.i3/config</span>
 <span class="c1">#  #  List the commented command shortcuts with::</span>
@@ -692,20 +706,20 @@ with a simple conditional regular expression:</p>
     <span class="c1">#  &lt;esc&gt;    -- exit resize mode</span>
 </pre></div>
 </div>
-<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
+<p>Add the <code class="docutils literal notranslate"><span class="pre">-n</span></code> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
 of the relevant configuration file documentation.</p>
 <p>The <a class="reference external" href="https://jashkenas.github.io/docco">docco</a> homepage lists quite a few more heavyweight approaches to
 generating documentation from comment strings embedded in various languages
 (such as Markdown in a shell script).</p>
 <p>I’ve added documentation with this pattern to my <a class="reference external" href="https://github.com/westurner/dotfiles">dotfiles</a>:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/tree/master/etc/bash">bashrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#bash">bashrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotvim/blob/master/vimrc">vimrc</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#vim">vimrc docs</a>)</li>
-<li><a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a>
-(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#i3wm">.i3/config docs</a>)</li>
-<li>and the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83">provis Makefile</a> (<a class="reference external" href="https://provis.readthedocs.org/en/latest/usage#Makefile">provis Makefile docs</a>)</li>
+<li><p><a class="reference external" href="https://github.com/westurner/dotfiles/tree/master/etc/bash">bashrc</a>
+(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#bash">bashrc docs</a>)</p></li>
+<li><p><a class="reference external" href="https://github.com/westurner/dotvim/blob/master/vimrc">vimrc</a>
+(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#vim">vimrc docs</a>)</p></li>
+<li><p><a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/.i3/config">.i3/config</a>
+(<a class="reference external" href="http://westurner.github.io/dotfiles/usage#i3wm">.i3/config docs</a>)</p></li>
+<li><p>and the <a class="reference external" href="https://github.com/westurner/provis/blob/8ee46bed/Makefile#L83">provis Makefile</a> (<a class="reference external" href="https://provis.readthedocs.org/en/latest/usage#Makefile">provis Makefile docs</a>)</p></li>
 </ul>
 <p>This simple pattern saves time when looking up <a class="reference external" href="http://westurner.github.io/dotfiles/usage#dotfiles-makefile">my keyboard shortcuts</a>.</p>
 <p>EDIT: 2014-12-16: Updated links to <a class="reference external" href="https://westurner.github.io/dotfiles/">https://westurner.github.io/dotfiles/</a></p>
@@ -723,20 +737,23 @@ generating documentation from comment strings embedded in various languages
 <h2>Lean Publishing</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Lean">https://en.wikipedia.org/wiki/Lean</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Lightweight_markup_language">https://en.wikipedia.org/wiki/Lightweight_markup_language</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/ReStructuredText">https://en.wikipedia.org/wiki/ReStructuredText</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Lightweight_markup_language">https://en.wikipedia.org/wiki/Lightweight_markup_language</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ReStructuredText">https://en.wikipedia.org/wiki/ReStructuredText</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)</a></li>
-<li><a class="reference external" href="https://pages.github.com">https://pages.github.com</a></li>
-<li><a class="reference external" href="http://pages.bitbucket.org">http://pages.bitbucket.org</a></li>
+<li><p><a class="reference external" href="https://westurner.github.io/self-directed-learning/">https://westurner.github.io/self-directed-learning/</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)">https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)</a></p></li>
+<li><p><a class="reference external" href="https://pages.github.com">https://pages.github.com</a></p></li>
+<li><p><a class="reference external" href="http://pages.bitbucket.org">http://pages.bitbucket.org</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://code.google.com/p/helphaitiproject/">https://code.google.com/p/helphaitiproject/</a><ul>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/WordPress">https://en.wikipedia.org/wiki/WordPress</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Agile_software_development">https://en.wikipedia.org/wiki/Category:Agile_software_development</a></li>
+<li><p><a class="reference external" href="https://code.google.com/p/helphaitiproject/">https://code.google.com/p/helphaitiproject/</a></p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/WordPress">https://en.wikipedia.org/wiki/WordPress</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Agile_software_development">https://en.wikipedia.org/wiki/Category:Agile_software_development</a></p></li>
 </ul>
 </li>
 </ul>
@@ -745,9 +762,9 @@ generating documentation from comment strings embedded in various languages
 <h2>Responsive Web Design</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Responsive_web_design">https://en.wikipedia.org/wiki/Category:Responsive_web_design</a></p>
 <ul class="simple">
-<li>Does it work on my device?</li>
-<li>Why am I looking at margins?</li>
-<li>Why should we prefer #anchors over page numbers?</li>
+<li><p>Does it work on my device?</p></li>
+<li><p>Why am I looking at margins?</p></li>
+<li><p>Why should we prefer #anchors over page numbers?</p></li>
 </ul>
 </div>
 <div class="section" id="stem-learning">
@@ -755,47 +772,47 @@ generating documentation from comment strings embedded in various languages
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/STEM_fields">https://en.wikipedia.org/wiki/STEM_fields</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23STEM&amp;src=hash">#STEM</a>)</p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_educational_resources">https://en.wikipedia.org/wiki/Open_educational_resources</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23OER&amp;src=hash">#OER</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/OpenCourseWare">https://en.wikipedia.org/wiki/OpenCourseWare</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23OCW&amp;src=hash">#OCW</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Khan_Academy">https://en.wikipedia.org/wiki/Khan_Academy</a>
-(<a class="reference external" href="https://twitter.com/khanacademy">@khanacademy</a>)</li>
-<li><a class="reference external" href="https://www.class-central.com/">https://www.class-central.com/</a>
-(<a class="reference external" href="https://twitter.com/classcentral">@classcentral</a>)</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open_educational_resources">https://en.wikipedia.org/wiki/Open_educational_resources</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23OER&amp;src=hash">#OER</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/OpenCourseWare">https://en.wikipedia.org/wiki/OpenCourseWare</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23OCW&amp;src=hash">#OCW</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Khan_Academy">https://en.wikipedia.org/wiki/Khan_Academy</a>
+(<a class="reference external" href="https://twitter.com/khanacademy">@khanacademy</a>)</p></li>
+<li><p><a class="reference external" href="https://www.class-central.com/">https://www.class-central.com/</a>
+(<a class="reference external" href="https://twitter.com/classcentral">@classcentral</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="writing-code">
 <h2>Writing Code</h2>
 <ul class="simple">
-<li><a class="reference external" href="http://code.org/">http://code.org/</a>
-(<a class="reference external" href="https://twitter.com/codeorg">@codeorg</a>)</li>
-<li><a class="reference external" href="https://www.khanacademy.org/cs">https://www.khanacademy.org/cs</a></li>
-<li><a class="reference external" href="https://www.class-central.com/subject/cs">https://www.class-central.com/subject/cs</a></li>
-<li><a class="reference external" href="http://www.acm.org/education/curricula/ComputerScience2008.pdf">http://www.acm.org/education/curricula/ComputerScience2008.pdf</a> [PDF]</li>
-<li><a class="reference external" href="http://courses.csail.mit.edu/6.042/spring14/mcs.pdf">http://courses.csail.mit.edu/6.042/spring14/mcs.pdf</a> (#OCW #OER) [PDF]</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Abstraction_(computer_science">https://en.wikipedia.org/wiki/Abstraction_(computer_science</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Algorithms">https://en.wikipedia.org/wiki/Category:Algorithms</a></li>
-<li><a class="reference external" href="http://rosettacode.org/wiki/Category:Programming_Tasks">http://rosettacode.org/wiki/Category:Programming_Tasks</a></li>
-<li><a class="reference external" href="https://projecteuler.net/problems">https://projecteuler.net/problems</a></li>
+<li><p><a class="reference external" href="http://code.org/">http://code.org/</a>
+(<a class="reference external" href="https://twitter.com/codeorg">@codeorg</a>)</p></li>
+<li><p><a class="reference external" href="https://www.khanacademy.org/cs">https://www.khanacademy.org/cs</a></p></li>
+<li><p><a class="reference external" href="https://www.class-central.com/subject/cs">https://www.class-central.com/subject/cs</a></p></li>
+<li><p><a class="reference external" href="http://www.acm.org/education/curricula/ComputerScience2008.pdf">http://www.acm.org/education/curricula/ComputerScience2008.pdf</a> [PDF]</p></li>
+<li><p><a class="reference external" href="http://courses.csail.mit.edu/6.042/spring14/mcs.pdf">http://courses.csail.mit.edu/6.042/spring14/mcs.pdf</a> (#OCW #OER) [PDF]</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Abstraction_(computer_science">https://en.wikipedia.org/wiki/Abstraction_(computer_science</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Algorithms">https://en.wikipedia.org/wiki/Category:Algorithms</a></p></li>
+<li><p><a class="reference external" href="http://rosettacode.org/wiki/Category:Programming_Tasks">http://rosettacode.org/wiki/Category:Programming_Tasks</a></p></li>
+<li><p><a class="reference external" href="https://projecteuler.net/problems">https://projecteuler.net/problems</a></p></li>
 </ul>
 </div>
 <div class="section" id="web-software-development">
 <h2>Web Software Development</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Web_development">https://en.wikipedia.org/wiki/Web_development</a></p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a">http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a</a></li>
-<li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w">http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w</a></li>
+<li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a">http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a</a></p></li>
+<li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w">http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w</a></p></li>
 </ul>
 </div>
 <div class="section" id="software-engineering">
 <h2>Software Engineering</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_engineering">https://en.wikipedia.org/wiki/Software_engineering</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Software_development_process">https://en.wikipedia.org/wiki/Software_development_process</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Software_design_patterns">https://en.wikipedia.org/wiki/Category:Software_design_patterns</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)">https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)</a></li>
-<li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa">http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_development_process">https://en.wikipedia.org/wiki/Software_development_process</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Software_design_patterns">https://en.wikipedia.org/wiki/Category:Software_design_patterns</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)">https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)</a></p></li>
+<li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa">http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa</a></p></li>
 </ul>
 </div>
 <div class="section" id="web-scale">
@@ -807,47 +824,47 @@ cache invalidation and naming things.”</p>
 <p class="attribution">—Phil Karlton</p>
 </div></blockquote>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Static_web_page">https://en.wikipedia.org/wiki/Static_web_page</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Content_delivery_network">https://en.wikipedia.org/wiki/Content_delivery_network</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing">https://en.wikipedia.org/wiki/Cloud_computing</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23cloud&amp;src=hash">#cloud</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/DevOps">https://en.wikipedia.org/wiki/DevOps</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23DevOps&amp;src=hash">#devops</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Systems_engineering">https://en.wikipedia.org/wiki/Systems_engineering</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Performance_engineering">https://en.wikipedia.org/wiki/Performance_engineering</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Social_web">https://en.wikipedia.org/wiki/Social_web</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Static_web_page">https://en.wikipedia.org/wiki/Static_web_page</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Content_delivery_network">https://en.wikipedia.org/wiki/Content_delivery_network</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cloud_computing">https://en.wikipedia.org/wiki/Cloud_computing</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23cloud&amp;src=hash">#cloud</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DevOps">https://en.wikipedia.org/wiki/DevOps</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23DevOps&amp;src=hash">#devops</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Systems_engineering">https://en.wikipedia.org/wiki/Systems_engineering</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Performance_engineering">https://en.wikipedia.org/wiki/Performance_engineering</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Social_web">https://en.wikipedia.org/wiki/Social_web</a></p></li>
 </ul>
 </div>
 <div class="section" id="sentiment">
 <h2>Sentiment</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Sentiment_analysis">https://en.wikipedia.org/wiki/Sentiment_analysis</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics">https://en.wikipedia.org/wiki/Computational_linguistics</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Semantic_analysis">https://en.wikipedia.org/wiki/Semantic_analysis</a></li>
-<li><a class="reference external" href="http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro">http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro</a></li>
-<li><a class="reference external" href="http://textblob.readthedocs.org/en/latest/">http://textblob.readthedocs.org/en/latest/</a></li>
-<li><a class="reference external" href="https://docs.continuum.io/anaconda/pkg-docs">https://docs.continuum.io/anaconda/pkg-docs</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Computational_linguistics">https://en.wikipedia.org/wiki/Computational_linguistics</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Semantic_analysis">https://en.wikipedia.org/wiki/Semantic_analysis</a></p></li>
+<li><p><a class="reference external" href="http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro">http://www.reddit.com/r/compsci/comments/1gpdb9/nlp_how_can_i_get_the_computer_to_understand_the/#camicro</a></p></li>
+<li><p><a class="reference external" href="http://textblob.readthedocs.org/en/latest/">http://textblob.readthedocs.org/en/latest/</a></p></li>
+<li><p><a class="reference external" href="https://docs.continuum.io/anaconda/pkg-docs">https://docs.continuum.io/anaconda/pkg-docs</a></p></li>
 </ul>
 </div>
 <div class="section" id="science">
 <h2>Science</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Science">https://en.wikipedia.org/wiki/Science</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Reproducibility">https://en.wikipedia.org/wiki/Reproducibility</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23reproducibility&amp;src=hash">#reproducibility</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Data_science">https://en.wikipedia.org/wiki/Data_science</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23datascience&amp;src=hash">#datascience</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_access">https://en.wikipedia.org/wiki/Open_access</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23openaccess&amp;src=hash">#openaccess</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_science">https://en.wikipedia.org/wiki/Open_science</a>
-(<a class="reference external" href="https://en.wikipedia.org/wiki/OpenScience">#openscience</a>)</li>
-<li><a class="reference external" href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/</a></li>
-<li><a class="reference external" href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285">http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open_data">https://en.wikipedia.org/wiki/Open_data</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23opendata&amp;src=hash">#opendata</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Linked_data">https://en.wikipedia.org/wiki/Linked_data</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23linkeddate&amp;src=hash">#linkeddata</a>)</li>
-<li><a class="reference external" href="http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data">http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Reproducibility">https://en.wikipedia.org/wiki/Reproducibility</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23reproducibility&amp;src=hash">#reproducibility</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Data_science">https://en.wikipedia.org/wiki/Data_science</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23datascience&amp;src=hash">#datascience</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open_access">https://en.wikipedia.org/wiki/Open_access</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23openaccess&amp;src=hash">#openaccess</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open_science">https://en.wikipedia.org/wiki/Open_science</a>
+(<a class="reference external" href="https://en.wikipedia.org/wiki/OpenScience">#openscience</a>)</p></li>
+<li><p><a class="reference external" href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/</a></p></li>
+<li><p><a class="reference external" href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285">http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003285</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open_data">https://en.wikipedia.org/wiki/Open_data</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23opendata&amp;src=hash">#opendata</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Linked_data">https://en.wikipedia.org/wiki/Linked_data</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23linkeddate&amp;src=hash">#linkeddata</a>)</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data">http://www.w3.org/TR/ld-glossary/#x5-star-linked-open-data</a></p></li>
 </ul>
 <blockquote class="epigraph">
 <div><p>☆</p>
@@ -887,68 +904,71 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
 <h2>Entrepreneurship</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Entrepreneurship">https://en.wikipedia.org/wiki/Entrepreneurship</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Microeconomics">https://en.wikipedia.org/wiki/Microeconomics</a><ul>
-<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/microeconomics">https://www.khanacademy.org/economics-finance-domain/microeconomics</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Microeconomics">https://en.wikipedia.org/wiki/Microeconomics</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/microeconomics">https://www.khanacademy.org/economics-finance-domain/microeconomics</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Macroeconomics">https://en.wikipedia.org/wiki/Macroeconomics</a><ul>
-<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/macroeconomics">https://www.khanacademy.org/economics-finance-domain/macroeconomics</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Macroeconomics">https://en.wikipedia.org/wiki/Macroeconomics</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/macroeconomics">https://www.khanacademy.org/economics-finance-domain/macroeconomics</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Venture_capital">https://en.wikipedia.org/wiki/Venture_capital</a><ul>
-<li><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup">https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Venture_capital">https://en.wikipedia.org/wiki/Venture_capital</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup">https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/venture-capital-and-capital-markets/v/raising-money-for-a-startup</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read">https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read</a></li>
-<li><a class="reference external" href="http://personalmba.com/best-business-books/">http://personalmba.com/best-business-books/</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Business_models_for_open-source_software">https://en.wikipedia.org/wiki/Business_models_for_open-source_software</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software_security#The_debate">https://en.wikipedia.org/wiki/Open-source_software_security#The_debate</a></li>
+<li><p><a class="reference external" href="https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read">https://www.quora.com/Book-Recommendations/What-books-should-entrepreneurs-read</a></p></li>
+<li><p><a class="reference external" href="http://personalmba.com/best-business-books/">http://personalmba.com/best-business-books/</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Business_models_for_open-source_software">https://en.wikipedia.org/wiki/Business_models_for_open-source_software</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software_security#The_debate">https://en.wikipedia.org/wiki/Open-source_software_security#The_debate</a></p></li>
 </ul>
 </div>
 <div class="section" id="community-development">
 <h2>Community Development</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Community_development">https://en.wikipedia.org/wiki/Community_development</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_for_America">https://en.wikipedia.org/wiki/Code_for_America</a>
-(<a class="reference external" href="https://twitter.com/codeforamerica">@codeforamerica</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness">https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness</a>
-(<a class="reference external" href="https://twitter.com/randomhacks">@randomhacks</a>)</li>
-<li><a class="reference external" href="http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17">http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Code_for_America">https://en.wikipedia.org/wiki/Code_for_America</a>
+(<a class="reference external" href="https://twitter.com/codeforamerica">@codeforamerica</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness">https://en.wikipedia.org/wiki/Random_Hacks_of_Kindness</a>
+(<a class="reference external" href="https://twitter.com/randomhacks">@randomhacks</a>)</p></li>
+<li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17">http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17</a></p></li>
 </ul>
 </div>
 <div class="section" id="hyperlocal">
 <h2>Hyperlocal</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Hyperlocal">https://en.wikipedia.org/wiki/Hyperlocal</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Multiverse">https://en.wikipedia.org/wiki/Multiverse</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Universe">https://en.wikipedia.org/wiki/Universe</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Laniakea_Supercluster">https://en.wikipedia.org/wiki/Laniakea_Supercluster</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Virgo_Supercluster">https://en.wikipedia.org/wiki/Virgo_Supercluster</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Local_Group">https://en.wikipedia.org/wiki/Local_Group</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Milky_Way">https://en.wikipedia.org/wiki/Milky_Way</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_System">https://en.wikipedia.org/wiki/Solar_System</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Earth">https://en.wikipedia.org/wiki/Earth</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/North_America">https://en.wikipedia.org/wiki/North_America</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/United_States">https://en.wikipedia.org/wiki/United_States</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Midwestern_United_States">https://en.wikipedia.org/wiki/Midwestern_United_States</a></li>
-<li><a class="reference external" href="http://www.siliconprairienews.com/">http://www.siliconprairienews.com/</a>
-(<a class="reference external" href="https://twitter.com/SiliconPrairie">@SiliconPrairie</a>)</li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Nebraska">https://en.wikipedia.org/wiki/Nebraska</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska">https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Newspapers_in_Nebraska">https://en.wikipedia.org/wiki/Newspapers_in_Nebraska</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Omaha">https://en.wikipedia.org/wiki/Omaha</a>
-(<a class="reference external" href="https://twitter.com/search?q=%23omaha&amp;src=hash">#omaha</a>)</li>
-<li><a class="reference external" href="https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&amp;src=typd">twitter: near:”Omaha, Nebraska, USA” within:25mi</a></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Multiverse">https://en.wikipedia.org/wiki/Multiverse</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Universe">https://en.wikipedia.org/wiki/Universe</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Laniakea_Supercluster">https://en.wikipedia.org/wiki/Laniakea_Supercluster</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Virgo_Supercluster">https://en.wikipedia.org/wiki/Virgo_Supercluster</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Local_Group">https://en.wikipedia.org/wiki/Local_Group</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Milky_Way">https://en.wikipedia.org/wiki/Milky_Way</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_System">https://en.wikipedia.org/wiki/Solar_System</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Earth">https://en.wikipedia.org/wiki/Earth</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/North_America">https://en.wikipedia.org/wiki/North_America</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/United_States">https://en.wikipedia.org/wiki/United_States</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Midwestern_United_States">https://en.wikipedia.org/wiki/Midwestern_United_States</a></p></li>
+<li><p><a class="reference external" href="http://www.siliconprairienews.com/">http://www.siliconprairienews.com/</a>
+(<a class="reference external" href="https://twitter.com/SiliconPrairie">@SiliconPrairie</a>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nebraska">https://en.wikipedia.org/wiki/Nebraska</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska">https://en.wikipedia.org/wiki/Template:Colleges_and_universities_in_Nebraska</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Newspapers_in_Nebraska">https://en.wikipedia.org/wiki/Newspapers_in_Nebraska</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Omaha">https://en.wikipedia.org/wiki/Omaha</a>
+(<a class="reference external" href="https://twitter.com/search?q=%23omaha&amp;src=hash">#omaha</a>)</p></li>
+<li><p><a class="reference external" href="https://twitter.com/search?q=near%3A%22Omaha%2C%20Nebraska%2C%20USA%22%20within%3A25mi&amp;src=typd">twitter: near:”Omaha, Nebraska, USA” within:25mi</a></p></li>
 </ul>
 <p>.</p>
 <ul class="simple">
-<li>EDIT: 2014-02-02: Updated link to “Mathematics for Computer Science” PDF</li>
-<li>EDIT: 2014-09-21: Updated link to “Mathematics for Computer Science” PDF</li>
-<li>EDIT: 2014-09-29: Added links to “Multiverse” and “Universe”</li>
-<li>EDIT: 2014-09-29: Added links to “Laniakea Supercluster”, “Virgo
-Supercluster”, and “Local Group”</li>
-<li>EDIT: 2014-12-16: Updated date formats to <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">https://en.wikipedia.org/wiki/ISO_8601</a></li>
-<li>EDIT: 2016-09-04: Updated links</li>
+<li><p>EDIT: 2014-02-02: Updated link to “Mathematics for Computer Science” PDF</p></li>
+<li><p>EDIT: 2014-09-21: Updated link to “Mathematics for Computer Science” PDF</p></li>
+<li><p>EDIT: 2014-09-29: Added links to “Multiverse” and “Universe”</p></li>
+<li><p>EDIT: 2014-09-29: Added links to “Laniakea Supercluster”, “Virgo
+Supercluster”, and “Local Group”</p></li>
+<li><p>EDIT: 2014-12-16: Updated date formats to <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">https://en.wikipedia.org/wiki/ISO_8601</a></p></li>
+<li><p>EDIT: 2016-09-04: Updated links</p></li>
 </ul>
 </div>
 ]]></description>
@@ -971,7 +991,7 @@ Supercluster”, and “Local Group”</li>
 </div>
 <p><strong>Updated: 2013-12-15</strong></p>
 <p>New blog! I thought best to accentuate “Hello World” with an exclamation
-point. <a class="footnote-reference" href="#f1" id="id1">[1]</a></p>
+point. <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
 <div class="section" id="this-blog">
 <h2>This Blog</h2>
 <p>This blog is created from <a class="reference external" href="https://en.wikipedia.org/wiki/reStructuredText">reStructuredText</a>
@@ -1005,20 +1025,16 @@ which generates the requisite
 <a class="reference external" href="http://pygments.org/">Pygments</a>
 (<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main">source</a>)
 style.</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none">
-<colgroup><col class="label"/><col/></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>TIL that “Hello World” originated from
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>TIL that “Hello World” originated from
 <a class="reference external" href="https://en.wikipedia.org/wiki/The_C_Programming_Language_(book)">The C Programming Language</a>
-by Kernighan and Ritchie (1978) <a class="footnote-reference" href="#f2" id="id2">[2]</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="f2" rules="none">
-<colgroup><col class="label"/><col/></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></td></tr>
-</tbody>
-</table>
+by Kernighan and Ritchie (1978) <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></p>
+</dd>
+</dl>
 </div>
 </div>
 ]]></description>

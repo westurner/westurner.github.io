@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
             <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <!-- Load modernizr and JQuery -->
+        <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" /><link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" /><!-- Load modernizr and JQuery -->
         <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
@@ -37,7 +37,7 @@
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script>
+    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script><script type="text/javascript" src="../../../_static/language_data.js"></script><script type="text/javascript" src="../../../_static/togglebutton.js"></script><script type="text/javascript" src="../../../None"></script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
     <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
@@ -328,7 +328,7 @@
             <span>October 18, 2016</span>
         </div>
     <div class="section" id="criteria-for-success-and-test-driven-development">
-<h1>Criteria for Success and Test-Driven-Development</h1>
+<h1>Criteria for Success and Test-Driven-Development<a class="headerlink" href="#criteria-for-success-and-test-driven-development" title="Permalink to this headline">¶</a></h1>
 <p>There are conceptual similarities and differences among
 TDD, the Scientific Method, and Goal-Directed Organizational Planning.</p>
 <p>How does Test-Driven-Development (TDD) relate to experimental
@@ -338,18 +338,19 @@ Experiments), we’re supposed to <strong>start with a hypothesis</strong>,
 experiment, and then <strong>test the hypothesis</strong>
 before drawing a conclusion.</p>
 <ul class="simple">
-<li>If the hypothesis is not met (in terms of statistical constraints,
-boolean test pass/fail), then we reject the conclusion.</li>
-<li>With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control),
+<li><p>If the hypothesis is not met (in terms of statistical constraints,
+boolean test pass/fail), then we reject the conclusion.</p></li>
+<li><p>With Six Sigma DMAIC (Define, Measure, Analyze, Implement, Control),
 in the Control step we re-evaluate whether the implemented approach
-is achieving the intended objectives that we defined ahead-of-time.<ul>
-<li>“Validated Learning” emphasizes the need to control given changes
-in predefined metrics, as well.</li>
+is achieving the intended objectives that we defined ahead-of-time.</p>
+<ul>
+<li><p>“Validated Learning” emphasizes the need to control given changes
+in predefined metrics, as well.</p></li>
 </ul>
 </li>
-<li>Control Theory and Systems Theory are all about how
+<li><p>Control Theory and Systems Theory are all about how
 changes in inputs (and feedback) affect measurable state
-(outputs, systemic outcomes).</li>
+(outputs, systemic outcomes).</p></li>
 </ul>
 <p>History, and various domains of science and policy, is chock-full of
 examples of how attempts to Optimize (Minimize or Maximize) for certain
@@ -360,8 +361,8 @@ think of a few salient examples in your domains of knowledge?</p>
 <p>There is math for solving multi-dimensional (“high-dimensional”)
 optimization problems.</p>
 <ul class="simple">
-<li>MCDA (<em>Multiple-Criteria Decision Analysis</em>) intends to find – often
-multiple – solutions to multi-dimensional optimization problems.</li>
+<li><p>MCDA (<em>Multiple-Criteria Decision Analysis</em>) intends to find – often
+multiple – solutions to multi-dimensional optimization problems.</p></li>
 </ul>
 <p>Most systems are inherently multi-dimensional: there are stocks and
 flows (sort of like nodes with magnitude and uni-/bi-directional edges
@@ -380,51 +381,52 @@ who are seeking continuous success in satisfying changing objectives.</p>
 when attempting to deliver software which successfully achieves customer
 expectations:</p>
 <ul>
-<li><p class="first">Functional Specification Coverage: whether all of the desired
+<li><p>Functional Specification Coverage: whether all of the desired
 behaviors are enumerated in at least one test.</p>
 <ul class="simple">
-<li>Each Use Case and/or User Story should have at least one test.
+<li><p>Each Use Case and/or User Story should have at least one test.
 (Behavior-Driven-Development tools make it easier to write
 these tests with something like natural language;
-so that developers/engineers can do what they do best).</li>
-<li>User Stories can be written and rewritten from
+so that developers/engineers can do what they do best).</p></li>
+<li><p>User Stories can be written and rewritten from
 the 5 W’s (Who, What, When, Where, Why)
-to a Given-When-Then (and Why) pattern:<ul>
-<li>“Users can register for user accounts”</li>
-<li>“As an unregistered user, when I complete the registration form,
+to a Given-When-Then (and Why) pattern:</p>
+<ul>
+<li><p>“Users can register for user accounts”</p></li>
+<li><p>“As an unregistered user, when I complete the registration form,
 and then click on the confirmation link sent to my email,
 then I have a registered user account (obviously: in order to
-onboard new users)”</li>
+onboard new users)”</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p class="first">Code Coverage: whether all of the actual code in the software is
+<li><p>Code Coverage: whether all of the actual code in the software is
 covered by at least one test.</p>
 <ul>
-<li><p class="first">When some of the tests no longer pass, this is called “breaking the
+<li><p>When some of the tests no longer pass, this is called “breaking the
 build”. Teams working with Continuous Integration (<em>CI</em>) are aware
 of this because all of the tests run for every change to the software.</p>
 <ul class="simple">
-<li>When the build breaks, it is the whole team’s (and specifically,
+<li><p>When the build breaks, it is the whole team’s (and specifically,
 the person whose changes broke the build’s) responsibility to
 stop what they are doing and un-break the build (often by just
 “backing out” the new changes (where they can remain in a separate
-feature branch)) so that the whole team is not blocked.</li>
-<li>Teams devise various ways to indicate that the build is broken
-(CI emails, a <em>build lamp</em>, respectful verbal indications).</li>
+feature branch)) so that the whole team is not blocked.</p></li>
+<li><p>Teams devise various ways to indicate that the build is broken
+(CI emails, a <em>build lamp</em>, respectful verbal indications).</p></li>
 </ul>
 </li>
-<li><p class="first">Function Coverage, Statement Coverage, Branch Coverage, Condition
+<li><p>Function Coverage, Statement Coverage, Branch Coverage, Condition
 Coverage:</p>
 <p>Statement Coverage is a Code Coverage metric for
 determining whether each text line of the software is executed by the tests.
 Statement Coverage can be misleading for a number of reasons:</p>
 <ol class="arabic simple">
-<li>There may be multiple branches on the same line.</li>
+<li><p>There may be multiple branches on the same line.</p></li>
 </ol>
 <blockquote>
-<div><div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 
@@ -442,11 +444,11 @@ high Statement Coverage. Stated another way, change in Statement
 Coverage can be predicted given change in Branch Coverage. Is this
 confounding?</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>Because Branch Coverage and Statement Coverage <strong>are not</strong>
 <em>conditionally independent</em>, there are a number of mathematical
 analyses which are not appropriate (e.g. Bayesian inference).</p>
-<p class="last">It can be said, then, that Branch Coverage and Statement Coverage
+<p>It can be said, then, that Branch Coverage and Statement Coverage
 are not <em>independent components</em>.</p>
 </div>
 </li>
@@ -458,10 +460,10 @@ are not <em>independent components</em>.</p>
 where we need to be?</p>
 <p>Organizations define criteria for success:</p>
 <ul class="simple">
-<li>Mission</li>
-<li>Goals</li>
-<li>Objectives / Targets</li>
-<li>Indicators / Metrics / Key Performance Indicators</li>
+<li><p>Mission</p></li>
+<li><p>Goals</p></li>
+<li><p>Objectives / Targets</p></li>
+<li><p>Indicators / Metrics / Key Performance Indicators</p></li>
 </ul>
 <p>In terms of Test-Driven-Development, many organizational “tests”
 are not yet “passing” (“reasonability”, “realism”).</p>
@@ -473,11 +475,11 @@ grouping for one or more objectives (though it could be argued that
 really all we have are nested sets of Goals or nested sets of
 Objectives):</p>
 <ul class="simple">
-<li>Are we upholding the Organizational Mission?</li>
-<li>Is this objective {S, M, A, R, and T}?</li>
-<li>Is this objective Measurable?</li>
-<li>Is this objective Achievable (Assignable)?</li>
-<li>[…]</li>
+<li><p>Are we upholding the Organizational Mission?</p></li>
+<li><p>Is this objective {S, M, A, R, and T}?</p></li>
+<li><p>Is this objective Measurable?</p></li>
+<li><p>Is this objective Achievable (Assignable)?</p></li>
+<li><p>[…]</p></li>
 </ul>
 <p>With tests for things in the future, we can define confidence intervals
 (low, medium, high) as e.g. “pessimistic”, “realistic”, and “optimistic”.</p>
@@ -486,25 +488,25 @@ given an interval,
 there are then four possible boolean tests for success
 (or just one, if we limit ourselves to TDD pass/fail):</p>
 <ul class="simple">
-<li>Is the metric between the low and high thresholds?</li>
-<li>Is the metric above the low threshold?</li>
-<li>Is the metric within a defined threshold around the medium threshold?</li>
-<li>Is the metric below the high threshold?</li>
+<li><p>Is the metric between the low and high thresholds?</p></li>
+<li><p>Is the metric above the low threshold?</p></li>
+<li><p>Is the metric within a defined threshold around the medium threshold?</p></li>
+<li><p>Is the metric below the high threshold?</p></li>
 </ul>
 <p>System Administrators sometimes define events for these types of
 threshold intervals:</p>
 <ul class="simple">
-<li>If utilization is below L, reduce the number of allocated servers.</li>
-<li>If utilization is above H, increase the number of allocated servers.</li>
+<li><p>If utilization is below L, reduce the number of allocated servers.</p></li>
+<li><p>If utilization is above H, increase the number of allocated servers.</p></li>
 </ul>
 <p>Organizations sometimes define events for these types of threshold
 intervals:</p>
 <ul class="simple">
-<li>If we reach our sales target by date/time, everyone gets a raise. (See
-also: profit sharing).</li>
-<li>If the planetary temperature increases by n degrees,
+<li><p>If we reach our sales target by date/time, everyone gets a raise. (See
+also: profit sharing).</p></li>
+<li><p>If the planetary temperature increases by n degrees,
 we’ll suddenly realize we need to minimize the effects of climate
-change. (And, by then, it’ll be too late)</li>
+change. (And, by then, it’ll be too late)</p></li>
 </ul>
 <p>These are <em>reactive</em> approaches.</p>
 <p>TDD is proactive, in that we test first, early, and often.</p>
@@ -513,29 +515,34 @@ success in software development and in adaptive, proactive,
 organizations.</p>
 <p>A bit about the Global Goals:</p>
 <ul class="simple">
-<li>The Global Goals for Sustainable Development are also known as
-the United Nations Sustainable Development Goals (SDGs).</li>
-<li>There are 17 Global Goals (<strong>#Goal1</strong> – <strong>#Goal17</strong>).</li>
-<li>There are Targets for each Goal, and there are Indicators for Targets:<ul>
-<li>Goal<ul>
-<li>Target<ul>
-<li>Indicator(s)</li>
+<li><p>The Global Goals for Sustainable Development are also known as
+the United Nations Sustainable Development Goals (SDGs).</p></li>
+<li><p>There are 17 Global Goals (<strong>#Goal1</strong> – <strong>#Goal17</strong>).</p></li>
+<li><p>There are Targets for each Goal, and there are Indicators for Targets:</p>
+<ul>
+<li><p>Goal</p>
+<ul>
+<li><p>Target</p>
+<ul>
+<li><p>Indicator(s)</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Some Indicators are relevant to multiple Targets.</li>
-<li>All Indicators should be relevant to all of us (“you people”).</li>
-<li>The UN Millennium Development Goals were through 2015.</li>
-<li>The UN Sustainable Development Goals are through 2030.<ul>
-<li>By 2030, we intend to be able to say that we’ve achieved ( or
+<li><p>Some Indicators are relevant to multiple Targets.</p></li>
+<li><p>All Indicators should be relevant to all of us (“you people”).</p></li>
+<li><p>The UN Millennium Development Goals were through 2015.</p></li>
+<li><p>The UN Sustainable Development Goals are through 2030.</p>
+<ul>
+<li><p>By 2030, we intend to be able to say that we’ve achieved ( or
 exceeded) each Target, given an evaluation of the Indicators. This
-is our <strong>criteria for success</strong>.<ul>
-<li>We aren’t yet passing the tests we’ve set for ourselves.</li>
-<li>We’re all working to find and implement solutions for achieving
-these Targets in our own states and worldwide.</li>
+is our <strong>criteria for success</strong>.</p>
+<ul>
+<li><p>We aren’t yet passing the tests we’ve set for ourselves.</p></li>
+<li><p>We’re all working to find and implement solutions for achieving
+these Targets in our own states and worldwide.</p></li>
 </ul>
 </li>
 </ul>
@@ -543,26 +550,26 @@ these Targets in our own states and worldwide.</li>
 </ul>
 <p>Concepts / References</p>
 <ul class="simple">
-<li><a class="reference external" href="https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html">https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Hypothesis">https://en.wikipedia.org/wiki/Hypothesis</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Design_of_experiments">https://en.wikipedia.org/wiki/Design_of_experiments</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Six_Sigma#DMAIC">https://en.wikipedia.org/wiki/Six_Sigma#DMAIC</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Validated_learning">https://en.wikipedia.org/wiki/Validated_learning</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Unintended_consequences">https://en.wikipedia.org/wiki/Unintended_consequences</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Confounding">https://en.wikipedia.org/wiki/Confounding</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/User_story">https://en.wikipedia.org/wiki/User_story</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Code_coverage">https://en.wikipedia.org/wiki/Code_coverage</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_independence">https://en.wikipedia.org/wiki/Conditional_independence</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/SMART_criteria">https://en.wikipedia.org/wiki/SMART_criteria</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">https://en.wikipedia.org/wiki/Sustainable_Development_Goals</a></li>
-<li><a class="reference external" href="https://westurner.github.io/opengov/un/#un-sustainable-development-goals">https://westurner.github.io/opengov/un/#un-sustainable-development-goals</a></li>
-<li><a class="reference external" href="http://www.globalgoals.org/">http://www.globalgoals.org/</a></li>
+<li><p><a class="reference external" href="https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html">https://westurner.github.io/2016/10/17/teaching-test-driven-development-first.html</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hypothesis">https://en.wikipedia.org/wiki/Hypothesis</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Design_of_experiments">https://en.wikipedia.org/wiki/Design_of_experiments</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Six_Sigma#DMAIC">https://en.wikipedia.org/wiki/Six_Sigma#DMAIC</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Validated_learning">https://en.wikipedia.org/wiki/Validated_learning</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_optimization">https://en.wikipedia.org/wiki/Mathematical_optimization</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Maxima_and_minima">https://en.wikipedia.org/wiki/Maxima_and_minima</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unintended_consequences">https://en.wikipedia.org/wiki/Unintended_consequences</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Confounding">https://en.wikipedia.org/wiki/Confounding</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis">https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/User_story">https://en.wikipedia.org/wiki/User_story</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Code_coverage">https://en.wikipedia.org/wiki/Code_coverage</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_independence">https://en.wikipedia.org/wiki/Conditional_independence</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SMART_criteria">https://en.wikipedia.org/wiki/SMART_criteria</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">https://en.wikipedia.org/wiki/Sustainable_Development_Goals</a></p></li>
+<li><p><a class="reference external" href="https://westurner.github.io/opengov/un/#un-sustainable-development-goals">https://westurner.github.io/opengov/un/#un-sustainable-development-goals</a></p></li>
+<li><p><a class="reference external" href="http://www.globalgoals.org/">http://www.globalgoals.org/</a></p></li>
 </ul>
 </div>
 
