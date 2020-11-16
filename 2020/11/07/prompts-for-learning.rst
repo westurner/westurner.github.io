@@ -45,6 +45,7 @@ them.
     pytest -v ./tests/
 
 As pytest tests:
+
 - CI, nbgrader, GitHub Classroom
 - locally?
 
