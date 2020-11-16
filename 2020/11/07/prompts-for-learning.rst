@@ -18,31 +18,31 @@ It is easier to be efficient when working with pytest instead of
 unittest; though pytest does run unittest tests when it finds
 them.
 
-```bash
-pip install -U pytest
+.. code:: bash
 
-mkdir ./tests/
-cat > ./tests/test_example.py <<EOF
+    pip install -U pytest
 
-data = dict(a=True)
+    mkdir ./tests/
+    cat > ./tests/test_example.py <<EOF
 
-def test_thing():
-    assert "a" in data
-    assert data["a"]
+    data = dict(a=True)
+
+    def test_thing():
+        assert "a" in data
+        assert data["a"]
 
 
-import unittest
-class TestCaseOne(unittest.TestCase):
-    def setUp(self):
-        self.data = data.copy()
+    import unittest
+    class TestCaseOne(unittest.TestCase):
+        def setUp(self):
+            self.data = data.copy()
 
-    def test_a_is_true(self):
-        self.assertIn("a", self.data)
+        def test_a_is_true(self):
+            self.assertIn("a", self.data)
         self.assertTrue(self.data['a'])
-EOF
-pytest -v ./tests/test_example.py
-pytest -v ./tests/
-```
+    EOF
+    pytest -v ./tests/test_example.py
+    pytest -v ./tests/
 
 As pytest tests:
 - CI, nbgrader, GitHub Classroom
