@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - source
+
 # pull_request:
 
 jobs:
@@ -12,7 +13,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ammaraskar/sphinx-action@master
       with:
-        docs-folder: "docs/"
+        #docs-folder: "docs/"
         #pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
-        pre-build-command: "make -C ../ setup_texlive_ubuntu"
+        pre-build-command: "make install"
         build-command: "make build"

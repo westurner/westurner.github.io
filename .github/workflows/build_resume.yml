@@ -14,5 +14,5 @@ jobs:
       with:
         docs-folder: "resume/"
         #pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
-        pre-build-command: "make install"
-        build-command: "make build"
+        pre-build-command: "make setup_texlive_ubuntu"
+        build-command: "make resume"
