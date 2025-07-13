@@ -20,7 +20,7 @@ description = 'A code blog'
 author = 'Wes Turner'
 
 # Change this to your copyright string
-copyright = '2020 %s' % author
+copyright = '2025 %s' % author
 
 # Change this to your blog root URL (required for RSS feed)
 website = 'https://westurner.github.io/'
@@ -63,7 +63,7 @@ extensions = [
     'tinkerer.ext.blog',
     'tinkerer.ext.disqus',
     'withgithub',
-    'myst_nb',
+    #'myst_nb',
 ]
 
 # Add other template paths here
@@ -76,7 +76,7 @@ html_static_path = ['_static', tinkerer.paths.static]
 html_theme_path = ['_themes', tinkerer.paths.themes]
 
 # Add file patterns to exclude from build
-exclude_patterns = ["drafts/*", "_templates/*"]
+exclude_patterns = ["drafts/*", "_templates/*", "src/*"]
 
 # Add templates to be rendered in sidebar here
 html_sidebars = {

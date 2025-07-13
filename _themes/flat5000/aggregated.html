@@ -14,6 +14,7 @@
 {%- set archive_title = archive_title is not defined and ' Blog Archive ' or archive_title -%}
 
 {%- block body -%}
+    {#
     <div class="twitter">
     <h1 id="twitter" class="h_underline">
         <a href="https://twitter.com/westurner" target="_blank">@westurner</a>
@@ -22,8 +23,9 @@
         {% include "twitter.html" %}
     </div>
     </div>
-    <div class="posts">
-    <h1 id="posts" class="h_underline">
+    #}
+    <div id="posts" class="posts">
+    <h1 class="h_underline posts_title">
         <a href="{{ pathto('archive') }}">Blog</a>
     </h1>
     {%- for metadata in posts -%}

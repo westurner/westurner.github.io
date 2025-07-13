@@ -1,5 +1,5 @@
 {#-
-    boilerplate/searchbox.html
+    flat5000/searchbox.html
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Sidebar search box.
@@ -13,6 +13,16 @@
     <h1><a href="#searchbox">{{ _('Search') }}</a></h1>
     <form action="{{ pathto('search') }}" method="get">
         <input type="text" name="q" />
-        <button type="submit"><span class="fa fa-search"></span></button>
+        <button type="submit" class="searchbutton">
+            <div style="font-size: 2em; font-weight: bold; -webkit-transform: rotate(42deg); 
+                -moz-transform: rotate(42deg); 
+                  -o-transform: rotate(42deg);
+                     transform: rotate(42deg); margin-top: -0.4em;
+  margin-right: -0.4em;
+  margin-left: -0.2em;
+  margin-bottom: -0.2em;">
+            &#9906;
+            </div>
+        </button>
     </form>
 </div>

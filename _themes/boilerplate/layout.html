@@ -55,18 +55,17 @@
         HAS_SOURCE:  {{ has_source|lower }}
       };
     </script>
-    {%- for scriptfile in script_files -%}
-        {#- Hack to filter out jquery.js auto-included by Sphinx since jquery is
-           already included in head. -#}
-        {%- if "jquery" not in scriptfile.lower() -%}
-            <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-        {%- endif -%}
+    {%- for scriptfile in script_files %}
+        {#- Hack to filter out jquery.js auto-included by Sphinx since jquery is already included in head. -#}
+        {# if "jquery" not in scriptfile.filename|lower -%}
+          <script type="text/javascript" src="{{ pathto(scriptfile.filename, 1) }}"></script>
+        {%- endif #}
     {%- endfor -%}
 {%- endmacro -%}
 
 {%- macro css() -%}
-    {%- for cssfile in css_files -%}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+    {%- for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile.filename, 1) }}" type="text/css" />
     {%- endfor -%}
 {%- endmacro -%}
 
@@ -74,7 +73,7 @@
 {%- macro rss_link() -%}
     <div class="rss">
         <a href="{{ rss_feed_link }}" title="Subscribe via RSS">
-            {%- if rss_symbol -%}<span class="fa fa-lg fa-rss"></span>{%- endif -%}
+            {%- if rss_symbol -%}<svg style="vertical-align: middle; background-color:white; padding:2px; border-radius:5px" xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="orange" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>{%- endif -%}
             {% if rss_link_text -%}{{ rss_link_text }}{% endif -%}
         </a>
     </div>
@@ -181,7 +180,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="{{ description }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {#- <meta name="viewport" content="width=device-width, initial-scale=1">--> #}
         {{ metatags }}
 
         {%- block htmltitle -%}
@@ -192,22 +191,25 @@
             <link rel="stylesheet" href="{{ pathto('_static/normalize.css', 1) }}" type="text/css">
             <link rel="stylesheet" href="{{ pathto('_static/sphinx.css', 1) }}" type="text/css">
             <link rel="stylesheet" href="{{ pathto('_static/main.css', 1) }}" type="text/css">
-            {%- if style not in ['none', 'main.css'] %}
+            {% for style in styles %}
+            {%- if style not in ['none', 'main.css'] -%}
             <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css">
-            {%- endif %}
+            {%- endif -%}
+            {%- endfor %}
             <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
             <!--<link rel="stylesheet" href="{{
                 pathto('_static/fontawesome/font-awesome.min.css', 1) }}" type="text/css">-->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
 
-        {%- endblock %}
+ 
+            {%- endblock %}
         {{ css() }}
         {%- if not embedded -%}
         {%- if favicon -%}
         <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
         {%- endif -%}
 
-        {%- block headjs -%}
+        {%- block headjs %}
         <!-- Load modernizr and JQuery -->
         <script src="{{ pathto('_static/vendor/modernizr-2.6.2.min.js', 1) }}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
