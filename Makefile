@@ -48,6 +48,14 @@ build:
 	# Generate static HTML in ./blog/html
 	tinker --build
 
+build-pdb:
+	# Run tinkerer with pdb (Python debugger)
+	python -m pdb -m tinkerer --build
+
+build-sphinx-build-pdb:
+	# Run sphinx-build with pdb (Python debugger)
+	python -m pdb -m sphinx.cmd.build -b html ./blog ./blog/html
+
 docs: build
 	# alias of 'build'
 
@@ -70,12 +78,13 @@ accounts:
 	#  git commit -m ./_static/service_icons ./_templates/accounts.html
 
 serve:
-	# Serve ./blog/html with python 2 SimpleHTTPServer
+	# Serve ./blog/html with python 3 http.server
 	(cd ./blog/html; \
-	python -m SimpleHTTPServer 18282)
+	python -m http.server 18282)
 
 serve-pgs:
 	# Serve ./blog/html with pgs
+	type -p pgs || python -m pip install pgs
 	(cd ./blog/html; pgs -p . -P 18282)
 
 GIT_WWW_BRANCH="master"  # gh-pages
