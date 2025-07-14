@@ -7,7 +7,8 @@ google_plus_profile_links
 
 
 import urllib
-import urllib2
+import urllib.parse
+import urllib.request
 import bs4
 import os.path
 import logging
@@ -21,7 +22,7 @@ def _repr(_str):
 
 
 def icon_url_to_local_path(img, icon_path):
-    sitename = urllib.splitquery(img['src'])[-1].split('&')[0][7:]
+    sitename = urllib.parse.urlsplit(img['src'])[-1].split('&')[0][7:]
     filename = '%s.png' % sitename
     filepath = os.path.join(icon_path, filename)
     imgurl = 'https:%s' % img['src']
@@ -29,11 +30,13 @@ def icon_url_to_local_path(img, icon_path):
 
 
 def get_accounts_from_google_plus(google_plus_url, icon_path=''):
-    r = urllib2.urlopen(google_plus_url)
+    r = urllib.request.urlopen(google_plus_url)
     html = r.read()
-    bs = bs4.BeautifulSoup(html)
+    bs = bs4.BeautifulSoup(html, features='lxml')
     #about = bs.find('div',{'class':'Ee g5a vna Yjb'})
     about = bs.find('div', {'class': 'wna fa-TCa Ala'})
+    if not about:
+        raise ValueError("about not found")
     accounts = about.findAll('li')
     for a in accounts:
         img = a.findNext('img')
@@ -44,7 +47,7 @@ def get_accounts_from_google_plus(google_plus_url, icon_path=''):
 
 def download_service_icons(iterable, icon_path=''):
     for img, link, (sitename, filename, filepath, imgurl) in iterable:
-        resp = urllib2.urlopen(imgurl)
+        resp = urllib.request.urlopen(imgurl)
         log.debug('downloading: %r' % imgurl)
         with open(filepath, 'w+') as f:
             f.write(resp.read())
@@ -91,6 +94,8 @@ def main():
     prs.add_option('-d', '--download-icons',
                     dest='download_icons',
                     action='store_true')
+    
+    prs.add_option("--data-uri", dest='do_data_uri', nargs=2, help="path_to.ico image/png")
 
     prs.add_option('-v', '--verbose',
                     dest='verbose',
@@ -116,17 +121,27 @@ def main():
         import unittest
         exit(unittest.main())
 
-    ICON_PATH = '_static/service_icons/'
-    account_url = 'https://plus.google.com/+WesTurner1/about'
+    if opts.do_data_uri:
+        import urllib.parse
+        import base64
+        def build_data_uri(path, mimetype):
+            with open(path, "rb") as image_file:
+                image_bytes = image_file.read()
+                encoded = urllib.parse.quote(base64.b64encode(image_bytes).decode("ascii"))
+            return "data:{};base64,{}".format(mimetype, encoded)
+        print(build_data_uri(opts.do_data_uri[0], opts.do_data_uri[1]))
+    else:
+        ICON_PATH = '_static/service_icons/'
+        account_url = 'https://plus.google.com/+WesTurner1/about'
 
-    accounts = get_accounts_from_google_plus(account_url, icon_path=ICON_PATH)
-    accounts = list(accounts)
+        accounts = get_accounts_from_google_plus(account_url, icon_path=ICON_PATH)
+        accounts = list(accounts)
 
-    if opts.download_icons:
-        download_service_icons(accounts, icon_path=ICON_PATH)
+        if opts.download_icons:
+            download_service_icons(accounts, icon_path=ICON_PATH)
 
-    for l in google_plus_profile_links(accounts, icon_path=ICON_PATH):
-        print(l)
+        for l in google_plus_profile_links(accounts, icon_path=ICON_PATH):
+            print(l)
 
 
 if __name__ == "__main__":
