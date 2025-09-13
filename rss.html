@@ -109,11 +109,11 @@ Statement Coverage can be misleading for a number of reasons:</p>
 <li><p>There may be multiple branches on the same line.</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 
-<span class="k">def</span> <span class="nf">test_func</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_func</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">func</span><span class="p">(</span><span class="mi">271</span><span class="p">,</span> <span class="mi">314</span><span class="p">)</span>  <span class="c1"># 100% coverage</span>
     <span class="k">assert</span> <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>      <span class="c1"># still 100% coverage</span>
 </pre></div>
@@ -267,7 +267,7 @@ these Targets in our own states and worldwide.</p></li>
 <p>A traditional first hello world program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># helloworld.py</span>
 
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">"Hello, </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>  <span class="c1"># w/o __name__ this'd run inadvertantly</span>
@@ -275,21 +275,21 @@ these Targets in our own states and worldwide.</p></li>
 </pre></div>
 </div>
 <p>And then run the program:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python ./helloworld.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python<span class="w"> </span>./helloworld.py
 <span class="c1"># "It should say 'Hello, @westurner!'"  # (check this manually every time)</span>
 </pre></div>
 </div>
 <p>Hello world with tests (Test-Driven-Development (TDD)):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># test_helloworld.py</span>
 
-<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 
-<span class="k">class</span> <span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># print("setUp")</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'TestName'</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
@@ -304,15 +304,15 @@ these Targets in our own states and worldwide.</p></li>
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python -m site                         <span class="c1"># sys.path and $PWD (`pwd`)</span>
-python -m unittest test_helloworld     <span class="c1"># ./test_helloworld.py</span>
-python -m unittest -v test_helloworld  <span class="c1"># ./test_helloworld.py</span>
-<span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"Tests failed! (nonzero returncode)"</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>python<span class="w"> </span>-m<span class="w"> </span>site<span class="w">                         </span><span class="c1"># sys.path and $PWD (`pwd`)</span>
+python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>test_helloworld<span class="w">     </span><span class="c1"># ./test_helloworld.py</span>
+python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>-v<span class="w"> </span>test_helloworld<span class="w">  </span><span class="c1"># ./test_helloworld.py</span>
+<span class="nb">test</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Tests failed! (nonzero returncode)"</span>
 </pre></div>
 </div>
 <p>Why should this first run of the tests fail?</p>
 <ul class="simple">
-<li><p>Because we didn’t remember to import <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></code> in <code class="docutils literal notranslate"><span class="pre">test_helloworld.py</span></code>.</p></li>
+<li><p>Because we didn’t remember to import <span class="docutils literal"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">test_helloworld.py</span></span>.</p></li>
 <li><p>Because, in keeping with TDD, we run the test first to make sure it
 actually fails without our changes.</p></li>
 </ul>
@@ -329,11 +329,11 @@ Concerns)</p></li>
 <ul class="simple">
 <li><p>Testable software design patterns</p>
 <ul>
-<li><p>Refactoring: Square, Rectangle, Triangle <code class="docutils literal notranslate"><span class="pre">obj.area()</span></code></p></li>
+<li><p>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></p></li>
 <li><p>Test factories / test fixtures</p></li>
 </ul>
 </li>
-<li><p>Additional testing tools (beyond <code class="docutils literal notranslate"><span class="pre">unittest</span></code>):</p>
+<li><p>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):</p>
 <ul>
 <li><p>pytest</p></li>
 <li><p>Nose</p></li>
@@ -415,8 +415,8 @@ sets of docs that I’ve been working on:</p>
 <li><p>Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage">https://westurner.github.io/dotfiles/usage</a> (
 <a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bootstrap_dotfiles.sh</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
+<li><p><span class="docutils literal"><span class="pre">bootstrap_dotfiles.sh</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh">https://westurner.github.io/dotfiles/usage#bootstrap-dotfiles-sh</a></p></li>
+<li><p><span class="docutils literal"><span class="pre">Makefile</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#makefile">https://westurner.github.io/dotfiles/usage#makefile</a>
 [<a class="reference external" href="https://westurner.github.io/tools/#make">tools/#make</a>]</p></li>
 <li><p>Bash Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#bash">https://westurner.github.io/dotfiles/usage#bash</a>
 [<a class="reference external" href="https://westurner.github.io/tools/#bash">tools/#bash</a>]</p></li>
@@ -424,10 +424,10 @@ sets of docs that I’ve been working on:</p>
 [<a class="reference external" href="https://westurner.github.io/tools/#vim">tools/#vim</a>]</p></li>
 <li><p>i3wm Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#i3wm">https://westurner.github.io/dotfiles/usage#i3wm</a>
 [<a class="reference external" href="https://westurner.github.io/tools/#i3wm">tools/#i3wm</a>]</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./scripts</span></code> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a></p>
+<li><p><span class="docutils literal"><span class="pre">./scripts</span></span> Usage: <a class="reference external" href="https://westurner.github.io/dotfiles/usage#scripts">https://westurner.github.io/dotfiles/usage#scripts</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">PATH_prepend</span> <span class="pre">"${__DOTFILES}/scripts"</span></code>
-(e.g. <code class="docutils literal notranslate"><span class="pre">dotfiles_add_path()</span></code> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</p></li>
+<li><p><span class="docutils literal"><span class="pre">PATH_prepend</span> <span class="pre">"${__DOTFILES}/scripts"</span></span>
+(e.g. <span class="docutils literal"><span class="pre">dotfiles_add_path()</span></span> in <a class="reference external" href="https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh">https://github.com/westurner/dotfiles/blob/master/etc/bash/05-bashrc.dotfiles.sh</a>)</p></li>
 </ul>
 </li>
 </ul>
@@ -460,7 +460,7 @@ sets of docs that I’ve been working on:</p>
 </ul>
 </li>
 </ul>
-<div class="section" id="update-2015-07-04">
+<section id="update-2015-07-04">
 <h2>Update: 2015-07-04</h2>
 <ul>
 <li><p>[X] DOC: 2015/03/02/documentation.rst: Update inlined
@@ -469,14 +469,14 @@ sets of docs that I’ve been working on:</p>
 <p><cite>gh:westurner/wiki#6</cite></p>
 <p><a class="reference external" href="https://github.com/westurner/wiki/issues/6">https://github.com/westurner/wiki/issues/6</a></p>
 <ul>
-<li><p>[o] [UBY] show the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link in the navbar
+<li><p>[o] [UBY] show the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link in the navbar
 when the fixed navbar is scrolled beyond the viewport
 (i.e. when showing the complete table of contents in the
 <em>full width sidebar navbar</em>).</p>
 <ul>
-<li><p>[x] Assert <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
-with an <code class="docutils literal notranslate"><span class="pre">id="anchor"</span></code> property.</p></li>
-<li><p>[o] Find and style each link to <code class="docutils literal notranslate"><span class="pre">#anchor</span></code> (<code class="docutils literal notranslate"><span class="pre">href="#anchor"</span></code>):</p>
+<li><p>[x] Assert <span class="docutils literal"><span class="pre">#anchor</span></span> exists as a <a class="reference external" href="https://wrdrd.github.io/docs/consulting/web-development#term-dom">DOM</a> element
+with an <span class="docutils literal"><span class="pre">id="anchor"</span></span> property.</p></li>
+<li><p>[o] Find and style each link to <span class="docutils literal"><span class="pre">#anchor</span></span> (<span class="docutils literal"><span class="pre">href="#anchor"</span></span>):</p>
 <ul>
 <li><p>[X] <em>mobile header navbar</em>:</p>
 <ul class="simple">
@@ -492,17 +492,17 @@ next to the heading,
 in place of the ¶ sphinx heading selector link.</p></li>
 <li><p>[X] UBY: If the <em>full width sidebar navbar</em> is on the screen;
 and there’s a link in the table of contents
-to the given <code class="docutils literal notranslate"><span class="pre">#anchor</span></code>;
+to the given <span class="docutils literal"><span class="pre">#anchor</span></span>;
 and that link is not displayed,
 <strong>scroll</strong> the sidebar navbar
 so that the given navbar link is displayed
 (with a few at the top, for context).</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span/>## pseudo-JS
-sidebar = $('#sidebar');
-link =  $(sidebar).find('a[href=&lt;#anchor&gt;]');
-if !(jquery.isonscreen.js(sidebar, link)) {
-    jquery.scrollTo(sidebar, link);
-}
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span/><span class="err">##</span><span class="w"> </span><span class="nx">pseudo</span><span class="o">-</span><span class="nx">JS</span>
+<span class="nx">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#sidebar'</span><span class="p">);</span>
+<span class="nx">link</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nx">sidebar</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'a[href=&lt;#anchor&gt;]'</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="nx">jquery</span><span class="p">.</span><span class="nx">isonscreen</span><span class="p">.</span><span class="nx">js</span><span class="p">(</span><span class="nx">sidebar</span><span class="p">,</span><span class="w"> </span><span class="nx">link</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">jquery</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="nx">sidebar</span><span class="p">,</span><span class="w"> </span><span class="nx">link</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </li>
@@ -527,11 +527,11 @@ in <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes
 <div class="line">CDNJS: <a class="reference external" href="https://cdnjs.com/libraries/twitter-bootstrap">https://cdnjs.com/libraries/twitter-bootstrap</a></div>
 </div>
 <ul class="simple">
-<li><p>ScrollSpy overwrites the currently <code class="docutils literal notranslate"><span class="pre">#manually-selected</span></code> link on scroll.</p></li>
+<li><p>ScrollSpy overwrites the currently <span class="docutils literal"><span class="pre">#manually-selected</span></span> link on scroll.</p></li>
 <li><p>ScrollSpy synchronizes all page scroll action with navbar current link
 indication.</p></li>
 <li><p>[ ] ScrollSpy does not work w/ a fixed navbar
-because <code class="docutils literal notranslate"><span class="pre">#anchors</span></code> are hidden
+because <span class="docutils literal"><span class="pre">#anchors</span></span> are hidden
 (and otherwise remain scrolled out of the vieport
 without something like isonscreen and scrollTo (ENH?,TST)</p></li>
 </ul>
@@ -547,14 +547,14 @@ without something like isonscreen and scrollTo (ENH?,TST)</p></li>
 <div class="line">Docs: <a class="reference external" href="https://read-the-docs.readthedocs.org/en/latest/theme.html">https://read-the-docs.readthedocs.org/en/latest/theme.html</a></div>
 </div>
 </li>
-<li><p>Sphinx themes are configured in a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.
+<li><p>Sphinx themes are configured in a <span class="docutils literal"><span class="pre">conf.py</span></span> file.
 From <a class="reference external" href="http://stackoverflow.com/a/25007833">http://stackoverflow.com/a/25007833</a> (CC-BY-SA 3.0):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="c1"># on_rtd is whether we are on readthedocs.org</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">on_rtd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'READTHEDOCS'</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'True'</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">on_rtd</span><span class="p">:</span>  <span class="c1"># only import and set the theme if we're building docs locally</span>
-    <span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sphinx_rtd_theme</span>
     <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">'sphinx_rtd_theme'</span>
     <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_rtd_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 
@@ -577,7 +577,7 @@ table of contents.</p></li>
 </ul>
 </li>
 </ul>
-</div>
+</section>
 ]]></description>
              <pubDate>Mon, 02 Mar 2015 00:00:00 -0500</pubDate>
         </item>
@@ -588,13 +588,13 @@ table of contents.</p></li>
             <title><![CDATA[WRD Research and Development]]></title>
             <description><![CDATA[<h1>WRD Research and Development</h1>
 <img alt="https://wrdrd.github.io/static/png/drawing-7.09-v0.1.1--_desk.svg.png" class="img-100" src="https://wrdrd.github.io/static/png/drawing-7.09-v0.1.1--_desk.svg.png"/>
-<div class="section" id="wrd-r-d">
+<section id="wrd-r-d">
 <h2>WRD R&amp;D</h2>
 <div class="line-block">
 <div class="line">Homepage: <a class="reference external" href="https://wrdrd.github.io/">https://wrdrd.github.io/</a></div>
 <div class="line">Docs: <a class="reference external" href="https://wrdrd.github.io/docs/">https://wrdrd.github.io/docs/</a></div>
 </div>
-</div>
+</section>
 ]]></description>
              <pubDate>Mon, 20 Oct 2014 00:00:00 -0400</pubDate>
         </item>
@@ -604,7 +604,7 @@ table of contents.</p></li>
             <guid>https://westurner.github.io/2014/10/20/working-on-lately.html</guid>
             <title><![CDATA[Working on Lately]]></title>
             <description><![CDATA[<h1>Working on Lately</h1>
-<div class="section" id="wiki">
+<section id="wiki">
 <h2>Wiki</h2>
 <p><a class="reference external" href="https://westurner.github.io/wiki/">https://westurner.github.io/wiki/</a></p>
 <ul class="simple">
@@ -613,8 +613,8 @@ table of contents.</p></li>
 <li><p><a class="reference external" href="https://westurner.github.io/wiki/workflow">https://westurner.github.io/wiki/workflow</a></p></li>
 <li><p><a class="reference external" href="https://github.com/westurner/wiki/blob/master/Makefile">https://github.com/westurner/wiki/blob/master/Makefile</a></p></li>
 </ul>
-</div>
-<div class="section" id="resume">
+</section>
+<section id="resume">
 <h2>Resume</h2>
 <p><a class="reference external" href="https://westurner.github.io/pages/resume">https://westurner.github.io/pages/resume</a></p>
 <p><a class="reference external" href="https://westurner.github.io/resume">https://westurner.github.io/resume</a></p>
@@ -622,7 +622,7 @@ table of contents.</p></li>
 <p>EDIT: 2014-11-01: Updated links to wiki</p>
 <p>EDIT: 2014-12-16: Updated date format to <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">https://en.wikipedia.org/wiki/ISO_8601</a></p>
 <p>EDIT: 2015-05-04: Updated links to resume</p>
-</div>
+</section>
 ]]></description>
              <pubDate>Mon, 20 Oct 2014 00:00:00 -0400</pubDate>
         </item>
@@ -639,8 +639,8 @@ can be difficult to grep through. It’s not always easy
 like <a class="reference external" href="https://en.wikipedia.org/wiki/Literate_programming#Contrast_with_documentation_generation">literate programming</a>:
 “literate configuration”.</p>
 <ol class="arabic simple">
-<li><p>Markup headings with two or more <code class="docutils literal notranslate"><span class="pre">#</span></code> signs.</p></li>
-<li><p>Markup comment lines with a <code class="docutils literal notranslate"><span class="pre">#</span></code> prefix and at least two spaces.</p></li>
+<li><p>Markup headings with two or more <span class="docutils literal"><span class="pre">#</span></span> signs.</p></li>
+<li><p>Markup comment lines with a <span class="docutils literal"><span class="pre">#</span></span> prefix and at least two spaces.</p></li>
 </ol>
 <p><strong>Example</strong></p>
 <p>Take an abbreviated excerpt from the <a class="reference external" href="https://en.wikipedia.org/wiki/I3_(window_manager)">i3wm</a>
@@ -683,7 +683,7 @@ mode "resize" {
 </div>
 <p>Run it through extended <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a>
 with a simple conditional regular expression:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>cat ~/.i3/config <span class="p">|</span> egrep <span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span/>cat<span class="w"> </span>~/.i3/config<span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s1">'(^(\s+)?##+ |^(\s+)?#  )'</span>
 </pre></div>
 </div>
 <p>Peruse the output for that one excellent keyboard shortcut</p>
@@ -706,7 +706,7 @@ with a simple conditional regular expression:</p>
     <span class="c1">#  &lt;esc&gt;    -- exit resize mode</span>
 </pre></div>
 </div>
-<p>Add the <code class="docutils literal notranslate"><span class="pre">-n</span></code> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
+<p>Add the <span class="docutils literal"><span class="pre">-n</span></span> switch to <a class="reference external" href="https://en.wikipedia.org/wiki/Grep">grep</a> to display the source line numbers
 of the relevant configuration file documentation.</p>
 <p>The <a class="reference external" href="https://jashkenas.github.io/docco">docco</a> homepage lists quite a few more heavyweight approaches to
 generating documentation from comment strings embedded in various languages
@@ -733,7 +733,7 @@ generating documentation from comment strings embedded in various languages
             <title><![CDATA[Tech News for America]]></title>
             <description><![CDATA[<h1>Tech News for America</h1>
 <p>So I started to prepare a mega-tweet for our new substitute teacher, and started to reference a few links – because what good is an internet page without links – from my trusty ol’ redditlog, here: <a class="reference external" href="https://westurner.github.io/redditlog/">https://westurner.github.io/redditlog/</a>.</p>
-<div class="section" id="lean-publishing">
+<section id="lean-publishing">
 <h2>Lean Publishing</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Lean">https://en.wikipedia.org/wiki/Lean</a></p>
 <ul class="simple">
@@ -757,8 +757,8 @@ generating documentation from comment strings embedded in various languages
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="responsive-web-design">
+</section>
+<section id="responsive-web-design">
 <h2>Responsive Web Design</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Category:Responsive_web_design">https://en.wikipedia.org/wiki/Category:Responsive_web_design</a></p>
 <ul class="simple">
@@ -766,8 +766,8 @@ generating documentation from comment strings embedded in various languages
 <li><p>Why am I looking at margins?</p></li>
 <li><p>Why should we prefer #anchors over page numbers?</p></li>
 </ul>
-</div>
-<div class="section" id="stem-learning">
+</section>
+<section id="stem-learning">
 <h2>STEM Learning</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/STEM_fields">https://en.wikipedia.org/wiki/STEM_fields</a>
 (<a class="reference external" href="https://twitter.com/search?q=%23STEM&amp;src=hash">#STEM</a>)</p>
@@ -781,8 +781,8 @@ generating documentation from comment strings embedded in various languages
 <li><p><a class="reference external" href="https://www.class-central.com/">https://www.class-central.com/</a>
 (<a class="reference external" href="https://twitter.com/classcentral">@classcentral</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="writing-code">
+</section>
+<section id="writing-code">
 <h2>Writing Code</h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://code.org/">http://code.org/</a>
@@ -796,16 +796,16 @@ generating documentation from comment strings embedded in various languages
 <li><p><a class="reference external" href="http://rosettacode.org/wiki/Category:Programming_Tasks">http://rosettacode.org/wiki/Category:Programming_Tasks</a></p></li>
 <li><p><a class="reference external" href="https://projecteuler.net/problems">https://projecteuler.net/problems</a></p></li>
 </ul>
-</div>
-<div class="section" id="web-software-development">
+</section>
+<section id="web-software-development">
 <h2>Web Software Development</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Web_development">https://en.wikipedia.org/wiki/Web_development</a></p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a">http://www.reddit.com/r/Python/comments/spsbs/are_the_same_thing_a_web_application_and_a_cms/#c4fy37a</a></p></li>
 <li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w">http://www.reddit.com/r/Python/comments/1eboql/python_website_tuts_that_dont_use_django/#c9yxl8w</a></p></li>
 </ul>
-</div>
-<div class="section" id="software-engineering">
+</section>
+<section id="software-engineering">
 <h2>Software Engineering</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Software_engineering">https://en.wikipedia.org/wiki/Software_engineering</a></p>
 <ul class="simple">
@@ -814,8 +814,8 @@ generating documentation from comment strings embedded in various languages
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)">https://en.wikipedia.org/wiki/Architectural_pattern_(computer_science)</a></p></li>
 <li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa">http://www.reddit.com/r/Python/comments/1sa5ot/for_employable_purposes_what_skills_do_i_need_to/#cdwgwaa</a></p></li>
 </ul>
-</div>
-<div class="section" id="web-scale">
+</section>
+<section id="web-scale">
 <h2>Web Scale</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Scalability">https://en.wikipedia.org/wiki/Scalability</a></p>
 <blockquote class="epigraph">
@@ -834,8 +834,8 @@ cache invalidation and naming things.”</p>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Performance_engineering">https://en.wikipedia.org/wiki/Performance_engineering</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Social_web">https://en.wikipedia.org/wiki/Social_web</a></p></li>
 </ul>
-</div>
-<div class="section" id="sentiment">
+</section>
+<section id="sentiment">
 <h2>Sentiment</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Sentiment_analysis">https://en.wikipedia.org/wiki/Sentiment_analysis</a></p>
 <ul class="simple">
@@ -845,8 +845,8 @@ cache invalidation and naming things.”</p>
 <li><p><a class="reference external" href="http://textblob.readthedocs.org/en/latest/">http://textblob.readthedocs.org/en/latest/</a></p></li>
 <li><p><a class="reference external" href="https://docs.continuum.io/anaconda/pkg-docs">https://docs.continuum.io/anaconda/pkg-docs</a></p></li>
 </ul>
-</div>
-<div class="section" id="science">
+</section>
+<section id="science">
 <h2>Science</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Science">https://en.wikipedia.org/wiki/Science</a></p>
 <ul class="simple">
@@ -899,8 +899,8 @@ be links
 to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data">data</a> sources.</p>
 <p class="attribution">—<a class="reference external" href="http://5stardata.info/">http://5stardata.info/</a></p>
 </div></blockquote>
-</div>
-<div class="section" id="entrepreneurship">
+</section>
+<section id="entrepreneurship">
 <h2>Entrepreneurship</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Entrepreneurship">https://en.wikipedia.org/wiki/Entrepreneurship</a></p>
 <ul class="simple">
@@ -924,8 +924,8 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Business_models_for_open-source_software">https://en.wikipedia.org/wiki/Business_models_for_open-source_software</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software_security#The_debate">https://en.wikipedia.org/wiki/Open-source_software_security#The_debate</a></p></li>
 </ul>
-</div>
-<div class="section" id="community-development">
+</section>
+<section id="community-development">
 <h2>Community Development</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Community_development">https://en.wikipedia.org/wiki/Community_development</a></p>
 <ul class="simple">
@@ -935,8 +935,8 @@ to useful <a class="reference external" href="https://en.wikipedia.org/wiki/Data
 (<a class="reference external" href="https://twitter.com/randomhacks">@randomhacks</a>)</p></li>
 <li><p><a class="reference external" href="http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17">http://www.reddit.com/r/Python/comments/1gn9gv/what_are_some_easy_projects_i_can_get_started_in/#cam3t17</a></p></li>
 </ul>
-</div>
-<div class="section" id="hyperlocal">
+</section>
+<section id="hyperlocal">
 <h2>Hyperlocal</h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Hyperlocal">https://en.wikipedia.org/wiki/Hyperlocal</a></p>
 <ul class="simple">
@@ -970,7 +970,7 @@ Supercluster”, and “Local Group”</p></li>
 <li><p>EDIT: 2014-12-16: Updated date formats to <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">https://en.wikipedia.org/wiki/ISO_8601</a></p></li>
 <li><p>EDIT: 2016-09-04: Updated links</p></li>
 </ul>
-</div>
+</section>
 ]]></description>
              <pubDate>Sun, 15 Dec 2013 00:00:00 -0500</pubDate>
         </item>
@@ -980,9 +980,9 @@ Supercluster”, and “Local Group”</p></li>
             <guid>https://westurner.github.io/2013/11/25/hello-world.html</guid>
             <title><![CDATA[Hello World!]]></title>
             <description><![CDATA[<h1>Hello World!</h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span/><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">print_function</span>
 
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">return</span> <span class="s2">"Hello World!"</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
@@ -991,8 +991,8 @@ Supercluster”, and “Local Group”</p></li>
 </div>
 <p><strong>Updated: 2013-12-15</strong></p>
 <p>New blog! I thought best to accentuate “Hello World” with an exclamation
-point. <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
-<div class="section" id="this-blog">
+point. <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<section id="this-blog">
 <h2>This Blog</h2>
 <p>This blog is created from <a class="reference external" href="https://en.wikipedia.org/wiki/reStructuredText">reStructuredText</a>
 <a class="reference external" href="https://github.com/westurner/westurner.github.io">sources hosted by GitHub</a>
@@ -1001,7 +1001,7 @@ which are processed by <a class="reference external" href="http://www.tinkerer.m
 which extends <a class="reference external" href="https://sphinx-doc.org/">Sphinx</a>
 (<a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx">source</a>,
 <a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)">wikipedia</a>).</p>
-<div class="section" id="syntax-highlighting">
+<section id="syntax-highlighting">
 <h3>Syntax Highlighting</h3>
 <p>Code syntax highlighting –
 <a class="reference external" href="https://github.com/westurner/pygments-style-jellywrd">pygments-style-jellywrd</a> –
@@ -1025,18 +1025,20 @@ which generates the requisite
 <a class="reference external" href="http://pygments.org/">Pygments</a>
 (<a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main">source</a>)
 style.</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>TIL that “Hello World” originated from
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>TIL that “Hello World” originated from
 <a class="reference external" href="https://en.wikipedia.org/wiki/The_C_Programming_Language_(book)">The C Programming Language</a>
-by Kernighan and Ritchie (1978) <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p>
-</dd>
-<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></p>
-</dd>
-</dl>
-</div>
-</div>
+by Kernighan and Ritchie (1978) <a class="footnote-reference brackets" href="#f2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</aside>
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Hello_world_program#History">https://en.wikipedia.org/wiki/Hello_world_program#History</a></p>
+</aside>
+</aside>
+</section>
+</section>
 ]]></description>
             <category><![CDATA[ python ]]></category>
              <pubDate>Mon, 25 Nov 2013 00:00:00 -0500</pubDate>

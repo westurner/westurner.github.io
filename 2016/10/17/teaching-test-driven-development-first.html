@@ -14,16 +14,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="A code blog">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Teaching Test-Driven-Development First &mdash; Wes Turner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teaching Test-Driven-Development First &mdash; Wes Turner</title>
             <link rel="stylesheet" href="../../../_static/normalize.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/sphinx.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/main.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/flat.css" type="text/css">
             <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
             <!--<link rel="stylesheet" href="../../../_static/fontawesome/font-awesome.min.css" type="text/css">-->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" /><link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" /><!-- Load modernizr and JQuery -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/flat.css" type="text/css" />
+        <!-- Load modernizr and JQuery -->
         <script src="../../../_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../../_static/js/jquery/2.1.1/jquery.min.js"><\/script>')</script>
@@ -32,12 +35,12 @@
         <link rel="search" title="Search" href="../../../search" /><link rel="next" title="Documentation" href="../../../2015/03/02/documentation" /><link rel="prev" title="Criteria for Success and Test-Driven-Development" href="../18/criteria-for-success-and-test-driven-development" /><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '1.7.2',
+        VERSION:     '1.8.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="../../../_static/underscore.js"></script><script type="text/javascript" src="../../../_static/doctools.js"></script><script type="text/javascript" src="../../../_static/language_data.js"></script><script type="text/javascript" src="../../../_static/togglebutton.js"></script><script type="text/javascript" src="../../../None"></script>
+    </script>
     <meta name="p:domain_verify" content="8d6002d06d8de33808f013dae9f1e40c"/>
     <script src="../../../_static/js/jquery.scrollTo.min.js" ></script>
     <script type="text/javascript">
@@ -84,7 +87,7 @@
       <hgroup>
         <h1><a href="/">Wes Turner</a></h1><h2>@westurner</h2></hgroup>
 
-      <div id="accounts_" style="height: 154px"><div class="widget">
+      <div id="accounts_" style="height: 154px; display: none"><div class="widget">
 <ul id="accounts">
 <li>
 <a href="https://twitter.com/westurner" title="Twitter" rel="me" property="schema:url" target="_blank">
@@ -299,41 +302,42 @@
 </ul>
 </div></div>
     </header>
-<nav role="navigation">
-    <ul>
+<div class="main-container">
+  <nav role="navigation" class="navbar">
+    <ul class="main-nav">
         
-        <li class="main-nav">
-            <a href="/">home</a>
+        <li>
+            <a href="/">blog</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="../../../pages/resume">resume</a>
         </li>
-        <li class="main-nav">
-            <a href="../../../archive">blog</a>
-        </li>
-        <li class="main-nav">
+        
+        <li>
             <a href="../../../pages/stream">stream</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/hnlog/" target="_blank">hnlog</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/wiki/" target="_blank">wiki</a>
         </li>
     </ul>
-    </nav><div class="main-container" role="main"><div class="main wrapper clearfix body"><article role="main"><div class="timestamp postmeta">
-            <span>October 17, 2016</span>
+  </nav>
+</div><div class="main-container" role="main"><div class="main wrapper clearfix body"><div class="article" role="main"><article>
+    <div class="timestamp postmeta">
+            <span>Date:</span> <span>October 17, 2016</span>
         </div>
-    <div class="section" id="teaching-test-driven-development-first">
-<h1>Teaching Test-Driven-Development First<a class="headerlink" href="#teaching-test-driven-development-first" title="Permalink to this headline">¶</a></h1>
+    <section id="teaching-test-driven-development-first">
+<h1>Teaching Test-Driven-Development First<a class="headerlink" href="#teaching-test-driven-development-first" title="Link to this heading">¶</a></h1>
 <p>Hello world is wrong! Every textbook is doing it wrong, and here’s why:</p>
 <p>A traditional first hello world program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># helloworld.py</span>
 
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">&quot;Hello, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>  <span class="c1"># w/o __name__ this&#39;d run inadvertantly</span>
@@ -341,21 +345,21 @@
 </pre></div>
 </div>
 <p>And then run the program:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python ./helloworld.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>./helloworld.py
 <span class="c1"># &quot;It should say &#39;Hello, @westurner!&#39;&quot;  # (check this manually every time)</span>
 </pre></div>
 </div>
 <p>Hello world with tests (Test-Driven-Development (TDD)):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_helloworld.py</span>
 
-<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 
-<span class="k">class</span> <span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestHelloWorld</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">Testcase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># print(&quot;setUp&quot;)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TestName&#39;</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -370,15 +374,15 @@
 </pre></div>
 </div>
 <p>And then run the automated tests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m site                         <span class="c1"># sys.path and $PWD (`pwd`)</span>
-python -m unittest test_helloworld     <span class="c1"># ./test_helloworld.py</span>
-python -m unittest -v test_helloworld  <span class="c1"># ./test_helloworld.py</span>
-<span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Tests failed! (nonzero returncode)&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>site<span class="w">                         </span><span class="c1"># sys.path and $PWD (`pwd`)</span>
+python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>test_helloworld<span class="w">     </span><span class="c1"># ./test_helloworld.py</span>
+python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>-v<span class="w"> </span>test_helloworld<span class="w">  </span><span class="c1"># ./test_helloworld.py</span>
+<span class="nb">test</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Tests failed! (nonzero returncode)&quot;</span>
 </pre></div>
 </div>
 <p>Why should this first run of the tests fail?</p>
 <ul class="simple">
-<li><p>Because we didn’t remember to import <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></code> in <code class="docutils literal notranslate"><span class="pre">test_helloworld.py</span></code>.</p></li>
+<li><p>Because we didn’t remember to import <span class="docutils literal"><span class="pre">from</span> <span class="pre">helloworld</span> <span class="pre">import</span> <span class="pre">helloworld</span></span> in <span class="docutils literal"><span class="pre">test_helloworld.py</span></span>.</p></li>
 <li><p>Because, in keeping with TDD, we run the test first to make sure it
 actually fails without our changes.</p></li>
 </ul>
@@ -395,11 +399,11 @@ Concerns)</p></li>
 <ul class="simple">
 <li><p>Testable software design patterns</p>
 <ul>
-<li><p>Refactoring: Square, Rectangle, Triangle <code class="docutils literal notranslate"><span class="pre">obj.area()</span></code></p></li>
+<li><p>Refactoring: Square, Rectangle, Triangle <span class="docutils literal"><span class="pre">obj.area()</span></span></p></li>
 <li><p>Test factories / test fixtures</p></li>
 </ul>
 </li>
-<li><p>Additional testing tools (beyond <code class="docutils literal notranslate"><span class="pre">unittest</span></code>):</p>
+<li><p>Additional testing tools (beyond <span class="docutils literal"><span class="pre">unittest</span></span>):</p>
 <ul>
 <li><p>pytest</p></li>
 <li><p>Nose</p></li>
@@ -427,11 +431,14 @@ Concerns)</p></li>
 <li><p><a class="reference external" href="https://wrdrd.github.io/docs/consulting/software-development#test-driven-development">https://wrdrd.github.io/docs/consulting/software-development#test-driven-development</a></p></li>
 <li><p><a class="reference external" href="https://westurner.github.io/2013/11/25/hello-world.html">https://westurner.github.io/2013/11/25/hello-world.html</a></p></li>
 </ul>
-</div>
+</section>
 
     <div class="postmeta">
+        <div class="timestamp postmeta">
+            <span>Date:</span> <span>2016-10-17</span>
+        </div>
         <div class="author">
-            <span>Posted by Wes Turner</span>
+            <span>Posted by:</span> <span>Wes Turner</span>
         </div>
         
         <div class="tags">
@@ -439,10 +446,11 @@ Concerns)</p></li>
                 Tags:
                 <a href="../../../tags/learning.html">#learning</a>&nbsp;<a href="../../../tags/oo.html">#OO</a>&nbsp;<a href="../../../tags/tdd.html">#TDD</a>&nbsp;<a href="../../../tags/testing.html">#testing</a>&nbsp;<a href="../../../tags/tst.html">#TST</a>&nbsp;<a href="../../../tags/python.html">#python</a></span>
         </div>
-        </div><ul class="related clearfix">
+        </div>
+    </article><ul class="related clearfix">
             <li class="left"> &laquo; <a href="../18/criteria-for-success-and-test-driven-development">Criteria for Success and Test-Driven-Development</a></li>
             <li class="right"><a href="../../../2015/03/02/documentation">Documentation</a> &raquo; </li>
-        </ul></article><aside class="sidebar"><section><div class="widget">
+        </ul></div><aside class="sidebar"><section><div class="widget recent-posts">
     <h3><a href="../../../archive">Recent Posts</a></h3>
     <ul><li>
             <a href="../18/criteria-for-success-and-test-driven-development">Criteria for Success and Test-Driven-Development</a>
@@ -466,7 +474,17 @@ Concerns)</p></li>
     <h1><a href="#searchbox">Search</a></h1>
     <form action="../../../search" method="get">
         <input type="text" name="q" />
-        <button type="submit"><span class="fa fa-search"></span></button>
+        <button type="submit" class="searchbutton">
+            <div style="font-size: 2em; font-weight: bold; -webkit-transform: rotate(42deg); 
+                -moz-transform: rotate(42deg); 
+                  -o-transform: rotate(42deg);
+                     transform: rotate(42deg); margin-top: -0.4em;
+  margin-right: -0.4em;
+  margin-left: -0.2em;
+  margin-bottom: -0.2em;">
+            &#9906;
+            </div>
+        </button>
     </form>
 </div></section><section><div class="widget">
     <h3 class="hidden sr-only">Tags</h3>
@@ -686,13 +704,14 @@ Concerns)</p></li>
 </ul>
 </div></section></aside></div> <!-- #main --></div> <!-- #main-container -->
 
-        <div class="footer-container" role="contentinfo"><footer class="wrapper" role="contentinfo">
+        <div class="footer-container" role="contentinfo">
+<footer class="wrapper" role="contentinfo">
     <ul>
         <li class="main-nav" style="margin-bottom:1em">
             <a href="#">^top^</a>
         </li><li class="main-nav"><div class="rss">
-        <a href="../../../rss" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
-    </div></li></ul>&copy; Copyright 2020 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
+        <a href="../../../rss" title="Subscribe via RSS"><svg style="vertical-align: middle; background-color:white; padding:2px; border-radius:5px" xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="orange" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg></a>
+    </div></li></ul>&copy; Copyright 2025 Wes Turner. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>. (<a href="https://github.com/westurner/westurner.github.io">github.com/westurner/westurner.github.io</a>)</footer></div> <!-- footer-container -->
 
       </div> <!--! end of #container --><!--[if lt IE 7 ]>
           <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

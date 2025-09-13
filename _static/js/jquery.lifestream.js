@@ -145,7 +145,7 @@
       // At then end we call the load method.
       if( !jQuery.tmpl ) {
         jQuery.getScript(
-          '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/' +
+          'https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/' +
           'jquery.tmpl.min.js',
           load);
       } else {
@@ -196,50 +196,55 @@
 (function($) {
 $.fn.lifestream.feeds.atom = function( config, callback ) {
 
+  console.trace();
+
   var template = $.extend({},
     {
-      posted: 'posted <a href="${link.href}">${title.content}</a>'
+      posted: 'posted <a href="${link}">${title}</a>'
     },
     config.template),
 
   /**
-   * Parse the input from atom feed
+   * Parse the input from atom feed XML
    */
-  parseAtom = function( input ) {
-    var output = [], list = [], i = 0, j = 0;
-    if(input.query && input.query.count && input.query.count > 0) {
-      list = input.query.results.feed.entry;
-      j = list.length;
-
-      for( ; i<j; i++) {
-        var item = list[i];
-
-        output.push({
-          url: item.link.href,
-          date: new Date( item.updated ),
-          config: config,
-          html: $.tmpl( template.posted, item )
-        });
-      }
-    }
+  parseAtom = function(xml) {
+    var output = [];
+    $(xml).find('entry').each(function() {
+      var $entry = $(this);
+      var link = $entry.find('link[rel="alternate"]').attr('href') ||
+                 $entry.find('link').attr('href') || '';
+      var title = $entry.find('title').text();
+      var updated = $entry.find('updated').text() || $entry.find('published').text();
+      output.push({
+        url: link,
+        date: new Date(updated),
+        config: config,
+        html: $.tmpl(template.posted, { link: link, title: title })
+      });
+    });
     return output;
   };
 
   $.ajax({
-    url: $.fn.lifestream.createYqlUrl('select * from xml where url="' +
-      config.user + '"'),
-    dataType: 'jsonp',
-    success: function( data ) {
+    url: config.user,
+    dataType: 'xml',
+    xhrFields: {
+        withCredentials: true // Include cookies/credentials if needed
+    },
+    success: function(data) {
+      console.log(data);
       callback(parseAtom(data));
+    },
+    error: function() {
+      console.log(data);
+      callback([]);
     }
   });
 
   // Expose the template.
-  // We use this to check which templates are available
   return {
-    "template" : template
+    "template": template
   };
-
 };
 })(jQuery);
 (function($) {
@@ -794,7 +799,7 @@ $.fn.lifestream.feeds.flickr = function( config, callback ) {
 
   var template = $.extend({},
     {
-      posted: 'posted a photo <a href="${link}">${title}</a>'
+      posted: '<i>posted a photo </i><a href="${link}">${title}</a>'
     },
     config.template);
 
@@ -1038,122 +1043,85 @@ $.fn.lifestream.feeds.gimmebar = function( config, callback ) {
 };
 })(jQuery);
 (function($) {
-$.fn.lifestream.feeds.github = function( config, callback ) {
+$.fn.lifestream.feeds.github = function(config, callback) {
 
   var template = $.extend({},
     {
-      commitCommentEvent: 'commented on <a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>',
-      createBranchEvent: 'created branch <a href="http://github.com/' +
-        '${status.repo.name}/tree/${status.payload.ref}">' +
-        '${status.payload.ref}</a> at <a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>',
-      createRepositoryEvent: 'created repository ' +
-        '<a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>',
-      createTagEvent: 'created tag <a href="http://github.com/' +
-        '${status.repo.name}/tree/${status.payload.ref}">' +
-        '${status.payload.ref}</a> at <a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>',
-      deleteBranchEvent: 'deleted branch ${status.payload.ref} at ' +
-        '<a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      deleteTagEvent: 'deleted tag ${status.payload.ref} at ' +
-        '<a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      followEvent: 'started following <a href="http://github.com/' +
-        '${status.payload.target.login}">${status.payload.target.login}</a>',
-      forkEvent: 'forked <a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      gistEvent: '${status.payload.action} gist ' +
-        '<a href="http://gist.github.com/${status.payload.gist.id}">' +
-        '${status.payload.gist.id}</a>',
-      issueCommentEvent: 'commented on issue <a href="http://github.com/' +
-        '${status.repo.name}/issues/${status.payload.issue.number}">' +
-        '${status.payload.issue.number}</a> on <a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>',
-      issuesEvent: '${status.payload.action} issue ' +
-        '<a href="http://github.com/${status.repo.name}/issues/' +
-        '${status.payload.issue.number}">${status.payload.issue.number}</a> '+
-        'on <a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      pullRequestEvent: '${status.payload.action} pull request ' +
-        '<a href="http://github.com/${status.repo.name}/pull/' +
-        '${status.payload.number}">${status.payload.number}</a> on ' +
-        '<a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      pushEvent: 'pushed to <a href="http://github.com/${status.repo.name}' +
-        '/tree/${status.payload.ref}">${status.payload.ref}</a> at ' +
-        '<a href="http://github.com/${status.repo.name}">' +
-        '${status.repo.name}</a>',
-      watchEvent: 'started watching <a href="http://github.com/' +
-        '${status.repo.name}">${status.repo.name}</a>'
+      commitCommentEvent: '<i>commented on </i><a href="https://github.com/${repo.name}">${repo.name}</a>',
+      createBranchEvent: '<i>created branch </i><a href="https://github.com/${repo.name}/tree/${payload.ref}">${repo.name}@${payload.ref}</a>',
+      createRepositoryEvent: '<i>created repository </i><a href="https://github.com/${repo.name}">${repo.name}</a>',
+      createTagEvent: '<i>created tag </i><a href="https://github.com/${repo.name}/tree/${payload.ref}">${repo.name}@${payload.ref}</a>',
+      deleteBranchEvent: '<i>deleted branch </i>${repo.name}@${payload.ref}',
+      deleteTagEvent: '<i>deleted tag </i>${repo.name}@${payload.ref}',
+      followEvent: '<i>started following </i><a href="https://github.com/${payload.target.login}">${payload.target.login}</a>',
+      forkEvent: '<i>forked </i><a href="https://github.com/${repo.name}">${repo.name}</a>',
+      gistEvent: '<i>${payload.action} gist </i><a href="https://gist.github.com/${payload.gist.id}">${payload.gist.id}</a>',
+      issueCommentEvent: '<i>commented on issue </i><a href="https://github.com/${repo.name}/issues/${payload.issue.number}">${repo.name}#${payload.issue.number}</a>',
+      issuesEvent: '<i>${payload.action} issue </i><a href="https://github.com/${repo.name}/issues/${payload.issue.number}">${repo.name}#${payload.issue.number}</a>',
+      pullRequestEvent: '<i>${payload.action} pull request </i><a href="https://github.com/${repo.name}/pull/${payload.number}">${repo.name}#${payload.number}</a>',
+      pushEvent: '<i>pushed to</i> <a href="https://github.com/${repo.name}/tree/${payload.ref.replace(new RegExp("^refs.heads."), "")}">${repo.name}@${payload.ref.replace(new RegExp("^refs.heads."), "")}</a>' +
+  '{{if payload.commits && payload.commits.length}}' +
+    '<ul class="github-commits">' +
+      '{{each payload.commits}}' +
+        '<li>' +
+          '<a href="https://github.com/${repo.name}/commit/${$value.sha}" title="open https://github.com/${repo.name}/commit/${$value.sha}"><span class="commit-message">${$value.message.split("\\n")[0]}</span></a> : ' +
+          '<a href="https://github.com/${repo.name}/commit/${$value.sha}" title="open https://github.com/${repo.name}/commit/${$value.sha}">${$value.sha.substring(0,7)}</a>' +
+        '</li>' +
+      '{{/each}}' +
+    '</ul>' +
+  '{{/if}}',
+      watchEvent: '<i>starred</i> <a href="https://github.com/${repo.name}">${repo.name}</a>'
     },
-    config.template),
+    config.template);
 
-  parseGithubStatus = function( status ) {
-    if (status.type === 'CommitCommentEvent' ) {
-      return $.tmpl( template.commitCommentEvent, {status: status} );
-    }
-    else if (status.type === 'CreateEvent' &&
-        status.payload.ref_type === 'branch') {
-      return $.tmpl( template.createBranchEvent, {status: status} );
-    }
-    else if (status.type === 'CreateEvent' &&
-        status.payload.ref_type === 'repository') {
-      return $.tmpl( template.createRepositoryEvent, {status: status} );
-    }
-    else if (status.type === 'CreateEvent' &&
-        status.payload.ref_type === 'tag') {
-      return $.tmpl( template.createTagEvent, {status: status} );
-    }
-    else if (status.type === 'DeleteEvent' &&
-        status.payload.ref_type === 'branch') {
-      return $.tmpl( template.deleteBranchEvent, {status: status} );
-    }
-    else if (status.type === 'DeleteEvent' &&
-        status.payload.ref_type === 'tag') {
-      return $.tmpl( template.deleteTagEvent, {status: status} );
-    }
-    else if (status.type === 'FollowEvent' ) {
-      return $.tmpl( template.followEvent, {status: status} );
-    }
-    else if (status.type === 'ForkEvent' ) {
-      return $.tmpl( template.forkEvent, {status: status} );
-    }
-    else if (status.type === 'GistEvent' ) {
+
+    
+  function parseGithubStatus(status) {
+    if (status.type === 'CommitCommentEvent') {
+      return $.tmpl(template.commitCommentEvent, status);
+    } else if (status.type === 'CreateEvent' && status.payload.ref_type === 'branch') {
+      return $.tmpl(template.createBranchEvent, status);
+    } else if (status.type === 'CreateEvent' && status.payload.ref_type === 'repository') {
+      return $.tmpl(template.createRepositoryEvent, status);
+    } else if (status.type === 'CreateEvent' && status.payload.ref_type === 'tag') {
+      return $.tmpl(template.createTagEvent, status);
+    } else if (status.type === 'DeleteEvent' && status.payload.ref_type === 'branch') {
+      return $.tmpl(template.deleteBranchEvent, status);
+    } else if (status.type === 'DeleteEvent' && status.payload.ref_type === 'tag') {
+      return $.tmpl(template.deleteTagEvent, status);
+    } else if (status.type === 'FollowEvent') {
+      return $.tmpl(template.followEvent, status);
+    } else if (status.type === 'ForkEvent') {
+      return $.tmpl(template.forkEvent, status);
+    } else if (status.type === 'GistEvent') {
       if (status.payload.action === 'create') {
         status.payload.action = 'created';
       } else if (status.payload.action === 'update') {
         status.payload.action = 'updated';
       }
-      return $.tmpl( template.gistEvent, {status: status} );
+      return $.tmpl(template.gistEvent, status);
+    } else if (status.type === 'IssueCommentEvent') {
+      return $.tmpl(template.issueCommentEvent, status);
+    } else if (status.type === 'IssuesEvent') {
+      return $.tmpl(template.issuesEvent, status);
+    } else if (status.type === 'PullRequestEvent') {
+      return $.tmpl(template.pullRequestEvent, status);
+    } else if (status.type === 'PushEvent') {
+      if (status.payload.ref && status.payload.ref.split('/').length > 2) {
+        status.payload.ref = status.payload.ref.split('/')[2];
+      }
+      return $.tmpl(template.pushEvent, status);
+    } else if (status.type === 'WatchEvent') {
+      return $.tmpl(template.watchEvent, status);
     }
-    else if (status.type === 'IssueCommentEvent' ) {
-      return $.tmpl( template.issueCommentEvent, {status: status} );
-    }
-    else if (status.type === 'IssuesEvent' ) {
-      return $.tmpl( template.issuesEvent, {status: status} );
-    }
-    else if (status.type === 'PullRequestEvent' ) {
-      return $.tmpl( template.pullRequestEvent, {status: status} );
-    }
-    else if (status.type === 'PushEvent' ) {
-      status.payload.ref = status.payload.ref.split('/')[2];
-      return $.tmpl( template.pushEvent, {status: status} );
-    }
-    else if (status.type === 'WatchEvent' ) {
-      return $.tmpl( template.watchEvent, {status: status} );
-    }
-  },
+  }
 
-  parseGithub = function( input ) {
+  function parseGithub(input) {
     var output = [], i = 0, j;
-
-    if (input.query && input.query.count && input.query.count >0) {
-      j = input.query.count;
-      for ( ; i<j; i++) {
-        var status = input.query.results.json[i].json;
+    if (input && input.length > 0) {
+      j = input.length;
+      for (; i < j; i++) {
+        var status = input[i];
         output.push({
           date: new Date(status.created_at),
           config: config,
@@ -1162,26 +1130,239 @@ $.fn.lifestream.feeds.github = function( config, callback ) {
         });
       }
     }
-
     return output;
-
-  };
+  }
 
   $.ajax({
-    url: $.fn.lifestream.createYqlUrl('select ' +
-      'json.type, json.actor, json.repo, json.payload, json.created_at ' +
-      'from json where url="https://api.github.com/users/' + config.user +
-      '/events/public?per_page=100"'),
-    dataType: 'jsonp',
-    success: function( data ) {
+    url: "https://api.github.com/users/" + config.user + "/events/public?per_page=100",
+    dataType: "json",
+    success: function(data) {
       callback(parseGithub(data));
+    },
+    error: function() {
+      callback([]);
     }
   });
 
   // Expose the template.
   // We use this to check which templates are available
   return {
-    "template" : template
+    "template": template
+  };
+
+};
+})(jQuery);
+(function($) {
+$.fn.lifestream.feeds.gitlab = function(config, callback) {
+
+  var template = $.extend({},
+    {
+      pushed: '<i>pushed to</i> <a href="${project.web_url}/-/commits/${push_data.ref}">${project.path_with_namespace}@${push_data.ref}</a>' +
+  '{{if commits && commits.length}}' +
+    '<ul class="github-commits">' +
+      '{{each commits}}' +
+        '<li>' +
+          '<span class="commit-message">${$value.title ? $value.title.split("\\n")[0] : ""}</span>' +
+          '<a href="${$value.web_url}" title="${$value.id}">${$value.id.substring(0,7)}</a>: ' +
+        '</li>' +
+      '{{/each}}' +
+    '</ul>' +
+  '{{/if}}',
+      created: '<i>created</i> <a href="${target_url}">${project.path_with_namespace}#${noteable_iid}: ${target_title}</a>',
+      //created: '<i>created</i> <a href="${target_url}">${project.path_with_namespace}</a>',
+      commented: '<i>commented on</i> <a href="${target_url}">${project.path_with_namespace}#${noteable_iid}: ${target_title}</a>',
+      closed: '<i>closed</i> <a href="${target_url}">${project.path_with_namespace}#${target_iid}</a></a>',
+      opened: '<i>opened</i> <a href="${target_url}">${project.path_with_namespace}#${target_iid}: ${target_title}</a>',
+      merged: '<i>merged</i> <a href="${target_url}">${project.path_with_namespace}#${target_iid}</a> <i>in</i> <a href="${project.web_url}">${project.name}</a>',
+    },
+    config.template);
+
+  // In-memory cache for project info
+  var projectCache = {};
+
+  // Helper: Fetch project info for a given project_id, with cache
+  function fetchProject(instance, project_id) {
+    return new Promise(function(resolve) {
+      if (projectCache[project_id]) {
+        resolve(projectCache[project_id]);
+      } else {
+        $.ajax({
+          url: instance + "/api/v4/projects/" + encodeURIComponent(project_id),
+          dataType: "json",
+          success: function(data) {
+            projectCache[project_id] = data;
+            resolve(data);
+          },
+          error: function() {
+            // fallback object
+            var fallback = { web_url: "#", name: "(unknown project)" };
+            projectCache[project_id] = fallback;
+            resolve(fallback);
+          }
+        });
+      }
+    });
+  }
+
+  // Helper: Compose target_url for issues, MRs, notes, etc.
+  function buildTargetUrl(event, project) {
+    if (event.target_type === "Issue" && event.target_iid) {
+      return project.web_url + "/-/issues/" + event.target_iid;
+    } else if (event.target_type === "MergeRequest" && event.target_iid) {
+      return project.web_url + "/-/merge_requests/" + event.target_iid;
+    } else if ((event.target_type === "Note" || event.target_type === "DiscussionNote") && event.note && event.note.noteable_type === "Issue" && event.note.noteable_iid) {
+      return project.web_url + "/-/issues/" + event.note.noteable_iid + "#note_" + event.note.id;
+    } else if ((event.target_type === "Note" || event.target_type === "DiscussionNote") && event.note && event.note.noteable_type === "MergeRequest" && event.note.noteable_iid) {
+      return project.web_url + "/-/merge_requests/" + event.note.noteable_iid + "#note_" + event.note.id;
+    } else if (event.target_type === "PushEvent" && event.push_data && event.push_data.ref) {
+      return project.web_url + "/-/commits/" + event.push_data.ref;
+    }
+    return project.web_url;
+  }
+
+  function parseGitlabEvent(event, project) {
+    // Provide safe defaults
+    event.project = project || { web_url: "#", name: "(unknown project)" };
+    event.target_url = buildTargetUrl(event, event.project);
+    event.action_name = event.action_name || "(action)";
+    // Add references to noteable_iid and other _iid properties
+    event.noteable_iid = (event.note && event.note.noteable_iid) || event.noteable_iid || "";
+    event.target_iid = event.target_iid || "";
+    event.target_type = event.target_type || "";
+    event.target_title = event.target_title || "";
+    var action = event.action_name ? event.action_name.toLowerCase() : '';
+
+    // Handle pushed to events with commit details
+    // if (action === 'pushed to' && event.push_data && event.push_data.ref && event.project && event.project.id) {
+    //   // Synchronously fetch commits for this push (API: /projects/:id/repository/commits?ref_name=...)
+    //   // This must be handled asynchronously in the main parseGitlab function
+    //   // So, just return a placeholder here; see below for async handling
+    //   return $.tmpl(template.pushed, event);
+    // }
+
+    if (action === 'pushed to') {
+      console.log('pushed to');
+      console.log(event);
+      return $.tmpl(template.pushed, event);
+    } else if (action === 'pushed new') {
+      console.log('pushed new');
+      console.log(event);
+      event.commits = [];
+      return $.tmpl(template.pushed, event);
+    } else if (action === 'created') {
+      event.push_data = event.push_data || {}; // TODO
+      return $.tmpl(template.created, event);
+    } else if (action === 'commented on') {
+      return $.tmpl(template.commented, event);
+    } else if (action === 'merged') {
+      return $.tmpl(template.merged, event);
+    } else if (action === 'closed') {
+      return $.tmpl(template.closed, event);
+    } else if (action === 'opened') {
+      console.log('opened');
+      console.log(event);
+      return $.tmpl(template.opened, event);
+    } else {
+      console.log('unknown action: ' + action);
+      console.log(event);
+      return $.tmpl(template.created, event);
+    }
+  }
+
+  // Helper: Fetch commits for a push event
+  function fetchCommitsForPush(instance, project, event, onResult) {
+    $.ajax({
+      url: instance + "/api/v4/projects/" + encodeURIComponent(project.id) +
+        "/repository/commits?ref_name=" + encodeURIComponent(event.push_data.ref),
+      dataType: "json",
+      success: function(commits) {
+        event.commits = commits;
+        onResult();
+      },
+      error: function() {
+        event.commits = [];
+        onResult();
+      }
+    });
+  }
+
+  function parseGitlab(events, projectMap, instance, doneCallback) {
+    var output = [];
+    var pending = 0;
+    var finished = function() {
+      if (--pending === 0) doneCallback(output);
+    };
+
+    for (var i = 0; i < events.length; i++) {
+      var event = events[i];
+      var project = projectMap[event.project_id] || { web_url: "#", name: "(unknown project)" };
+      var action = event.action_name ? event.action_name.toLowerCase() : '';
+      if (action === 'pushed to' && event.push_data && event.push_data.ref && project.id) {
+        pending++;
+        fetchCommitsForPush(instance, project, event, function() {
+          var html = parseGitlabEvent(event, project);
+          output.push({
+            date: new Date(event.created_at),
+            config: config,
+            html: html,
+            url: event.target_url || project.web_url
+          });
+          finished();
+        });
+      } else {
+        output.push({
+          date: new Date(event.created_at),
+          config: config,
+          html: parseGitlabEvent(event, project),
+          url: event.target_url || project.web_url
+        });
+      }
+    }
+    if (pending === 0) doneCallback(output);
+  }
+
+  // config.user should be the GitLab username
+  // config.instance_url can be set for self-hosted GitLab, defaults to gitlab.com
+  var instance = config.instance_url || "https://gitlab.com";
+  var api_url = instance + "/api/v4/users/" + encodeURIComponent(config.user) + "/events?per_page=20";
+
+  $.ajax({
+    url: api_url,
+    dataType: "json",
+    success: function(events) {
+      // 1. Collect unique project_ids
+      var projectIds = {};
+      for (var i = 0; i < events.length; i++) {
+        if (events[i].project_id) {
+          projectIds[events[i].project_id] = true;
+        }
+      }
+      var uniqueIds = Object.keys(projectIds);
+
+      // 2. Fetch all project info in parallel, using cache
+      var fetches = uniqueIds.map(function(pid) {
+        return fetchProject(instance, pid).then(function(project) {
+          return [pid, project];
+        });
+      });
+
+      Promise.all(fetches).then(function(results) {
+        var projectMap = {};
+        results.forEach(function(pair) {
+          projectMap[pair[0]] = pair[1];
+        });
+        // Use new parseGitlab with async commit fetching
+        parseGitlab(events, projectMap, instance, callback);
+      });
+    },
+    error: function() {
+      callback([]);
+    }
+  });
+
+  // Expose the template.
+  return {
+    "template": template
   };
 
 };
@@ -1952,7 +2133,7 @@ $.fn.lifestream.feeds.reddit = function( config, callback ) {
     var score = item.data.ups - item.data.downs,
         pass = {
           item: item,
-          score: (score > 0) ? "+" + score : score
+          score: (score > 0) ? "+" + score : ""
         };
 
     // t1 = reply, t3 = new thread
@@ -2090,7 +2271,6 @@ $.fn.lifestream.feeds.slideshare = function( config, callback ) {
       j = list.length;
       for ( ; i < j; i++) {
         item = list[i];
-
         output.push({
           date: new Date(item.pubDate),
           config: config,
@@ -2170,14 +2350,23 @@ $.fn.lifestream.feeds.stackoverflow = function( config, callback ) {
 
   var parseStackoverflowItem = function( item ) {
     var text="", title="", link="",
-    stackoverflow_link = "http://stackoverflow.com/users/" + config.user,
-    question_link = "http://stackoverflow.com/questions/";
+    stackoverflow_link = "https://stackoverflow.com/users/" + config.user,
+    question_link = "https://stackoverflow.com/questions/";
 
     if(item.timeline_type === "badge") {
       link = stackoverflow_link + "?tab=reputation";
     }
 
-    text = item.timeline_type;
+    if (item.timeline_type == "commented") {
+      text = "commented on";
+    } else if (item.timeline_type == "badge") {
+      text = "earned badge";
+    } else if (item.timeline_type == "suggested") {
+      text = "suggested an edit to"
+    } else {
+      text = item.timeline_type;
+    }
+
     title = item.title || item.detail || "";
     link = link || question_link + item.post_id;
 
@@ -2207,7 +2396,7 @@ $.fn.lifestream.feeds.stackoverflow = function( config, callback ) {
             config: config,
             html: $.tmpl( template.global, parseStackoverflowItem(item) )
           });
-        }
+               }
       }
 
       callback(output);
@@ -2479,35 +2668,36 @@ $.fn.lifestream.feeds.vimeo = function( config, callback ) {
   },
   config.template),
 
-  parseVimeo = function( input, item_type ) {
-    var output = [], i = 0, j, item, type = item_type || 'liked', date, description;
+  parseVimeo = function( input, activity ) {
+    var output = [], i = 0, j, item, video, date, templateData;
 
-    if (input) {
-      j = input.length;
-      for( ; i < j; i++) {
-        item = input[i];
-        if (type === 'posted') {
-          date = new Date( item.upload_date.replace(' ', 'T') );
-        } else {
-          date = new Date( item.liked_on.replace(' ', 'T') );
+    if(input.data && input.data.items) {
+      j = input.data.items.length;
+      for( ; i<j; i++) {
+        item = input.data.items[i];
+
+        switch (activity) {
+          case 'favorited':
+            video = item.video;
+            date = item.created;
+            templateData = item;
+            break;
+          case 'uploaded':
+            video = item;
+            date = video.uploaded;
+            templateData = {video: video};
+            break;
         }
 
-        if (item.description) {
-          description = item.description.replace(/"/g, "'").replace( /<.+?>/gi, '');
-        } else {
-          description = '';
+        // Don't add unavailable items (private, rejected, failed)
+        if (!video.player || !video.player['default']) {
+          continue;
         }
 
         output.push({
-          date: date,
+          date: new Date(date),
           config: config,
-          html: $.tmpl( template[type], {
-            url: item.url,
-            description: item.description ? item.description
-              .replace(/"/g, "'")
-              .replace( /<.+?>/gi, '') : '',
-            title: item.title
-          })
+          html: $.tmpl( template[activity], templateData )
         });
       }
     }
@@ -2516,37 +2706,27 @@ $.fn.lifestream.feeds.vimeo = function( config, callback ) {
   };
 
   $.ajax({
-    url: $.fn.lifestream.createYqlUrl('SELECT * FROM xml WHERE ' +
-      'url="http://vimeo.com/api/v2/' + config.user + '/likes.xml" OR ' +
-      'url="http://vimeo.com/api/v2/' + config.user + '/videos.xml"'),
+    url: "https://gdata.youtube.com/feeds/api/users/" + config.user +
+      "/favorites?v=2&alt=jsonc",
     dataType: 'jsonp',
-    success: function( response ) {
-      var output = [];
+    success: function( data ) {
+      callback(parseYoutube(data, 'favorited'));
+    }
+  });
 
-      // check for likes & parse
-      if ( response.query.results.videos[0] != null &&
-           response.query.results.videos[0].video.length > 0 ) {
-        output = output.concat(parseVimeo(
-          response.query.results.videos[0].video
-        ));
-      }
-
-      // check for uploads & parse
-      if ( response.query.results.videos[1] != null &&
-           response.query.results.videos[1].video.length > 0 ) {
-        output = output.concat(
-          parseVimeo(response.query.results.videos[1].video, 'posted')
-        );
-      }
-
-      callback(output);
+  $.ajax({
+    url: "https://gdata.youtube.com/feeds/api/users/" + config.user +
+      "/uploads?v=2&alt=jsonc",
+    dataType: 'jsonp',
+    success: function( data ) {
+      callback(parseYoutube(data, 'uploaded'));
     }
   });
 
   // Expose the template.
   // We use this to check which templates are available
   return {
-    'template' : template
+    "template" : template
   };
 
 };
@@ -2557,7 +2737,7 @@ $.fn.lifestream.feeds.wikipedia = function( config, callback ) {
 
   template = $.extend({},
     {
-      contribution: 'contributed to <a href="${url}">${title}</a>'
+      contribution: '<i>contributed to</i> <a href="${url}">${title}</a>'
     },
     config.template);
 
@@ -2729,8 +2909,7 @@ $.fn.lifestream.feeds.youtube = function( config, callback ) {
   };
 
 };
-})(jQuery);
-(function($) {
+})(jQuery);(function($) {
 $.fn.lifestream.feeds.zotero = function( config, callback ) {
 
   var template = $.extend({},
