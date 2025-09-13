@@ -66,52 +66,66 @@
 {% endblock -%}
 
 {%- block navigation -%}
-    <nav role="navigation">
-    <ul>
+<div class="main-container">
+  <nav role="navigation" class="navbar">
+    <ul class="main-nav">
         {#
         {% for page in pages -%}
-        <li class="main-nav">
+        <li>
             <a href="{{ pathto(page[0]) }}">{{ page[1]|e }}</a>
         </li>
         {% endfor -%}
         #}
-        <li class="main-nav">
-            <a href="/">home</a>
+        <li {%- if current_page_name == "index" or current_page_name == "archive" %} class="active"{% endif %}>
+            <a href="/">blog</a>
         </li>
-        <li class="main-nav">
+        {%- if current_page_name == "archive" %} 
+        <li class="breacrumbspacer">&gt;</li>
+        <li class="active subnav"><a href="{{ pathto('archive') }}">archive</a></li>
+        <li class="breacrumbspacerlarge"></li>
+        {% endif %}
+        <li {%- if metadata.is_page and metadata.title == "Resume" %} class="active"{% endif %}>
             <a href="{{ pathto('pages/resume') }}">resume</a>
         </li>
-        <li class="main-nav">
-            <a href="{{ pathto('archive') }}">blog</a>
-        </li>
-        <li class="main-nav">
+        {#<li {%- if current_page_name == "archive" %} class="active"{% endif %}>
+            <a href="{{ pathto('archive') }}">archive</a>
+        </li>#}
+        <li {%- if metadata.is_page and metadata.title == "Stream" %} class="active"{% endif %}>
             <a href="{{ pathto('pages/stream') }}">stream</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/redditlog/" target="_blank">redditlog</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/hnlog/" target="_blank">hnlog</a>
         </li>
-        <li class="main-nav">
+        <li>
             <a href="https://westurner.github.io/wiki/" target="_blank">wiki</a>
         </li>
     </ul>
-    </nav>
+  </nav>
+</div>
 {%- endblock -%}
 
 
 {#- Post layout -#}
 {%- block document -%}
-    <article role="main">
+    <div class="article" role="main">
         {%- block body -%}{%- endblock -%}
         {%- block relbar -%}{{ relbar() }}{%- endblock -%}
         {%- block comments_section -%}{%- endblock -%}
-    </article>
+    </div>
 {%- endblock -%}
 
 
 {%- block footer -%}
+{#-
+            <textarea cols="81" rows="40" style="background-color: #dca">
+            {{ metadata|escape }}
+
+            {{ debug() }}
+            </textarea>
+#}
 <footer class="wrapper" role="contentinfo">
     <ul>
         <li class="main-nav" style="margin-bottom:1em">

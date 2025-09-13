@@ -23,18 +23,28 @@
         {% include "twitter.html" %}
     </div>
     </div>
-    #}
     <div id="posts" class="posts">
-    <h1 class="h_underline posts_title">
+    <h1 class="posts_title">
         <a href="{{ pathto('archive') }}">Blog</a>
     </h1>
+
+    #}
     {%- for metadata in posts -%}
+        <article>
+        {#
+            <textarea cols="81" rows="40" style="background-color: #dca">
+            {{ debug(indent=2)|escape }}
+            </textarea>
+            <textarea cols="81" rows="40" style="background-color: #dca">
+            {{ metadata|escape }}
+            </textarea>
+        #}
         <div class="post">
         {{ metadata.body }}
-        {{ timestamp(metadata.formatted_date) }}
         {{ post_meta(metadata, metadata.comment_count) }}
         {%- if not loop.last -%}<div class="separator post_separator"></div>{%- endif -%}
         </div>
+        </article>
     {%- endfor -%}
     {#
     <div class="archive_link">

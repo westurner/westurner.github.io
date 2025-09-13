@@ -37,99 +37,53 @@
     }
     </style>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-    <script src="../_static/js/jquery.lifestream.min.js"></script>
+    <!--<script src="../_static/js/jquery.lifestream.min.js"></script>-->
+    <script src="../_static/js/jquery.lifestream.js"></script>
     <script src="../_static/js/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
     var accounts_list = [
     //{service:"bitbucket", user:"westurner"},
-    {   service:"bitly",
-        user:"westurner",
-        template: {
-            created:
-                'shared <a href="${short_url}" title="${title}">' +
-                '${short_url}</a>'
-        },
-    },
+
+    // {   service:"bitly",
+    //     user:"westurner",
+    //     template: {
+    //         created:
+    //             'shared <a href="${short_url}" title="${title}">' +
+    //             '${short_url}</a>'
+    //     },
+    // },
+
     //{   service:"disqus",
     //    user:"1092665",
     //    key:"kkdNdXNS6fJli47N3A6mvweO62BLmZC8hBGv5J4L526YnmoEPe8ULfVvvJC4f6or"}, //user:"westurner"
+
     {   service:"flickr",
         user:"29384429@N04"}, //user:"westurner"},
+
+    // { service: "atom",
+    //   user: "https://github.com/westurner.atom"
+    // },  // fails because CORS
+
     {   service:"github",
-        user:"westurner",
-        template: {
-            commitCommentEvent: 'commented on <a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>',
-            createBranchEvent: 'created branch <a href="http://github.com/' +
-                '${status.repo.name}/tree/${status.payload.ref}">' +
-                '${status.payload.ref}</a> at <a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>',
-            createRepositoryEvent: 'created repository ' +
-                '<a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>',
-            createTagEvent: 'created tag <a href="http://github.com/' +
-                '${status.repo.name}/tree/${status.payload.ref}">' +
-                '${status.payload.ref}</a> at <a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>',
-            deleteBranchEvent: 'deleted branch ${status.payload.ref} at ' +
-                '<a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            deleteTagEvent: 'deleted tag ${status.payload.ref} at ' +
-                '<a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            followEvent: 'started following <a href="http://github.com/' +
-                '${status.payload.target.login}">${status.payload.target.login}</a>',
-            forkEvent: 'forked <a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            gistEvent: '${status.payload.action} gist ' +
-                '<a href="http://gist.github.com/${status.payload.gist.id}">' +
-                '${status.payload.gist.id}</a>',
-            issueCommentEvent: 'commented on issue <a href="http://github.com/' +
-                '${status.repo.name}/issues/${status.payload.issue.number}">' +
-                '${status.payload.issue.number}</a> on <a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>',
-            issuesEvent: '${status.payload.action} issue ' +
-                '<a href="http://github.com/${status.repo.name}/issues/' +
-                '${status.payload.issue.number}">${status.payload.issue.number}</a> '+
-                'on <a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            pullRequestEvent: '${status.payload.action} pull request ' +
-                '<a href="http://github.com/${status.repo.name}/pull/' +
-                '${status.payload.number}">${status.payload.number}</a> on ' +
-                '<a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            pushEvent: 'pushed to <a href="http://github.com/${status.repo.name}' +
-                '/tree/${status.payload.ref}">${status.payload.ref}</a> at ' +
-                '<a href="http://github.com/${status.repo.name}">' +
-                '${status.repo.name}</a>',
-            watchEvent: 'starred <a href="http://github.com/' +
-                '${status.repo.name}">${status.repo.name}</a>'
-        }
-    },
-    {   service:"googleplus",
-        user:"114596103453008801526",
-        key:"AIzaSyC_w11BJHfblXv2eiygei0j-Sp2Tom83_Y",
-        template: {
-            posted: // '<a href="${actor.url}">${actor.displayName}</a>' +
-                'shared <a href="${url}" ' +
-                'title="${object.replies.totalItems} replies, ' +
-                '${object.plusoners.totalItems} +1s, ' +
-                '${object.resharers.totalItems} reshares">' +
-                '${title} (' +
-                '${object.replies.totalItems}/' +
-                '${object.plusoners.totalItems}/' +
-                '${object.resharers.totalItems}) </a>'
-        },
-    },
+         user:"westurner", },
+
+    {   service:"gitlab",
+         user:"westurner", },
+
     //{   service:"instagram", user:"dubturner", },
-    {   service:"lastfm",
-        user:"westurner"},
+
+    // {   service:"lastfm",
+    //     user:"westurner"},
+
     //{service:"librarything", user:"westurner"},
     //{service:"linkedin", user:"westurner", url:"http://linkedin.com/in/westurner"},
-    {   service:"mendeley",
-        user:"wes-turner"},
-    {   service:"quora",
-        user:"Wes-Turner-1"},
+
+    // {   service:"mendeley",
+    //     user:"wes-turner"},
+
+    // {   service:"quora",
+    //     user:"Wes-Turner-1"},
+
     //{   service:"reddit",
     //    user:"westurner",
     //    template: {
@@ -147,24 +101,30 @@
     //            '${item.data.subreddit}</a>'
     //    },
     //},
+
     {   service:"stackoverflow",
         user:"188833",
         template: {
             global: '<i>${text}</i> <a href="${link}">${title}</a>'
         },
     },
+
     // NOP: Tumblr requests resources over HTTP
     //{   service:"tumblr",
     //    user:"westurner" },
-    {   service:"twitter",
-        user:"westurner",
-        template: {
-          "posted": '<a href="${complete_url}">tweeted</a> <i>{{html tweet}}</i>'
-        },
-    },
+
+    // {   service:"twitter",
+    //     user:"westurner",
+    //     template: {
+    //       "posted": '<a href="${complete_url}">tweeted</a> <i>{{html tweet}}</i>'
+    //     },
+    // },
+
     {service:"wikipedia", user:"Wes.turner"},
-    {service:"youtube", user:"ws.turn"},
-    {service:"zotero", user:"westurner"}
+
+    // {service:"youtube", user:"ws.turn"},
+
+    // {service:"zotero", user:"westurner"}
     ];
 
 

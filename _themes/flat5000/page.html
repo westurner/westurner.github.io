@@ -12,9 +12,11 @@
 {%- extends "layout.html" -%}
 
 {%- block body -%}
+    <article>
     {{ timestamp(metadata.formatted_date) }}
     {{ body }}
     {{ post_meta(metadata) }}
+    </article>
 {%- endblock -%}
 
 {%- block comments_section -%}

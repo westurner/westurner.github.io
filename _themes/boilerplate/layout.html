@@ -101,7 +101,7 @@
 {%- macro timestamp(date) -%}
     {%- if date -%}
         <div class="timestamp postmeta">
-            <span>{{ date }}</span>
+            <span>Date:</span> <span>{{ date }}</span>
         </div>
     {%- endif -%}
 {%- endmacro -%}
@@ -110,7 +110,7 @@
 {%- macro author(author_name) -%}
     {%- if author_name -%}
         <div class="author">
-            <span>{{ text_posted_by }} {{ author_name }}</span>
+            <span>{{ text_posted_by }}:</span> <span>{{ author_name }}</span>
         </div>
     {%- endif -%}
 {%- endmacro -%}
@@ -158,6 +158,7 @@
 {#- Post metadata -#}
 {%- macro post_meta(metadata, comment_count_code=None) -%}
     <div class="postmeta">
+        {{ timestamp(metadata.formatted_date_iso8601_short) }}
         {{ author(metadata.author) }}
         {{ category_list(metadata.filing["categories"]) }}
         {{ tag_list(metadata.filing["tags"]) }}
