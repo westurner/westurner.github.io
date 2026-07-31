@@ -5,6 +5,7 @@
 .PHONY: default \
 	all \
 	build \
+	build-local \
 	accounts \
 	serve open view \
 	push \
@@ -48,6 +49,10 @@ build:
 	# Generate static HTML in ./blog/html
 	tinker --build
 
+build-local:
+	# Generate static HTML using the pinned local dependency copies
+	tinker --build --build-local-assets
+
 build-pdb:
 	# Run tinkerer with pdb (Python debugger)
 	python -m pdb -m tinkerer --build
@@ -85,7 +90,7 @@ serve:
 serve-pgs:
 	# Serve ./blog/html with pgs
 	type -p pgs || python -m pip install pgs
-	(cd ./blog/html; pgs -p . -P 18282)
+	(cd ./blog/html; pgs --generate-cert -p . -P 18282)
 
 GIT_WWW_BRANCH="master"  # gh-pages
 serve-gh-pages:

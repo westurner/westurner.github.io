@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 import tinkerer
 import tinkerer.paths
 
@@ -72,6 +74,10 @@ templates_path = ['_templates']
 
 # Add other static paths here
 html_static_path = ['_static', tinkerer.paths.static]
+
+# Use the pinned copies in _static instead of the CDN dependencies.
+use_local_assets = os.environ.get('TINKERER_BUILD_LOCAL_ASSETS') == '1'
+html_context = {'use_local_assets': use_local_assets}
 
 # Add other theme paths here
 html_theme_path = ['_themes', tinkerer.paths.themes]

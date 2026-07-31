@@ -1,0 +1,17 @@
+[
+  {
+    "path": "_static/css/fontawesome-6.7.2.min.css",
+    "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css",
+    "integrity": "sha384-AGSGRaBRodcsy1n0F2zMm+LfXuZry/ZJ6nfio36UgMuNBs/AOC8ciJ7py4SgkpoY"
+  },
+  {
+    "path": "_static/vendor/jquery-3.7.1.min.js",
+    "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+    "integrity": "sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+  },
+  {
+    "path": "_static/vendor/modernizr-2.8.3.min.js",
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js",
+    "integrity": "sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts"
+  }
+]
