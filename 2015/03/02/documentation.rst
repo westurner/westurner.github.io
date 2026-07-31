@@ -134,7 +134,7 @@ Update: 2015-07-04
           so that the given navbar link is displayed
           (with a few at the top, for context).
 
-          .. code:: javascript
+          .. code:: text
 
               ## pseudo-JS
               sidebar = $('#sidebar');

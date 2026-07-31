@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2026/07/31/keyboard_shortcut_reference
    2016/10/18/criteria-for-success-and-test-driven-development
    2016/10/17/teaching-test-driven-development-first
    2015/03/02/documentation

@@ -150,7 +150,11 @@ resume-commit:
 
 install:
 	# Install requirements
-	pip install -r requirements.txt
+	pip install --exists-action=s -r requirements.txt
+
+PYVER=3.12
+onCreate:
+	set -x; mamba install -q -y -c conda-forge uv pixi python=${PYVER} ipykernel pandas numpy sympy ipykernel ruff isort pytest-cov sphinx &&  python -m ipykernel install --user --name=python${PYVER} && python -m pip install --exists-action=s -r /workdir/requirements.txt
 
 autocompile.py:
 	# Install pyinotify and get autocompile.py

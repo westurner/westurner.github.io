@@ -91,7 +91,7 @@ code, kbd, pre, samp { font-family: {{ code_font }}; line-height: 1.4em; }
 }*/
 
 /* Layout */
-ul { padding: 0 0 0 20px; list-style: square; }
+ul { padding: 0 0 0 20px; list-style: circle; }
 
 header { padding: 20px 0; }
 header h1, span { margin: 0; }
@@ -156,7 +156,7 @@ div.highlight pre { overflow-x: auto; white-space: pre; word-wrap: normal; paddi
   background: transparent; } */
 
 aside.sidebar h1 { margin-top: 0; }
-aside.sidebar div.widget { margin-bottom: 20px; padding: 0 20px; }
+aside.sidebar div.widget { margin-bottom: 20px; padding: 0; }
 
 div.archive_link { padding-top: 10px; text-align: center; }
 
@@ -277,9 +277,9 @@ div.postmeta { color: {{ theme_color_light }}; }
 /* Archive page */
 span.title_tag, span.title_category { font-style: italic; }
 
-div.year h1 { font-size: 1.6em; margin-bottom: 0; margin-top: 20px; }
+div.year h1 { font-size: 1.6em; margin-bottom: 0; margin: 0 !important; }
 
-div.year ul { display: inline; list-style-type: none; margin: 0; }
+div.year ul { display: inline-block; list-style-type: none; margin: 0; }
 
 div.year div.postmeta { margin: 10px 0 10px 0; }
 
@@ -320,6 +320,7 @@ section h3 {
 /* inspired by Bootstrap CSS */
 h1, h2, h3 { margin: 10px 0 10px 0 !important; }
 p { margin: 0 0 10px; }
+li p { margin: 0 0 4px; }
 ul, ol { margin: 0 0 10px; }
 div.line-block { margin: 0 0 10px; }
 /* end inspired by Bootstrap CSS */
@@ -400,3 +401,23 @@ div.cell div.cell_output,
 }
 
 .cell_output div.highlight { padding: 0; }
+
+
+table.docutils td {
+  border: 2px solid #bbb;
+  padding: 0 8px;
+}
+
+/*
+table.docutils td p {
+  margin: 0 0 4px;
+}*/
+
+div.archive div.postmeta div.timestamp {
+    font-size: 0.9em;
+    color: #93a4ad;
+}
+
+article p {
+  line-height: 1.3;
+}

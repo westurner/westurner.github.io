@@ -141,7 +141,8 @@
 	},
 
 	// 6. Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "root",
+	//"remoteUser": "root",
+	"remoteUser": "jovyan",
 
 	// the following commands are related to container lifecylce. More info: https://containers.dev/implementors/json_reference/#lifecycle-scripts
 
@@ -149,7 +150,9 @@
 	// "initializeCommand": "",
 
 	// 8. Use 'onCreateCommand' to run commands INSIDE THE CONTAINER after it started for the first time.
-	"onCreateCommand": "mamba install -q -y -c conda-forge uv pixi python=3.12 ipykernel pandas numpy sympy ipykernel ruff isort pytest-cov sphinx && python -m pip install tinkerer && python -m ipykernel install --user --name=python3.12"
+	"onCreateCommand": "make onCreate"
+
+	// python -m pip install tinkerer &&
 
 	// 9. Use 'updateContentCommand' to run commands if the root filetree have any changes, during container creation.
 	// "updateContentCommand": "",

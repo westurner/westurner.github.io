@@ -101,7 +101,7 @@
 {%- macro timestamp(date) -%}
     {%- if date -%}
         <div class="timestamp postmeta">
-            <span>Date:</span> <span>{{ date }}</span>
+            <span property="https://schema.org/dateCreated">{{ date }}</span>
         </div>
     {%- endif -%}
 {%- endmacro -%}
@@ -110,7 +110,7 @@
 {%- macro author(author_name) -%}
     {%- if author_name -%}
         <div class="author">
-            <span>{{ text_posted_by }}:</span> <span>{{ author_name }}</span>
+            <span>{{ text_posted_by }}:</span> <span property="https://schema.org/author">{{ author_name }}</span>
         </div>
     {%- endif -%}
 {%- endmacro -%}
@@ -122,7 +122,7 @@
             <span>
                 {{ text_filed_under }}:
                 {% for link, category in post_categories -%}
-                    <a href="{{ pathto('categories/' + link + '.html', 1) }}">{{ category }}</a>
+                    <a property="https://schema.org/about" href="{{ pathto('categories/' + link + '.html', 1) }}">{{ category }}</a>
                     {%- if not loop.last -%}, {% endif -%}
                 {% endfor -%}
             </span>
@@ -137,7 +137,7 @@
             <span>
                 {{ text_tags }}:
                 {% for link, tag in post_tags -%}
-                    <a href="{{ pathto('tags/' + link + '.html', 1) }}">#{{ tag }}</a>
+                    <a property="https://schema.org/about" href="{{ pathto('tags/' + link + '.html', 1) }}">#{{ tag }}</a>
                     {%- if not loop.last -%}&nbsp;{% endif -%}
                 {% endfor -%}
             </span>
