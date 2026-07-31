@@ -16,6 +16,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     bzip2 \
     git \
     make \
+    less \
+    ripgrep \
     && rm -rf /var/lib/apt/lists/*
 
 # TODO: add ripgrep \
