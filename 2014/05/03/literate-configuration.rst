@@ -14,8 +14,8 @@ like `literate programming`_:
 
 **Example**
 
-Take an abbreviated excerpt from the `i3wm`_
-`.i3/config`_ that I cleaned up this morning.
+For example, here's an abbreviated excerpt from the `i3wm`_
+`.i3/config`_ that I cleaned up this morning:
 
 .. code::
 

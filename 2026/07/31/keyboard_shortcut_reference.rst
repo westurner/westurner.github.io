@@ -5,17 +5,32 @@ Keyboard Shortcut Reference
 Browser shortcuts
 ------------------
 
-+-----------------+----------------------------------------+------------------------------+
-| Shortcuts       | Description                            | Tools that support shortcut  |
-+-----------------+----------------------------------------+------------------------------+
-| Ctrl-L          | Go to Address Bar                      | FF, Chrome, File browsers    |
-+-----------------+----------------------------------------+------------------------------+
-| Ctrl-D          | Create Bookmark                        | FF, Chrome                   |
-+-----------------+----------------------------------------+------------------------------+
-| Ctrl-Shift-I    | Open Devtools and Inspect Element      | FF, Chrome, vscode           |
-+-----------------+----------------------------------------+------------------------------+
-| Ctrl-Shift-C    | Open Devtools and Inspect Element      | FF, Chrome, vscode           |
-+-----------------+----------------------------------------+------------------------------+
++-----------------------+-----------------------------------+-----------------------------+
+| Shortcuts             | Description                       | Tools that support shortcut |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-L                | Go to Address Bar                 | FF, Chrome, File browsers   |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-D                | Create Bookmark                   | FF, Chrome                  |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-W                | Close tab                         | FF, Chrome                  |
++-----------------------+-----------------------------------+-----------------------------+
+| Shift-Ctrl-W          | Repoen closed tab(s)              | FF, Chrome                  |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-Shift-I          | Open Devtools and Inspect Element | FF, Chrome, vscode          |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-Shift-C          | Open Devtools and Inspect Element | FF, Chrome, vscode          |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-PgDn/PgUp        | Go to next/prev tab               | FF, Chrome, vscode          |
+| Ctrl-Fn-Dn/Ctrl-Fn-Up |                                   |                             |
++-----------------------+-----------------------------------+-----------------------------+
+| Ctrl-Shift-PgDn/PgUp  | Move tab left/right               | FF, Chrome, vscode          |
+| Ctrl-Shift-Fn-Dn/Up   |                                   |                             |
++-----------------------+-----------------------------------+-----------------------------+
+
+vim
+----
+- https://westurner.github.io/dotfiles/usage/#vim
+
 
 vscode.dev and vscode
 --------------------------
@@ -63,11 +78,14 @@ vscode.dev and vscode
 +----------------------------+---------------------------------------------------------------------------------+
 | Ctrl-K Ctrl-R or           | Open the online VS Code keyboard shortcuts                                      |
 | Ctrl-Shift-P               | document for Windows, Mac, and Linux                                            |
+|                            |                                                                                 |
 |                            | - https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf (Ctrl) |
 |                            | - https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf (⌘)      |
 |                            | - https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf (Ctrl)   |
 +----------------------------+---------------------------------------------------------------------------------+
 | VScode keybindings docs    | https://code.visualstudio.com/docs/getstarted/keybindings                       |
++----------------------------+---------------------------------------------------------------------------------+
+| Ctrl-Shift-O               | Terminal: Open a list of paths grepped from the term                            |
 +----------------------------+---------------------------------------------------------------------------------+
 | Ctrl-Shift-P               | Dev Containers: Help                                                            |
 |                            | - https://aka.ms/vscode-remote/containers                                       |
