@@ -406,7 +406,7 @@ div.cell div.cell_output,
 
 
 table.docutils td {
-  border: 2px solid #bbb;
+  border: 2px solid #c3bdad;
   padding: 0 8px;
 }
 
@@ -760,12 +760,21 @@ table.docutils {
 }
 
 table.docutils tr td {
-  padding-top: 2px;
-  padding-bottom: 0;
   padding: 0 4px;
 }
 
 table.docutils td p {
-  /* padding-bottom: 0; */
   margin: 2px 0;
+}
+
+tr.row-odd {
+  background-color: #c3bdad; /* light mode */
+}
+
+html[data-theme="dark"] tr.row-odd {
+  background-color: #191919; /* dark mode */
+}
+
+ul.related {
+  padding: 8px 4px;
 }
