@@ -748,3 +748,7 @@ html[data-theme="dark"] div.post div.postmeta {
 html[data-theme="dark"] article h1 {
     color: #8e6f7d;
 }
+
+.del {
+  text-decoration: line-through;
+}
