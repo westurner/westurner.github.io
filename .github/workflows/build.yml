@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: westurner/sphinx-action@master
+    - uses: actions/setup-python@v7.1.0
       with:
-        docs-folder: "."
-        #pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
-        pre-build-command: "apt-get install -y git && make install"
-        build-command: "make build"
+        python-version: "3.13"
+    - name: Install dependencies and build docs
+      env:
+        # Keep editable installs separate from the uninitialized src/tinkerer submodule.
+        PIP_SRC: ${{ runner.temp }}/pip-src
+      run: make install build
