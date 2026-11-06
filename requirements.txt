@@ -1,7 +1,7 @@
 
 #tinkerer
-#-e ./src/tinkerer
--e git+https://github.com/westurner/tinkerer#egg=tinkerer
+-e ./src/tinkerer
+#-e git+https://github.com/westurner/tinkerer#egg=tinkerer
 
 ghp-import
 
