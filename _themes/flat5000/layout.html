@@ -37,6 +37,53 @@
             var currentTheme = getPreferredTheme();
             applyTheme(currentTheme);
 
+            function getSidebarCollapsed(side) {
+                return localStorage.getItem(side + '-sidebar-collapsed') === 'true';
+            }
+            function applySidebarState(side, collapsed) {
+                document.documentElement.classList.toggle(side + '-sidebar-collapsed', collapsed);
+                var button = document.querySelector('[data-sidebar-toggle="' + side + '"]');
+                if (button) {
+                    button.setAttribute('aria-pressed', collapsed);
+                    button.querySelector('.sidebar-toggle-label').textContent =
+                        (collapsed ? 'Show ' : 'Hide ') + side + ' sidebar';
+                }
+            }
+            function toggleSidebar(side) {
+                var collapsed = !getSidebarCollapsed(side);
+                localStorage.setItem(side + '-sidebar-collapsed', collapsed);
+                applySidebarState(side, collapsed);
+            }
+            var displaySettingOptions = {
+                width: ['wide', 'middle', 'narrow'],
+                'line-height': ['wide', 'middle', 'compact']
+            };
+            function getDisplaySetting(setting) {
+                var savedValue = localStorage.getItem('main-' + setting);
+                return displaySettingOptions[setting].indexOf(savedValue) !== -1 ?
+                    savedValue : displaySettingOptions[setting][0];
+            }
+            function applyDisplaySetting(setting, value) {
+                document.documentElement.setAttribute('data-main-' + setting, value);
+                var buttons = document.querySelectorAll(
+                    '[data-display-setting="' + setting + '"]');
+                Array.prototype.forEach.call(buttons, function(button) {
+                    button.setAttribute('aria-pressed', button.getAttribute('data-value') === value);
+                });
+            }
+            function setDisplaySetting(setting, value) {
+                if (displaySettingOptions[setting].indexOf(value) === -1) {
+                    return;
+                }
+                localStorage.setItem('main-' + setting, value);
+                applyDisplaySetting(setting, value);
+            }
+            applySidebarState('right', getSidebarCollapsed('right'));
+            applySidebarState('left', getSidebarCollapsed('left'));
+            ['width', 'line-height'].forEach(function(setting) {
+                applyDisplaySetting(setting, getDisplaySetting(setting));
+            });
+
             if (window.matchMedia) {
                 var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
                 var handleChange = function() {
@@ -55,6 +102,49 @@
                 var select = document.getElementById('theme-select');
                 if (select) {
                     select.value = getPreferredTheme();
+                }
+                ['right', 'left'].forEach(function(side) {
+                    applySidebarState(side, getSidebarCollapsed(side));
+                    var sidebarButton = document.querySelector(
+                        '[data-sidebar-toggle="' + side + '"]');
+                    if (sidebarButton) {
+                        sidebarButton.addEventListener('click', function() {
+                            toggleSidebar(side);
+                        });
+                    }
+                });
+                ['width', 'line-height'].forEach(function(setting) {
+                    applyDisplaySetting(setting, getDisplaySetting(setting));
+                    var settingButtons = document.querySelectorAll(
+                        '[data-display-setting="' + setting + '"]');
+                    Array.prototype.forEach.call(settingButtons, function(button) {
+                        button.addEventListener('click', function() {
+                            setDisplaySetting(setting, button.getAttribute('data-value'));
+                        });
+                    });
+                });
+                var settingsToggle = document.getElementById('settings-toggle');
+                var settingsPanel = document.getElementById('settings-panel');
+                if (settingsToggle && settingsPanel) {
+                    var settingsContainer = document.querySelector('.settings-container');
+                    settingsToggle.addEventListener('click', function() {
+                        var isOpen = settingsToggle.getAttribute('aria-expanded') === 'true';
+                        settingsToggle.setAttribute('aria-expanded', !isOpen);
+                        settingsPanel.hidden = isOpen;
+                    });
+                    document.addEventListener('click', function(event) {
+                        if (!settingsPanel.hidden && !settingsContainer.contains(event.target)) {
+                            settingsToggle.setAttribute('aria-expanded', 'false');
+                            settingsPanel.hidden = true;
+                        }
+                    });
+                    settingsPanel.addEventListener('keydown', function(event) {
+                        if (event.key === 'Escape') {
+                            settingsToggle.setAttribute('aria-expanded', 'false');
+                            settingsPanel.hidden = true;
+                            settingsToggle.focus();
+                        }
+                    });
                 }
             });
         })();
@@ -109,19 +199,67 @@
           {%- include "accounts.html" -%}
       </div>
 
-      <div class="theme-selector-container">
-        <label for="theme-select">Theme: </label><br/>
-        <select id="theme-select" aria-label="Theme selector" onchange="setTheme(this.value)">
-          <option value="auto">Auto</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </div>
-
     </header>
 {% endblock -%}
 
 {%- block navigation -%}
+<div class="settings-container">
+    <button id="settings-toggle" class="settings-toggle" type="button" aria-expanded="false" aria-controls="settings-panel">
+        <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6.5 1.5h3l.4 1.5a5 5 0 0 1 1.1.6l1.5-.5 1.5 2.6-1.1 1a5 5 0 0 1 0 1.3l1.1 1-1.5 2.6-1.5-.5a5 5 0 0 1-1.1.6l-.4 1.5h-3l-.4-1.5a5 5 0 0 1-1.1-.6l-1.5.5L2 9l1.1-1a5 5 0 0 1 0-1.3L2 5.7l1.5-2.6 1.5.5a5 5 0 0 1 1.1-.6z"/>
+            <circle cx="8" cy="7.3" r="2"/>
+        </svg>
+        <span>Settings</span>
+    </button>
+    <div id="settings-panel" class="settings-panel" role="region" aria-labelledby="settings-toggle" hidden>
+        <ul class="settings-list">
+            <li>
+                <button type="button" data-sidebar-toggle="left" aria-pressed="false">
+                    <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="1.5" y="2" width="13" height="12" rx="1"/><path d="M6 2v12m5-8-2 2 2 2"/>
+                    </svg>
+                    <span class="sidebar-toggle-label">Hide left sidebar</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-sidebar-toggle="right" aria-pressed="false">
+                    <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="1.5" y="2" width="13" height="12" rx="1"/><path d="M10 2v12M6 6l2 2-2 2"/>
+                    </svg>
+                    <span class="sidebar-toggle-label">Hide right sidebar</span>
+                </button>
+            </li>
+            <li>
+                <div class="display-setting-group" role="group" aria-labelledby="width-setting-label">
+                    <span id="width-setting-label" class="display-setting-label">Width</span>
+                    <div class="settings-options">
+                        <button type="button" data-display-setting="width" data-value="wide" aria-pressed="true">Wide</button>
+                        <button type="button" data-display-setting="width" data-value="middle" aria-pressed="false">Middle</button>
+                        <button type="button" data-display-setting="width" data-value="narrow" aria-pressed="false">Narrow</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="display-setting-group" role="group" aria-labelledby="line-height-setting-label">
+                    <span id="line-height-setting-label" class="display-setting-label">Line-height</span>
+                    <div class="settings-options">
+                        <button type="button" data-display-setting="line-height" data-value="wide" aria-pressed="true">Wide</button>
+                        <button type="button" data-display-setting="line-height" data-value="middle" aria-pressed="false">Middle</button>
+                        <button type="button" data-display-setting="line-height" data-value="compact" aria-pressed="false">Compact</button>
+                    </div>
+                </div>
+            </li>
+            <li class="theme-selector-container">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select" aria-label="Theme selector" onchange="setTheme(this.value)">
+                    <option value="auto">Auto</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="main-container">
   <nav role="navigation" class="navbar">
     <ul class="main-nav">
