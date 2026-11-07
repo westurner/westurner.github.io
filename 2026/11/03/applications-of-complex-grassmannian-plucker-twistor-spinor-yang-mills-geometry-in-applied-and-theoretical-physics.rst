@@ -7,15 +7,15 @@ Applications of *Complex* Grassmannian Plucker Twistor-Spinor Yang-Mills geometr
 
     -- Life Aquatic with Steve Zissou
 
-TIL about: "Applications of *Complex* Grassmannian (Gr_{C^4} (GrC)) Plücker Twistor-Spinor Yang-Mills
+TIL about: "Applications of *Complex* Grassmannian ($Gr_{C^4}$) Plücker Twistor-Spinor Yang-Mills
 geometry in photonic and electronic superposition, nanophotonics, nanolithography, 
 QED scattering gravity,
 virtual particles,
-and tachyons outside the positive Grassmannian (Gr_{>0} (Gr)) light cone 
+and tachyons outside the positive Grassmannian ($Gr_{>0}$) light cone 
 with Lean 4, Rust, and JS for realtime simulation".
 
 That's what I human-remember after AI-solving
-by model fitting with Complex Grassmannians like GrC(2,4).
+by model fitting with Complex Grassmannians like $Gr_C(2,4)$ (GrC(2,4)).
 
 I have pre-prerints in a series here;
 starting with the Huygens-Steiner *Intensity for Superposition* question;
@@ -81,8 +81,16 @@ Here also, I'll human summarize some of these early findings:
   - SQG   (Fedi 2017)
   - QED Scattering Gravity (Partanen and Tulkki 2025)
   - DDF Dilatant Dark Fluid (Fedi 2026)
-  - Flat-Space GrC(2,4) + BCJ Double Copy + 1-loop Post-Minkowskian QFT (Turner 2026)
-  - Unified GrC(2,4) + Conservative DDF Dilatant Dark Fluid (Turner 2026) 
+  - Flat-Space GrC(2,4) + BCJ Double Copy + 1-loop Post-Minkowskian QFT (without DDF) (Turner 2026)
+  - Unified $Gr_{\\mathbb{C}}(2,4)$ + Conservative Dilatant Dark Fluid (DDF) + 3D ``NormedTensorGaussianSplat3D``
+    (`Fedi 2026 <#grav-fedi2026>`_), ``Signals.DDF`` + ``NormedTensorGaussianSplat3D`` (Turner 2026))
+  - Homogeneous Plücker $\\mathcal{Q}_4$ Madelung QHJ + Fubini–Study Kähler Chart + ``iGPE`` Potential Inversion (Without DDF)
+    ([grassmannian-complex-gpe-igpe-plucker-madelung-paper.md](grassmannian-complex-gpe-igpe-plucker-madelung-paper.md): ``PlanetaryOrbit.turnerPluckerIGPEPrecessionRad``, ``pluckerInversePotentialReconstruction``)
+  - Unified Dual-Grassmannian $Gr_{\\mathbb{C}}(2,4)\\times Gr_{\\mathbb{C}}(2,4)^\\vee$ ``iGPE`` + Homogeneous Plücker $\\mathcal{Q}_4$ Madelung + Conservative DDF
+    ([grassmannian-complex-gpe-igpe-plucker-madelung-paper.md](grassmannian-complex-gpe-igpe-plucker-madelung-paper.md): ``RiverExterior.turnerDualGr24IGPEDDFPrecessionRad``) 
+  - See: "4.4 Multi-Model Gravity Comparison Table & Machine-Checked Relative Predictive Errors
+    in TODO: grassmannian-gravity-from-qed-scattering-paper.rst )
+    and the Lean signals library: ``PlanetaryOrbit.gravity_models_relative_predictive_error_comparison``)"
 
 - Models of Gravitational waves
 
