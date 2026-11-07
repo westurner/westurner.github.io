@@ -53,11 +53,35 @@
         HAS_SOURCE:  {{ has_source|lower }}
       };
     </script>
-    {%- for scriptfile in script_files %}
-        {#- Hack to filter out jquery.js auto-included by Sphinx since jquery is already included in head. -#}
-        {# if "jquery" not in scriptfile.filename|lower -%}
-          <script type="text/javascript" src="{{ pathto(scriptfile.filename, 1) }}"></script>
-        {%- endif #}
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], processEscapes: true },
+        options: { processHtmlClass: 'math|reference' }
+      };
+      document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('a.reference.external');
+        var hasDollarMath = Array.prototype.some.call(links, function (link) {
+          return /\$[^$]+\$/.test(link.textContent);
+        });
+        if (!hasDollarMath || document.querySelector('script[src*="tex-mml-chtml.js"]')) {
+          return;
+        }
+        var mathJaxScript = document.createElement('script');
+        mathJaxScript.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+        mathJaxScript.async = true;
+        document.head.appendChild(mathJaxScript);
+      });
+    </script>
+    {%- for scriptfile in script_files -%}
+      {%- set script_filename = scriptfile.filename if scriptfile.filename is defined else scriptfile -%}
+      {#- jQuery is loaded separately by the theme. -#}
+      {%- if script_filename is none or "jquery" not in script_filename|string|lower -%}
+        {%- if js_tag is defined -%}
+          {{ js_tag(scriptfile) }}
+        {%- else -%}
+          <script type="text/javascript" src="{{ pathto(script_filename, 1) }}"></script>
+        {%- endif -%}
+      {%- endif -%}
     {%- endfor -%}
 {%- endmacro -%}
 

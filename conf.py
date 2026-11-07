@@ -65,6 +65,7 @@ extensions = [
     #'jinja2.ext',  # TODO: add jinja2.debug
     'tinkerer.ext.blog',
     'tinkerer.ext.disqus',
+    'sphinx.ext.mathjax',
     'withgithub',
     #'myst_nb',
 ]
