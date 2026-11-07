@@ -18,7 +18,7 @@ Browser shortcuts
 +-----------------------+-----------------------------------+-----------------------------+
 | Ctrl-Shift-I          | Open Devtools and Inspect Element | FF, Chrome, vscode          |
 +-----------------------+-----------------------------------+-----------------------------+
-| Ctrl-Shift-C          | Open Devtools and Inspect Element | FF, Chrome, vscode          |
+| Ctrl-Shift-C          | Open Devtools and Select Element  | FF, Chrome, vscode          |
 +-----------------------+-----------------------------------+-----------------------------+
 | Ctrl-PgDn/PgUp        | Go to next/prev tab               | FF, Chrome, vscode          |
 | Ctrl-Fn-Dn/Ctrl-Fn-Up |                                   |                             |
@@ -140,5 +140,5 @@ Terminal shortcuts
 
 .. author:: default
 .. categories:: none
-.. tags:: shell, browser, keyboardshortcuts
+.. tags:: shell, browser, vscode, ctrl-p, keyboardshortcuts
 .. comments::
