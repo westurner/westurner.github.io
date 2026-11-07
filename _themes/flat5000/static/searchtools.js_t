@@ -17,6 +17,70 @@
  * latter for highlighting it.
  */
 
+function highlightSearchSummary(result, excerpt, words) {
+  if (typeof result.highlightText === 'function') {
+    $.each(words, function() {
+      result = result.highlightText(this, 'highlighted');
+    });
+    return;
+  }
+
+  var escapedWords = [];
+  $.each(words, function(_, word) {
+    if (word) {
+      escapedWords.push(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    }
+  });
+  if (!escapedWords.length) {
+    return;
+  }
+
+  var expression = new RegExp('(' + escapedWords.join('|') + ')', 'ig');
+  result.empty();
+  $.each(excerpt.split(expression), function(index, part) {
+    if (index % 2 === 1) {
+      $('<span class="highlighted"></span>').text(part).appendTo(result);
+    } else {
+      result.append(document.createTextNode(part));
+    }
+  });
+}
+
+function normalizePostPath(path) {
+  return path.replace(/\.rst\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '');
+}
+
+function appendPostTags(element, postHref) {
+  var postPath = normalizePostPath(new URL(postHref, document.baseURI).pathname);
+  var records = document.querySelectorAll('#post-tag-index [data-post-href]');
+  var record = Array.prototype.find.call(records, function(item) {
+    var recordPath = new URL(item.getAttribute('data-post-href'), document.baseURI).pathname;
+    return normalizePostPath(recordPath) === postPath;
+  });
+  if (!record) {
+    return;
+  }
+
+  var sourceTags = record.querySelectorAll('[data-post-tag]');
+  if (!sourceTags.length) {
+    return;
+  }
+
+  var tagList = document.createElement('div');
+  tagList.className = 'post-tags';
+  var label = document.createElement('span');
+  label.className = 'post-tags-label';
+  label.textContent = _('Tags') + ': ';
+  tagList.appendChild(label);
+  Array.prototype.forEach.call(sourceTags, function(sourceTag) {
+    var tag = document.createElement('a');
+    tag.href = new URL(sourceTag.getAttribute('href'), document.baseURI).href;
+    tag.textContent = sourceTag.textContent;
+    tagList.appendChild(tag);
+  });
+  element.appendChild(tagList);
+}
+
 jQuery.makeSearchSummary = function(text, keywords, hlwords) {
   var textLower = text.toLowerCase();
   var start = 0;
@@ -30,9 +94,7 @@ jQuery.makeSearchSummary = function(text, keywords, hlwords) {
   $.trim(text.substr(start, 240)) +
   ((start + 240 - text.length) ? '...' : '');
   var rv = $('<div class="context"></div>').text(excerpt);
-  $.each(hlwords, function() {
-    rv = rv.highlightText(this, 'highlighted');
-  });
+  highlightSearchSummary(rv, excerpt, hlwords);
   return rv;
 }
 
@@ -48,12 +110,74 @@ var Search = {
   _pulse_status : -1,
 
   init : function() {
-      var params = $.getQueryParameters();
-      if (params.q) {
-          var query = params.q[0];
+      var query = new URLSearchParams(window.location.search).get('q');
+      if (query) {
           $('input[name="q"]')[0].value = query;
           this.performSearch(query);
+          this.performTagSearch(query);
       }
+  },
+
+  performTagSearch : function(query) {
+    var container = document.getElementById('tag-search-results');
+    var tagLinks = document.querySelectorAll('#tag-search-index a[data-tag]');
+    if (!container || !tagLinks.length) {
+      return;
+    }
+
+    var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    var matchingTags = Array.prototype.filter.call(tagLinks, function(tagLink) {
+      var tag = tagLink.getAttribute('data-tag').toLowerCase();
+      return terms.some(function(term) { return tag.indexOf(term) !== -1; });
+    });
+    container.innerHTML = '';
+    container.hidden = matchingTags.length === 0;
+    if (!matchingTags.length) {
+      return;
+    }
+
+    var heading = document.createElement('h2');
+    heading.textContent = _('Matching tags') + ' (' + matchingTags.length + ')';
+    container.appendChild(heading);
+
+    matchingTags.forEach(function(tagLink) {
+      var tag = tagLink.getAttribute('data-tag');
+      var group = document.createElement('section');
+      group.className = 'tag-search-match';
+      group.setAttribute('data-tag', tag);
+
+      var groupHeading = document.createElement('h3');
+      var tagAnchor = document.createElement('a');
+      tagAnchor.href = tagLink.href;
+      tagAnchor.textContent = tag;
+      groupHeading.appendChild(tagAnchor);
+      group.appendChild(groupHeading);
+
+      var list = document.createElement('ul');
+      list.className = 'search';
+      group.appendChild(list);
+      container.appendChild(group);
+
+      fetch(tagLink.href).then(function(response) {
+        if (!response.ok) {
+          throw new Error('Unable to load tag archive.');
+        }
+        return response.text();
+      }).then(function(markup) {
+        var archive = new DOMParser().parseFromString(markup, 'text/html');
+        var posts = archive.querySelectorAll('.archive .year li h2 a');
+        Array.prototype.forEach.call(posts, function(post) {
+          var item = document.createElement('li');
+          item.className = 'search-result';
+          var postLink = document.createElement('a');
+          postLink.href = new URL(post.getAttribute('href'), tagLink.href).href;
+          postLink.textContent = post.textContent;
+          item.appendChild(postLink);
+          appendPostTags(item, postLink.href);
+          list.appendChild(item);
+        });
+      }).catch(function() {});
+    });
   },
 
   loadIndex : function(url) {
@@ -104,6 +228,7 @@ var Search = {
     // create the required interface elements
     this.out = $('#search-results');
     this.title = $('<h2>' + _('Searching') + '</h2>').appendTo(this.out);
+    $('<h3></h3>').text(_('Matching posts')).appendTo(this.out);
     this.dots = $('<span></span>').appendTo(this.title);
     this.status = $('<p style="display: none"></p>').appendTo(this.out);
     this.output = $('<ul class="search"/>').appendTo(this.out);
@@ -133,7 +258,7 @@ var Search = {
           objectterms.push(tmp[i].toLowerCase());
       }
 
-      if ($u.indexOf(stopwords, tmp[i]) != -1 || tmp[i].match(/^\d+$/) ||
+      if ($.inArray(tmp[i].toLowerCase(), stopwords) != -1 || tmp[i].match(/^\d+$/) ||
           tmp[i] == "") {
         // skip this "word"
         continue;
@@ -153,7 +278,7 @@ var Search = {
       if (!$.contains(toAppend, word))
         toAppend.push(word);
     };
-    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
+    var highlightstring = '?highlight=' + encodeURIComponent(hlterms.join(" "));
 
     // console.debug('SEARCH: searching for:');
     // console.info('required: ', searchterms);
@@ -250,7 +375,7 @@ var Search = {
       // results left, load the summary and display it
       if (results.length) {
         var item = results.pop();
-        var listItem = $('<li style="display:none"></li>');
+        var listItem = $('<li class="search-result" style="display:none"></li>');
         if (DOCUMENTATION_OPTIONS.FILE_SUFFIX == '') {
           // dirhtml builder
           var dirname = item[0] + '/';
@@ -268,6 +393,7 @@ var Search = {
             item[0] + DOCUMENTATION_OPTIONS.FILE_SUFFIX +
             highlightstring + item[2]).html(item[1]));
         }
+        appendPostTags(listItem[0], listItem.find('a').first().attr('href'));
         if (item[3]) {
           listItem.append($('<span> (' + item[3] + ')</span>'));
           Search.output.append(listItem);

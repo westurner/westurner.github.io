@@ -56,12 +56,18 @@
             }
             var displaySettingOptions = {
                 width: ['wide', 'middle', 'narrow'],
-                'line-height': ['wide', 'middle', 'compact']
+                'line-height': ['wide', 'middle', 'compact'],
+                'font-size': ['small', 'medium', 'large', 'x-large']
+            };
+            var displaySettingDefaults = {
+                width: 'wide',
+                'line-height': 'wide',
+                'font-size': 'medium'
             };
             function getDisplaySetting(setting) {
                 var savedValue = localStorage.getItem('main-' + setting);
                 return displaySettingOptions[setting].indexOf(savedValue) !== -1 ?
-                    savedValue : displaySettingOptions[setting][0];
+                    savedValue : displaySettingDefaults[setting];
             }
             function applyDisplaySetting(setting, value) {
                 document.documentElement.setAttribute('data-main-' + setting, value);
@@ -80,7 +86,7 @@
             }
             applySidebarState('right', getSidebarCollapsed('right'));
             applySidebarState('left', getSidebarCollapsed('left'));
-            ['width', 'line-height'].forEach(function(setting) {
+            ['width', 'line-height', 'font-size'].forEach(function(setting) {
                 applyDisplaySetting(setting, getDisplaySetting(setting));
             });
 
@@ -113,7 +119,7 @@
                         });
                     }
                 });
-                ['width', 'line-height'].forEach(function(setting) {
+                ['width', 'line-height', 'font-size'].forEach(function(setting) {
                     applyDisplaySetting(setting, getDisplaySetting(setting));
                     var settingButtons = document.querySelectorAll(
                         '[data-display-setting="' + setting + '"]');
@@ -249,6 +255,17 @@
                     </div>
                 </div>
             </li>
+            <li>
+                <div class="display-setting-group" role="group" aria-labelledby="font-size-setting-label">
+                    <span id="font-size-setting-label" class="display-setting-label">Font size</span>
+                    <div class="settings-options">
+                        <button type="button" data-display-setting="font-size" data-value="small" aria-pressed="false">Small</button>
+                        <button type="button" data-display-setting="font-size" data-value="medium" aria-pressed="true">Medium</button>
+                        <button type="button" data-display-setting="font-size" data-value="large" aria-pressed="false">Large</button>
+                        <button type="button" data-display-setting="font-size" data-value="x-large" aria-pressed="false">X-large</button>
+                    </div>
+                </div>
+            </li>
             <li class="theme-selector-container">
                 <label for="theme-select">Theme</label>
                 <select id="theme-select" aria-label="Theme selector" onchange="setTheme(this.value)">
@@ -304,7 +321,7 @@
 
 {#- Post layout -#}
 {%- block document -%}
-    <div class="article" role="main">
+    <div class="article">
         {%- block body -%}{%- endblock -%}
         {%- block relbar -%}{{ relbar() }}{%- endblock -%}
         {%- block comments_section -%}{%- endblock -%}

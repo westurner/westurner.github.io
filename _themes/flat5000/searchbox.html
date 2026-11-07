@@ -9,11 +9,11 @@
     :license: FreeBSD, see LICENSE file
 -#}
 
-<div class="widget" id="searchbox" role="search">
-    <h1><a href="#searchbox">{{ _('Search') }}</a></h1>
+<div class="widget" id="searchbox" role="search" aria-label="{{ _('Site search') }}">
+    <h2><a href="#searchbox">{{ _('Search') }}</a></h2>
     <form action="{{ pathto('search') }}" method="get">
-        <input type="text" name="q" />
-        <button type="submit" class="searchbutton">
+        <input type="text" name="q" aria-label="{{ _('Search this site') }}" />
+        <button type="submit" class="searchbutton" aria-label="{{ _('Search') }}" title="{{ _('Search') }}">
             <div style="font-size: 2em; font-weight: bold; -webkit-transform: rotate(42deg); 
                 -moz-transform: rotate(42deg); 
                   -o-transform: rotate(42deg);
