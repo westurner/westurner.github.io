@@ -7,15 +7,15 @@ Applications of *Complex* Grassmannian Plucker Twistor-Spinor Yang-Mills geometr
 
     -- Life Aquatic with Steve Zissou
 
-TIL about: "Applications of *Complex* Grassmannian (``Gr_{C^4}`` (``GrC``)) Plücker Twistor-Spinor Yang-Mills
+TIL about: "Applications of *Complex* Grassmannian (Gr_{C^4} (GrC)) Plücker Twistor-Spinor Yang-Mills
 geometry in photonic and electronic superposition, nanophotonics, nanolithography, 
 QED scattering gravity,
 virtual particles,
-and tachyons outside the positive Grassmannian (``Gr_{>0}`` (``Gr``)) light cone 
+and tachyons outside the positive Grassmannian (Gr_{>0} (Gr)) light cone 
 with Lean 4, Rust, and JS for realtime simulation".
 
 That's what I human-remember after AI-solving
-by model fitting with Complex Grassmannians like ``GrC(2,4)``.
+by model fitting with Complex Grassmannians like GrC(2,4).
 
 I have pre-prerints in a series here;
 starting with the Huygens-Steiner *Intensity for Superposition* question;
@@ -33,10 +33,10 @@ starting with the Huygens-Steiner *Intensity for Superposition* question;
 11. `Normed 2D and 3D Tensor Gaussian Splats in Lean 4: Simultaneous Conservation Laws, Holographic $Gr_{\mathbb{C}}(2,4)$ & $Gr_{\mathbb{C}}(3,6)$ Affine Projection, Inversion-Free Schur–Plücker Calculus, and Multi-Domain Applications <https://github.com/westurner/sustainablefactory/blob/main/docs/gaussian-splat-tensors-normed-paper.md>`_
 12. `Holographic $Gr_{\mathbb{C}}(2,4)$ Depth Recovery and Convergent Multi-Beam Volumetric Imaging: Plücker Axial Variance Inversion, Perspective Range Tomography, and Self-Calibrating Phase Conjugation in Lean 4 <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-holographic-imaging-depth-recovery-paper.md>`_
 13. `3D Vectorial Wave Model for Longitudinal Polarization ($E_z$) and Higher-Rank $Gr_{\mathbb{C}}(3,n)$ Volumetric Imaging: Debye–Wolf Counter-Polarization, High-NA Dielectric Metasurfaces, ZRI Collimation vs. Thin-Film ENZ-Lignin Boundary Amplification in Lean 4 <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-vectorial-longitudinal-polarization-paper.md>`_
-14. `Epsilon-Near-Zero (ENZ) and Hyperbolic Metamaterials in Unified Grassmannian–DDF Mechanics: ``rGO-polyCBD-SS-Lignin`` Nanolaminates, Argon/Ionospheric Trivelpiece–Gould Plasma, Denisov Mode Conversion, and CPA-TNSA $p\text{-}^{11}\text{B}$ / $s\text{CO}_2$ Power Ledgers in Lean 4 <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-enz-hyperbolic-metamaterials-paper.md>`_
-15. `Holographic $405\text{ nm} / 532\text{ nm}$ Longitudinal Carbon Nanolithography, 6-Stage Linux RISC-V (``CVA6``, ``CHERI-CVA6``, & ``Ibex``), Volumetric KiCAD/GDSII EDA, and Exothermic Radical-Recombination Physics in Lean 4 and Rust/WASM <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-riscv-holographic-nanolithography-kicad-paper.md>`_
+14. `Epsilon-Near-Zero (ENZ) and Hyperbolic Metamaterials in Unified Grassmannian–DDF Mechanics: rGO-polyCBD-SS-Lignin Nanolaminates, Argon/Ionospheric Trivelpiece–Gould Plasma, Denisov Mode Conversion, and CPA-TNSA $p\text{-}^{11}\text{B}$ / $s\text{CO}_2$ Power Ledgers in Lean 4 <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-enz-hyperbolic-metamaterials-paper.md>`_
+15. `Holographic $405\text{ nm} / 532\text{ nm}$ Longitudinal Carbon Nanolithography, 6-Stage Linux RISC-V (CVA6, CHERI-CVA6, & Ibex), Volumetric KiCAD/GDSII EDA, and Exothermic Radical-Recombination Physics in Lean 4 and Rust/WASM <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-riscv-holographic-nanolithography-kicad-paper.md>`_
 16. `Hawking Radiation, Inverse Gross–Pitaevskii (iGPE) Unwinding, and Amplituhedron/CP-ALS Decoding in Complex Grassmannian $Gr_{\mathbb{C}}(2,4)$ and Dilatant Dark Fluid (DDF) Mechanics: With and Without DDF, With and Without Normed Tensor Gaussian Splats in Lean 4 <https://github.com/westurner/sustainablefactory/blob/main/docs/grassmannian-hawking-radiation-decoding-paper.md>`_
-17. Hubble Space Telescope's electron counts are better processed with a Grassmannian like  ``Gr_R(4, 8.4e6)`` or ``Gr_R(dims, lambda_bands)`` before transformation to TIFF,
+17. Hubble Space Telescope's electron counts are better processed with a Grassmannian like  Gr_R(4, 8.4e6) or Gr_R(dims, lambda_bands) before transformation to TIFF,
     and it's likely possible to do cosmic ray studies of Dots, Worms, and Streaks
     with new advanced processing of existing Hubble (electron) astrophotography.
 
